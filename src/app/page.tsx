@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { AuthService, AuthUser } from '@/lib/auth'
 import { OrganizationService } from '@/lib/organizations'
 import { ActivityService, ActivityItem } from '@/lib/activity'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
@@ -11,7 +10,7 @@ import { Users, Building2, Calendar, TrendingUp, Activity, MapPin, ExternalLink 
 import Link from 'next/link'
 
 export default function DashboardPage() {
-  const [user, setUser] = useState<AuthUser | null>(null)
+  const [user, setUser] = useState<any>(null)
   const [isLoading, setIsLoading] = useState(true)
   const [stats, setStats] = useState({
     total_organizations: 0,

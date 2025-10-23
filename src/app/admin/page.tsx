@@ -19,7 +19,6 @@ import {
   X,
   AlertTriangle
 } from 'lucide-react'
-import { AuthService } from '@/lib/auth'
 
 // Mock data - in production this would come from the database
 const REFERENCE_DATA = {
