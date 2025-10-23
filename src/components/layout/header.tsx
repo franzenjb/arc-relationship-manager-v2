@@ -15,7 +15,10 @@ export function Header() {
     { name: 'Dashboard', href: '/', active: true },
     { name: 'Organizations', href: '/organizations', active: true },
     { name: 'People', href: '/people', active: true },
-    { name: 'Meetings', href: '/meetings', active: true }
+    { name: 'Meetings', href: '/meetings', active: true },
+    { name: 'Map', href: '/map', active: true },
+    { name: 'Activity', href: '/activity', active: true },
+    { name: 'Tech Stack', href: '/tech-stack', active: true }
   ]
 
   return (
