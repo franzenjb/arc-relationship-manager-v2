@@ -99,9 +99,14 @@ export class MeetingService {
   static async create(data: Partial<Meeting>): Promise<Meeting> {
     const auditFields = await AuditService.createAuditFields()
     
-    // Extract attendees from data (they go in junction table, not meetings table)
-    const { attendees, ...meetingDataWithoutAttendees } = data
-    const meetingData = { ...meetingDataWithoutAttendees, ...auditFields }
+    // Extract fields that don't exist in the meetings table yet
+    const { 
+      attendees, 
+      other_organizations, 
+      rc_attendees, 
+      ...meetingDataWithoutArrays 
+    } = data
+    const meetingData = { ...meetingDataWithoutArrays, ...auditFields }
 
     // Create the meeting first
     const { data: meeting, error } = await supabase
