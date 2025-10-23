@@ -237,15 +237,35 @@ export default function PeoplePage() {
               <CardContent>
                 <div className="space-y-2">
                   {person.organization && (
-                    <div className="flex items-center text-sm text-gray-600">
-                      <Building2 className="h-4 w-4 mr-2" />
-                      <span className="truncate">{person.organization.name}</span>
+                    <div>
+                      <div className="flex items-center text-sm text-gray-600">
+                        <Building2 className="h-4 w-4 mr-2" />
+                        <span className="truncate font-medium">{person.organization.name}</span>
+                      </div>
+                      {(person.organization.address || person.organization.city || person.organization.state) && (
+                        <div className="flex items-start text-sm text-gray-500 ml-6">
+                          <div className="min-w-0">
+                            {person.organization.address && (
+                              <div className="truncate">{person.organization.address}</div>
+                            )}
+                            {(person.organization.city || person.organization.state || person.organization.zip) && (
+                              <div className="truncate">
+                                {[person.organization.city, person.organization.state, person.organization.zip]
+                                  .filter(Boolean)
+                                  .join(', ')}
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                      )}
                     </div>
                   )}
                   {person.email && (
                     <div className="flex items-center text-sm text-gray-600">
                       <Mail className="h-4 w-4 mr-2" />
-                      <span className="truncate">{person.email}</span>
+                      <a href={`mailto:${person.email}`} className="truncate text-blue-600 hover:underline">
+                        {person.email}
+                      </a>
                     </div>
                   )}
                   {person.phone && (
@@ -350,7 +370,9 @@ export default function PeoplePage() {
                           {person.email && (
                             <div className="flex items-center">
                               <Mail className="h-3 w-3 mr-1" />
-                              <span className="truncate max-w-32">{person.email}</span>
+                              <a href={`mailto:${person.email}`} className="truncate max-w-32 text-blue-600 hover:underline">
+                                {person.email}
+                              </a>
                             </div>
                           )}
                           {person.phone && (

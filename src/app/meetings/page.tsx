@@ -277,11 +277,12 @@ export default function MeetingsPage() {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="space-y-2">
+                <div className="space-y-3">
                   {meeting.organization && (
-                    <div className="flex items-center text-sm text-gray-600">
-                      <Building2 className="h-4 w-4 mr-2" />
-                      <span className="truncate">{meeting.organization.name}</span>
+                    <div>
+                      <h3 className="text-lg font-bold text-gray-900">
+                        {meeting.organization.name}
+                      </h3>
                     </div>
                   )}
                   {meeting.location && (

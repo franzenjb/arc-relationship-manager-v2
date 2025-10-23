@@ -108,6 +108,7 @@ export interface Meeting {
   org_id: string
   meeting_name?: string
   description?: string
+  summary?: string  // Brief summary of meeting outcomes
   date: string
   next_meeting_date?: string
   location?: string

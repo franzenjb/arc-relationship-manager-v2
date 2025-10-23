@@ -241,10 +241,17 @@ export default function OrganizationsPage() {
               </CardHeader>
               <CardContent>
                 <div className="space-y-2">
-                  {org.address && (
-                    <div className="flex items-center text-sm text-gray-600">
-                      <MapPin className="h-4 w-4 mr-2" />
-                      <span className="truncate">{org.city}, {org.state}</span>
+                  {(org.address || org.city || org.state) && (
+                    <div className="flex items-start text-sm text-gray-600">
+                      <MapPin className="h-4 w-4 mr-2 mt-0.5 flex-shrink-0" />
+                      <div className="min-w-0">
+                        {org.address && <div className="truncate">{org.address}</div>}
+                        {(org.city || org.state || org.zip) && (
+                          <div className="truncate">
+                            {[org.city, org.state, org.zip].filter(Boolean).join(', ')}
+                          </div>
+                        )}
+                      </div>
                     </div>
                   )}
                   {org.website && (
