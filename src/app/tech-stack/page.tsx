@@ -46,6 +46,51 @@ export default function TechStackPage() {
     { item: "Monitoring & Backups", cost: "$30/month", total: "$360/year" },
   ]
 
+  const databaseSchema = [
+    { 
+      table: "organizations", 
+      purpose: "Partner organizations",
+      keyFields: "name, mission_area, organization_type, address, relationship_manager_id",
+      relationships: "Has many people, Has many meetings"
+    },
+    { 
+      table: "people", 
+      purpose: "External contacts",
+      keyFields: "first_name, last_name, title, email, phone, org_id",
+      relationships: "Belongs to organization, Attends meetings"
+    },
+    { 
+      table: "staff_members", 
+      purpose: "Red Cross employees",
+      keyFields: "first_name, last_name, email, title, department, region, is_active",
+      relationships: "Can be relationship managers, Attend meetings"
+    },
+    { 
+      table: "meetings", 
+      purpose: "Interactions & coordination",
+      keyFields: "meeting_name, date, location, agenda, notes, attendees",
+      relationships: "Has organization, Has attendees, Links to counties"
+    },
+    { 
+      table: "regions", 
+      purpose: "Geographic regions",
+      keyFields: "name, code, division_id",
+      relationships: "Contains chapters"
+    },
+    { 
+      table: "chapters", 
+      purpose: "Local chapters",
+      keyFields: "name, code, region_id",
+      relationships: "Contains counties"
+    },
+    { 
+      table: "counties", 
+      purpose: "County jurisdictions",
+      keyFields: "name, state_code, fips_code",
+      relationships: "Used for meeting locations"
+    }
+  ]
+
   const techStack = [
     { category: "Frontend", tech: "Next.js 14", description: "React framework with App Router, TypeScript, Tailwind CSS" },
     { category: "Backend", tech: "Supabase", description: "PostgreSQL + PostGIS, Authentication, Real-time, File Storage" },
@@ -106,6 +151,69 @@ export default function TechStackPage() {
               business logic. The current implementation is a variation of their excellent 
               database architecture and requirements analysis.
             </p>
+          </div>
+        </CardContent>
+      </Card>
+
+      {/* Database Schema */}
+      <Card>
+        <CardHeader>
+          <CardTitle className="flex items-center">
+            <Database className="h-5 w-5 mr-2 text-purple-600" />
+            Database Schema & Application Structure
+          </CardTitle>
+          <CardDescription>
+            How the ARC Relationship Manager works - designed specifically for Red Cross partnership tracking
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <div className="space-y-6">
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+              <h3 className="font-semibold text-blue-900 mb-2">Core Concept</h3>
+              <p className="text-blue-800 text-sm">
+                The system tracks relationships between American Red Cross and partner organizations. 
+                Red Cross staff are kept in a separate table (staff_members) from external contacts (people table). 
+                All interactions are tracked through meetings, which can include multiple organizations and attendees.
+              </p>
+            </div>
+            
+            <div>
+              <h3 className="font-semibold mb-3">Database Tables</h3>
+              <div className="grid gap-3">
+                {databaseSchema.map((table, index) => (
+                  <div key={index} className="border rounded-lg p-3 hover:bg-gray-50">
+                    <div className="flex items-center justify-between mb-1">
+                      <span className="font-mono text-sm font-semibold text-red-600">{table.table}</span>
+                      <Badge variant="secondary">{table.purpose}</Badge>
+                    </div>
+                    <div className="text-xs space-y-1">
+                      <p className="text-gray-600">
+                        <span className="font-medium">Fields:</span> {table.keyFields}
+                      </p>
+                      <p className="text-gray-500">
+                        <span className="font-medium">Links:</span> {table.relationships}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="bg-gray-50 rounded-lg p-4">
+              <h3 className="font-semibold mb-2">Geographic Hierarchy</h3>
+              <div className="flex items-center space-x-2 text-sm">
+                <span className="px-2 py-1 bg-white rounded">Division</span>
+                <ArrowRight className="h-4 w-4 text-gray-400" />
+                <span className="px-2 py-1 bg-white rounded">Region</span>
+                <ArrowRight className="h-4 w-4 text-gray-400" />
+                <span className="px-2 py-1 bg-white rounded">Chapter</span>
+                <ArrowRight className="h-4 w-4 text-gray-400" />
+                <span className="px-2 py-1 bg-white rounded">County</span>
+              </div>
+              <p className="text-xs text-gray-600 mt-2">
+                Example: Eastern Division → National Capital Region → DC Metro Chapter → Montgomery County
+              </p>
+            </div>
           </div>
         </CardContent>
       </Card>

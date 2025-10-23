@@ -128,13 +128,25 @@ export class OrganizationService {
 
   static async getOrganizationsWithRedCross(): Promise<any[]> {
     const orgs = await this.getAll()
-    const redCrossOrg = {
-      id: '00000000-0000-0000-0000-000000000001',
-      name: 'American Red Cross',
-      organization_type: 'nonprofit',
-      status: 'active'
+    
+    // Check if American Red Cross already exists
+    const hasRedCross = orgs.some(org => 
+      org.name.toLowerCase().includes('american red cross') || 
+      org.name.toLowerCase() === 'red cross'
+    )
+    
+    // Only add if it doesn't exist
+    if (!hasRedCross) {
+      const redCrossOrg = {
+        id: '00000000-0000-0000-0000-000000000001',
+        name: 'American Red Cross',
+        organization_type: 'nonprofit',
+        status: 'active'
+      }
+      return [redCrossOrg, ...orgs]
     }
-    return [redCrossOrg, ...orgs]
+    
+    return orgs
   }
 
   static async getChaptersByRegion(regionId: string) {
