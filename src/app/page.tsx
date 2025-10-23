@@ -316,43 +316,6 @@ export default function DashboardPage() {
         </Card>
       )}
 
-      {/* Project Status Buttons */}
-      <Card>
-        <CardHeader>
-          <CardTitle>🚀 Project Status</CardTitle>
-          <CardDescription>
-            Check deployment status and launch the application
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Button variant="outline" asChild className="flex-1">
-              <Link 
-                href="https://vercel.com/jbf-2539-e1ec6bfb/arc-relationship-manager" 
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <ExternalLink className="h-4 w-4 mr-2" />
-                → VIEW DEPLOY ←
-              </Link>
-            </Button>
-            <Button asChild className="flex-1 bg-red-600 hover:bg-red-700">
-              <Link 
-                href="https://arc-relationship-manager.vercel.app/" 
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <ExternalLink className="h-4 w-4 mr-2" />
-                → LAUNCH APP ←
-              </Link>
-            </Button>
-          </div>
-          <p className="text-xs text-gray-500 mt-2">
-            Check if deployment is live (green ✓ = ready) before launching
-          </p>
-        </CardContent>
-      </Card>
-
       {/* Contact Information - Same as Tech Stack */}
       <div className="mt-12 pt-6 border-t border-gray-200">
         <div className="bg-gray-50 rounded-lg px-8 py-4">

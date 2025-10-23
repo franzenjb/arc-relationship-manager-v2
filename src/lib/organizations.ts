@@ -7,7 +7,7 @@ export class OrganizationService {
     let query = supabase
       .from('organizations')
       .select('*')
-      .order('updated_at', { ascending: false })
+      .order('name', { ascending: true })
 
     // Apply search filter
     if (filters?.query) {

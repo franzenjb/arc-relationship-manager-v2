@@ -65,7 +65,7 @@ export class StaffService {
     const { data, error } = await supabase
       .from('staff_members')
       .select('*')
-      .eq('status', 'active')
+      .eq('is_active', true)
       .order('last_name', { ascending: true })
 
     if (error) throw error
