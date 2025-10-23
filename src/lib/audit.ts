@@ -1,9 +1,9 @@
 export class AuditService {
   /**
-   * Get current user ID for audit trail - hardcoded for demo
+   * Get current user ID for audit trail - returns null for demo (no auth)
    */
   static async getCurrentUserId(): Promise<string | null> {
-    return 'demo-user'
+    return null
   }
 
   /**
