@@ -352,23 +352,23 @@ export default function DashboardPage() {
           </p>
         </CardContent>
       </Card>
-    </div>
 
-    {/* Contact Information - Same as Tech Stack */}
-    <div className="mt-12 pt-6 border-t border-gray-200">
-      <div className="bg-gray-50 rounded-lg px-8 py-4">
-        <p className="text-center text-sm text-gray-600">
-          For further information, suggestions, or comments: 
-          <span className="font-medium text-gray-900 ml-2">Jeff Franzen</span>
-          <span className="mx-2">•</span>
-          <a href="mailto:Jeff.Franzen2@redcross.org" className="text-red-600 hover:text-red-700 hover:underline">
-            Jeff.Franzen2@redcross.org
-          </a>
-          <span className="mx-2">•</span>
-          <a href="tel:703-957-5711" className="text-red-600 hover:text-red-700 hover:underline">
-            703-957-5711
-          </a>
-        </p>
+      {/* Contact Information - Same as Tech Stack */}
+      <div className="mt-12 pt-6 border-t border-gray-200">
+        <div className="bg-gray-50 rounded-lg px-8 py-4">
+          <p className="text-center text-sm text-gray-600">
+            For further information, suggestions, or comments: 
+            <span className="font-medium text-gray-900 ml-2">Jeff Franzen</span>
+            <span className="mx-2">•</span>
+            <a href="mailto:Jeff.Franzen2@redcross.org" className="text-red-600 hover:text-red-700 hover:underline">
+              Jeff.Franzen2@redcross.org
+            </a>
+            <span className="mx-2">•</span>
+            <a href="tel:703-957-5711" className="text-red-600 hover:text-red-700 hover:underline">
+              703-957-5711
+            </a>
+          </p>
+        </div>
       </div>
     </div>
   )
