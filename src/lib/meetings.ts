@@ -9,10 +9,7 @@ export class MeetingService {
       .select('*, organization:organizations(id, name)')
       .order('date', { ascending: false })
 
-    // Apply search filter
-    if (filters?.query) {
-      query = query.textSearch('search_vector', filters.query)
-    }
+    // Apply search filter - removed textSearch (no search_vector column)
 
     // Apply organization filter
     if (filters?.organization_ids?.length) {
