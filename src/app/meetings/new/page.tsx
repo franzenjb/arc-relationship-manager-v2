@@ -173,8 +173,8 @@ function NewMeetingPageContent() {
     e.preventDefault()
     setError('')
 
-    if (!formData.org_id) {
-      setError('Please select an organization')
+    if (!formData.lead_organization_id) {
+      setError('Please select a lead organization')
       return
     }
 
@@ -196,7 +196,7 @@ function NewMeetingPageContent() {
       for (const attendeeName of customAttendees) {
         try {
           const newPerson = await PersonService.create({
-            org_id: formData.org_id,
+            org_id: formData.lead_organization_id,
             first_name: attendeeName.split(' ')[0] || attendeeName,
             last_name: attendeeName.split(' ').slice(1).join(' ') || undefined,
           })
@@ -213,7 +213,7 @@ function NewMeetingPageContent() {
       ]
 
       const meetingData: Partial<Meeting> = {
-        org_id: formData.org_id,
+        org_id: formData.lead_organization_id,
         meeting_name: formData.meeting_name,
         description: formData.description || undefined,
         date: formData.date,
@@ -238,7 +238,7 @@ function NewMeetingPageContent() {
     }
   }
 
-  const selectedOrganization = organizations.find(org => org.id === formData.org_id)
+  const selectedOrganization = organizations.find(org => org.id === formData.lead_organization_id)
 
   // Set default date to today
   useEffect(() => {
