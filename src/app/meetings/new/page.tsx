@@ -6,10 +6,12 @@ import Link from 'next/link'
 import { OrganizationService } from '@/lib/organizations'
 import { MeetingService } from '@/lib/meetings'
 import { PersonService } from '@/lib/people'
+import { StaffService, StaffMember } from '@/lib/staff'
 import { Organization, Meeting, Person } from '@/lib/types'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
+import { MultiSelect } from '@/components/ui/multi-select'
 import { 
   Calendar, 
   ArrowLeft, 
@@ -26,6 +28,10 @@ function NewMeetingPageContent() {
   const searchParams = useSearchParams()
   const [organizations, setOrganizations] = useState<Organization[]>([])
   const [people, setPeople] = useState<Person[]>([])
+  const [staffMembers, setStaffMembers] = useState<StaffMember[]>([])
+  const [regions, setRegions] = useState<any[]>([])
+  const [chapters, setChapters] = useState<any[]>([])
+  const [counties, setCounties] = useState<any[]>([])
   const [isLoading, setIsLoading] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [error, setError] = useState('')
@@ -36,10 +42,20 @@ function NewMeetingPageContent() {
   // Form state
   const [formData, setFormData] = useState({
     org_id: preselectedOrgId || '',
+    meeting_name: '',
+    description: '',
     date: '',
+    next_meeting_date: '',
     location: '',
-    summary: '',
-    follow_up_date: '',
+    agenda: '',
+    notes: '',
+    lead_organization_id: '',
+    primary_external_poc_id: '',
+    region_id: '',
+    chapter_id: '',
+    county_id: '',
+    rc_attendees: [] as string[],
+    other_organizations: [] as string[],
     attendees: [] as string[]
   })
 
@@ -49,16 +65,23 @@ function NewMeetingPageContent() {
   const [selectedAttendees, setSelectedAttendees] = useState<Person[]>([])
   const [customAttendees, setCustomAttendees] = useState<string[]>([])
 
+  const watchedRegionId = formData.region_id
+  const watchedChapterId = formData.chapter_id
+
   useEffect(() => {
     const loadData = async () => {
       try {
         setIsLoading(true)
-        const [orgsData, peopleData] = await Promise.all([
+        const [orgsData, peopleData, staffData, regionsData] = await Promise.all([
           OrganizationService.getAll(),
-          PersonService.getAll()
+          PersonService.getAll(),
+          StaffService.getActive(),
+          OrganizationService.getRegions()
         ])
         setOrganizations(orgsData)
         setPeople(peopleData)
+        setStaffMembers(staffData)
+        setRegions(regionsData)
       } catch (error: any) {
         setError(error.message || 'Failed to load data')
       } finally {
@@ -68,6 +91,27 @@ function NewMeetingPageContent() {
 
     loadData()
   }, [])
+
+  // Load chapters when region changes
+  useEffect(() => {
+    if (watchedRegionId) {
+      OrganizationService.getChaptersByRegion(watchedRegionId).then(setChapters)
+      setFormData(prev => ({ ...prev, chapter_id: '', county_id: '' }))
+    } else {
+      setChapters([])
+      setCounties([])
+    }
+  }, [watchedRegionId])
+
+  // Load counties when chapter changes
+  useEffect(() => {
+    if (watchedChapterId) {
+      OrganizationService.getCountiesByChapter(watchedChapterId).then(setCounties)
+      setFormData(prev => ({ ...prev, county_id: '' }))
+    } else {
+      setCounties([])
+    }
+  }, [watchedChapterId])
 
   // Close dropdown when clicking outside
   useEffect(() => {
@@ -139,6 +183,11 @@ function NewMeetingPageContent() {
       return
     }
 
+    if (!formData.meeting_name) {
+      setError('Please enter a meeting name')
+      return
+    }
+
     try {
       setIsSubmitting(true)
       
@@ -146,17 +195,14 @@ function NewMeetingPageContent() {
       const newPersonIds: string[] = []
       for (const attendeeName of customAttendees) {
         try {
-          // Create a new person record for each custom attendee
           const newPerson = await PersonService.create({
-            org_id: formData.org_id, // Associate with the same organization as the meeting
+            org_id: formData.org_id,
             first_name: attendeeName.split(' ')[0] || attendeeName,
             last_name: attendeeName.split(' ').slice(1).join(' ') || undefined,
-            // Could add more parsing logic here for email detection, etc.
           })
           newPersonIds.push(newPerson.id)
         } catch (error) {
           console.error(`Failed to create person record for ${attendeeName}:`, error)
-          // Continue with other attendees if one fails
         }
       }
 
@@ -168,16 +214,22 @@ function NewMeetingPageContent() {
 
       const meetingData: Partial<Meeting> = {
         org_id: formData.org_id,
+        meeting_name: formData.meeting_name,
+        description: formData.description || undefined,
         date: formData.date,
+        next_meeting_date: formData.next_meeting_date || undefined,
         location: formData.location || undefined,
-        summary: formData.summary || undefined,
-        follow_up_date: formData.follow_up_date || undefined,
-        attendees: allAttendeeIds.length > 0 ? allAttendeeIds : undefined
+        agenda: formData.agenda || undefined,
+        notes: formData.notes || undefined,
+        lead_organization_id: formData.lead_organization_id || undefined,
+        primary_external_poc_id: formData.primary_external_poc_id || undefined,
+        county_id: formData.county_id || undefined,
+        attendees: allAttendeeIds.length > 0 ? allAttendeeIds : undefined,
+        rc_attendees: formData.rc_attendees.length > 0 ? formData.rc_attendees : undefined,
+        other_organizations: formData.other_organizations.length > 0 ? formData.other_organizations : undefined
       }
 
       const newMeeting = await MeetingService.create(meetingData)
-      
-      // Redirect to the meeting details or back to meetings list
       router.push(`/meetings`)
     } catch (error: any) {
       setError(error.message || 'Failed to create meeting')
@@ -233,222 +285,376 @@ function NewMeetingPageContent() {
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-6">
-                {/* Organization Selection */}
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Organization *
-                  </label>
-                  <select
-                    value={formData.org_id}
-                    onChange={(e) => handleInputChange('org_id', e.target.value)}
-                    required
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
-                    disabled={isLoading}
-                  >
-                    <option value="">Select an organization...</option>
-                    {organizations.map((org) => (
-                      <option key={org.id} value={org.id}>
-                        {org.name} {org.city && `(${org.city}, ${org.state})`}
-                      </option>
-                    ))}
-                  </select>
-                  {isLoading && (
-                    <p className="text-sm text-gray-500 mt-1">Loading organizations...</p>
-                  )}
+                {/* Basic Meeting Information */}
+                <div className="space-y-4">
+                  <h3 className="text-lg font-medium text-gray-900">Basic Information</h3>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="md:col-span-2">
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Meeting Name *
+                      </label>
+                      <Input
+                        type="text"
+                        value={formData.meeting_name}
+                        onChange={(e) => handleInputChange('meeting_name', e.target.value)}
+                        placeholder="Enter meeting name"
+                        required
+                      />
+                    </div>
+
+                    <div className="md:col-span-2">
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Description of Interaction
+                      </label>
+                      <textarea
+                        value={formData.description}
+                        onChange={(e) => handleInputChange('description', e.target.value)}
+                        placeholder="Describe the purpose and nature of this interaction"
+                        rows={3}
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent resize-vertical"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Date of Meeting *
+                      </label>
+                      <Input
+                        type="date"
+                        value={formData.date}
+                        onChange={(e) => handleInputChange('date', e.target.value)}
+                        required
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Date of Next Meeting
+                      </label>
+                      <Input
+                        type="date"
+                        value={formData.next_meeting_date}
+                        onChange={(e) => handleInputChange('next_meeting_date', e.target.value)}
+                        placeholder="Optional follow-up meeting date"
+                      />
+                    </div>
+                  </div>
                 </div>
 
-                {/* Date and Time */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Meeting Date *
-                    </label>
-                    <Input
-                      type="date"
-                      value={formData.date}
-                      onChange={(e) => handleInputChange('date', e.target.value)}
-                      required
-                    />
+                {/* Geographic Selection */}
+                <div className="space-y-4">
+                  <h3 className="text-lg font-medium text-gray-900">Location</h3>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Region
+                      </label>
+                      <select
+                        value={formData.region_id}
+                        onChange={(e) => handleInputChange('region_id', e.target.value)}
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                      >
+                        <option value="">Select region</option>
+                        {regions.map((region) => (
+                          <option key={region.id} value={region.id}>
+                            {region.name}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Chapter
+                      </label>
+                      <select
+                        value={formData.chapter_id}
+                        onChange={(e) => handleInputChange('chapter_id', e.target.value)}
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                        disabled={!watchedRegionId}
+                      >
+                        <option value="">Select chapter</option>
+                        {chapters.map((chapter) => (
+                          <option key={chapter.id} value={chapter.id}>
+                            {chapter.name}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        County
+                      </label>
+                      <select
+                        value={formData.county_id}
+                        onChange={(e) => handleInputChange('county_id', e.target.value)}
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                        disabled={!watchedChapterId}
+                      >
+                        <option value="">Select county</option>
+                        {counties.map((county) => (
+                          <option key={county.id} value={county.id}>
+                            {county.name}, {county.state_code}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
                   </div>
+
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Follow-up Date
+                      Meeting Location/Address
                     </label>
-                    <Input
-                      type="date"
-                      value={formData.follow_up_date}
-                      onChange={(e) => handleInputChange('follow_up_date', e.target.value)}
-                      placeholder="Optional follow-up reminder"
-                    />
+                    <div className="relative">
+                      <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
+                      <Input
+                        type="text"
+                        value={formData.location}
+                        onChange={(e) => handleInputChange('location', e.target.value)}
+                        placeholder="Meeting location (office, virtual, etc.)"
+                        className="pl-10"
+                      />
+                    </div>
                   </div>
                 </div>
 
-                {/* Location */}
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Location
-                  </label>
-                  <div className="relative">
-                    <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
-                    <Input
-                      type="text"
-                      value={formData.location}
-                      onChange={(e) => handleInputChange('location', e.target.value)}
-                      placeholder="Meeting location (office, virtual, etc.)"
-                      className="pl-10"
+                {/* Organizations and Contacts */}
+                <div className="space-y-4">
+                  <h3 className="text-lg font-medium text-gray-900">Organizations & Contacts</h3>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Lead Organization *
+                      </label>
+                      <select
+                        value={formData.lead_organization_id}
+                        onChange={(e) => handleInputChange('lead_organization_id', e.target.value)}
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                        disabled={isLoading}
+                      >
+                        <option value="">Select lead organization...</option>
+                        {organizations.map((org) => (
+                          <option key={org.id} value={org.id}>
+                            {org.name} {org.city && `(${org.city}, ${org.state})`}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Primary External Meeting POC
+                      </label>
+                      <select
+                        value={formData.primary_external_poc_id}
+                        onChange={(e) => handleInputChange('primary_external_poc_id', e.target.value)}
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                        disabled={isLoading}
+                      >
+                        <option value="">Select primary contact...</option>
+                        {people.map((person) => (
+                          <option key={person.id} value={person.id}>
+                            {person.first_name} {person.last_name} ({person.organization?.name})
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Red Cross Attendees
+                    </label>
+                    <MultiSelect
+                      options={staffMembers.map(staff => ({ 
+                        id: staff.id, 
+                        name: `${staff.first_name} ${staff.last_name}${staff.title ? ` - ${staff.title}` : ''}` 
+                      }))}
+                      selected={formData.rc_attendees}
+                      onChange={(selected) => setFormData(prev => ({ ...prev, rc_attendees: selected }))}
+                      placeholder="Select Red Cross staff attendees..."
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Other Organizations Present
+                    </label>
+                    <MultiSelect
+                      options={organizations.map(org => ({ id: org.id, name: org.name }))}
+                      selected={formData.other_organizations}
+                      onChange={(selected) => setFormData(prev => ({ ...prev, other_organizations: selected }))}
+                      placeholder="Select other organizations present..."
                     />
                   </div>
                 </div>
 
                 {/* Attendees */}
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Attendees
-                  </label>
-                  <div className="space-y-4">
-                    {/* Search for existing people */}
-                    <div>
-                      <label className="block text-xs font-medium text-gray-600 mb-1">
-                        Search People in Database
-                      </label>
-                      <div className="relative attendee-search-container">
+                <div className="space-y-4">
+                  <h3 className="text-lg font-medium text-gray-900">External Attendees</h3>
+                  
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Search People in Database
+                    </label>
+                    <div className="relative attendee-search-container">
+                      <Users className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
+                      <Input
+                        type="text"
+                        value={attendeeSearchQuery}
+                        onChange={(e) => {
+                          setAttendeeSearchQuery(e.target.value)
+                          setShowAttendeeDropdown(e.target.value.length > 0)
+                        }}
+                        placeholder="Search by name, email, or organization"
+                        className="pl-10"
+                        onFocus={() => setShowAttendeeDropdown(attendeeSearchQuery.length > 0)}
+                      />
+                      
+                      {/* Dropdown */}
+                      {showAttendeeDropdown && filteredPeople.length > 0 && (
+                        <div className="absolute z-10 w-full mt-1 bg-white border border-gray-300 rounded-md shadow-lg max-h-60 overflow-auto">
+                          {filteredPeople.slice(0, 10).map((person) => (
+                            <div
+                              key={person.id}
+                              className="p-3 hover:bg-gray-50 cursor-pointer border-b border-gray-100 last:border-b-0"
+                              onClick={() => addPersonAttendee(person)}
+                            >
+                              <div className="flex items-center justify-between">
+                                <div>
+                                  <p className="font-medium text-gray-900">
+                                    {person.first_name} {person.last_name}
+                                  </p>
+                                  {person.title && (
+                                    <p className="text-sm text-gray-600">{person.title}</p>
+                                  )}
+                                  {person.email && (
+                                    <p className="text-sm text-gray-500">{person.email}</p>
+                                  )}
+                                </div>
+                                <div className="text-right">
+                                  {person.organization?.name && (
+                                    <p className="text-sm text-gray-600">{person.organization.name}</p>
+                                  )}
+                                </div>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* Add custom attendee */}
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Add New Person (Not in Database)
+                    </label>
+                    <div className="flex space-x-2">
+                      <div className="relative flex-1">
                         <Users className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
                         <Input
                           type="text"
-                          value={attendeeSearchQuery}
-                          onChange={(e) => {
-                            setAttendeeSearchQuery(e.target.value)
-                            setShowAttendeeDropdown(e.target.value.length > 0)
-                          }}
-                          placeholder="Search by name, email, or organization"
+                          value={attendeeInput}
+                          onChange={(e) => setAttendeeInput(e.target.value)}
+                          placeholder="Enter full name for new attendee"
                           className="pl-10"
-                          onFocus={() => setShowAttendeeDropdown(attendeeSearchQuery.length > 0)}
+                          onKeyPress={(e) => {
+                            if (e.key === 'Enter') {
+                              e.preventDefault()
+                              addCustomAttendee()
+                            }
+                          }}
                         />
-                        
-                        {/* Dropdown */}
-                        {showAttendeeDropdown && filteredPeople.length > 0 && (
-                          <div className="absolute z-10 w-full mt-1 bg-white border border-gray-300 rounded-md shadow-lg max-h-60 overflow-auto">
-                            {filteredPeople.slice(0, 10).map((person) => (
-                              <div
-                                key={person.id}
-                                className="p-3 hover:bg-gray-50 cursor-pointer border-b border-gray-100 last:border-b-0"
-                                onClick={() => addPersonAttendee(person)}
-                              >
-                                <div className="flex items-center justify-between">
-                                  <div>
-                                    <p className="font-medium text-gray-900">
-                                      {person.first_name} {person.last_name}
-                                    </p>
-                                    {person.title && (
-                                      <p className="text-sm text-gray-600">{person.title}</p>
-                                    )}
-                                    {person.email && (
-                                      <p className="text-sm text-gray-500">{person.email}</p>
-                                    )}
-                                  </div>
-                                  <div className="text-right">
-                                    {person.organization?.name && (
-                                      <p className="text-sm text-gray-600">{person.organization.name}</p>
-                                    )}
-                                  </div>
-                                </div>
-                              </div>
-                            ))}
-                          </div>
-                        )}
                       </div>
+                      <Button type="button" onClick={addCustomAttendee} variant="outline">
+                        Add New
+                      </Button>
                     </div>
-
-                    {/* Add custom attendee */}
-                    <div>
-                      <label className="block text-xs font-medium text-gray-600 mb-1">
-                        Add New Person (Not in Database)
-                      </label>
-                      <div className="flex space-x-2">
-                        <div className="relative flex-1">
-                          <Users className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
-                          <Input
-                            type="text"
-                            value={attendeeInput}
-                            onChange={(e) => setAttendeeInput(e.target.value)}
-                            placeholder="Enter full name for new attendee"
-                            className="pl-10"
-                            onKeyPress={(e) => {
-                              if (e.key === 'Enter') {
-                                e.preventDefault()
-                                addCustomAttendee()
-                              }
-                            }}
-                          />
-                        </div>
-                        <Button type="button" onClick={addCustomAttendee} variant="outline">
-                          Add New
-                        </Button>
-                      </div>
-                    </div>
-
-                    {/* Selected Attendees */}
-                    {(selectedAttendees.length > 0 || customAttendees.length > 0) && (
-                      <div>
-                        <label className="block text-xs font-medium text-gray-600 mb-2">
-                          Selected Attendees
-                        </label>
-                        <div className="flex flex-wrap gap-2">
-                          {/* Database people */}
-                          {selectedAttendees.map((person) => (
-                            <span
-                              key={person.id}
-                              className="inline-flex items-center px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full"
-                            >
-                              {person.first_name} {person.last_name}
-                              {person.organization?.name && (
-                                <span className="ml-1 text-green-600">({person.organization.name})</span>
-                              )}
-                              <button
-                                type="button"
-                                onClick={() => removePersonAttendee(person.id)}
-                                className="ml-2 text-green-600 hover:text-green-800"
-                              >
-                                ×
-                              </button>
-                            </span>
-                          ))}
-                          
-                          {/* Custom attendees */}
-                          {customAttendees.map((attendee, index) => (
-                            <span
-                              key={index}
-                              className="inline-flex items-center px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full"
-                            >
-                              {attendee}
-                              <span className="ml-1 text-blue-600">(New)</span>
-                              <button
-                                type="button"
-                                onClick={() => removeCustomAttendee(attendee)}
-                                className="ml-2 text-blue-600 hover:text-blue-800"
-                              >
-                                ×
-                              </button>
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                    )}
                   </div>
+
+                  {/* Selected Attendees */}
+                  {(selectedAttendees.length > 0 || customAttendees.length > 0) && (
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Selected External Attendees
+                      </label>
+                      <div className="flex flex-wrap gap-2">
+                        {/* Database people */}
+                        {selectedAttendees.map((person) => (
+                          <span
+                            key={person.id}
+                            className="inline-flex items-center px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full"
+                          >
+                            {person.first_name} {person.last_name}
+                            {person.organization?.name && (
+                              <span className="ml-1 text-green-600">({person.organization.name})</span>
+                            )}
+                            <button
+                              type="button"
+                              onClick={() => removePersonAttendee(person.id)}
+                              className="ml-2 text-green-600 hover:text-green-800"
+                            >
+                              ×
+                            </button>
+                          </span>
+                        ))}
+                        
+                        {/* Custom attendees */}
+                        {customAttendees.map((attendee, index) => (
+                          <span
+                            key={index}
+                            className="inline-flex items-center px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full"
+                          >
+                            {attendee}
+                            <span className="ml-1 text-blue-600">(New)</span>
+                            <button
+                              type="button"
+                              onClick={() => removeCustomAttendee(attendee)}
+                              className="ml-2 text-blue-600 hover:text-blue-800"
+                            >
+                              ×
+                            </button>
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  )}
                 </div>
 
-                {/* Summary */}
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Meeting Summary
-                  </label>
-                  <textarea
-                    value={formData.summary}
-                    onChange={(e) => handleInputChange('summary', e.target.value)}
-                    placeholder="Key discussion points, decisions made, action items..."
-                    rows={6}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent resize-vertical"
-                  />
+                {/* Agenda and Notes */}
+                <div className="space-y-4">
+                  <h3 className="text-lg font-medium text-gray-900">Content</h3>
+                  
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Agenda
+                    </label>
+                    <textarea
+                      value={formData.agenda}
+                      onChange={(e) => handleInputChange('agenda', e.target.value)}
+                      placeholder="Meeting agenda and topics to be discussed"
+                      rows={4}
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent resize-vertical"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Notes
+                    </label>
+                    <textarea
+                      value={formData.notes}
+                      onChange={(e) => handleInputChange('notes', e.target.value)}
+                      placeholder="Key discussion points, decisions made, action items..."
+                      rows={6}
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent resize-vertical"
+                    />
+                  </div>
                 </div>
 
                 {/* Submit Button */}
@@ -540,11 +746,13 @@ function NewMeetingPageContent() {
               </CardTitle>
             </CardHeader>
             <CardContent className="text-sm text-gray-600 space-y-2">
-              <p>• Record key discussion points and decisions</p>
-              <p>• Note action items and responsible parties</p>
-              <p>• Set follow-up dates for important items</p>
-              <p>• Include all attendees for better tracking</p>
-              <p>• Be specific about next steps and timelines</p>
+              <p>• Include comprehensive meeting name and description</p>
+              <p>• Set geographic location for proper tracking</p>
+              <p>• Identify lead organization and primary contact</p>
+              <p>• Add all Red Cross staff who attended</p>
+              <p>• Note other organizations present</p>
+              <p>• Record detailed agenda and meeting notes</p>
+              <p>• Set next meeting date if applicable</p>
             </CardContent>
           </Card>
 

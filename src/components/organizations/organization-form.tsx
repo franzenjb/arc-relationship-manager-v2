@@ -7,12 +7,15 @@ import { z } from 'zod'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { MultiSelect } from '@/components/ui/multi-select'
 import { Organization } from '@/lib/types'
 import { OrganizationService } from '@/lib/organizations'
+import { StaffService, MissionArea, LineOfService, PartnerType, StaffMember } from '@/lib/staff'
 import { Loader2, AlertCircle } from 'lucide-react'
 
 const organizationSchema = z.object({
   name: z.string().min(1, 'Organization name is required'),
+  description: z.string().optional(),
   mission_area: z.enum(['disaster_relief', 'health_safety', 'military_families', 'international', 'blood_services', 'other']).optional(),
   organization_type: z.enum(['government', 'nonprofit', 'business', 'faith_based', 'educational', 'healthcare', 'other']).optional(),
   address: z.string().optional(),
@@ -22,10 +25,17 @@ const organizationSchema = z.object({
   website: z.string().url().optional().or(z.literal('')),
   phone: z.string().optional(),
   notes: z.string().optional(),
+  goals: z.string().optional(),
   status: z.enum(['active', 'inactive', 'prospect']).default('active'),
   region_id: z.string().optional(),
   chapter_id: z.string().optional(),
   county_id: z.string().optional(),
+  partner_type: z.string().optional(),
+  relationship_manager_id: z.string().optional(),
+  alternate_relationship_manager_id: z.string().optional(),
+  last_contact_date: z.string().optional(),
+  mission_areas: z.array(z.string()).default([]),
+  lines_of_service: z.array(z.string()).default([]),
 })
 
 type OrganizationFormData = z.infer<typeof organizationSchema>
@@ -43,11 +53,16 @@ export function OrganizationForm({ organization, onSuccess, onCancel }: Organiza
   const [counties, setCounties] = useState<any[]>([])
   const [duplicates, setDuplicates] = useState<any[]>([])
   const [isCheckingDuplicates, setIsCheckingDuplicates] = useState(false)
+  const [staffMembers, setStaffMembers] = useState<StaffMember[]>([])
+  const [missionAreas, setMissionAreas] = useState<MissionArea[]>([])
+  const [linesOfService, setLinesOfService] = useState<LineOfService[]>([])
+  const [partnerTypes, setPartnerTypes] = useState<PartnerType[]>([])
 
   const form = useForm<OrganizationFormData>({
     resolver: zodResolver(organizationSchema) as any,
     defaultValues: {
       name: organization?.name || '',
+      description: organization?.description || '',
       mission_area: organization?.mission_area || undefined,
       organization_type: organization?.organization_type || undefined,
       address: organization?.address || '',
@@ -57,10 +72,17 @@ export function OrganizationForm({ organization, onSuccess, onCancel }: Organiza
       website: organization?.website || '',
       phone: organization?.phone || '',
       notes: organization?.notes || '',
+      goals: organization?.goals || '',
       status: organization?.status || 'active',
       region_id: organization?.region_id || '',
       chapter_id: organization?.chapter_id || '',
       county_id: organization?.county_id || '',
+      partner_type: organization?.partner_type || '',
+      relationship_manager_id: organization?.relationship_manager_id || '',
+      alternate_relationship_manager_id: organization?.alternate_relationship_manager_id || '',
+      last_contact_date: organization?.last_contact_date || '',
+      mission_areas: organization?.mission_areas || [],
+      lines_of_service: organization?.lines_of_service || [],
     },
   })
 
@@ -68,9 +90,27 @@ export function OrganizationForm({ organization, onSuccess, onCancel }: Organiza
   const watchedRegionId = form.watch('region_id')
   const watchedChapterId = form.watch('chapter_id')
 
-  // Load regions on mount
+  // Load initial data on mount
   useEffect(() => {
-    OrganizationService.getRegions().then(setRegions)
+    const loadInitialData = async () => {
+      try {
+        const [regionsData, staffData, missionAreasData, losData, partnerTypesData] = await Promise.all([
+          OrganizationService.getRegions(),
+          StaffService.getActive(),
+          StaffService.getMissionAreas(),
+          StaffService.getLinesOfService(),
+          StaffService.getPartnerTypes()
+        ])
+        setRegions(regionsData)
+        setStaffMembers(staffData)
+        setMissionAreas(missionAreasData)
+        setLinesOfService(losData)
+        setPartnerTypes(partnerTypesData)
+      } catch (error) {
+        console.error('Error loading initial data:', error)
+      }
+    }
+    loadInitialData()
   }, [])
 
 
@@ -181,70 +221,97 @@ export function OrganizationForm({ organization, onSuccess, onCancel }: Organiza
             )}
 
             {/* Basic Information */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="md:col-span-2">
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                  Organization Name *
-                  {isCheckingDuplicates && <Loader2 className="inline h-4 w-4 ml-2 animate-spin" />}
-                </label>
-                <Input
-                  {...form.register('name')}
-                  placeholder="Organization name"
-                />
-                {form.formState.errors.name && (
-                  <p className="text-red-500 text-sm mt-1">{form.formState.errors.name.message}</p>
-                )}
-              </div>
+            <div className="space-y-6">
+              <h3 className="text-lg font-medium text-gray-900">Basic Information</h3>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="md:col-span-2">
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                    Organization Name *
+                    {isCheckingDuplicates && <Loader2 className="inline h-4 w-4 ml-2 animate-spin" />}
+                  </label>
+                  <Input
+                    {...form.register('name')}
+                    placeholder="Organization name"
+                  />
+                  {form.formState.errors.name && (
+                    <p className="text-red-500 text-sm mt-1">{form.formState.errors.name.message}</p>
+                  )}
+                </div>
 
-              <div>
-                <label htmlFor="mission_area" className="block text-sm font-medium text-gray-700 mb-2">
-                  Mission Area
-                </label>
-                <select
-                  {...form.register('mission_area')}
-                  className="flex h-10 w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm"
-                >
-                  <option value="">Select mission area</option>
-                  <option value="disaster_relief">Disaster Relief</option>
-                  <option value="health_safety">Health & Safety</option>
-                  <option value="military_families">Military Families</option>
-                  <option value="international">International</option>
-                  <option value="blood_services">Blood Services</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
+                <div className="md:col-span-2">
+                  <label htmlFor="description" className="block text-sm font-medium text-gray-700 mb-2">
+                    Description of the Organization
+                  </label>
+                  <textarea
+                    {...form.register('description')}
+                    className="flex w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm placeholder:text-gray-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2"
+                    rows={3}
+                    placeholder="Describe what this organization does and their mission"
+                  />
+                </div>
 
-              <div>
-                <label htmlFor="organization_type" className="block text-sm font-medium text-gray-700 mb-2">
-                  Organization Type
-                </label>
-                <select
-                  {...form.register('organization_type')}
-                  className="flex h-10 w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm"
-                >
-                  <option value="">Select type</option>
-                  <option value="government">Government</option>
-                  <option value="nonprofit">Nonprofit</option>
-                  <option value="business">Business</option>
-                  <option value="faith_based">Faith-based</option>
-                  <option value="educational">Educational</option>
-                  <option value="healthcare">Healthcare</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
+                <div>
+                  <label htmlFor="partner_type" className="block text-sm font-medium text-gray-700 mb-2">
+                    Partner Type
+                  </label>
+                  <select
+                    {...form.register('partner_type')}
+                    className="flex h-10 w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm"
+                  >
+                    <option value="">Select partner type</option>
+                    {partnerTypes.map((type) => (
+                      <option key={type.id} value={type.id}>
+                        {type.name}
+                      </option>
+                    ))}
+                  </select>
+                </div>
 
-              <div>
-                <label htmlFor="status" className="block text-sm font-medium text-gray-700 mb-2">
-                  Status
-                </label>
-                <select
-                  {...form.register('status')}
-                  className="flex h-10 w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm"
-                >
-                  <option value="active">Active</option>
-                  <option value="inactive">Inactive</option>
-                  <option value="prospect">Prospect</option>
-                </select>
+                <div>
+                  <label htmlFor="status" className="block text-sm font-medium text-gray-700 mb-2">
+                    Status
+                  </label>
+                  <select
+                    {...form.register('status')}
+                    className="flex h-10 w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm"
+                  >
+                    <option value="active">Active</option>
+                    <option value="inactive">Inactive</option>
+                    <option value="prospect">Prospect</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            {/* Mission Areas and Lines of Service */}
+            <div className="space-y-4">
+              <h3 className="text-lg font-medium text-gray-900">Mission Areas & Services</h3>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Recovery/Response/Preparedness Mission Areas
+                  </label>
+                  <MultiSelect
+                    options={missionAreas.map(ma => ({ id: ma.id, name: ma.name }))}
+                    selected={form.watch('mission_areas')}
+                    onChange={(selected) => form.setValue('mission_areas', selected)}
+                    placeholder="Select mission areas..."
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    LOS Relationship (Lines of Service)
+                  </label>
+                  <MultiSelect
+                    options={linesOfService.map(los => ({ id: los.id, name: los.name }))}
+                    selected={form.watch('lines_of_service')}
+                    onChange={(selected) => form.setValue('lines_of_service', selected)}
+                    placeholder="Select lines of service..."
+                  />
+                </div>
               </div>
             </div>
 
@@ -353,6 +420,69 @@ export function OrganizationForm({ organization, onSuccess, onCancel }: Organiza
               </div>
             </div>
 
+            {/* Red Cross Relationship Management */}
+            <div className="space-y-4">
+              <h3 className="text-lg font-medium text-gray-900">Red Cross Relationship Management</h3>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <label htmlFor="relationship_manager_id" className="block text-sm font-medium text-gray-700 mb-2">
+                    RC Relationship Manager
+                  </label>
+                  <select
+                    {...form.register('relationship_manager_id')}
+                    className="flex h-10 w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm"
+                  >
+                    <option value="">Select relationship manager</option>
+                    {staffMembers.map((staff) => (
+                      <option key={staff.id} value={staff.id}>
+                        {staff.first_name} {staff.last_name} {staff.title && `- ${staff.title}`}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
+                <div>
+                  <label htmlFor="alternate_relationship_manager_id" className="block text-sm font-medium text-gray-700 mb-2">
+                    Alternate RC Relationship Manager
+                  </label>
+                  <select
+                    {...form.register('alternate_relationship_manager_id')}
+                    className="flex h-10 w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm"
+                  >
+                    <option value="">Select alternate manager</option>
+                    {staffMembers.map((staff) => (
+                      <option key={staff.id} value={staff.id}>
+                        {staff.first_name} {staff.last_name} {staff.title && `- ${staff.title}`}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
+                <div>
+                  <label htmlFor="last_contact_date" className="block text-sm font-medium text-gray-700 mb-2">
+                    Last Date of Contact
+                  </label>
+                  <Input
+                    type="date"
+                    {...form.register('last_contact_date')}
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label htmlFor="goals" className="block text-sm font-medium text-gray-700 mb-2">
+                  Goals
+                </label>
+                <textarea
+                  {...form.register('goals')}
+                  className="flex w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm placeholder:text-gray-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2"
+                  rows={3}
+                  placeholder="Partnership goals and objectives"
+                />
+              </div>
+            </div>
+
             {/* Contact Information */}
             <div className="space-y-4">
               <h3 className="text-lg font-medium text-gray-900">Contact Information</h3>
@@ -381,27 +511,6 @@ export function OrganizationForm({ organization, onSuccess, onCancel }: Organiza
                   />
                 </div>
               </div>
-
-              {/* Relationship Manager Info */}
-              {!organization && (
-                <div className="bg-blue-50 border border-blue-200 rounded-md p-4">
-                  <div className="flex">
-                    <div className="flex-shrink-0">
-                      <svg className="h-5 w-5 text-blue-400" viewBox="0 0 20 20" fill="currentColor">
-                        <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    <div className="ml-3">
-                      <h3 className="text-sm font-medium text-blue-800">
-                        Red Cross Relationship Managers
-                      </h3>
-                      <div className="mt-2 text-sm text-blue-700">
-                        <p>After creating this organization, you can assign Red Cross staff as relationship managers for this partnership.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              )}
 
               <div>
                 <label htmlFor="notes" className="block text-sm font-medium text-gray-700 mb-2">

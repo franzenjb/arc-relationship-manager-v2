@@ -27,6 +27,7 @@ export interface County {
 export interface Organization {
   id: string
   name: string
+  description?: string
   mission_area?: 'disaster_relief' | 'health_safety' | 'military_families' | 'international' | 'blood_services' | 'other'
   organization_type?: 'government' | 'nonprofit' | 'business' | 'faith_based' | 'educational' | 'healthcare' | 'other'
   
@@ -45,8 +46,18 @@ export interface Organization {
   website?: string
   phone?: string
   
-  // Red Cross relationship managers (array of person IDs)
-  relationship_managers?: string[]
+  // Red Cross relationship fields
+  relationship_manager_id?: string
+  alternate_relationship_manager_id?: string
+  partner_type?: string
+  last_contact_date?: string
+  goals?: string
+  
+  // Mission areas (many-to-many)
+  mission_areas?: string[]
+  
+  // Lines of Service (many-to-many)
+  lines_of_service?: string[]
   
   // Metadata
   tags?: string[]
@@ -65,6 +76,8 @@ export interface Organization {
   county?: County
   people?: Person[]
   meetings?: Meeting[]
+  relationship_manager?: StaffMember
+  alternate_relationship_manager?: StaffMember
   created_by_user?: UserProfile
   updated_by_user?: UserProfile
 }
@@ -93,11 +106,22 @@ export interface Person {
 export interface Meeting {
   id: string
   org_id: string
+  meeting_name?: string
+  description?: string
   date: string
+  next_meeting_date?: string
   location?: string
-  summary?: string
-  follow_up_date?: string
+  notes?: string
+  agenda?: string
+  lead_organization_id?: string
+  primary_external_poc_id?: string
+  county_id?: string
+  
+  // Attendees
   attendees?: string[]
+  rc_attendees?: string[]  // Red Cross staff member IDs
+  other_organizations?: string[]  // Other organization IDs
+  
   created_at: string
   updated_at: string
   created_by?: string
@@ -105,6 +129,9 @@ export interface Meeting {
   
   // Relations
   organization?: Organization
+  lead_organization?: Organization
+  primary_external_poc?: Person
+  county?: County
   attachments?: Attachment[]
   created_by_user?: UserProfile
   updated_by_user?: UserProfile
@@ -121,6 +148,24 @@ export interface Attachment {
   
   // Relations
   meeting?: Meeting
+}
+
+export interface StaffMember {
+  id: string
+  employee_id?: string
+  first_name: string
+  last_name: string
+  email?: string
+  phone?: string
+  title?: string
+  department?: string
+  region_id?: string
+  chapter_id?: string
+  role?: 'employee' | 'volunteer'
+  status: 'active' | 'inactive'
+  hire_date?: string
+  created_at: string
+  updated_at: string
 }
 
 export interface UserProfile {
