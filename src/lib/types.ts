@@ -1,27 +1,21 @@
-export interface Region {
-  id: string
-  name: string
-  code: string
-  created_at: string
-}
-
-export interface Chapter {
-  id: string
-  region_id: string
-  name: string
-  code: string
-  created_at: string
-  region?: Region
-}
-
+// Counties are the main geographic unit
+// They contain chapter, region, and division information
 export interface County {
   id: string
-  chapter_id: string
   name: string
   state_code: string
-  fips_code: string
+  fips_code?: string
+  
+  // Geographic hierarchy fields
+  chapter?: string
+  chapter_code?: string
+  region?: string
+  region_code?: string
+  division?: string
+  division_code?: string
+  
   created_at: string
-  chapter?: Chapter
+  updated_at?: string
 }
 
 export interface Organization {
@@ -71,8 +65,6 @@ export interface Organization {
   updated_by?: string
   
   // Relations
-  region?: Region
-  chapter?: Chapter
   county?: County
   people?: Person[]
   meetings?: Meeting[]
