@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f3f4f6;
+  --foreground: #111827;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Print styles for landscape orientation */
+@media print {
+  @page {
+    size: landscape;
+    margin: 0.5in;
+  }
+  
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  
+  /* Hide navigation and non-essential elements when printing */
+  .no-print,
+  nav,
+  .sidebar,
+  button:not(.print-button) {
+    display: none !important;
+  }
+  
+  /* Ensure content fits properly in landscape */
+  .print-landscape {
+    width: 100% !important;
+    max-width: none !important;
+  }
+}
