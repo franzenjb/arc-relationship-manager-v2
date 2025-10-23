@@ -1,0 +1,687 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - banner [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e4]:
+        - link "ARC Relationship Manager American Red Cross" [ref=e6] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e7]: ARC
+          - generic [ref=e8]:
+            - generic [ref=e9]: Relationship Manager
+            - generic [ref=e10]: American Red Cross
+        - generic [ref=e11]:
+          - link "Dashboard" [ref=e12] [cursor=pointer]:
+            - /url: /
+          - link "Organizations" [ref=e13] [cursor=pointer]:
+            - /url: /organizations
+          - link "People" [ref=e14] [cursor=pointer]:
+            - /url: /people
+          - link "Meetings" [ref=e15] [cursor=pointer]:
+            - /url: /meetings
+          - link "Map" [ref=e16] [cursor=pointer]:
+            - /url: /map
+          - link "Activity" [ref=e17] [cursor=pointer]:
+            - /url: /activity
+          - link "Tech Stack" [ref=e18] [cursor=pointer]:
+            - /url: /tech-stack
+  - main [ref=e19]:
+    - button [ref=e20]:
+      - img [ref=e21]
+      - img [ref=e23]
+    - generic [ref=e25]:
+      - generic [ref=e27]:
+        - heading "Filters" [level=2] [ref=e28]
+        - button [ref=e29]:
+          - img [ref=e30]
+      - generic [ref=e33]:
+        - generic [ref=e34]:
+          - generic [ref=e35]:
+            - img [ref=e36]
+            - text: Search
+          - textbox "Search..." [ref=e39]
+        - generic [ref=e40]:
+          - generic [ref=e41]: Cities
+          - generic [ref=e42]:
+            - generic [ref=e43]:
+              - checkbox "Arlington" [ref=e44]
+              - text: Arlington
+            - generic [ref=e45]:
+              - checkbox "Baltimore" [ref=e46]
+              - text: Baltimore
+            - generic [ref=e47]:
+              - checkbox "Bay Lake" [ref=e48]
+              - text: Bay Lake
+            - generic [ref=e49]:
+              - checkbox "Big Pine Key" [ref=e50]
+              - text: Big Pine Key
+            - generic [ref=e51]:
+              - checkbox "Coral Gables" [ref=e52]
+              - text: Coral Gables
+            - generic [ref=e53]:
+              - checkbox "Gainesville" [ref=e54]
+              - text: Gainesville
+            - generic [ref=e55]:
+              - checkbox "Hollywood" [ref=e56]
+              - text: Hollywood
+            - generic [ref=e57]:
+              - checkbox "Juno Beach" [ref=e58]
+              - text: Juno Beach
+            - generic [ref=e59]:
+              - checkbox "Lakeland" [ref=e60]
+              - text: Lakeland
+            - generic [ref=e61]:
+              - checkbox "Miami" [ref=e62]
+              - text: Miami
+            - generic [ref=e63]:
+              - checkbox "Orlando" [ref=e64]
+              - text: Orlando
+            - generic [ref=e65]:
+              - checkbox "Philadelphia" [ref=e66]
+              - text: Philadelphia
+            - generic [ref=e67]:
+              - checkbox "St. Augustine" [ref=e68]
+              - text: St. Augustine
+            - generic [ref=e69]:
+              - checkbox "Tallahassee" [ref=e70]
+              - text: Tallahassee
+            - generic [ref=e71]:
+              - checkbox "Tampa" [ref=e72]
+              - text: Tampa
+            - generic [ref=e73]:
+              - checkbox "Washington" [ref=e74]
+              - text: Washington
+        - generic [ref=e75]:
+          - generic [ref=e76]: States
+          - generic [ref=e77]:
+            - generic [ref=e78]:
+              - checkbox "DC" [ref=e79]
+              - text: DC
+            - generic [ref=e80]:
+              - checkbox "FL" [ref=e81]
+              - text: FL
+            - generic [ref=e82]:
+              - checkbox "MD" [ref=e83]
+              - text: MD
+            - generic [ref=e84]:
+              - checkbox "PA" [ref=e85]
+              - text: PA
+            - generic [ref=e86]:
+              - checkbox "VA" [ref=e87]
+              - text: VA
+        - generic [ref=e88]:
+          - generic [ref=e89]: Mission Areas
+          - generic [ref=e90]:
+            - generic [ref=e91]:
+              - checkbox "Disaster Relief" [ref=e92]
+              - text: Disaster Relief
+            - generic [ref=e93]:
+              - checkbox "Health Safety" [ref=e94]
+              - text: Health Safety
+        - generic [ref=e95]:
+          - generic [ref=e96]: Organization Types
+          - generic [ref=e97]:
+            - generic [ref=e98]:
+              - checkbox "Business" [ref=e99]
+              - text: Business
+            - generic [ref=e100]:
+              - checkbox "Educational" [ref=e101]
+              - text: Educational
+            - generic [ref=e102]:
+              - checkbox "Faith Based" [ref=e103]
+              - text: Faith Based
+            - generic [ref=e104]:
+              - checkbox "Government" [ref=e105]
+              - text: Government
+            - generic [ref=e106]:
+              - checkbox "Healthcare" [ref=e107]
+              - text: Healthcare
+            - generic [ref=e108]:
+              - checkbox "Nonprofit" [ref=e109]
+              - text: Nonprofit
+            - generic [ref=e110]:
+              - checkbox "Other" [ref=e111]
+              - text: Other
+        - generic [ref=e112]:
+          - generic [ref=e113]: Status
+          - generic [ref=e115]:
+            - checkbox "Active" [ref=e116]
+            - text: Active
+        - generic [ref=e117]:
+          - generic [ref=e118]: Activity
+          - generic [ref=e119]:
+            - generic [ref=e120]:
+              - checkbox "Recent activity (30 days)" [ref=e121]
+              - text: Recent activity (30 days)
+            - generic [ref=e122]:
+              - checkbox "Upcoming follow-ups" [ref=e123]
+              - text: Upcoming follow-ups
+    - generic [ref=e124]:
+      - generic [ref=e125]:
+        - generic [ref=e126]:
+          - heading "Organizations" [level=1] [ref=e127]
+          - paragraph [ref=e128]: Manage partner organizations and stakeholders
+        - link "Add Organization" [active] [ref=e130] [cursor=pointer]:
+          - /url: /organizations/new
+          - img [ref=e131]
+          - text: Add Organization
+      - generic [ref=e132]:
+        - generic [ref=e133]:
+          - img [ref=e134]
+          - textbox "Search organizations..." [ref=e137]
+        - generic [ref=e138]:
+          - generic [ref=e139]:
+            - button [ref=e140]:
+              - img [ref=e141]
+            - button [ref=e143]:
+              - img [ref=e144]
+          - paragraph [ref=e145]: 23 of 23 organizations
+      - generic [ref=e146]:
+        - generic [ref=e147]:
+          - generic [ref=e148]:
+            - heading "American Red Cross active" [level=3] [ref=e149]:
+              - generic [ref=e150]: American Red Cross
+              - generic [ref=e151]: active
+            - paragraph [ref=e152]: disaster relief
+          - generic [ref=e153]:
+            - generic [ref=e155]:
+              - img [ref=e156]
+              - generic [ref=e160]: Tampa, FL
+            - generic [ref=e161]:
+              - generic [ref=e162]:
+                - generic [ref=e163]: 0 people
+                - generic [ref=e164]: 0 meetings
+              - link "View" [ref=e166] [cursor=pointer]:
+                - /url: /organizations/51d76ada-3aee-4135-a06e-bfafa896a1b0
+        - generic [ref=e167]:
+          - generic [ref=e168]:
+            - heading "Baptist Health South Florida active" [level=3] [ref=e169]:
+              - generic [ref=e170]: Baptist Health South Florida
+              - generic [ref=e171]: active
+            - paragraph [ref=e172]: health safety
+          - generic [ref=e173]:
+            - generic [ref=e174]:
+              - generic [ref=e175]:
+                - img [ref=e176]
+                - generic [ref=e179]:
+                  - generic [ref=e180]: 6855 Red Road
+                  - generic [ref=e181]: Coral Gables, FL, 33143
+              - generic [ref=e182]:
+                - img [ref=e183]
+                - generic [ref=e186]: https://www.baptisthealth.net
+              - generic [ref=e187]:
+                - img [ref=e188]
+                - generic [ref=e190]: (786) 596-1960
+            - generic [ref=e191]:
+              - generic [ref=e192]:
+                - generic [ref=e193]: 0 people
+                - generic [ref=e194]: 0 meetings
+              - link "View" [ref=e196] [cursor=pointer]:
+                - /url: /organizations/550e8400-e29b-41d4-a716-446655440306
+        - generic [ref=e197]:
+          - generic [ref=e198]:
+            - heading "FEMA Region III active" [level=3] [ref=e199]:
+              - generic [ref=e200]: FEMA Region III
+              - generic [ref=e201]: active
+            - paragraph [ref=e202]: disaster relief
+          - generic [ref=e203]:
+            - generic [ref=e205]:
+              - img [ref=e206]
+              - generic [ref=e210]: Philadelphia, PA
+            - generic [ref=e211]:
+              - generic [ref=e212]:
+                - generic [ref=e213]: 0 people
+                - generic [ref=e214]: 0 meetings
+              - link "View" [ref=e216] [cursor=pointer]:
+                - /url: /organizations/67100240-3703-43ba-b1a7-d0b135da146f
+        - generic [ref=e217]:
+          - generic [ref=e218]:
+            - heading "Florida Division of Emergency Management active" [level=3] [ref=e219]:
+              - generic [ref=e220]: Florida Division of Emergency Management
+              - generic [ref=e221]: active
+            - paragraph [ref=e222]: disaster relief
+          - generic [ref=e223]:
+            - generic [ref=e225]:
+              - img [ref=e226]
+              - generic [ref=e230]: Tallahassee, FL
+            - generic [ref=e231]:
+              - generic [ref=e232]:
+                - generic [ref=e233]: 0 people
+                - generic [ref=e234]: 0 meetings
+              - link "View" [ref=e236] [cursor=pointer]:
+                - /url: /organizations/70536a63-08e2-4a60-a65b-1391a7366a0f
+        - generic [ref=e237]:
+          - generic [ref=e238]:
+            - heading "Florida Division of Emergency Management active" [level=3] [ref=e239]:
+              - generic [ref=e240]: Florida Division of Emergency Management
+              - generic [ref=e241]: active
+            - paragraph [ref=e242]: disaster relief
+          - generic [ref=e243]:
+            - generic [ref=e244]:
+              - generic [ref=e245]:
+                - img [ref=e246]
+                - generic [ref=e249]:
+                  - generic [ref=e250]: 2555 Shumard Oak Boulevard
+                  - generic [ref=e251]: Tallahassee, FL, 32399
+              - generic [ref=e252]:
+                - img [ref=e253]
+                - generic [ref=e256]: https://www.floridadisaster.org
+              - generic [ref=e257]:
+                - img [ref=e258]
+                - generic [ref=e260]: (850) 413-9969
+            - generic [ref=e261]:
+              - generic [ref=e262]:
+                - generic [ref=e263]: 0 people
+                - generic [ref=e264]: 0 meetings
+              - link "View" [ref=e266] [cursor=pointer]:
+                - /url: /organizations/550e8400-e29b-41d4-a716-446655440300
+        - generic [ref=e267]:
+          - generic [ref=e268]:
+            - heading "Florida International University - Emergency Management active" [level=3] [ref=e269]:
+              - generic [ref=e270]: Florida International University - Emergency Management
+              - generic [ref=e271]: active
+            - paragraph [ref=e272]: disaster relief
+          - generic [ref=e273]:
+            - generic [ref=e274]:
+              - generic [ref=e275]:
+                - img [ref=e276]
+                - generic [ref=e279]:
+                  - generic [ref=e280]: 11200 SW 8th Street
+                  - generic [ref=e281]: Miami, FL, 33199
+              - generic [ref=e282]:
+                - img [ref=e283]
+                - generic [ref=e286]: https://www.fiu.edu
+              - generic [ref=e287]:
+                - img [ref=e288]
+                - generic [ref=e290]: (305) 348-2000
+            - generic [ref=e291]:
+              - generic [ref=e292]:
+                - generic [ref=e293]: 0 people
+                - generic [ref=e294]: 0 meetings
+              - link "View" [ref=e296] [cursor=pointer]:
+                - /url: /organizations/550e8400-e29b-41d4-a716-446655440312
+        - generic [ref=e297]:
+          - generic [ref=e298]:
+            - heading "Florida Keys Electric Cooperative active" [level=3] [ref=e299]:
+              - generic [ref=e300]: Florida Keys Electric Cooperative
+              - generic [ref=e301]: active
+            - paragraph [ref=e302]: disaster relief
+          - generic [ref=e303]:
+            - generic [ref=e304]:
+              - generic [ref=e305]:
+                - img [ref=e306]
+                - generic [ref=e309]:
+                  - generic [ref=e310]: 31050 Overseas Highway
+                  - generic [ref=e311]: Big Pine Key, FL, 33043
+              - generic [ref=e312]:
+                - img [ref=e313]
+                - generic [ref=e316]: https://www.fkec.com
+              - generic [ref=e317]:
+                - img [ref=e318]
+                - generic [ref=e320]: (305) 852-2431
+            - generic [ref=e321]:
+              - generic [ref=e322]:
+                - generic [ref=e323]: 0 people
+                - generic [ref=e324]: 0 meetings
+              - link "View" [ref=e326] [cursor=pointer]:
+                - /url: /organizations/550e8400-e29b-41d4-a716-446655440308
+        - generic [ref=e327]:
+          - generic [ref=e328]:
+            - heading "Florida National Guard active" [level=3] [ref=e329]:
+              - generic [ref=e330]: Florida National Guard
+              - generic [ref=e331]: active
+            - paragraph [ref=e332]: disaster relief
+          - generic [ref=e333]:
+            - generic [ref=e334]:
+              - generic [ref=e335]:
+                - img [ref=e336]
+                - generic [ref=e339]:
+                  - generic [ref=e340]: 82 Marine Street
+                  - generic [ref=e341]: St. Augustine, FL, 32084
+              - generic [ref=e342]:
+                - img [ref=e343]
+                - generic [ref=e346]: https://www.fl.ng.mil
+              - generic [ref=e347]:
+                - img [ref=e348]
+                - generic [ref=e350]: (904) 823-0100
+            - generic [ref=e351]:
+              - generic [ref=e352]:
+                - generic [ref=e353]: 0 people
+                - generic [ref=e354]: 0 meetings
+              - link "View" [ref=e356] [cursor=pointer]:
+                - /url: /organizations/550e8400-e29b-41d4-a716-446655440303
+        - generic [ref=e357]:
+          - generic [ref=e358]:
+            - heading "Florida Power & Light Company active" [level=3] [ref=e359]:
+              - generic [ref=e360]: Florida Power & Light Company
+              - generic [ref=e361]: active
+            - paragraph [ref=e362]: disaster relief
+          - generic [ref=e363]:
+            - generic [ref=e364]:
+              - generic [ref=e365]:
+                - img [ref=e366]
+                - generic [ref=e369]:
+                  - generic [ref=e370]: 700 Universe Boulevard
+                  - generic [ref=e371]: Juno Beach, FL, 33408
+              - generic [ref=e372]:
+                - img [ref=e373]
+                - generic [ref=e376]: https://www.fpl.com
+              - generic [ref=e377]:
+                - img [ref=e378]
+                - generic [ref=e380]: (800) 468-8243
+            - generic [ref=e381]:
+              - generic [ref=e382]:
+                - generic [ref=e383]: 0 people
+                - generic [ref=e384]: 0 meetings
+              - link "View" [ref=e386] [cursor=pointer]:
+                - /url: /organizations/550e8400-e29b-41d4-a716-446655440307
+        - generic [ref=e387]:
+          - generic [ref=e388]:
+            - heading "Johns Hopkins Hospital active" [level=3] [ref=e389]:
+              - generic [ref=e390]: Johns Hopkins Hospital
+              - generic [ref=e391]: active
+            - paragraph [ref=e392]: health safety
+          - generic [ref=e393]:
+            - generic [ref=e395]:
+              - img [ref=e396]
+              - generic [ref=e400]: Baltimore, MD
+            - generic [ref=e401]:
+              - generic [ref=e402]:
+                - generic [ref=e403]: 0 people
+                - generic [ref=e404]: 0 meetings
+              - link "View" [ref=e406] [cursor=pointer]:
+                - /url: /organizations/7a4ec24d-8cba-4712-823f-5fbacbb82b7d
+        - generic [ref=e407]:
+          - generic [ref=e408]:
+            - heading "Miami-Dade Emergency Management active" [level=3] [ref=e409]:
+              - generic [ref=e410]: Miami-Dade Emergency Management
+              - generic [ref=e411]: active
+            - paragraph [ref=e412]: disaster relief
+          - generic [ref=e413]:
+            - generic [ref=e414]:
+              - generic [ref=e415]:
+                - img [ref=e416]
+                - generic [ref=e419]:
+                  - generic [ref=e420]: 9300 NW 41st Street
+                  - generic [ref=e421]: Miami, FL, 33178
+              - generic [ref=e422]:
+                - img [ref=e423]
+                - generic [ref=e426]: https://www.miamidade.gov/emergency
+              - generic [ref=e427]:
+                - img [ref=e428]
+                - generic [ref=e430]: (305) 468-5400
+            - generic [ref=e431]:
+              - generic [ref=e432]:
+                - generic [ref=e433]: 0 people
+                - generic [ref=e434]: 0 meetings
+              - link "View" [ref=e436] [cursor=pointer]:
+                - /url: /organizations/550e8400-e29b-41d4-a716-446655440301
+        - generic [ref=e437]:
+          - generic [ref=e438]:
+            - heading "Orange County Emergency Management active" [level=3] [ref=e439]:
+              - generic [ref=e440]: Orange County Emergency Management
+              - generic [ref=e441]: active
+            - paragraph [ref=e442]: disaster relief
+          - generic [ref=e443]:
+            - generic [ref=e444]:
+              - generic [ref=e445]:
+                - img [ref=e446]
+                - generic [ref=e449]:
+                  - generic [ref=e450]: 4200 South John Young Parkway
+                  - generic [ref=e451]: Orlando, FL, 32839
+              - generic [ref=e452]:
+                - img [ref=e453]
+                - generic [ref=e456]: https://www.ocfl.net/emergency
+              - generic [ref=e457]:
+                - img [ref=e458]
+                - generic [ref=e460]: (407) 836-9140
+            - generic [ref=e461]:
+              - generic [ref=e462]:
+                - generic [ref=e463]: 0 people
+                - generic [ref=e464]: 0 meetings
+              - link "View" [ref=e466] [cursor=pointer]:
+                - /url: /organizations/550e8400-e29b-41d4-a716-446655440302
+        - generic [ref=e467]:
+          - generic [ref=e468]:
+            - heading "Orlando Health active" [level=3] [ref=e469]:
+              - generic [ref=e470]: Orlando Health
+              - generic [ref=e471]: active
+            - paragraph [ref=e472]: health safety
+          - generic [ref=e473]:
+            - generic [ref=e474]:
+              - generic [ref=e475]:
+                - img [ref=e476]
+                - generic [ref=e479]:
+                  - generic [ref=e480]: 1414 Kuhl Avenue
+                  - generic [ref=e481]: Orlando, FL, 32806
+              - generic [ref=e482]:
+                - img [ref=e483]
+                - generic [ref=e486]: https://www.orlandohealth.com
+              - generic [ref=e487]:
+                - img [ref=e488]
+                - generic [ref=e490]: (321) 841-5111
+            - generic [ref=e491]:
+              - generic [ref=e492]:
+                - generic [ref=e493]: 0 people
+                - generic [ref=e494]: 0 meetings
+              - link "View" [ref=e496] [cursor=pointer]:
+                - /url: /organizations/550e8400-e29b-41d4-a716-446655440305
+        - generic [ref=e497]:
+          - generic [ref=e498]:
+            - heading "Publix Super Markets active" [level=3] [ref=e499]:
+              - generic [ref=e500]: Publix Super Markets
+              - generic [ref=e501]: active
+            - paragraph [ref=e502]: disaster relief
+          - generic [ref=e503]:
+            - generic [ref=e504]:
+              - generic [ref=e505]:
+                - img [ref=e506]
+                - generic [ref=e509]:
+                  - generic [ref=e510]: 3300 Publix Corporate Parkway
+                  - generic [ref=e511]: Lakeland, FL, 33811
+              - generic [ref=e512]:
+                - img [ref=e513]
+                - generic [ref=e516]: https://www.publix.com
+              - generic [ref=e517]:
+                - img [ref=e518]
+                - generic [ref=e520]: (863) 688-1188
+            - generic [ref=e521]:
+              - generic [ref=e522]:
+                - generic [ref=e523]: 0 people
+                - generic [ref=e524]: 0 meetings
+              - link "View" [ref=e526] [cursor=pointer]:
+                - /url: /organizations/550e8400-e29b-41d4-a716-446655440309
+        - generic [ref=e527]:
+          - generic [ref=e528]:
+            - heading "Salvation Army active" [level=3] [ref=e529]:
+              - generic [ref=e530]: Salvation Army
+              - generic [ref=e531]: active
+            - paragraph [ref=e532]: disaster relief
+          - generic [ref=e533]:
+            - generic [ref=e535]:
+              - img [ref=e536]
+              - generic [ref=e540]: Orlando, FL
+            - generic [ref=e541]:
+              - generic [ref=e542]:
+                - generic [ref=e543]: 0 people
+                - generic [ref=e544]: 0 meetings
+              - link "View" [ref=e546] [cursor=pointer]:
+                - /url: /organizations/3b443d17-ec9d-4e96-b9db-5e74273f4929
+        - generic [ref=e547]:
+          - generic [ref=e548]:
+            - heading "Seminole Tribe of Florida active" [level=3] [ref=e549]:
+              - generic [ref=e550]: Seminole Tribe of Florida
+              - generic [ref=e551]: active
+            - paragraph [ref=e552]: disaster relief
+          - generic [ref=e553]:
+            - generic [ref=e554]:
+              - generic [ref=e555]:
+                - img [ref=e556]
+                - generic [ref=e559]:
+                  - generic [ref=e560]: 6300 Stirling Road
+                  - generic [ref=e561]: Hollywood, FL, 33024
+              - generic [ref=e562]:
+                - img [ref=e563]
+                - generic [ref=e566]: https://www.semtribe.com
+              - generic [ref=e567]:
+                - img [ref=e568]
+                - generic [ref=e570]: (954) 967-3416
+            - generic [ref=e571]:
+              - generic [ref=e572]:
+                - generic [ref=e573]: 0 people
+                - generic [ref=e574]: 0 meetings
+              - link "View" [ref=e576] [cursor=pointer]:
+                - /url: /organizations/550e8400-e29b-41d4-a716-446655440313
+        - generic [ref=e577]:
+          - generic [ref=e578]:
+            - heading "Tampa General Hospital active" [level=3] [ref=e579]:
+              - generic [ref=e580]: Tampa General Hospital
+              - generic [ref=e581]: active
+            - paragraph [ref=e582]: health safety
+          - generic [ref=e583]:
+            - generic [ref=e585]:
+              - img [ref=e586]
+              - generic [ref=e590]: Tampa, FL
+            - generic [ref=e591]:
+              - generic [ref=e592]:
+                - generic [ref=e593]: 0 people
+                - generic [ref=e594]: 0 meetings
+              - link "View" [ref=e596] [cursor=pointer]:
+                - /url: /organizations/7c0532e9-6b5b-4532-8ddb-ed022b6a6fe5
+        - generic [ref=e597]:
+          - generic [ref=e598]:
+            - heading "Tampa General Hospital active" [level=3] [ref=e599]:
+              - generic [ref=e600]: Tampa General Hospital
+              - generic [ref=e601]: active
+            - paragraph [ref=e602]: health safety
+          - generic [ref=e603]:
+            - generic [ref=e604]:
+              - generic [ref=e605]:
+                - img [ref=e606]
+                - generic [ref=e609]:
+                  - generic [ref=e610]: 1 Tampa General Circle
+                  - generic [ref=e611]: Tampa, FL, 33606
+              - generic [ref=e612]:
+                - img [ref=e613]
+                - generic [ref=e616]: https://www.tgh.org
+              - generic [ref=e617]:
+                - img [ref=e618]
+                - generic [ref=e620]: (813) 844-7000
+            - generic [ref=e621]:
+              - generic [ref=e622]:
+                - generic [ref=e623]: 0 people
+                - generic [ref=e624]: 0 meetings
+              - link "View" [ref=e626] [cursor=pointer]:
+                - /url: /organizations/550e8400-e29b-41d4-a716-446655440304
+        - generic [ref=e627]:
+          - generic [ref=e628]:
+            - heading "United Way of Central Florida active" [level=3] [ref=e629]:
+              - generic [ref=e630]: United Way of Central Florida
+              - generic [ref=e631]: active
+            - paragraph [ref=e632]: disaster relief
+          - generic [ref=e633]:
+            - generic [ref=e634]:
+              - generic [ref=e635]:
+                - img [ref=e636]
+                - generic [ref=e639]:
+                  - generic [ref=e640]: 1940 Traylor Boulevard
+                  - generic [ref=e641]: Orlando, FL, 32804
+              - generic [ref=e642]:
+                - img [ref=e643]
+                - generic [ref=e646]: https://www.uwcf.org
+              - generic [ref=e647]:
+                - img [ref=e648]
+                - generic [ref=e650]: (407) 425-2734
+            - generic [ref=e651]:
+              - generic [ref=e652]:
+                - generic [ref=e653]: 0 people
+                - generic [ref=e654]: 0 meetings
+              - link "View" [ref=e656] [cursor=pointer]:
+                - /url: /organizations/550e8400-e29b-41d4-a716-446655440314
+        - generic [ref=e657]:
+          - generic [ref=e658]:
+            - heading "United Way of the National Capital Area active" [level=3] [ref=e659]:
+              - generic [ref=e660]: United Way of the National Capital Area
+              - generic [ref=e661]: active
+            - paragraph [ref=e662]: health safety
+          - generic [ref=e663]:
+            - generic [ref=e665]:
+              - img [ref=e666]
+              - generic [ref=e670]: Washington, DC
+            - generic [ref=e671]:
+              - generic [ref=e672]:
+                - generic [ref=e673]: 0 people
+                - generic [ref=e674]: 0 meetings
+              - link "View" [ref=e676] [cursor=pointer]:
+                - /url: /organizations/4cbdc4fd-5d4b-434a-9ed3-fe9c9955a136
+        - generic [ref=e677]:
+          - generic [ref=e678]:
+            - heading "United Way of the National Capital Area active" [level=3] [ref=e679]:
+              - generic [ref=e680]: United Way of the National Capital Area
+              - generic [ref=e681]: active
+            - paragraph [ref=e682]: disaster relief
+          - generic [ref=e683]:
+            - generic [ref=e685]:
+              - img [ref=e686]
+              - generic [ref=e690]: Arlington, VA
+            - generic [ref=e691]:
+              - generic [ref=e692]:
+                - generic [ref=e693]: 0 people
+                - generic [ref=e694]: 0 meetings
+              - link "View" [ref=e696] [cursor=pointer]:
+                - /url: /organizations/f22a1d2f-bec2-420a-9a58-c7af6bc0af32
+        - generic [ref=e697]:
+          - generic [ref=e698]:
+            - heading "University of Florida - Disaster Research Center active" [level=3] [ref=e699]:
+              - generic [ref=e700]: University of Florida - Disaster Research Center
+              - generic [ref=e701]: active
+            - paragraph [ref=e702]: disaster relief
+          - generic [ref=e703]:
+            - generic [ref=e704]:
+              - generic [ref=e705]:
+                - img [ref=e706]
+                - generic [ref=e709]:
+                  - generic [ref=e710]: 1523 Union Road
+                  - generic [ref=e711]: Gainesville, FL, 32611
+              - generic [ref=e712]:
+                - img [ref=e713]
+                - generic [ref=e716]: https://www.ufl.edu
+              - generic [ref=e717]:
+                - img [ref=e718]
+                - generic [ref=e720]: (352) 392-0311
+            - generic [ref=e721]:
+              - generic [ref=e722]:
+                - generic [ref=e723]: 0 people
+                - generic [ref=e724]: 0 meetings
+              - link "View" [ref=e726] [cursor=pointer]:
+                - /url: /organizations/550e8400-e29b-41d4-a716-446655440311
+        - generic [ref=e727]:
+          - generic [ref=e728]:
+            - heading "Walt Disney World Resort active" [level=3] [ref=e729]:
+              - generic [ref=e730]: Walt Disney World Resort
+              - generic [ref=e731]: active
+            - paragraph [ref=e732]: disaster relief
+          - generic [ref=e733]:
+            - generic [ref=e734]:
+              - generic [ref=e735]:
+                - img [ref=e736]
+                - generic [ref=e739]:
+                  - generic [ref=e740]: 1375 Buena Vista Drive
+                  - generic [ref=e741]: Bay Lake, FL, 32830
+              - generic [ref=e742]:
+                - img [ref=e743]
+                - generic [ref=e746]: https://disneyworld.disney.go.com
+              - generic [ref=e747]:
+                - img [ref=e748]
+                - generic [ref=e750]: (407) 939-5277
+            - generic [ref=e751]:
+              - generic [ref=e752]:
+                - generic [ref=e753]: 0 people
+                - generic [ref=e754]: 0 meetings
+              - link "View" [ref=e756] [cursor=pointer]:
+                - /url: /organizations/550e8400-e29b-41d4-a716-446655440310
+  - button "Open Next.js Dev Tools" [ref=e762] [cursor=pointer]:
+    - img [ref=e763]
+  - alert [ref=e766]
+```

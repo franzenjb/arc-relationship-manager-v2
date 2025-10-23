@@ -1,0 +1,1060 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - banner [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e4]:
+        - link "ARC Relationship Manager American Red Cross" [ref=e6] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e7]: ARC
+          - generic [ref=e8]:
+            - generic [ref=e9]: Relationship Manager
+            - generic [ref=e10]: American Red Cross
+        - generic [ref=e11]:
+          - link "Dashboard" [ref=e12] [cursor=pointer]:
+            - /url: /
+          - link "Organizations" [ref=e13] [cursor=pointer]:
+            - /url: /organizations
+          - link "People" [ref=e14] [cursor=pointer]:
+            - /url: /people
+          - link "Meetings" [ref=e15] [cursor=pointer]:
+            - /url: /meetings
+          - link "Map" [ref=e16] [cursor=pointer]:
+            - /url: /map
+          - link "Activity" [ref=e17] [cursor=pointer]:
+            - /url: /activity
+          - link "Tech Stack" [ref=e18] [cursor=pointer]:
+            - /url: /tech-stack
+  - main [ref=e19]:
+    - button [ref=e20]:
+      - img [ref=e21]
+      - img [ref=e23]
+    - generic [ref=e25]:
+      - generic [ref=e27]:
+        - heading "Filters" [level=2] [ref=e28]
+        - button [ref=e29]:
+          - img [ref=e30]
+      - generic [ref=e33]:
+        - generic [ref=e34]:
+          - generic [ref=e35]:
+            - img [ref=e36]
+            - text: Search
+          - textbox "Search..." [ref=e39]
+        - generic [ref=e40]:
+          - generic [ref=e41]: Cities
+          - generic [ref=e42]:
+            - generic [ref=e43]:
+              - checkbox "Arlington" [ref=e44]
+              - text: Arlington
+            - generic [ref=e45]:
+              - checkbox "Baltimore" [ref=e46]
+              - text: Baltimore
+            - generic [ref=e47]:
+              - checkbox "Bay Lake" [ref=e48]
+              - text: Bay Lake
+            - generic [ref=e49]:
+              - checkbox "Big Pine Key" [ref=e50]
+              - text: Big Pine Key
+            - generic [ref=e51]:
+              - checkbox "Coral Gables" [ref=e52]
+              - text: Coral Gables
+            - generic [ref=e53]:
+              - checkbox "Gainesville" [ref=e54]
+              - text: Gainesville
+            - generic [ref=e55]:
+              - checkbox "Hollywood" [ref=e56]
+              - text: Hollywood
+            - generic [ref=e57]:
+              - checkbox "Juno Beach" [ref=e58]
+              - text: Juno Beach
+            - generic [ref=e59]:
+              - checkbox "Lakeland" [ref=e60]
+              - text: Lakeland
+            - generic [ref=e61]:
+              - checkbox "Miami" [ref=e62]
+              - text: Miami
+            - generic [ref=e63]:
+              - checkbox "Orlando" [ref=e64]
+              - text: Orlando
+            - generic [ref=e65]:
+              - checkbox "Philadelphia" [ref=e66]
+              - text: Philadelphia
+            - generic [ref=e67]:
+              - checkbox "St. Augustine" [ref=e68]
+              - text: St. Augustine
+            - generic [ref=e69]:
+              - checkbox "Tallahassee" [ref=e70]
+              - text: Tallahassee
+            - generic [ref=e71]:
+              - checkbox "Tampa" [ref=e72]
+              - text: Tampa
+            - generic [ref=e73]:
+              - checkbox "Washington" [ref=e74]
+              - text: Washington
+        - generic [ref=e75]:
+          - generic [ref=e76]: States
+          - generic [ref=e77]:
+            - generic [ref=e78]:
+              - checkbox "DC" [ref=e79]
+              - text: DC
+            - generic [ref=e80]:
+              - checkbox "FL" [ref=e81]
+              - text: FL
+            - generic [ref=e82]:
+              - checkbox "MD" [ref=e83]
+              - text: MD
+            - generic [ref=e84]:
+              - checkbox "PA" [ref=e85]
+              - text: PA
+            - generic [ref=e86]:
+              - checkbox "VA" [ref=e87]
+              - text: VA
+        - generic [ref=e88]:
+          - generic [ref=e89]: Job Titles
+          - generic [ref=e90]:
+            - generic [ref=e91]:
+              - checkbox "Adjutant General" [ref=e92]
+              - text: Adjutant General
+            - generic [ref=e93]:
+              - checkbox "CEO" [ref=e94]
+              - text: CEO
+            - generic [ref=e95]:
+              - checkbox "Chairman" [ref=e96]
+              - text: Chairman
+            - generic [ref=e97]:
+              - checkbox "Chief Emergency Officer" [ref=e98]
+              - text: Chief Emergency Officer
+            - generic [ref=e99]:
+              - checkbox "Chief Medical Officer" [ref=e100]
+              - text: Chief Medical Officer
+            - generic [ref=e101]:
+              - checkbox "Communications Director" [ref=e102]
+              - text: Communications Director
+            - generic [ref=e103]:
+              - checkbox "Community Relations Manager" [ref=e104]
+              - text: Community Relations Manager
+            - generic [ref=e105]:
+              - checkbox "Deputy Director" [ref=e106]
+              - text: Deputy Director
+            - generic [ref=e107]:
+              - checkbox "Deputy Director of Operations" [ref=e108]
+              - text: Deputy Director of Operations
+            - generic [ref=e109]:
+              - checkbox "Director" [ref=e110]
+              - text: Director
+            - generic [ref=e111]:
+              - checkbox "Disaster Research Director" [ref=e112]
+              - text: Disaster Research Director
+            - generic [ref=e113]:
+              - checkbox "Disaster Services Director" [ref=e114]
+              - text: Disaster Services Director
+            - generic [ref=e115]:
+              - checkbox "Emergency Management Director" [ref=e116]
+              - text: Emergency Management Director
+            - generic [ref=e117]:
+              - checkbox "Emergency Management Program Director" [ref=e118]
+              - text: Emergency Management Program Director
+            - generic [ref=e119]:
+              - checkbox "Emergency Preparedness Director" [ref=e120]
+              - text: Emergency Preparedness Director
+            - generic [ref=e121]:
+              - checkbox "Emergency Preparedness Manager" [ref=e122]
+              - text: Emergency Preparedness Manager
+            - generic [ref=e123]:
+              - checkbox "Faith & Community Partnerships Director" [ref=e124]
+              - text: Faith & Community Partnerships Director
+            - generic [ref=e125]:
+              - checkbox "General Manager" [ref=e126]
+              - text: General Manager
+            - generic [ref=e127]:
+              - checkbox "Healthcare Partnership Manager" [ref=e128]
+              - text: Healthcare Partnership Manager
+            - generic [ref=e129]:
+              - checkbox "Planning Coordinator" [ref=e130]
+              - text: Planning Coordinator
+            - generic [ref=e131]:
+              - checkbox "President" [ref=e132]
+              - text: President
+            - generic [ref=e133]:
+              - checkbox "President & CEO" [ref=e134]
+              - text: President & CEO
+            - generic [ref=e135]:
+              - checkbox "Regional Coordinator" [ref=e136]
+              - text: Regional Coordinator
+            - generic [ref=e137]:
+              - checkbox "Regional Director" [ref=e138]
+              - text: Regional Director
+            - generic [ref=e139]:
+              - checkbox "Regional Relationship Manager" [ref=e140]
+              - text: Regional Relationship Manager
+            - generic [ref=e141]:
+              - checkbox "VP Emergency Services" [ref=e142]
+              - text: VP Emergency Services
+            - generic [ref=e143]:
+              - checkbox "VP of Community Impact" [ref=e144]
+              - text: VP of Community Impact
+        - generic [ref=e145]:
+          - generic [ref=e146]: Organizations
+          - generic [ref=e147]:
+            - generic [ref=e148]:
+              - checkbox "American Red Cross" [ref=e149]
+              - text: American Red Cross
+            - generic [ref=e150]:
+              - checkbox "Baptist Health South Florida" [ref=e151]
+              - text: Baptist Health South Florida
+            - generic [ref=e152]:
+              - checkbox "FEMA Region III" [ref=e153]
+              - text: FEMA Region III
+            - generic [ref=e154]:
+              - checkbox "Florida Division of Emergency Management" [ref=e155]
+              - text: Florida Division of Emergency Management
+            - generic [ref=e156]:
+              - checkbox "Florida Division of Emergency Management" [ref=e157]
+              - text: Florida Division of Emergency Management
+            - generic [ref=e158]:
+              - checkbox "Florida International University - Emergency Management" [ref=e159]
+              - text: Florida International University - Emergency Management
+            - generic [ref=e160]:
+              - checkbox "Florida Keys Electric Cooperative" [ref=e161]
+              - text: Florida Keys Electric Cooperative
+            - generic [ref=e162]:
+              - checkbox "Florida National Guard" [ref=e163]
+              - text: Florida National Guard
+            - generic [ref=e164]:
+              - checkbox "Florida Power & Light Company" [ref=e165]
+              - text: Florida Power & Light Company
+            - generic [ref=e166]:
+              - checkbox "Johns Hopkins Hospital" [ref=e167]
+              - text: Johns Hopkins Hospital
+            - generic [ref=e168]:
+              - checkbox "Miami-Dade Emergency Management" [ref=e169]
+              - text: Miami-Dade Emergency Management
+            - generic [ref=e170]:
+              - checkbox "Orange County Emergency Management" [ref=e171]
+              - text: Orange County Emergency Management
+            - generic [ref=e172]:
+              - checkbox "Orlando Health" [ref=e173]
+              - text: Orlando Health
+            - generic [ref=e174]:
+              - checkbox "Publix Super Markets" [ref=e175]
+              - text: Publix Super Markets
+            - generic [ref=e176]:
+              - checkbox "Salvation Army" [ref=e177]
+              - text: Salvation Army
+            - generic [ref=e178]:
+              - checkbox "Seminole Tribe of Florida" [ref=e179]
+              - text: Seminole Tribe of Florida
+            - generic [ref=e180]:
+              - checkbox "Tampa General Hospital" [ref=e181]
+              - text: Tampa General Hospital
+            - generic [ref=e182]:
+              - checkbox "Tampa General Hospital" [ref=e183]
+              - text: Tampa General Hospital
+            - generic [ref=e184]:
+              - checkbox "United Way of Central Florida" [ref=e185]
+              - text: United Way of Central Florida
+            - generic [ref=e186]:
+              - checkbox "United Way of the National Capital Area" [ref=e187]
+              - text: United Way of the National Capital Area
+            - generic [ref=e188]:
+              - checkbox "United Way of the National Capital Area" [ref=e189]
+              - text: United Way of the National Capital Area
+            - generic [ref=e190]:
+              - checkbox "University of Florida - Disaster Research Center" [ref=e191]
+              - text: University of Florida - Disaster Research Center
+            - generic [ref=e192]:
+              - checkbox "Walt Disney World Resort" [ref=e193]
+              - text: Walt Disney World Resort
+        - generic [ref=e194]:
+          - generic [ref=e195]: Activity
+          - generic [ref=e196]:
+            - generic [ref=e197]:
+              - checkbox "Recent activity (30 days)" [ref=e198]
+              - text: Recent activity (30 days)
+            - generic [ref=e199]:
+              - checkbox "Upcoming follow-ups" [ref=e200]
+              - text: Upcoming follow-ups
+    - generic [ref=e201]:
+      - generic [ref=e202]:
+        - generic [ref=e203]:
+          - heading "People" [level=1] [ref=e204]
+          - paragraph [ref=e205]: Manage contacts and key relationships
+        - link "Add Person" [active] [ref=e207] [cursor=pointer]:
+          - /url: /people/new
+          - img [ref=e208]
+          - text: Add Person
+      - generic [ref=e209]:
+        - generic [ref=e210]:
+          - img [ref=e211]
+          - textbox "Search people..." [ref=e214]
+        - generic [ref=e215]:
+          - generic [ref=e216]:
+            - button [ref=e217]:
+              - img [ref=e218]
+            - button [ref=e220]:
+              - img [ref=e221]
+          - paragraph [ref=e222]: 32 of 32 people
+      - generic [ref=e223]:
+        - generic [ref=e224]:
+          - heading "Jim Manson" [level=3] [ref=e226]:
+            - generic [ref=e227]:
+              - img [ref=e228]
+              - generic [ref=e231]: Jim Manson
+          - generic [ref=e232]:
+            - generic [ref=e234]:
+              - generic [ref=e235]:
+                - img [ref=e236]
+                - generic [ref=e240]: Tampa General Hospital
+              - generic [ref=e243]: Tampa, FL
+            - generic [ref=e244]:
+              - generic [ref=e245]: 0 meetings
+              - link "View" [ref=e247] [cursor=pointer]:
+                - /url: /people/eb9cf1ae-e197-4458-9499-76b93d88ee6b
+        - generic [ref=e248]:
+          - generic [ref=e249]:
+            - heading "Michael Chen" [level=3] [ref=e250]:
+              - generic [ref=e251]:
+                - img [ref=e252]
+                - generic [ref=e255]: Michael Chen
+            - paragraph [ref=e256]: VP of Community Impact
+          - generic [ref=e257]:
+            - generic [ref=e258]:
+              - generic [ref=e259]:
+                - generic [ref=e260]:
+                  - img [ref=e261]
+                  - generic [ref=e265]: United Way of the National Capital Area
+                - generic [ref=e268]: Washington, DC
+              - generic [ref=e269]:
+                - img [ref=e270]
+                - link "mchen@unitedway.org" [ref=e273] [cursor=pointer]:
+                  - /url: mailto:mchen@unitedway.org
+              - generic [ref=e274]:
+                - img [ref=e275]
+                - generic [ref=e277]: (202) 555-0200
+            - generic [ref=e278]:
+              - generic [ref=e279]: 0 meetings
+              - link "View" [ref=e281] [cursor=pointer]:
+                - /url: /people/ed7990cb-e575-43e6-aa9a-ce9ebbad8b85
+        - generic [ref=e282]:
+          - generic [ref=e283]:
+            - heading "Dr. Emily Rodriguez" [level=3] [ref=e284]:
+              - generic [ref=e285]:
+                - img [ref=e286]
+                - generic [ref=e289]: Dr. Emily Rodriguez
+            - paragraph [ref=e290]: Emergency Preparedness Director
+          - generic [ref=e291]:
+            - generic [ref=e292]:
+              - generic [ref=e293]:
+                - generic [ref=e294]:
+                  - img [ref=e295]
+                  - generic [ref=e299]: Tampa General Hospital
+                - generic [ref=e302]: Tampa, FL
+              - generic [ref=e303]:
+                - img [ref=e304]
+                - link "emily.rodriguez@tgh.org" [ref=e307] [cursor=pointer]:
+                  - /url: mailto:emily.rodriguez@tgh.org
+              - generic [ref=e308]:
+                - img [ref=e309]
+                - generic [ref=e311]: (813) 555-0300
+            - generic [ref=e312]:
+              - generic [ref=e313]: 0 meetings
+              - link "View" [ref=e315] [cursor=pointer]:
+                - /url: /people/616a7ec1-7e4f-499f-a41a-86ef2897b9f9
+        - generic [ref=e316]:
+          - generic [ref=e317]:
+            - heading "James Mitchell" [level=3] [ref=e318]:
+              - generic [ref=e319]:
+                - img [ref=e320]
+                - generic [ref=e323]: James Mitchell
+            - paragraph [ref=e324]: Regional Coordinator
+          - generic [ref=e325]:
+            - generic [ref=e326]:
+              - generic [ref=e327]:
+                - generic [ref=e328]:
+                  - img [ref=e329]
+                  - generic [ref=e333]: Florida Division of Emergency Management
+                - generic [ref=e336]: Tallahassee, FL
+              - generic [ref=e337]:
+                - img [ref=e338]
+                - link "james.mitchell@em.myflorida.com" [ref=e341] [cursor=pointer]:
+                  - /url: mailto:james.mitchell@em.myflorida.com
+              - generic [ref=e342]:
+                - img [ref=e343]
+                - generic [ref=e345]: (850) 555-0400
+            - generic [ref=e346]:
+              - generic [ref=e347]: 0 meetings
+              - link "View" [ref=e349] [cursor=pointer]:
+                - /url: /people/87dfe811-eb48-4125-ab30-6b19ee9bb3e7
+        - generic [ref=e350]:
+          - generic [ref=e351]:
+            - heading "Robert Williams" [level=3] [ref=e352]:
+              - generic [ref=e353]:
+                - img [ref=e354]
+                - generic [ref=e357]: Robert Williams
+            - paragraph [ref=e358]: Disaster Services Director
+          - generic [ref=e359]:
+            - generic [ref=e360]:
+              - generic [ref=e361]:
+                - generic [ref=e362]:
+                  - img [ref=e363]
+                  - generic [ref=e367]: Salvation Army
+                - generic [ref=e370]: Orlando, FL
+              - generic [ref=e371]:
+                - img [ref=e372]
+                - link "robert.williams@salvationarmy.org" [ref=e375] [cursor=pointer]:
+                  - /url: mailto:robert.williams@salvationarmy.org
+              - generic [ref=e376]:
+                - img [ref=e377]
+                - generic [ref=e379]: (407) 555-0500
+            - generic [ref=e380]:
+              - generic [ref=e381]: 0 meetings
+              - link "View" [ref=e383] [cursor=pointer]:
+                - /url: /people/823ff787-9264-4a6c-9ab9-5f15642b9097
+        - generic [ref=e384]:
+          - generic [ref=e385]:
+            - heading "Sarah Johnson" [level=3] [ref=e386]:
+              - generic [ref=e387]:
+                - img [ref=e388]
+                - generic [ref=e391]: Sarah Johnson
+            - paragraph [ref=e392]: Regional Director
+          - generic [ref=e393]:
+            - generic [ref=e394]:
+              - generic [ref=e395]:
+                - generic [ref=e396]:
+                  - img [ref=e397]
+                  - generic [ref=e401]: American Red Cross
+                - generic [ref=e404]: Tampa, FL
+              - generic [ref=e405]:
+                - img [ref=e406]
+                - link "sarah.johnson@redcross.org" [ref=e409] [cursor=pointer]:
+                  - /url: mailto:sarah.johnson@redcross.org
+              - generic [ref=e410]:
+                - img [ref=e411]
+                - generic [ref=e413]: (813) 555-0100
+            - generic [ref=e414]:
+              - generic [ref=e415]: 0 meetings
+              - link "View" [ref=e417] [cursor=pointer]:
+                - /url: /people/fa5cc2eb-20e3-4f65-9a46-4ed3e00f2435
+        - generic [ref=e418]:
+          - heading "Bob Johnson" [level=3] [ref=e420]:
+            - generic [ref=e421]:
+              - img [ref=e422]
+              - generic [ref=e425]: Bob Johnson
+          - generic [ref=e426]:
+            - generic [ref=e428]:
+              - generic [ref=e429]:
+                - img [ref=e430]
+                - generic [ref=e434]: Tampa General Hospital
+              - generic [ref=e437]: Tampa, FL
+            - generic [ref=e438]:
+              - generic [ref=e439]: 0 meetings
+              - link "View" [ref=e441] [cursor=pointer]:
+                - /url: /people/7c547beb-1871-4d64-9e04-3252be9eed36
+        - generic [ref=e442]:
+          - generic [ref=e443]:
+            - heading "Dr. Amanda Chen" [level=3] [ref=e444]:
+              - generic [ref=e445]:
+                - img [ref=e446]
+                - generic [ref=e449]: Dr. Amanda Chen
+            - paragraph [ref=e450]: Faith & Community Partnerships Director
+          - generic [ref=e451]:
+            - generic [ref=e452]:
+              - generic [ref=e453]:
+                - img [ref=e454]
+                - link "amanda.chen@redcross.org" [ref=e457] [cursor=pointer]:
+                  - /url: mailto:amanda.chen@redcross.org
+              - generic [ref=e458]:
+                - img [ref=e459]
+                - generic [ref=e461]: (202) 303-5003
+            - generic [ref=e462]:
+              - generic [ref=e463]: 0 meetings
+              - link "View" [ref=e465] [cursor=pointer]:
+                - /url: /people/57c7db8d-22bc-4026-bb27-82fa90841a08
+        - generic [ref=e466]:
+          - generic [ref=e467]:
+            - heading "Michael Rodriguez" [level=3] [ref=e468]:
+              - generic [ref=e469]:
+                - img [ref=e470]
+                - generic [ref=e473]: Michael Rodriguez
+            - paragraph [ref=e474]: Healthcare Partnership Manager
+          - generic [ref=e475]:
+            - generic [ref=e476]:
+              - generic [ref=e477]:
+                - img [ref=e478]
+                - link "michael.rodriguez@redcross.org" [ref=e481] [cursor=pointer]:
+                  - /url: mailto:michael.rodriguez@redcross.org
+              - generic [ref=e482]:
+                - img [ref=e483]
+                - generic [ref=e485]: (202) 303-5002
+            - generic [ref=e486]:
+              - generic [ref=e487]: 0 meetings
+              - link "View" [ref=e489] [cursor=pointer]:
+                - /url: /people/4511bed6-5646-40a1-af3c-70835fa10b71
+        - generic [ref=e490]:
+          - generic [ref=e491]:
+            - heading "Sarah Johnson" [level=3] [ref=e492]:
+              - generic [ref=e493]:
+                - img [ref=e494]
+                - generic [ref=e497]: Sarah Johnson
+            - paragraph [ref=e498]: Regional Relationship Manager
+          - generic [ref=e499]:
+            - generic [ref=e500]:
+              - generic [ref=e501]:
+                - img [ref=e502]
+                - link "sarah.johnson@redcross.org" [ref=e505] [cursor=pointer]:
+                  - /url: mailto:sarah.johnson@redcross.org
+              - generic [ref=e506]:
+                - img [ref=e507]
+                - generic [ref=e509]: (202) 303-5001
+            - generic [ref=e510]:
+              - generic [ref=e511]: 0 meetings
+              - link "View" [ref=e513] [cursor=pointer]:
+                - /url: /people/d735cb63-bfd7-48f4-9dcc-b6422a2a97ed
+        - generic [ref=e514]:
+          - heading "Jeff Franzen" [level=3] [ref=e516]:
+            - generic [ref=e517]:
+              - img [ref=e518]
+              - generic [ref=e521]: Jeff Franzen
+          - generic [ref=e522]:
+            - generic [ref=e523]:
+              - generic [ref=e524]:
+                - img [ref=e525]
+                - link "jbf@jbf.com" [ref=e528] [cursor=pointer]:
+                  - /url: mailto:jbf@jbf.com
+              - generic [ref=e529]:
+                - img [ref=e530]
+                - generic [ref=e532]: "7039575711"
+            - generic [ref=e533]:
+              - generic [ref=e534]: 0 meetings
+              - link "View" [ref=e536] [cursor=pointer]:
+                - /url: /people/4651e48b-ba13-484c-bd57-d1eb34567344
+        - generic [ref=e537]:
+          - generic [ref=e538]:
+            - heading "Alex Johnson" [level=3] [ref=e539]:
+              - generic [ref=e540]:
+                - img [ref=e541]
+                - generic [ref=e544]: Alex Johnson
+            - paragraph [ref=e545]: Communications Director
+          - generic [ref=e546]:
+            - generic [ref=e547]:
+              - generic [ref=e548]:
+                - generic [ref=e549]:
+                  - img [ref=e550]
+                  - generic [ref=e554]: Tampa General Hospital
+                - generic [ref=e557]: Tampa, FL
+              - generic [ref=e558]:
+                - img [ref=e559]
+                - link "alex.johnson@tgh.org" [ref=e562] [cursor=pointer]:
+                  - /url: mailto:alex.johnson@tgh.org
+              - generic [ref=e563]:
+                - img [ref=e564]
+                - generic [ref=e566]: (813) 844-7100
+            - generic [ref=e567]:
+              - generic [ref=e568]: 0 meetings
+              - link "View" [ref=e570] [cursor=pointer]:
+                - /url: /people/badb8687-402f-487d-893b-4e7ab1f1e8fc
+        - generic [ref=e571]:
+          - generic [ref=e572]:
+            - heading "Dr. Mark Jones" [level=3] [ref=e573]:
+              - generic [ref=e574]:
+                - img [ref=e575]
+                - generic [ref=e578]: Dr. Mark Jones
+            - paragraph [ref=e579]: Chief Emergency Officer
+          - generic [ref=e580]:
+            - generic [ref=e581]:
+              - generic [ref=e582]:
+                - generic [ref=e583]:
+                  - img [ref=e584]
+                  - generic [ref=e588]: Orlando Health
+                - generic [ref=e591]: Orlando, FL
+              - generic [ref=e592]:
+                - img [ref=e593]
+                - link "mark.jones@orlandohealth.com" [ref=e596] [cursor=pointer]:
+                  - /url: mailto:mark.jones@orlandohealth.com
+              - generic [ref=e597]:
+                - img [ref=e598]
+                - generic [ref=e600]: (321) 841-5112
+            - generic [ref=e601]:
+              - generic [ref=e602]: 0 meetings
+              - link "View" [ref=e604] [cursor=pointer]:
+                - /url: /people/550e8400-e29b-41d4-a716-446655440407
+        - generic [ref=e605]:
+          - generic [ref=e606]:
+            - heading "Dr. Maria Rodriguez" [level=3] [ref=e607]:
+              - generic [ref=e608]:
+                - img [ref=e609]
+                - generic [ref=e612]: Dr. Maria Rodriguez
+            - paragraph [ref=e613]: VP Emergency Services
+          - generic [ref=e614]:
+            - generic [ref=e615]:
+              - generic [ref=e616]:
+                - generic [ref=e617]:
+                  - img [ref=e618]
+                  - generic [ref=e622]: Baptist Health South Florida
+                - generic [ref=e625]: Coral Gables, FL
+              - generic [ref=e626]:
+                - img [ref=e627]
+                - link "maria.rodriguez@baptisthealth.net" [ref=e630] [cursor=pointer]:
+                  - /url: mailto:maria.rodriguez@baptisthealth.net
+              - generic [ref=e631]:
+                - img [ref=e632]
+                - generic [ref=e634]: (786) 596-1961
+            - generic [ref=e635]:
+              - generic [ref=e636]: 0 meetings
+              - link "View" [ref=e638] [cursor=pointer]:
+                - /url: /people/550e8400-e29b-41d4-a716-446655440408
+        - generic [ref=e639]:
+          - generic [ref=e640]:
+            - heading "Eric Silagy" [level=3] [ref=e641]:
+              - generic [ref=e642]:
+                - img [ref=e643]
+                - generic [ref=e646]: Eric Silagy
+            - paragraph [ref=e647]: President & CEO
+          - generic [ref=e648]:
+            - generic [ref=e649]:
+              - generic [ref=e650]:
+                - generic [ref=e651]:
+                  - img [ref=e652]
+                  - generic [ref=e656]: Florida Power & Light Company
+                - generic [ref=e659]: Juno Beach, FL
+              - generic [ref=e660]:
+                - img [ref=e661]
+                - link "eric.silagy@fpl.com" [ref=e664] [cursor=pointer]:
+                  - /url: mailto:eric.silagy@fpl.com
+              - generic [ref=e665]:
+                - img [ref=e666]
+                - generic [ref=e668]: (800) 468-8244
+            - generic [ref=e669]:
+              - generic [ref=e670]: 0 meetings
+              - link "View" [ref=e672] [cursor=pointer]:
+                - /url: /people/550e8400-e29b-41d4-a716-446655440409
+        - generic [ref=e673]:
+          - generic [ref=e674]:
+            - heading "Scott Newberry" [level=3] [ref=e675]:
+              - generic [ref=e676]:
+                - img [ref=e677]
+                - generic [ref=e680]: Scott Newberry
+            - paragraph [ref=e681]: General Manager
+          - generic [ref=e682]:
+            - generic [ref=e683]:
+              - generic [ref=e684]:
+                - generic [ref=e685]:
+                  - img [ref=e686]
+                  - generic [ref=e690]: Florida Keys Electric Cooperative
+                - generic [ref=e693]: Big Pine Key, FL
+              - generic [ref=e694]:
+                - img [ref=e695]
+                - link "snewberry@fkec.com" [ref=e698] [cursor=pointer]:
+                  - /url: mailto:snewberry@fkec.com
+              - generic [ref=e699]:
+                - img [ref=e700]
+                - generic [ref=e702]: (305) 852-2432
+            - generic [ref=e703]:
+              - generic [ref=e704]: 0 meetings
+              - link "View" [ref=e706] [cursor=pointer]:
+                - /url: /people/550e8400-e29b-41d4-a716-446655440410
+        - generic [ref=e707]:
+          - generic [ref=e708]:
+            - heading "Todd Jones" [level=3] [ref=e709]:
+              - generic [ref=e710]:
+                - img [ref=e711]
+                - generic [ref=e714]: Todd Jones
+            - paragraph [ref=e715]: CEO
+          - generic [ref=e716]:
+            - generic [ref=e717]:
+              - generic [ref=e718]:
+                - generic [ref=e719]:
+                  - img [ref=e720]
+                  - generic [ref=e724]: Publix Super Markets
+                - generic [ref=e727]: Lakeland, FL
+              - generic [ref=e728]:
+                - img [ref=e729]
+                - link "todd.jones@publix.com" [ref=e732] [cursor=pointer]:
+                  - /url: mailto:todd.jones@publix.com
+              - generic [ref=e733]:
+                - img [ref=e734]
+                - generic [ref=e736]: (863) 688-1189
+            - generic [ref=e737]:
+              - generic [ref=e738]: 0 meetings
+              - link "View" [ref=e740] [cursor=pointer]:
+                - /url: /people/550e8400-e29b-41d4-a716-446655440411
+        - generic [ref=e741]:
+          - generic [ref=e742]:
+            - heading "Jennifer Williams" [level=3] [ref=e743]:
+              - generic [ref=e744]:
+                - img [ref=e745]
+                - generic [ref=e748]: Jennifer Williams
+            - paragraph [ref=e749]: Community Relations Manager
+          - generic [ref=e750]:
+            - generic [ref=e751]:
+              - generic [ref=e752]:
+                - generic [ref=e753]:
+                  - img [ref=e754]
+                  - generic [ref=e758]: Publix Super Markets
+                - generic [ref=e761]: Lakeland, FL
+              - generic [ref=e762]:
+                - img [ref=e763]
+                - link "jennifer.williams@publix.com" [ref=e766] [cursor=pointer]:
+                  - /url: mailto:jennifer.williams@publix.com
+              - generic [ref=e767]:
+                - img [ref=e768]
+                - generic [ref=e770]: (863) 688-1190
+            - generic [ref=e771]:
+              - generic [ref=e772]: 0 meetings
+              - link "View" [ref=e774] [cursor=pointer]:
+                - /url: /people/550e8400-e29b-41d4-a716-446655440412
+        - generic [ref=e775]:
+          - generic [ref=e776]:
+            - heading "Jeff Vahle" [level=3] [ref=e777]:
+              - generic [ref=e778]:
+                - img [ref=e779]
+                - generic [ref=e782]: Jeff Vahle
+            - paragraph [ref=e783]: President
+          - generic [ref=e784]:
+            - generic [ref=e785]:
+              - generic [ref=e786]:
+                - generic [ref=e787]:
+                  - img [ref=e788]
+                  - generic [ref=e792]: Walt Disney World Resort
+                - generic [ref=e795]: Bay Lake, FL
+              - generic [ref=e796]:
+                - img [ref=e797]
+                - link "jeff.vahle@disney.com" [ref=e800] [cursor=pointer]:
+                  - /url: mailto:jeff.vahle@disney.com
+              - generic [ref=e801]:
+                - img [ref=e802]
+                - generic [ref=e804]: (407) 939-5278
+            - generic [ref=e805]:
+              - generic [ref=e806]: 0 meetings
+              - link "View" [ref=e808] [cursor=pointer]:
+                - /url: /people/550e8400-e29b-41d4-a716-446655440413
+        - generic [ref=e809]:
+          - generic [ref=e810]:
+            - heading "Dr. Rebecca Christofferson" [level=3] [ref=e811]:
+              - generic [ref=e812]:
+                - img [ref=e813]
+                - generic [ref=e816]: Dr. Rebecca Christofferson
+            - paragraph [ref=e817]: Disaster Research Director
+          - generic [ref=e818]:
+            - generic [ref=e819]:
+              - generic [ref=e820]:
+                - generic [ref=e821]:
+                  - img [ref=e822]
+                  - generic [ref=e826]: University of Florida - Disaster Research Center
+                - generic [ref=e829]: Gainesville, FL
+              - generic [ref=e830]:
+                - img [ref=e831]
+                - link "rchristofferson@ufl.edu" [ref=e834] [cursor=pointer]:
+                  - /url: mailto:rchristofferson@ufl.edu
+              - generic [ref=e835]:
+                - img [ref=e836]
+                - generic [ref=e838]: (352) 392-0312
+            - generic [ref=e839]:
+              - generic [ref=e840]: 0 meetings
+              - link "View" [ref=e842] [cursor=pointer]:
+                - /url: /people/550e8400-e29b-41d4-a716-446655440414
+        - generic [ref=e843]:
+          - generic [ref=e844]:
+            - heading "Dr. Cem Karakurt" [level=3] [ref=e845]:
+              - generic [ref=e846]:
+                - img [ref=e847]
+                - generic [ref=e850]: Dr. Cem Karakurt
+            - paragraph [ref=e851]: Emergency Management Program Director
+          - generic [ref=e852]:
+            - generic [ref=e853]:
+              - generic [ref=e854]:
+                - generic [ref=e855]:
+                  - img [ref=e856]
+                  - generic [ref=e860]: Florida International University - Emergency Management
+                - generic [ref=e863]: Miami, FL
+              - generic [ref=e864]:
+                - img [ref=e865]
+                - link "ckarakurt@fiu.edu" [ref=e868] [cursor=pointer]:
+                  - /url: mailto:ckarakurt@fiu.edu
+              - generic [ref=e869]:
+                - img [ref=e870]
+                - generic [ref=e872]: (305) 348-2001
+            - generic [ref=e873]:
+              - generic [ref=e874]: 0 meetings
+              - link "View" [ref=e876] [cursor=pointer]:
+                - /url: /people/550e8400-e29b-41d4-a716-446655440415
+        - generic [ref=e877]:
+          - generic [ref=e878]:
+            - heading "Marcellus Osceola Jr." [level=3] [ref=e879]:
+              - generic [ref=e880]:
+                - img [ref=e881]
+                - generic [ref=e884]: Marcellus Osceola Jr.
+            - paragraph [ref=e885]: Chairman
+          - generic [ref=e886]:
+            - generic [ref=e887]:
+              - generic [ref=e888]:
+                - generic [ref=e889]:
+                  - img [ref=e890]
+                  - generic [ref=e894]: Seminole Tribe of Florida
+                - generic [ref=e897]: Hollywood, FL
+              - generic [ref=e898]:
+                - img [ref=e899]
+                - link "mosceola@semtribe.com" [ref=e902] [cursor=pointer]:
+                  - /url: mailto:mosceola@semtribe.com
+              - generic [ref=e903]:
+                - img [ref=e904]
+                - generic [ref=e906]: (954) 967-3417
+            - generic [ref=e907]:
+              - generic [ref=e908]: 0 meetings
+              - link "View" [ref=e910] [cursor=pointer]:
+                - /url: /people/550e8400-e29b-41d4-a716-446655440416
+        - generic [ref=e911]:
+          - generic [ref=e912]:
+            - heading "Susan Plasencia" [level=3] [ref=e913]:
+              - generic [ref=e914]:
+                - img [ref=e915]
+                - generic [ref=e918]: Susan Plasencia
+            - paragraph [ref=e919]: President & CEO
+          - generic [ref=e920]:
+            - generic [ref=e921]:
+              - generic [ref=e922]:
+                - generic [ref=e923]:
+                  - img [ref=e924]
+                  - generic [ref=e928]: United Way of Central Florida
+                - generic [ref=e931]: Orlando, FL
+              - generic [ref=e932]:
+                - img [ref=e933]
+                - link "susanp@uwcf.org" [ref=e936] [cursor=pointer]:
+                  - /url: mailto:susanp@uwcf.org
+              - generic [ref=e937]:
+                - img [ref=e938]
+                - generic [ref=e940]: (407) 425-2735
+            - generic [ref=e941]:
+              - generic [ref=e942]: 0 meetings
+              - link "View" [ref=e944] [cursor=pointer]:
+                - /url: /people/550e8400-e29b-41d4-a716-446655440417
+        - generic [ref=e945]:
+          - generic [ref=e946]:
+            - heading "Carmen Hernandez" [level=3] [ref=e947]:
+              - generic [ref=e948]:
+                - img [ref=e949]
+                - generic [ref=e952]: Carmen Hernandez
+            - paragraph [ref=e953]: Deputy Director
+          - generic [ref=e954]:
+            - generic [ref=e955]:
+              - generic [ref=e956]:
+                - generic [ref=e957]:
+                  - img [ref=e958]
+                  - generic [ref=e962]: Miami-Dade Emergency Management
+                - generic [ref=e965]: Miami, FL
+              - generic [ref=e966]:
+                - img [ref=e967]
+                - link "carmen.hernandez@miamidade.gov" [ref=e970] [cursor=pointer]:
+                  - /url: mailto:carmen.hernandez@miamidade.gov
+              - generic [ref=e971]:
+                - img [ref=e972]
+                - generic [ref=e974]: (305) 468-5402
+            - generic [ref=e975]:
+              - generic [ref=e976]: 0 meetings
+              - link "View" [ref=e978] [cursor=pointer]:
+                - /url: /people/550e8400-e29b-41d4-a716-446655440418
+        - generic [ref=e979]:
+          - generic [ref=e980]:
+            - heading "Robert Chen" [level=3] [ref=e981]:
+              - generic [ref=e982]:
+                - img [ref=e983]
+                - generic [ref=e986]: Robert Chen
+            - paragraph [ref=e987]: Planning Coordinator
+          - generic [ref=e988]:
+            - generic [ref=e989]:
+              - generic [ref=e990]:
+                - generic [ref=e991]:
+                  - img [ref=e992]
+                  - generic [ref=e996]: Orange County Emergency Management
+                - generic [ref=e999]: Orlando, FL
+              - generic [ref=e1000]:
+                - img [ref=e1001]
+                - link "robert.chen@ocfl.net" [ref=e1004] [cursor=pointer]:
+                  - /url: mailto:robert.chen@ocfl.net
+              - generic [ref=e1005]:
+                - img [ref=e1006]
+                - generic [ref=e1008]: (407) 836-9142
+            - generic [ref=e1009]:
+              - generic [ref=e1010]: 0 meetings
+              - link "View" [ref=e1012] [cursor=pointer]:
+                - /url: /people/550e8400-e29b-41d4-a716-446655440419
+        - generic [ref=e1013]:
+          - generic [ref=e1014]:
+            - heading "Sarah Martinez" [level=3] [ref=e1015]:
+              - generic [ref=e1016]:
+                - img [ref=e1017]
+                - generic [ref=e1020]: Sarah Martinez
+            - paragraph [ref=e1021]: Deputy Director of Operations
+          - generic [ref=e1022]:
+            - generic [ref=e1023]:
+              - generic [ref=e1024]:
+                - generic [ref=e1025]:
+                  - img [ref=e1026]
+                  - generic [ref=e1030]: Florida Division of Emergency Management
+                - generic [ref=e1033]: Tallahassee, FL
+              - generic [ref=e1034]:
+                - img [ref=e1035]
+                - link "sarah.martinez@em.myflorida.com" [ref=e1038] [cursor=pointer]:
+                  - /url: mailto:sarah.martinez@em.myflorida.com
+              - generic [ref=e1039]:
+                - img [ref=e1040]
+                - generic [ref=e1042]: (850) 413-9970
+            - generic [ref=e1043]:
+              - generic [ref=e1044]: 0 meetings
+              - link "View" [ref=e1046] [cursor=pointer]:
+                - /url: /people/550e8400-e29b-41d4-a716-446655440401
+        - generic [ref=e1047]:
+          - generic [ref=e1048]:
+            - heading "Kevin Guthrie" [level=3] [ref=e1049]:
+              - generic [ref=e1050]:
+                - img [ref=e1051]
+                - generic [ref=e1054]: Kevin Guthrie
+            - paragraph [ref=e1055]: Director
+          - generic [ref=e1056]:
+            - generic [ref=e1057]:
+              - generic [ref=e1058]:
+                - generic [ref=e1059]:
+                  - img [ref=e1060]
+                  - generic [ref=e1064]: Florida Division of Emergency Management
+                - generic [ref=e1067]: Tallahassee, FL
+              - generic [ref=e1068]:
+                - img [ref=e1069]
+                - link "kevin.guthrie@em.myflorida.com" [ref=e1072] [cursor=pointer]:
+                  - /url: mailto:kevin.guthrie@em.myflorida.com
+              - generic [ref=e1073]:
+                - img [ref=e1074]
+                - generic [ref=e1076]: (850) 413-9969
+            - generic [ref=e1077]:
+              - generic [ref=e1078]: 0 meetings
+              - link "View" [ref=e1080] [cursor=pointer]:
+                - /url: /people/550e8400-e29b-41d4-a716-446655440400
+        - generic [ref=e1081]:
+          - generic [ref=e1082]:
+            - heading "Frank Rollason" [level=3] [ref=e1083]:
+              - generic [ref=e1084]:
+                - img [ref=e1085]
+                - generic [ref=e1088]: Frank Rollason
+            - paragraph [ref=e1089]: Director
+          - generic [ref=e1090]:
+            - generic [ref=e1091]:
+              - generic [ref=e1092]:
+                - generic [ref=e1093]:
+                  - img [ref=e1094]
+                  - generic [ref=e1098]: Miami-Dade Emergency Management
+                - generic [ref=e1101]: Miami, FL
+              - generic [ref=e1102]:
+                - img [ref=e1103]
+                - link "frank.rollason@miamidade.gov" [ref=e1106] [cursor=pointer]:
+                  - /url: mailto:frank.rollason@miamidade.gov
+              - generic [ref=e1107]:
+                - img [ref=e1108]
+                - generic [ref=e1110]: (305) 468-5401
+            - generic [ref=e1111]:
+              - generic [ref=e1112]: 0 meetings
+              - link "View" [ref=e1114] [cursor=pointer]:
+                - /url: /people/550e8400-e29b-41d4-a716-446655440402
+        - generic [ref=e1115]:
+          - generic [ref=e1116]:
+            - heading "Danny Banks" [level=3] [ref=e1117]:
+              - generic [ref=e1118]:
+                - img [ref=e1119]
+                - generic [ref=e1122]: Danny Banks
+            - paragraph [ref=e1123]: Emergency Management Director
+          - generic [ref=e1124]:
+            - generic [ref=e1125]:
+              - generic [ref=e1126]:
+                - generic [ref=e1127]:
+                  - img [ref=e1128]
+                  - generic [ref=e1132]: Orange County Emergency Management
+                - generic [ref=e1135]: Orlando, FL
+              - generic [ref=e1136]:
+                - img [ref=e1137]
+                - link "danny.banks@ocfl.net" [ref=e1140] [cursor=pointer]:
+                  - /url: mailto:danny.banks@ocfl.net
+              - generic [ref=e1141]:
+                - img [ref=e1142]
+                - generic [ref=e1144]: (407) 836-9141
+            - generic [ref=e1145]:
+              - generic [ref=e1146]: 0 meetings
+              - link "View" [ref=e1148] [cursor=pointer]:
+                - /url: /people/550e8400-e29b-41d4-a716-446655440403
+        - generic [ref=e1149]:
+          - generic [ref=e1150]:
+            - heading "James Eifert" [level=3] [ref=e1151]:
+              - generic [ref=e1152]:
+                - img [ref=e1153]
+                - generic [ref=e1156]: James Eifert
+            - paragraph [ref=e1157]: Adjutant General
+          - generic [ref=e1158]:
+            - generic [ref=e1159]:
+              - generic [ref=e1160]:
+                - generic [ref=e1161]:
+                  - img [ref=e1162]
+                  - generic [ref=e1166]: Florida National Guard
+                - generic [ref=e1169]: St. Augustine, FL
+              - generic [ref=e1170]:
+                - img [ref=e1171]
+                - link "james.eifert@us.army.mil" [ref=e1174] [cursor=pointer]:
+                  - /url: mailto:james.eifert@us.army.mil
+              - generic [ref=e1175]:
+                - img [ref=e1176]
+                - generic [ref=e1178]: (904) 823-0101
+            - generic [ref=e1179]:
+              - generic [ref=e1180]: 0 meetings
+              - link "View" [ref=e1182] [cursor=pointer]:
+                - /url: /people/550e8400-e29b-41d4-a716-446655440404
+        - generic [ref=e1183]:
+          - generic [ref=e1184]:
+            - heading "Dr. Lisa Merritt" [level=3] [ref=e1185]:
+              - generic [ref=e1186]:
+                - img [ref=e1187]
+                - generic [ref=e1190]: Dr. Lisa Merritt
+            - paragraph [ref=e1191]: Chief Medical Officer
+          - generic [ref=e1192]:
+            - generic [ref=e1193]:
+              - generic [ref=e1194]:
+                - generic [ref=e1195]:
+                  - img [ref=e1196]
+                  - generic [ref=e1200]: Tampa General Hospital
+                - generic [ref=e1203]: Tampa, FL
+              - generic [ref=e1204]:
+                - img [ref=e1205]
+                - link "lmerritt@tgh.org" [ref=e1208] [cursor=pointer]:
+                  - /url: mailto:lmerritt@tgh.org
+              - generic [ref=e1209]:
+                - img [ref=e1210]
+                - generic [ref=e1212]: (813) 844-7001
+            - generic [ref=e1213]:
+              - generic [ref=e1214]: 0 meetings
+              - link "View" [ref=e1216] [cursor=pointer]:
+                - /url: /people/550e8400-e29b-41d4-a716-446655440405
+        - generic [ref=e1217]:
+          - generic [ref=e1218]:
+            - heading "Michael Thompson" [level=3] [ref=e1219]:
+              - generic [ref=e1220]:
+                - img [ref=e1221]
+                - generic [ref=e1224]: Michael Thompson
+            - paragraph [ref=e1225]: Emergency Preparedness Manager
+          - generic [ref=e1226]:
+            - generic [ref=e1227]:
+              - generic [ref=e1228]:
+                - generic [ref=e1229]:
+                  - img [ref=e1230]
+                  - generic [ref=e1234]: Tampa General Hospital
+                - generic [ref=e1237]: Tampa, FL
+              - generic [ref=e1238]:
+                - img [ref=e1239]
+                - link "mthompson@tgh.org" [ref=e1242] [cursor=pointer]:
+                  - /url: mailto:mthompson@tgh.org
+              - generic [ref=e1243]:
+                - img [ref=e1244]
+                - generic [ref=e1246]: (813) 844-7002
+            - generic [ref=e1247]:
+              - generic [ref=e1248]: 0 meetings
+              - link "View" [ref=e1250] [cursor=pointer]:
+                - /url: /people/550e8400-e29b-41d4-a716-446655440406
+  - button "Open Next.js Dev Tools" [ref=e1256] [cursor=pointer]:
+    - img [ref=e1257]
+  - alert [ref=e1260]
+```
