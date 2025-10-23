@@ -6,7 +6,7 @@ export class MeetingService {
   static async getAll(filters?: SearchFilters): Promise<Meeting[]> {
     let query = supabase
       .from('meetings')
-      .select('*, organization:organizations(id, name)')
+      .select('*, organization:org_id(id, name)')
       .order('date', { ascending: false })
 
     // Apply search filter - removed textSearch (no search_vector column)
@@ -33,7 +33,7 @@ export class MeetingService {
   static async getById(id: string): Promise<Meeting | null> {
     const { data, error } = await supabase
       .from('meetings')
-      .select('*, organization:organizations(id, name)')
+      .select('*, organization:org_id(id, name)')
       .eq('id', id)
       .single()
 
@@ -60,7 +60,7 @@ export class MeetingService {
   static async getByOrganization(orgId: string): Promise<Meeting[]> {
     const { data, error } = await supabase
       .from('meetings')
-      .select('*, organization:organizations(id, name)')
+      .select('*, organization:org_id(id, name)')
       .eq('org_id', orgId)
       .order('date', { ascending: false })
 
@@ -73,7 +73,7 @@ export class MeetingService {
     
     const { data, error } = await supabase
       .from('meetings')
-      .select('*, organization:organizations(id, name)')
+      .select('*, organization:org_id(id, name)')
       .gte('date', today)
       .order('date', { ascending: true })
       .limit(limit)
@@ -87,7 +87,7 @@ export class MeetingService {
     
     const { data, error } = await supabase
       .from('meetings')
-      .select('*, organization:organizations(id, name)')
+      .select('*, organization:org_id(id, name)')
       .not('follow_up_date', 'is', null)
       .lte('follow_up_date', today)
       .order('follow_up_date', { ascending: true })
@@ -109,7 +109,7 @@ export class MeetingService {
       .insert(meetingData)
       .select(`
         *, 
-        organization:organizations(id, name)
+        organization:org_id(id, name)
       `)
       .single()
 
@@ -149,7 +149,7 @@ export class MeetingService {
       .eq('id', id)
       .select(`
         *, 
-        organization:organizations(id, name)
+        organization:org_id(id, name)
       `)
       .single()
 

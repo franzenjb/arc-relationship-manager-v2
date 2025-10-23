@@ -6,7 +6,7 @@ export class PersonService {
   static async getAll(filters?: SearchFilters): Promise<Person[]> {
     let query = supabase
       .from('people')
-      .select('*, organization:organizations(id, name, city, state)')
+      .select('*, organization:org_id(id, name, city, state)')
       .order('updated_at', { ascending: false })
 
     // Apply search filter
@@ -55,7 +55,7 @@ export class PersonService {
   static async getById(id: string): Promise<Person | null> {
     const { data, error } = await supabase
       .from('people')
-      .select('*, organization:organizations(id, name)')
+      .select('*, organization:org_id(id, name)')
       .eq('id', id)
       .single()
 
@@ -86,7 +86,7 @@ export class PersonService {
       .insert(personData)
       .select(`
         *, 
-        organization:organizations(id, name)
+        organization:org_id(id, name)
       `)
       .single()
 
@@ -104,7 +104,7 @@ export class PersonService {
       .eq('id', id)
       .select(`
         *, 
-        organization:organizations(id, name)
+        organization:org_id(id, name)
       `)
       .single()
 
@@ -124,7 +124,7 @@ export class PersonService {
   static async searchByEmail(email: string): Promise<Person[]> {
     const { data, error } = await supabase
       .from('people')
-      .select('*, organization:organizations(id, name)')
+      .select('*, organization:org_id(id, name)')
       .ilike('email', `%${email}%`)
       .limit(10)
 
@@ -135,7 +135,7 @@ export class PersonService {
   static async searchByName(name: string): Promise<Person[]> {
     const { data, error } = await supabase
       .from('people')
-      .select('*, organization:organizations(id, name)')
+      .select('*, organization:org_id(id, name)')
       .or(`first_name.ilike.%${name}%,last_name.ilike.%${name}%`)
       .limit(10)
 

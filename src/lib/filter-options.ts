@@ -24,7 +24,7 @@ export class FilterOptionsService {
       // Get all people to extract titles and organization relationships
       const { data: people, error: peopleError } = await supabase
         .from('people')
-        .select('title, org_id, organization:organizations(id, name)')
+        .select('title, org_id, organization:org_id(id, name)')
 
       if (peopleError) throw peopleError
 
