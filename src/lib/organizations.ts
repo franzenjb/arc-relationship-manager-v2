@@ -5,23 +5,23 @@ import { getUserRegion, REGIONS } from '@/config/regions'
 import { GeocodingService } from './geocoding'
 
 export class OrganizationService {
-  static async getAll(filters?: SearchFilters): Promise<Organization[]> {
+  static async getAll(filters?: SearchFilters, userRegion?: string): Promise<Organization[]> {
     let query = supabase
       .from('organizations')
       .select('*')
       .order('name', { ascending: true })
 
     // Apply region filter based on logged-in user's region
-    if (typeof window !== 'undefined') {
-      const userRegion = getUserRegion()
-      if (userRegion && userRegion !== 'NATIONAL') {
-        const regionConfig = REGIONS[userRegion as keyof typeof REGIONS]
-        if (regionConfig?.states && regionConfig.states.length > 0) {
-          query = query.in('state', regionConfig.states)
-        }
+    // Accept userRegion parameter for server-side usage, fallback to client-side
+    const currentRegion = userRegion || (typeof window !== 'undefined' ? getUserRegion() : null)
+    
+    if (currentRegion && currentRegion !== 'NATIONAL') {
+      const regionConfig = REGIONS[currentRegion as keyof typeof REGIONS]
+      if (regionConfig?.states && regionConfig.states.length > 0) {
+        query = query.in('state', regionConfig.states)
       }
-      // NATIONAL sees all data, so no filter needed
     }
+    // NATIONAL sees all data, so no filter needed
 
     // Apply search filter
     if (filters?.query) {

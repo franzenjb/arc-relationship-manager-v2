@@ -60,13 +60,16 @@ function MapPageContent() {
   useEffect(() => {
     const loadData = async () => {
       try {
-        // Load organizations - will be filtered by region in OrganizationService
-        const orgData = await OrganizationService.getAll()
+        // Get current user's region to pass to services
+        const currentUserRegion = getUserRegion()
+        
+        // Load organizations - filtered by region
+        const orgData = await OrganizationService.getAll(undefined, currentUserRegion)
         setOrganizations(orgData)
         setFilteredOrgs(orgData)
         
-        // Load people - will be filtered by region in PersonService
-        const peopleData = await PersonService.getAll()
+        // Load people - filtered by region
+        const peopleData = await PersonService.getAll(undefined, currentUserRegion)
         setPeople(peopleData)
         setFilteredPeople(peopleData)
         

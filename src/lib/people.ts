@@ -5,29 +5,29 @@ import { getUserRegion, REGIONS } from '@/config/regions'
 import { GeocodingService } from './geocoding'
 
 export class PersonService {
-  static async getAll(filters?: SearchFilters): Promise<Person[]> {
+  static async getAll(filters?: SearchFilters, userRegion?: string): Promise<Person[]> {
     let query = supabase
       .from('people')
       .select('*, organization:org_id(id, name, city, state)')
       .order('updated_at', { ascending: false })
 
     // Apply region filter - people belong to organizations in specific states
-    if (typeof window !== 'undefined') {
-      const userRegion = getUserRegion()
-      if (userRegion && userRegion !== 'NATIONAL') {
-        const regionConfig = REGIONS[userRegion as keyof typeof REGIONS]
-        if (regionConfig?.states && regionConfig.states.length > 0) {
-          // First get org IDs in the region
-          const { data: orgs } = await supabase
-            .from('organizations')
-            .select('id')
-            .in('state', regionConfig.states)
-          
-          if (orgs) {
-            const orgIds = orgs.map(o => o.id)
-            if (orgIds.length > 0) {
-              query = query.in('org_id', orgIds)
-            }
+    // Accept userRegion parameter for server-side usage, fallback to client-side
+    const currentRegion = userRegion || (typeof window !== 'undefined' ? getUserRegion() : null)
+    
+    if (currentRegion && currentRegion !== 'NATIONAL') {
+      const regionConfig = REGIONS[currentRegion as keyof typeof REGIONS]
+      if (regionConfig?.states && regionConfig.states.length > 0) {
+        // First get org IDs in the region
+        const { data: orgs } = await supabase
+          .from('organizations')
+          .select('id')
+          .in('state', regionConfig.states)
+        
+        if (orgs) {
+          const orgIds = orgs.map(o => o.id)
+          if (orgIds.length > 0) {
+            query = query.in('org_id', orgIds)
           }
         }
       }
