@@ -7,6 +7,7 @@ import { OrganizationService } from '@/lib/organizations'
 import { PersonService } from '@/lib/people'
 import { Organization, Person } from '@/lib/types'
 import { getUserRegion, REGIONS } from '@/config/regions'
+import { getFiltersForRegion } from '@/config/regionMapConfig'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
@@ -240,95 +241,11 @@ function MapPageContent() {
   const uniqueTypes = [...new Set(organizations.map(org => org.organization_type).filter(Boolean))]
   const uniqueCities = [...new Set(organizations.map(org => org.city).filter(Boolean))].sort()
   
-  // Real Florida Red Cross structure from CSV data
-  const floridaRegions = [
-    { value: 'north_and_central', label: 'North and Central' },
-    { value: 'south', label: 'South' }
-  ]
-  
-  const floridaChapters = [
-    { value: 'northwest_florida', label: 'Northwest Florida' },
-    { value: 'capital_area', label: 'Capital Area' },
-    { value: 'north_central_florida', label: 'North Central Florida' },
-    { value: 'northeast_florida', label: 'Northeast Florida' },
-    { value: 'central_florida_coast', label: 'Central Florida Coast' },
-    { value: 'tampa_bay', label: 'Tampa Bay' },
-    { value: 'mid_florida', label: 'Mid Florida' },
-    { value: 'palm_beach_to_treasure_coast', label: 'Palm Beach to Treasure Coast' },
-    { value: 'southwest_gulf_coast_to_glades', label: 'Southwest Gulf Coast to Glades' },
-    { value: 'broward', label: 'Broward' },
-    { value: 'greater_miami_to_the_keys', label: 'Greater Miami to the Keys' }
-  ]
-  
-  const floridaCounties = [
-    { value: 'washington', label: 'Washington County' },
-    { value: 'walton', label: 'Walton County' },
-    { value: 'wakulla', label: 'Wakulla County' },
-    { value: 'volusia', label: 'Volusia County' },
-    { value: 'union', label: 'Union County' },
-    { value: 'taylor', label: 'Taylor County' },
-    { value: 'suwannee', label: 'Suwannee County' },
-    { value: 'sumter', label: 'Sumter County' },
-    { value: 'st_lucie', label: 'St. Lucie County' },
-    { value: 'st_johns', label: 'St. Johns County' },
-    { value: 'seminole', label: 'Seminole County' },
-    { value: 'sarasota', label: 'Sarasota County' },
-    { value: 'santa_rosa', label: 'Santa Rosa County' },
-    { value: 'putnam', label: 'Putnam County' },
-    { value: 'polk', label: 'Polk County' },
-    { value: 'pinellas', label: 'Pinellas County' },
-    { value: 'pasco', label: 'Pasco County' },
-    { value: 'palm_beach', label: 'Palm Beach County' },
-    { value: 'osceola', label: 'Osceola County' },
-    { value: 'orange', label: 'Orange County' },
-    { value: 'okeechobee', label: 'Okeechobee County' },
-    { value: 'okaloosa', label: 'Okaloosa County' },
-    { value: 'nassau', label: 'Nassau County' },
-    { value: 'monroe', label: 'Monroe County' },
-    { value: 'miami_dade', label: 'Miami-Dade County' },
-    { value: 'martin', label: 'Martin County' },
-    { value: 'marion', label: 'Marion County' },
-    { value: 'manatee', label: 'Manatee County' },
-    { value: 'madison', label: 'Madison County' },
-    { value: 'liberty', label: 'Liberty County' },
-    { value: 'levy', label: 'Levy County' },
-    { value: 'leon', label: 'Leon County' },
-    { value: 'lee', label: 'Lee County' },
-    { value: 'lake', label: 'Lake County' },
-    { value: 'lafayette', label: 'Lafayette County' },
-    { value: 'jefferson', label: 'Jefferson County' },
-    { value: 'jackson', label: 'Jackson County' },
-    { value: 'indian_river', label: 'Indian River County' },
-    { value: 'holmes', label: 'Holmes County' },
-    { value: 'hillsborough', label: 'Hillsborough County' },
-    { value: 'highlands', label: 'Highlands County' },
-    { value: 'hernando', label: 'Hernando County' },
-    { value: 'hendry', label: 'Hendry County' },
-    { value: 'hardee', label: 'Hardee County' },
-    { value: 'hamilton', label: 'Hamilton County' },
-    { value: 'gulf', label: 'Gulf County' },
-    { value: 'glades', label: 'Glades County' },
-    { value: 'gilchrist', label: 'Gilchrist County' },
-    { value: 'gadsden', label: 'Gadsden County' },
-    { value: 'franklin', label: 'Franklin County' },
-    { value: 'flagler', label: 'Flagler County' },
-    { value: 'escambia', label: 'Escambia County' },
-    { value: 'duval', label: 'Duval County' },
-    { value: 'dixie', label: 'Dixie County' },
-    { value: 'desoto', label: 'DeSoto County' },
-    { value: 'columbia', label: 'Columbia County' },
-    { value: 'collier', label: 'Collier County' },
-    { value: 'clay', label: 'Clay County' },
-    { value: 'citrus', label: 'Citrus County' },
-    { value: 'charlotte', label: 'Charlotte County' },
-    { value: 'calhoun', label: 'Calhoun County' },
-    { value: 'broward', label: 'Broward County' },
-    { value: 'brevard', label: 'Brevard County' },
-    { value: 'bradford', label: 'Bradford County' },
-    { value: 'bay', label: 'Bay County' },
-    { value: 'baker', label: 'Baker County' },
-    { value: 'alachua', label: 'Alachua County' }
-  ]
+  // Get region-specific filters
+  const regionFilters = getFiltersForRegion()
+  const regionRegions = regionFilters.regions
+  const regionChapters = regionFilters.chapters  
+  const regionCounties = regionFilters.counties
 
   return (
     <div className="space-y-6">
@@ -514,7 +431,7 @@ function MapPageContent() {
                   className="w-full px-2 py-1 text-xs border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-red-500 focus:border-transparent"
                 >
                   <option value="all">All Regions</option>
-                  {floridaRegions.map((region) => (
+                  {regionRegions.map((region) => (
                     <option key={region.value} value={region.value}>
                       {region.label}
                     </option>
@@ -531,7 +448,7 @@ function MapPageContent() {
                   className="w-full px-2 py-1 text-xs border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-red-500 focus:border-transparent"
                 >
                   <option value="all">All Chapters</option>
-                  {floridaChapters.map((chapter) => (
+                  {regionChapters.map((chapter) => (
                     <option key={chapter.value} value={chapter.value}>
                       {chapter.label}
                     </option>
@@ -548,7 +465,7 @@ function MapPageContent() {
                   className="w-full px-2 py-1 text-xs border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-red-500 focus:border-transparent"
                 >
                   <option value="all">All Counties</option>
-                  {floridaCounties.map((county) => (
+                  {regionCounties.map((county) => (
                     <option key={county.value} value={county.value}>
                       {county.label}
                     </option>

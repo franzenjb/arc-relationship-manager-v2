@@ -3,6 +3,9 @@
 import { useEffect, useState } from 'react'
 import dynamic from 'next/dynamic'
 import { Organization, Person } from '@/lib/types'
+import { getCoordinatesForRegion } from '@/config/regionMapConfig'
+import { getUserRegion } from '@/lib/auth'
+import { REGIONS } from '@/config/regions'
 
 // Dynamically import Leaflet components to avoid SSR issues
 const MapContainer = dynamic(() => import('react-leaflet').then(mod => mod.MapContainer), { ssr: false })
@@ -18,31 +21,8 @@ interface LeafletMapProps {
   displayMode: 'organizations' | 'people' | 'both'
 }
 
-// Florida city coordinates
-const FLORIDA_COORDINATES: Record<string, [number, number]> = {
-  'miami': [25.7617, -80.1918],
-  'tampa': [27.9506, -82.4572],
-  'orlando': [28.5383, -81.3792],
-  'jacksonville': [30.3322, -81.6557],
-  'tallahassee': [30.4518, -84.27277],
-  'fort lauderdale': [26.1224, -80.1373],
-  'st. petersburg': [27.7676, -82.6403],
-  'gainesville': [29.6516, -82.3248],
-  'west palm beach': [26.7153, -80.0534],
-  'naples': [26.1420, -81.7948],
-  'fort myers': [26.5628, -81.8495],
-  'cape coral': [26.5629, -81.9495],
-  'pensacola': [30.4213, -87.2169],
-  'sarasota': [27.3364, -82.5307],
-  'clearwater': [27.9659, -82.8001],
-  'lakeland': [28.0395, -81.9498],
-  'melbourne': [28.0836, -80.6081]
-}
-
 const getCoordinates = (city?: string): [number, number] | null => {
-  if (!city) return null
-  const normalized = city.toLowerCase().trim()
-  return FLORIDA_COORDINATES[normalized] || null
+  return getCoordinatesForRegion(city)
 }
 
 const createCustomIcon = (count: number, isSelected: boolean, markerType: 'organization' | 'person' | 'mixed') => {
@@ -97,8 +77,11 @@ export default function LeafletMapSimple({
   const [mapMarkers, setMapMarkers] = useState<any[]>([])
 
   // Fixed map settings - no auto-zoom
-  const mapCenter: [number, number] = [27.7663, -82.6404] // Florida center
-  const mapZoom: number = 7
+  // Get map center based on user's region
+  const userRegion = getUserRegion()
+  const regionConfig = userRegion ? REGIONS[userRegion as keyof typeof REGIONS] : null
+  const mapCenter: [number, number] = regionConfig?.map?.center || [39.8283, -98.5795] // Default to US center
+  const mapZoom: number = regionConfig?.map?.zoom || 4
 
   useEffect(() => {
     setIsClient(true)
