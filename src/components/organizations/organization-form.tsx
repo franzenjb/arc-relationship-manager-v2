@@ -8,6 +8,7 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { MultiSelect } from '@/components/ui/multi-select'
+import { CountySelector } from '@/components/ui/county-selector'
 import { Organization } from '@/lib/types'
 import { OrganizationService } from '@/lib/organizations'
 import { StaffService, MissionArea, LineOfService, PartnerType, StaffMember } from '@/lib/staff'
@@ -22,6 +23,7 @@ const organizationSchema = z.object({
   city: z.string().optional(),
   state: z.string().optional(),
   zip: z.string().optional(),
+  county_id: z.string().optional(),
   website: z.string().url().optional().or(z.literal('')),
   phone: z.string().optional(),
   notes: z.string().optional(),
@@ -416,6 +418,25 @@ export function OrganizationForm({ organization, onSuccess, onCancel }: Organiza
                       placeholder="ZIP"
                     />
                   </div>
+                </div>
+
+                {/* County Selection */}
+                <div className="md:col-span-2">
+                  <CountySelector
+                    value={form.watch('county_id')}
+                    onValueChange={(countyId) => form.setValue('county_id', countyId)}
+                    state={form.watch('state')}
+                    label="Red Cross County Assignment"
+                    placeholder="Select county for Red Cross hierarchy..."
+                    showHierarchy={true}
+                    className="w-full"
+                  />
+                  <p className="mt-1 text-sm text-gray-500">
+                    County assignment determines Red Cross Division → Region → Chapter hierarchy.
+                    {form.watch('state') && !form.watch('county_id') && (
+                      <span className="text-amber-600 font-medium"> Auto-assigned based on address when saved.</span>
+                    )}
+                  </p>
                 </div>
               </div>
             </div>

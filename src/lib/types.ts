@@ -82,6 +82,14 @@ export interface Person {
   title?: string
   email?: string
   phone?: string
+  
+  // Address information (for sole proprietors)
+  address?: string
+  city?: string
+  state?: string
+  zip?: string
+  county_id?: string
+  
   notes?: string
   created_at: string
   updated_at: string
@@ -90,6 +98,7 @@ export interface Person {
   
   // Relations
   organization?: Organization
+  county?: County
   meetings?: Meeting[]
   created_by_user?: UserProfile
   updated_by_user?: UserProfile

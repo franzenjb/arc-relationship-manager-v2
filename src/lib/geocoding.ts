@@ -88,9 +88,9 @@ export class GeocodingService {
   }
 
   /**
-   * Geocode address and assign county to organization
+   * Geocode address and assign county to organization or person
    */
-  static async geocodeAndAssignCounty(organizationId: string, address?: string, city?: string, state?: string, zip?: string): Promise<{success: boolean, county?: any, coordinates?: GeocodingResult}> {
+  static async geocodeAndAssignCounty(entityId: string, address?: string, city?: string, state?: string, zip?: string, entityType: 'organizations' | 'people' = 'organizations'): Promise<{success: boolean, county?: any, coordinates?: GeocodingResult}> {
     if (!address && !city) {
       return { success: false }
     }
@@ -113,14 +113,14 @@ export class GeocodingService {
         return { success: false, coordinates }
       }
       
-      // Update the organization with county assignment
+      // Update the entity with county assignment
       const { error } = await supabase
-        .from('organizations')
+        .from(entityType)
         .update({ 
           county_id: county.id
           // Note: latitude/longitude columns need to be added to the database schema
         })
-        .eq('id', organizationId)
+        .eq('id', entityId)
       
       if (error) {
         console.error('Failed to update organization with county:', error)

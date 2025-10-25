@@ -10,8 +10,9 @@ import { OrganizationService } from '@/lib/organizations'
 import { Person, Organization } from '@/lib/types'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { CountySelector } from '@/components/ui/county-selector'
 import { OrganizationForm } from '@/components/organizations/organization-form'
-import { User, Building2, Mail, Phone, FileText, Plus, X } from 'lucide-react'
+import { User, Building2, Mail, Phone, FileText, Plus, X, MapPin } from 'lucide-react'
 
 const personSchema = z.object({
   org_id: z.string().min(1, 'Organization is required'),
@@ -20,6 +21,12 @@ const personSchema = z.object({
   title: z.string().optional(),
   email: z.string().email('Valid email is required').optional().or(z.literal('')),
   phone: z.string().optional(),
+  // Address fields for sole proprietors
+  address: z.string().optional(),
+  city: z.string().optional(),
+  state: z.string().optional(),
+  zip: z.string().optional(),
+  county_id: z.string().optional(),
   notes: z.string().optional(),
 })
 
@@ -53,6 +60,11 @@ export function PersonForm({ person, organizationId, onSuccess, onCancel }: Pers
       title: person?.title || '',
       email: person?.email || '',
       phone: person?.phone || '',
+      address: person?.address || '',
+      city: person?.city || '',
+      state: person?.state || '',
+      zip: person?.zip || '',
+      county_id: person?.county_id || '',
       notes: person?.notes || '',
     }
   })
@@ -236,6 +248,87 @@ export function PersonForm({ person, organizationId, onSuccess, onCancel }: Pers
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500"
                 placeholder="(555) 123-4567"
               />
+            </div>
+          </div>
+
+          {/* Address Information (for sole proprietors) */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-medium text-gray-900 border-b border-gray-200 pb-2">
+              <MapPin className="h-5 w-5 inline mr-2" />
+              Address Information
+            </h3>
+            <p className="text-sm text-gray-600">
+              For sole proprietors or when person's location differs from organization
+            </p>
+
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                Street Address
+              </label>
+              <input
+                type="text"
+                {...register('address')}
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500"
+                placeholder="123 Main Street"
+              />
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  City
+                </label>
+                <input
+                  type="text"
+                  {...register('city')}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500"
+                  placeholder="City"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  State
+                </label>
+                <input
+                  type="text"
+                  {...register('state')}
+                  maxLength={2}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500"
+                  placeholder="FL"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  ZIP Code
+                </label>
+                <input
+                  type="text"
+                  {...register('zip')}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500"
+                  placeholder="12345"
+                />
+              </div>
+            </div>
+
+            {/* County Selection */}
+            <div>
+              <CountySelector
+                value={watch('county_id')}
+                onValueChange={(countyId) => setValue('county_id', countyId)}
+                state={watch('state')}
+                label="Red Cross County Assignment"
+                placeholder="Select county for Red Cross hierarchy..."
+                showHierarchy={true}
+                className="w-full"
+              />
+              <p className="mt-1 text-sm text-gray-500">
+                County assignment determines Red Cross Division → Region → Chapter hierarchy.
+                {watch('state') && !watch('county_id') && (
+                  <span className="text-amber-600 font-medium"> Auto-assigned based on address when saved.</span>
+                )}
+              </p>
             </div>
           </div>
 

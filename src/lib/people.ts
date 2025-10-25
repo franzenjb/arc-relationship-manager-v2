@@ -2,6 +2,7 @@ import { supabase } from './supabase'
 import { Person, SearchFilters } from './types'
 import { AuditService } from './audit'
 import { getUserRegion, REGIONS } from '@/config/regions'
+import { GeocodingService } from './geocoding'
 
 export class PersonService {
   static async getAll(filters?: SearchFilters): Promise<Person[]> {
@@ -102,24 +103,89 @@ export class PersonService {
 
   static async create(data: Partial<Person>): Promise<Person> {
     const auditFields = await AuditService.createAuditFields()
-    const personData = { ...data, ...auditFields }
+    let personData = { ...data, ...auditFields }
+
+    // Auto-assign county using geocoding if we have address information
+    if (!personData.county_id && (personData.address || personData.city) && personData.state) {
+      try {
+        // First try simple city match in Red Cross geography
+        const { data: exactMatch } = await supabase
+          .from('red_cross_geography')
+          .select('*')
+          .eq('state', personData.state)
+          .ilike('city', personData.city || '')
+          .limit(1)
+          .single()
+
+        if (exactMatch) {
+          personData.county_id = exactMatch.id
+        }
+        // If no direct match, geocoding will happen after creation
+      } catch (error) {
+        console.warn('Failed to auto-assign county to person:', error)
+      }
+    }
 
     const { data: person, error } = await supabase
       .from('people')
       .insert(personData)
       .select(`
         *, 
-        organization:org_id(id, name)
+        organization:org_id(id, name),
+        county:county_id(county, state, region, chapter, division)
       `)
       .single()
 
     if (error) throw error
+
+    // If no county was assigned and we have address info, try geocoding
+    if (!person.county_id && (person.address || person.city) && person.state) {
+      console.log(`Attempting to geocode person: ${person.first_name} ${person.last_name}`)
+      GeocodingService.geocodeAndAssignCounty(
+        person.id,
+        person.address,
+        person.city,
+        person.state,
+        person.zip,
+        'people'
+      ).catch(error => {
+        console.warn(`Geocoding failed for person ${person.first_name} ${person.last_name}:`, error)
+      })
+    }
+
     return person
   }
 
   static async update(id: string, data: Partial<Person>): Promise<Person> {
     const auditFields = await AuditService.updateAuditFields()
-    const personData = { ...data, ...auditFields }
+    let personData = { ...data, ...auditFields }
+
+    // Auto-assign county if address changed but no county assigned
+    if (!personData.county_id && (personData.address || personData.city || personData.state)) {
+      // Get current person to check if we have the missing address info
+      const current = await this.getById(id)
+      const address = personData.address || current?.address
+      const city = personData.city || current?.city
+      const state = personData.state || current?.state
+      
+      if (city && state) {
+        try {
+          const { data: exactMatch } = await supabase
+            .from('red_cross_geography')
+            .select('*')
+            .eq('state', state)
+            .ilike('city', city)
+            .limit(1)
+            .single()
+
+          if (exactMatch) {
+            personData.county_id = exactMatch.id
+          }
+        } catch (error) {
+          console.warn('Failed to auto-assign county to person:', error)
+        }
+      }
+    }
 
     const { data: person, error } = await supabase
       .from('people')
@@ -127,11 +193,28 @@ export class PersonService {
       .eq('id', id)
       .select(`
         *, 
-        organization:org_id(id, name)
+        organization:org_id(id, name),
+        county:county_id(county, state, region, chapter, division)
       `)
       .single()
 
     if (error) throw error
+
+    // If address changed and no county assigned, try geocoding
+    if (!person.county_id && (person.address || person.city) && person.state) {
+      console.log(`Attempting to geocode updated person: ${person.first_name} ${person.last_name}`)
+      GeocodingService.geocodeAndAssignCounty(
+        person.id,
+        person.address,
+        person.city,
+        person.state,
+        person.zip,
+        'people'
+      ).catch(error => {
+        console.warn(`Geocoding failed for person ${person.first_name} ${person.last_name}:`, error)
+      })
+    }
+
     return person
   }
 
