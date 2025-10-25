@@ -283,7 +283,7 @@ export default function ActivityPage() {
             Recent Activity ({filteredActivities.length} of {activities.length} items)
           </CardTitle>
           <CardDescription>
-            Comprehensive activity log for your Florida partnerships
+            Comprehensive activity log for your partnerships
           </CardDescription>
         </CardHeader>
         <CardContent>

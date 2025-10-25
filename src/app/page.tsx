@@ -110,7 +110,7 @@ export default function DashboardPage() {
       icon: Building2,
       color: "text-blue-600",
       bgColor: "bg-blue-100",
-      change: "Florida partnerships"
+      change: "partnerships"
     },
     {
       title: "People",
