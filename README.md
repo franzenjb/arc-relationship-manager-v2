@@ -1,21 +1,31 @@
 # ARC Relationship Manager V2
 
-## 🚨 **CRITICAL SECURITY NOTICE**
+## 🚨 **AUTHENTICATION UPDATE - January 25, 2025**
 
-### **⚠️ NO AUTHENTICATION CURRENTLY IMPLEMENTED**
+### **🔐 NEW: Region-Based Password Protection (BETA)**
 
-**Current Status (as of January 24, 2025):**
-- ❌ **NO LOGIN REQUIRED** - Anyone with the URL can access the system
-- ❌ **NO USER AUTHENTICATION** - All users appear as "Jeff Franzen"
-- ❌ **NO ACCESS CONTROL** - Full read/write access to all data
-- ❌ **NO AUDIT TRAIL** - Changes not tracked to real users
-- ❌ **PUBLIC ACCESS** - System is completely open
+**Current Authentication Status:**
+- ✅ **REGION PASSWORD SYSTEM** - Basic password protection per region
+- ⚠️ **NOT ENFORCED YET** - Direct URLs still accessible (gradual rollout)
+- ⏳ **IN TESTING** - Login at: https://arc-relationship-manager-v2.vercel.app/login
+- 🔄 **GOLD STANDARD BACKUP** - Tagged v2.0-gold-standard for rollback if needed
 
-**Why Authentication Was Removed:**
-- Emergency fix for executive demo on October 23, 2024
-- Authentication was blocking critical functionality
-- Temporary removal to ensure system worked for demo
-- **AUTHENTICATION MUST BE RE-IMPLEMENTED BEFORE PRODUCTION USE**
+**Region Access Passwords:**
+- **Florida:** `RedCrossFlorida2025!`
+- **Nebraska & Iowa:** `RedCrossMidwest2025!`
+- **National HQ:** `RedCrossHQ2025Admin!`
+
+**Implementation Timeline:**
+1. ✅ **Phase 0.5** (Jan 25): Region passwords - COMPLETE
+2. ⏳ **Phase 1** (Next): Enforce login + add user tracking
+3. ⏳ **Phase 2** (Future): Full Supabase Auth with individual users
+4. ⏳ **Phase 3** (Later): SSO integration
+
+**Why This Approach:**
+- Simple password per region (requested by user)
+- No database changes required (uses sessionStorage)
+- Can be rolled back instantly if issues arise
+- Allows gradual testing without breaking production
 
 ---
 
