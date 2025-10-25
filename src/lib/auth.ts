@@ -5,6 +5,10 @@ export function setUserRegion(region: string, userName: string = 'User') {
   if (typeof window !== 'undefined') {
     sessionStorage.setItem('userRegion', region)
     sessionStorage.setItem('userName', userName)
+    
+    // Also set cookies for middleware to access
+    document.cookie = `userRegion=${region}; path=/; max-age=86400` // 24 hours
+    document.cookie = `userName=${userName}; path=/; max-age=86400`
   }
 }
 
@@ -26,6 +30,10 @@ export function clearUserRegion() {
   if (typeof window !== 'undefined') {
     sessionStorage.removeItem('userRegion')
     sessionStorage.removeItem('userName')
+    
+    // Also clear cookies
+    document.cookie = 'userRegion=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT'
+    document.cookie = 'userName=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT'
   }
 }
 
