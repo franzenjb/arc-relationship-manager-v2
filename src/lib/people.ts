@@ -75,22 +75,32 @@ export class PersonService {
 
     const people = data || []
 
-    // Manually fetch county information for people that have county_id
-    const peopleWithCounties = []
-    for (const person of people) {
-      if (person.county_id) {
-        const { data: countyData } = await supabase
-          .from('red_cross_geography')
-          .select('id, county, state, chapter, region, division')
-          .eq('id', person.county_id)
-          .single()
-        
-        if (countyData) {
-          person.county = countyData
-        }
+    // Get all unique county IDs from people
+    const countyIds = [...new Set(people
+      .map(person => person.county_id)
+      .filter(Boolean))]
+
+    // Fetch all county data in a single query
+    let countyMap = {}
+    if (countyIds.length > 0) {
+      const { data: counties } = await supabase
+        .from('red_cross_geography')
+        .select('id, county, state, chapter, region, division')
+        .in('id', countyIds)
+      
+      if (counties) {
+        countyMap = counties.reduce((acc, county) => {
+          acc[county.id] = county
+          return acc
+        }, {})
       }
-      peopleWithCounties.push(person)
     }
+
+    // Attach county data to people
+    const peopleWithCounties = people.map(person => ({
+      ...person,
+      county: person.county_id ? countyMap[person.county_id] : null
+    }))
 
     return peopleWithCounties
   }

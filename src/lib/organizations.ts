@@ -70,22 +70,32 @@ export class OrganizationService {
     
     const organizations = data || []
 
-    // Manually fetch county information for organizations that have county_id
-    const orgsWithCounties = []
-    for (const org of organizations) {
-      if (org.county_id) {
-        const { data: countyData } = await supabase
-          .from('red_cross_geography')
-          .select('id, county, state, chapter, region, division')
-          .eq('id', org.county_id)
-          .single()
-        
-        if (countyData) {
-          org.county = countyData
-        }
+    // Get all unique county IDs from organizations
+    const countyIds = [...new Set(organizations
+      .map(org => org.county_id)
+      .filter(Boolean))]
+
+    // Fetch all county data in a single query
+    let countyMap = {}
+    if (countyIds.length > 0) {
+      const { data: counties } = await supabase
+        .from('red_cross_geography')
+        .select('id, county, state, chapter, region, division')
+        .in('id', countyIds)
+      
+      if (counties) {
+        countyMap = counties.reduce((acc, county) => {
+          acc[county.id] = county
+          return acc
+        }, {})
       }
-      orgsWithCounties.push(org)
     }
+
+    // Attach county data to organizations
+    const orgsWithCounties = organizations.map(org => ({
+      ...org,
+      county: org.county_id ? countyMap[org.county_id] : null
+    }))
 
     return orgsWithCounties
   }
