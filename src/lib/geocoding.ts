@@ -113,14 +113,12 @@ export class GeocodingService {
         return { success: false, coordinates }
       }
       
-      // Update the organization
+      // Update the organization with county assignment
       const { error } = await supabase
         .from('organizations')
         .update({ 
-          county_id: county.id,
-          // Store coordinates for mapping
-          latitude: coordinates.latitude,
-          longitude: coordinates.longitude
+          county_id: county.id
+          // Note: latitude/longitude columns need to be added to the database schema
         })
         .eq('id', organizationId)
       
