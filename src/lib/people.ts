@@ -8,11 +8,7 @@ export class PersonService {
   static async getAll(filters?: SearchFilters): Promise<Person[]> {
     let query = supabase
       .from('people')
-      .select(`
-        *,
-        organization:org_id(id, name, city, state),
-        county:red_cross_geography(id, county, state, chapter, region, division)
-      `)
+      .select('*, organization:org_id(id, name, city, state)')
       .order('updated_at', { ascending: false })
 
     // Apply region filter - people belong to organizations in specific states
@@ -77,17 +73,32 @@ export class PersonService {
       })
     }
 
-    return data || []
+    const people = data || []
+
+    // Manually fetch county information for people that have county_id
+    const peopleWithCounties = []
+    for (const person of people) {
+      if (person.county_id) {
+        const { data: countyData } = await supabase
+          .from('red_cross_geography')
+          .select('id, county, state, chapter, region, division')
+          .eq('id', person.county_id)
+          .single()
+        
+        if (countyData) {
+          person.county = countyData
+        }
+      }
+      peopleWithCounties.push(person)
+    }
+
+    return peopleWithCounties
   }
 
   static async getById(id: string): Promise<Person | null> {
     const { data, error } = await supabase
       .from('people')
-      .select(`
-        *,
-        organization:org_id(id, name),
-        county:red_cross_geography(id, county, state, chapter, region, division)
-      `)
+      .select('*, organization:org_id(id, name)')
       .eq('id', id)
       .single()
 
@@ -95,6 +106,20 @@ export class PersonService {
       if (error.code === 'PGRST116') return null // Not found
       throw error
     }
+
+    // Manually fetch county information if county_id exists
+    if (data && data.county_id) {
+      const { data: countyData } = await supabase
+        .from('red_cross_geography')
+        .select('id, county, state, chapter, region, division')
+        .eq('id', data.county_id)
+        .single()
+      
+      if (countyData) {
+        data.county = countyData
+      }
+    }
+
     return data
   }
 

@@ -8,10 +8,7 @@ export class OrganizationService {
   static async getAll(filters?: SearchFilters): Promise<Organization[]> {
     let query = supabase
       .from('organizations')
-      .select(`
-        *,
-        county:red_cross_geography(id, county, state, chapter, region, division)
-      `)
+      .select('*')
       .order('name', { ascending: true })
 
     // Apply region filter based on logged-in user's region
@@ -70,16 +67,33 @@ export class OrganizationService {
     const { data, error } = await query
 
     if (error) throw error
-    return data || []
+    
+    const organizations = data || []
+
+    // Manually fetch county information for organizations that have county_id
+    const orgsWithCounties = []
+    for (const org of organizations) {
+      if (org.county_id) {
+        const { data: countyData } = await supabase
+          .from('red_cross_geography')
+          .select('id, county, state, chapter, region, division')
+          .eq('id', org.county_id)
+          .single()
+        
+        if (countyData) {
+          org.county = countyData
+        }
+      }
+      orgsWithCounties.push(org)
+    }
+
+    return orgsWithCounties
   }
 
   static async getById(id: string): Promise<Organization | null> {
     const { data, error } = await supabase
       .from('organizations')
-      .select(`
-        *,
-        county:red_cross_geography(id, county, state, chapter, region, division)
-      `)
+      .select('*')
       .eq('id', id)
       .single()
 
@@ -87,6 +101,20 @@ export class OrganizationService {
       if (error.code === 'PGRST116') return null // Not found
       throw error
     }
+
+    // Manually fetch county information if county_id exists
+    if (data && data.county_id) {
+      const { data: countyData } = await supabase
+        .from('red_cross_geography')
+        .select('id, county, state, chapter, region, division')
+        .eq('id', data.county_id)
+        .single()
+      
+      if (countyData) {
+        data.county = countyData
+      }
+    }
+
     return data
   }
 
