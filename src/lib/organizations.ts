@@ -179,7 +179,31 @@ export class OrganizationService {
   }
 
   static async getDashboardStats() {
-    // Get basic statistics from tables
+    // Apply region filtering like other methods
+    if (typeof window !== 'undefined') {
+      const userRegion = getUserRegion()
+      if (userRegion && userRegion !== 'NATIONAL') {
+        const regionConfig = REGIONS[userRegion as keyof typeof REGIONS]
+        if (regionConfig?.states && regionConfig.states.length > 0) {
+          // Get region-specific stats
+          const [orgCount, peopleCount, meetingCount] = await Promise.all([
+            supabase.from('organizations').select('id', { count: 'exact' }).in('state', regionConfig.states),
+            // For people and meetings, we need to filter by organization state
+            this.getRegionPeopleCount(regionConfig.states),
+            this.getRegionMeetingCount(regionConfig.states)
+          ])
+
+          return {
+            total_organizations: orgCount.count || 0,
+            total_people: peopleCount,
+            total_meetings: meetingCount,
+            recent_activities: 0
+          }
+        }
+      }
+    }
+
+    // NATIONAL or no region filtering - get all data
     const [orgCount, peopleCount, meetingCount] = await Promise.all([
       supabase.from('organizations').select('id', { count: 'exact' }),
       supabase.from('people').select('id', { count: 'exact' }),
@@ -192,6 +216,42 @@ export class OrganizationService {
       total_meetings: meetingCount.count || 0,
       recent_activities: 0
     }
+  }
+
+  static async getRegionPeopleCount(states: string[]): Promise<number> {
+    // Get org IDs in the region
+    const { data: orgs } = await supabase
+      .from('organizations')
+      .select('id')
+      .in('state', states)
+    
+    if (!orgs || orgs.length === 0) return 0
+    
+    const orgIds = orgs.map(o => o.id)
+    const { count } = await supabase
+      .from('people')
+      .select('id', { count: 'exact' })
+      .in('org_id', orgIds)
+    
+    return count || 0
+  }
+
+  static async getRegionMeetingCount(states: string[]): Promise<number> {
+    // Get org IDs in the region
+    const { data: orgs } = await supabase
+      .from('organizations')
+      .select('id')
+      .in('state', states)
+    
+    if (!orgs || orgs.length === 0) return 0
+    
+    const orgIds = orgs.map(o => o.id)
+    const { count } = await supabase
+      .from('meetings')
+      .select('id', { count: 'exact' })
+      .in('org_id', orgIds)
+    
+    return count || 0
   }
 
   static async searchSimilar(name: string, regionId?: string) {
