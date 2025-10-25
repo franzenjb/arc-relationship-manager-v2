@@ -22,7 +22,16 @@ export default function DashboardPage() {
   const router = useRouter()
 
   useEffect(() => {
-    // ALWAYS LOGGED IN
+    // FLORIDA-ONLY VERSION: Auto-login to Florida region
+    if (typeof window !== 'undefined') {
+      sessionStorage.setItem('userRegion', 'FLORIDA')
+      sessionStorage.setItem('userName', 'Jeff Franzen')
+      
+      // Also set cookies for middleware
+      document.cookie = 'userRegion=FLORIDA; path=/; max-age=86400'
+      document.cookie = 'userName=Jeff Franzen; path=/; max-age=86400'
+    }
+    
     setUser({
       id: 'temp-user',
       email: 'jeff.franzen2@redcross.org',
