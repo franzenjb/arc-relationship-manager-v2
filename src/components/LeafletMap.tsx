@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react'
 import dynamic from 'next/dynamic'
 import { Organization, Person } from '@/lib/types'
+import { getCurrentRegion, getUserRegion, REGIONS } from '@/config/regions'
 
 // Dynamically import Leaflet components to avoid SSR issues
 const MapContainer = dynamic(() => import('react-leaflet').then(mod => mod.MapContainer), { ssr: false })
@@ -20,55 +21,87 @@ interface LeafletMapProps {
   displayMode: 'organizations' | 'people' | 'both'
 }
 
-// Florida city coordinates (TEMPORARY: Will be replaced with proper geocoding)
-// TODO: Implement address-level geocoding for precise marker placement
-// Current system groups all organizations by city, causing clustering issues
-const FLORIDA_COORDINATES: Record<string, [number, number]> = {
-  'miami': [25.7617, -80.1918],
-  'tampa': [27.9506, -82.4572],
-  'orlando': [28.5383, -81.3792],
-  'jacksonville': [30.3322, -81.6557],
-  'tallahassee': [30.4518, -84.27277],
-  'fort lauderdale': [26.1224, -80.1373],
-  'st. petersburg': [27.7676, -82.6403],
-  'saint petersburg': [27.7676, -82.6403],
-  'gainesville': [29.6516, -82.3248],
-  'west palm beach': [26.7153, -80.0534],
-  'palm beach': [26.7153, -80.0534],
-  'naples': [26.1420, -81.7948],
-  'fort myers': [26.5628, -81.8495],
-  'cape coral': [26.5629, -81.9495],
-  'pensacola': [30.4213, -87.2169],
-  'sarasota': [27.3364, -82.5307],
-  'bradenton': [27.4989, -82.5748],
-  'clearwater': [27.9659, -82.8001],
-  'lakeland': [28.0395, -81.9498],
-  'melbourne': [28.0836, -80.6081],
-  'cocoa': [28.3861, -80.7420],
-  'titusville': [28.6122, -80.8075],
-  'key west': [24.5551, -81.7800],
-  'marathon': [24.7140, -81.0890],
-  'ocala': [29.1872, -82.1401],
-  'panama city': [30.1588, -85.6602],
-  'st. augustine': [29.9012, -81.3124],
-  'sanford': [28.8028, -81.2695],
-  'kissimmee': [28.2916, -81.4077],
-  'port st. lucie': [27.2730, -80.3582],
-  'stuart': [27.1973, -80.2528],
-  'vero beach': [27.6386, -80.3977]
+// City coordinates by region
+const CITY_COORDINATES: Record<string, Record<string, [number, number]>> = {
+  FLORIDA: {
+    'miami': [25.7617, -80.1918],
+    'tampa': [27.9506, -82.4572],
+    'orlando': [28.5383, -81.3792],
+    'jacksonville': [30.3322, -81.6557],
+    'tallahassee': [30.4518, -84.27277],
+    'fort lauderdale': [26.1224, -80.1373],
+    'st. petersburg': [27.7676, -82.6403],
+    'saint petersburg': [27.7676, -82.6403],
+    'gainesville': [29.6516, -82.3248],
+    'west palm beach': [26.7153, -80.0534],
+    'palm beach': [26.7153, -80.0534],
+    'naples': [26.1420, -81.7948],
+    'fort myers': [26.5628, -81.8495],
+    'cape coral': [26.5629, -81.9495],
+    'pensacola': [30.4213, -87.2169],
+    'sarasota': [27.3364, -82.5307],
+    'bradenton': [27.4989, -82.5748],
+    'clearwater': [27.9659, -82.8001],
+    'lakeland': [28.0395, -81.9498],
+    'melbourne': [28.0836, -80.6081],
+    'cocoa': [28.3861, -80.7420],
+    'titusville': [28.6122, -80.8075],
+    'key west': [24.5551, -81.7800],
+    'marathon': [24.7140, -81.0890],
+    'ocala': [29.1872, -82.1401],
+    'panama city': [30.1588, -85.6602],
+    'st. augustine': [29.9012, -81.3124],
+    'sanford': [28.8028, -81.2695],
+    'kissimmee': [28.2916, -81.4077],
+    'port st. lucie': [27.2730, -80.3582],
+    'stuart': [27.1973, -80.2528],
+    'vero beach': [27.6386, -80.3977]
+  },
+  NEBRASKA_IOWA: {
+    'omaha': [41.2565, -95.9345],
+    'lincoln': [40.8136, -96.7026],
+    'bellevue': [41.1544, -95.9146],
+    'grand island': [40.9264, -98.3420],
+    'kearney': [40.6993, -99.0817],
+    'hastings': [40.5862, -98.3889],
+    'north platte': [41.1239, -100.7654],
+    'columbus': [41.4297, -97.3684],
+    'des moines': [41.5868, -93.6250],
+    'cedar rapids': [41.9779, -91.6656],
+    'davenport': [41.5236, -90.5776],
+    'sioux city': [42.4963, -96.4049],
+    'iowa city': [41.6611, -91.5302],
+    'waterloo': [42.4928, -92.3426],
+    'council bluffs': [41.2619, -95.8608],
+    'ames': [42.0308, -93.6320],
+    'dubuque': [42.5006, -90.6646],
+    'ankeny': [41.7317, -93.6001],
+    'west des moines': [41.5772, -93.7113],
+    'cedar falls': [42.5349, -92.4453]
+  },
+  NATIONAL: {} // National uses all coordinates
 }
 
 // Function to get coordinates for a city
-const getCityCoordinates = (cityName: string): [number, number] | null => {
+const getCityCoordinates = (cityName: string, regionCode?: string | null): [number, number] | null => {
   const normalizedCity = cityName.toLowerCase().trim()
   
+  // Get region-specific coordinates
+  const userRegion = regionCode || getUserRegion() || 'FLORIDA'
+  let coordsToSearch = CITY_COORDINATES[userRegion] || {}
+  
+  // If NATIONAL, search all regions
+  if (userRegion === 'NATIONAL') {
+    coordsToSearch = { ...CITY_COORDINATES.FLORIDA, ...CITY_COORDINATES.NEBRASKA_IOWA }
+  }
+  
   // Direct match
-  if (FLORIDA_COORDINATES[normalizedCity]) {
-    return FLORIDA_COORDINATES[normalizedCity]
+  if (coordsToSearch[normalizedCity]) {
+    return coordsToSearch[normalizedCity]
   }
   
   // Partial match
-  for (const [key, coords] of Object.entries(FLORIDA_COORDINATES)) {
+  for (const [key, coords] of Object.entries(coordsToSearch)) {
     if (normalizedCity.includes(key) || key.includes(normalizedCity)) {
       return coords
     }
@@ -161,8 +194,12 @@ export default function LeafletMap({ organizations, people, selectedOrg, onSelec
     type: 'organization' | 'person' | 'mixed'
   }>>([])
   const [mapBounds, setMapBounds] = useState<[[number, number], [number, number]] | null>(null)
-  const [mapCenter, setMapCenter] = useState<[number, number]>([27.7663, -82.6404])
-  const [mapZoom, setMapZoom] = useState<number>(7)
+  
+  // Get region-specific map configuration
+  const userRegion = getUserRegion() || 'FLORIDA'
+  const regionConfig = REGIONS[userRegion as keyof typeof REGIONS] || REGIONS.FLORIDA
+  const [mapCenter, setMapCenter] = useState<[number, number]>(regionConfig.map.center)
+  const [mapZoom, setMapZoom] = useState<number>(regionConfig.map.zoom)
 
   useEffect(() => {
     setIsClient(true)
@@ -257,12 +294,12 @@ export default function LeafletMap({ organizations, people, selectedOrg, onSelec
         setMapBounds(bounds)
       }
     } else {
-      // No organizations - default Florida view
-      setMapCenter([27.7663, -82.6404])
-      setMapZoom(7)
+      // No organizations - use region-specific default view
+      setMapCenter(regionConfig.map.center)
+      setMapZoom(regionConfig.map.zoom)
       setMapBounds(null)
     }
-  }, [organizations, people, displayMode])
+  }, [organizations, people, displayMode, regionConfig])
 
   if (!isClient) {
     return (

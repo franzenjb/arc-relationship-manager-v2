@@ -1,13 +1,36 @@
 import { supabase } from './supabase'
 import { Meeting, SearchFilters } from './types'
 import { AuditService } from './audit'
+import { getUserRegion, REGIONS } from '@/config/regions'
 
 export class MeetingService {
   static async getAll(filters?: SearchFilters): Promise<Meeting[]> {
     let query = supabase
       .from('meetings')
-      .select('*, organization:org_id(id, name)')
+      .select('*, organization:org_id(id, name, state)')
       .order('date', { ascending: false })
+
+    // Apply region filter - meetings belong to organizations in specific states
+    if (typeof window !== 'undefined') {
+      const userRegion = getUserRegion()
+      if (userRegion && userRegion !== 'NATIONAL') {
+        const regionConfig = REGIONS[userRegion as keyof typeof REGIONS]
+        if (regionConfig?.states && regionConfig.states.length > 0) {
+          // First get org IDs in the region
+          const { data: orgs } = await supabase
+            .from('organizations')
+            .select('id')
+            .in('state', regionConfig.states)
+          
+          if (orgs) {
+            const orgIds = orgs.map(o => o.id)
+            if (orgIds.length > 0) {
+              query = query.in('org_id', orgIds)
+            }
+          }
+        }
+      }
+    }
 
     // Apply search filter - removed textSearch (no search_vector column)
 

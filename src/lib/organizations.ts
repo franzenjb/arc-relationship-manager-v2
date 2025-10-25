@@ -1,6 +1,7 @@
 import { supabase } from './supabase'
 import { Organization, SearchFilters } from './types'
 import { AuditService } from './audit'
+import { getUserRegion, REGIONS } from '@/config/regions'
 
 export class OrganizationService {
   static async getAll(filters?: SearchFilters): Promise<Organization[]> {
@@ -8,6 +9,18 @@ export class OrganizationService {
       .from('organizations')
       .select('*')
       .order('name', { ascending: true })
+
+    // Apply region filter based on logged-in user's region
+    if (typeof window !== 'undefined') {
+      const userRegion = getUserRegion()
+      if (userRegion && userRegion !== 'NATIONAL') {
+        const regionConfig = REGIONS[userRegion as keyof typeof REGIONS]
+        if (regionConfig?.states && regionConfig.states.length > 0) {
+          query = query.in('state', regionConfig.states)
+        }
+      }
+      // NATIONAL sees all data, so no filter needed
+    }
 
     // Apply search filter
     if (filters?.query) {

@@ -1,6 +1,7 @@
 import { supabase } from './supabase'
 import { Person, SearchFilters } from './types'
 import { AuditService } from './audit'
+import { getUserRegion, REGIONS } from '@/config/regions'
 
 export class PersonService {
   static async getAll(filters?: SearchFilters): Promise<Person[]> {
@@ -8,6 +9,28 @@ export class PersonService {
       .from('people')
       .select('*, organization:org_id(id, name, city, state)')
       .order('updated_at', { ascending: false })
+
+    // Apply region filter - people belong to organizations in specific states
+    if (typeof window !== 'undefined') {
+      const userRegion = getUserRegion()
+      if (userRegion && userRegion !== 'NATIONAL') {
+        const regionConfig = REGIONS[userRegion as keyof typeof REGIONS]
+        if (regionConfig?.states && regionConfig.states.length > 0) {
+          // First get org IDs in the region
+          const { data: orgs } = await supabase
+            .from('organizations')
+            .select('id')
+            .in('state', regionConfig.states)
+          
+          if (orgs) {
+            const orgIds = orgs.map(o => o.id)
+            if (orgIds.length > 0) {
+              query = query.in('org_id', orgIds)
+            }
+          }
+        }
+      }
+    }
 
     // Apply search filter
     if (filters?.query) {
