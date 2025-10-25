@@ -42,26 +42,48 @@ export class GeocodingService {
   }
 
   /**
-   * Find the Red Cross county that contains the given coordinates
+   * Find the Red Cross county that contains the given coordinates and geocoded county name
    */
-  static async findCountyByCoordinates(latitude: number, longitude: number): Promise<any | null> {
-    // For now, we'll use a simple approach - find the nearest county by state
-    // In a production system, you'd want proper point-in-polygon queries
+  static async findCountyByCoordinatesAndName(latitude: number, longitude: number, geocodedCounty?: string, geocodedState?: string): Promise<any | null> {
+    // First, try to match by county name if we have it from geocoding
+    if (geocodedCounty && geocodedState) {
+      // Clean up the county name (remove "County" suffix)
+      const cleanCounty = geocodedCounty.replace(/\s+County\s*$/i, '').trim()
+      
+      const { data: exactMatch } = await supabase
+        .from('red_cross_geography')
+        .select('*')
+        .eq('state', this.normalizeState(geocodedState))
+        .or(`county.ilike.%${cleanCounty}%,county_long.ilike.%${geocodedCounty}%`)
+        .limit(1)
+        .single()
+      
+      if (exactMatch) {
+        console.log(`✅ Found county match: ${cleanCounty} -> ${exactMatch.county}, ${exactMatch.state}`)
+        return exactMatch
+      }
+    }
     
-    // First, determine the state based on coordinate ranges
+    // If no county name match, fall back to coordinate-based state lookup
     const state = this.getStateFromCoordinates(latitude, longitude)
-    if (!state) return null
+    if (!state) {
+      console.warn(`Could not determine state from coordinates: ${latitude}, ${longitude}`)
+      return null
+    }
     
-    // Get all counties for that state and find the closest one
+    // Get the first county in the state as fallback
     const { data: counties, error } = await supabase
       .from('red_cross_geography')
       .select('*')
       .eq('state', state)
+      .limit(1)
     
-    if (error || !counties) return null
+    if (error || !counties || counties.length === 0) {
+      console.warn(`No counties found for state: ${state}`)
+      return null
+    }
     
-    // For now, just return the first county in the state
-    // TODO: Implement proper spatial distance calculation
+    console.log(`⚠️ Using fallback county for ${state}: ${counties[0].county}`)
     return counties[0]
   }
 
@@ -80,8 +102,13 @@ export class GeocodingService {
         return { success: false }
       }
       
-      // Find the county
-      const county = await this.findCountyByCoordinates(coordinates.latitude, coordinates.longitude)
+      // Find the county using both coordinates and geocoded county name
+      const county = await this.findCountyByCoordinatesAndName(
+        coordinates.latitude, 
+        coordinates.longitude,
+        coordinates.county,
+        coordinates.state
+      )
       if (!county) {
         return { success: false, coordinates }
       }
@@ -154,6 +181,24 @@ export class GeocodingService {
   private static buildAddressString(address?: string, city?: string, state?: string, zip?: string): string {
     const parts = [address, city, state, zip].filter(Boolean)
     return parts.join(', ')
+  }
+
+  /**
+   * Normalize state name to abbreviation
+   */
+  private static normalizeState(stateName: string): string {
+    const stateMap: Record<string, string> = {
+      'florida': 'FL',
+      'nebraska': 'NE', 
+      'iowa': 'IA',
+      'texas': 'TX',
+      'pennsylvania': 'PA',
+      'maryland': 'MD',
+      'virginia': 'VA'
+    }
+    
+    const normalized = stateName.toLowerCase().trim()
+    return stateMap[normalized] || stateName.toUpperCase()
   }
 
   /**
