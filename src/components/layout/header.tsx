@@ -46,7 +46,7 @@ export function Header() {
         <div className="flex h-16 justify-between items-center">
           {/* Logo and Brand */}
           <div className="flex items-center">
-            <Link href="/" className="flex items-center">
+            <Link href="/login" className="flex items-center">
               <div className="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center text-white font-bold mr-3">
                 ARC
               </div>
