@@ -114,7 +114,7 @@ function MapPageContent() {
     if (filterRegion !== 'all') {
       filtered = filtered.filter(org => {
         if (!org.county?.region) return false
-        return org.county.region.toLowerCase().includes(filterRegion.toLowerCase().replace('_', ' '))
+        return org.county.region.toLowerCase().includes(filterRegion.toLowerCase().replace(/_/g, ' '))
       })
     }
 
@@ -122,7 +122,7 @@ function MapPageContent() {
     if (filterChapter !== 'all') {
       filtered = filtered.filter(org => {
         if (!org.county?.chapter) return false
-        return org.county.chapter.toLowerCase().includes(filterChapter.toLowerCase().replace('_', ' '))
+        return org.county.chapter.toLowerCase().includes(filterChapter.toLowerCase().replace(/_/g, ' '))
       })
     }
 
@@ -130,7 +130,7 @@ function MapPageContent() {
     if (filterCounty !== 'all') {
       filtered = filtered.filter(org => {
         if (!org.county?.county) return false
-        return org.county.county.toLowerCase().includes(filterCounty.toLowerCase().replace('_', ' '))
+        return org.county.county.toLowerCase().includes(filterCounty.toLowerCase().replace(/_/g, ' '))
       })
     }
 
