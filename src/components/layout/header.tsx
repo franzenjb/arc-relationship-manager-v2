@@ -1,15 +1,23 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { Button } from '@/components/ui/button'
-import { Search, Menu, X } from 'lucide-react'
+import { Search, Menu, X, LogOut, MapPin } from 'lucide-react'
 import Image from 'next/image'
+import { getUserRegion, clearUserRegion } from '@/lib/auth'
+import { REGIONS } from '@/config/regions'
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [currentRegion, setCurrentRegion] = useState<string | null>(null)
   const router = useRouter()
+
+  useEffect(() => {
+    const region = getUserRegion()
+    setCurrentRegion(region)
+  }, [])
 
   const coreNavigation = [
     { name: 'Dashboard', href: '/', active: true },
@@ -20,6 +28,17 @@ export function Header() {
     { name: 'Activity', href: '/activity', active: true },
     { name: 'Tech Stack', href: '/tech-stack', active: true }
   ]
+
+  const handleLogout = () => {
+    clearUserRegion()
+    router.push('/login')
+  }
+
+  const getRegionDisplay = () => {
+    if (!currentRegion) return null
+    const regionConfig = REGIONS[currentRegion as keyof typeof REGIONS]
+    return regionConfig?.name || currentRegion
+  }
 
   return (
     <header className="bg-white shadow-sm border-b border-gray-200">
@@ -51,6 +70,27 @@ export function Header() {
                 {item.name}
               </Link>
             ))}
+            
+            {/* Region Indicator */}
+            {currentRegion && (
+              <div className="flex items-center space-x-2 px-3 py-1 bg-red-50 text-red-700 rounded-md">
+                <MapPin className="h-4 w-4" />
+                <span className="text-sm font-medium">{getRegionDisplay()}</span>
+              </div>
+            )}
+            
+            {/* Logout Button */}
+            {currentRegion && (
+              <Button
+                onClick={handleLogout}
+                variant="outline"
+                size="sm"
+                className="flex items-center space-x-2"
+              >
+                <LogOut className="h-4 w-4" />
+                <span>Logout</span>
+              </Button>
+            )}
           </div>
 
           {/* Mobile menu button */}
@@ -81,6 +121,25 @@ export function Header() {
                 {item.name}
               </Link>
             ))}
+            
+            {/* Mobile Region & Logout */}
+            {currentRegion && (
+              <>
+                <div className="mx-3 my-2 px-3 py-1 bg-red-50 text-red-700 rounded-md flex items-center space-x-2">
+                  <MapPin className="h-4 w-4" />
+                  <span className="text-sm font-medium">{getRegionDisplay()}</span>
+                </div>
+                <button
+                  onClick={handleLogout}
+                  className="block w-full text-left px-3 py-2 text-base font-medium text-gray-700 hover:text-red-600 hover:bg-gray-50"
+                >
+                  <div className="flex items-center space-x-2">
+                    <LogOut className="h-4 w-4" />
+                    <span>Logout</span>
+                  </div>
+                </button>
+              </>
+            )}
           </div>
         )}
       </nav>

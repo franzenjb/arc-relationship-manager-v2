@@ -1,84 +1,90 @@
-// Temporary Red Cross Geographic Hierarchy
-// Based on known structure - will be updated with full ArcGIS data
+// Red Cross Geographic Hierarchy
+// Source: ArcGIS Master_RC_Geo_County_2025 (3,162 counties)
+// Updated: October 2025
 
 export const RED_CROSS_DIVISIONS = {
-  EASTERN: {
-    name: 'Eastern Division',
-    states: ['ME', 'NH', 'VT', 'MA', 'RI', 'CT', 'NY', 'NJ', 'PA', 'DE', 'MD', 'DC', 'VA', 'WV']
+  CENTRAL_ATLANTIC: {
+    name: 'Central Atlantic Division',
+    code: 'D24',
+    states: ['DC', 'DE', 'MD', 'PA', 'VA', 'WV']
   },
-  CENTRAL_SOUTH: {
-    name: 'Central and South Division', 
-    states: ['OH', 'IN', 'IL', 'MI', 'WI', 'KY', 'TN', 'NC', 'SC', 'GA', 'FL', 'AL', 'MS']
+  NORTH_CENTRAL: {
+    name: 'North Central Division',
+    code: 'D23',
+    states: ['IA', 'IL', 'IN', 'MI', 'MN', 'NE', 'ND', 'SD', 'WI']
   },
-  MIDWEST_PLAINS: {
-    name: 'Midwest and Plains Division',
-    states: ['MN', 'IA', 'MO', 'AR', 'LA', 'TX', 'OK', 'KS', 'NE', 'SD', 'ND']
-  },
-  SOUTHWEST_ROCKY_MOUNTAIN: {
-    name: 'Southwest and Rocky Mountain Division',
-    states: ['MT', 'ID', 'WY', 'CO', 'NM', 'AZ', 'UT', 'NV']
+  NORTHEAST: {
+    name: 'Northeast Division',
+    code: 'D27',
+    states: ['CT', 'MA', 'ME', 'NH', 'NJ', 'NY', 'RI', 'VT']
   },
   PACIFIC: {
     name: 'Pacific Division',
-    states: ['WA', 'OR', 'CA', 'AK', 'HI']
+    code: 'D21',
+    states: ['AK', 'AS', 'CA', 'GU', 'HI', 'ID', 'MP', 'MT', 'OR', 'WA']
+  },
+  SOUTHEAST_CARIBBEAN: {
+    name: 'Southeast and Caribbean Division',
+    code: 'D25',
+    states: ['AL', 'FL', 'GA', 'KY', 'MS', 'NC', 'PR', 'SC', 'TN', 'VI']
+  },
+  SOUTHWEST_ROCKY_MOUNTAIN: {
+    name: 'Southwest and Rocky Mountain Division',
+    code: 'D22',
+    states: ['AR', 'AZ', 'CO', 'KS', 'LA', 'MO', 'NM', 'NV', 'OK', 'TX', 'UT', 'WY']
   }
 }
 
-// Known regions for our current implementation
+// Region configurations based on actual ArcGIS data
 export const KNOWN_REGIONS = {
   FLORIDA: {
-    division: 'Central and South Division',
+    division: 'Southeast and Caribbean Division',
+    divisionCode: 'D25',
     regions: [
       {
         name: 'South Florida Region',
-        chapters: [
-          { name: 'Greater Miami & The Keys', counties: ['Miami-Dade', 'Monroe'] },
-          { name: 'Broward County', counties: ['Broward'] },
-          { name: 'Palm Beach County', counties: ['Palm Beach'] }
-        ]
+        code: '10R12',
+        chapters: 5,
+        counties: 18
       },
       {
-        name: 'Central Florida Region',
-        chapters: [
-          { name: 'Central Florida', counties: ['Orange', 'Osceola', 'Seminole', 'Lake'] },
-          { name: 'Tampa Bay', counties: ['Hillsborough', 'Pinellas', 'Pasco'] },
-          { name: 'Southwest Florida', counties: ['Lee', 'Collier', 'Charlotte', 'Sarasota', 'Manatee'] }
-        ]
-      },
-      {
-        name: 'North Florida Region',
-        chapters: [
-          { name: 'Northeast Florida', counties: ['Duval', 'Clay', 'St. Johns', 'Nassau', 'Baker'] },
-          { name: 'Capital Area', counties: ['Leon', 'Gadsden', 'Jefferson', 'Wakulla'] },
-          { name: 'Northwest Florida', counties: ['Escambia', 'Santa Rosa', 'Okaloosa', 'Walton'] }
-        ]
+        name: 'North and Central Florida Region',
+        code: '10R08',
+        chapters: 7,
+        counties: 52
       }
     ]
   },
   
   NEBRASKA_IOWA: {
-    division: 'Midwest and Plains Division',
+    division: 'North Central Division',
+    divisionCode: 'D23',
     regions: [
       {
-        name: 'Nebraska Region',
-        chapters: [
-          { name: 'Heartland Chapter', counties: ['Douglas', 'Sarpy', 'Washington', 'Dodge', 'Saunders'] },
-          { name: 'Southeast Nebraska Chapter', counties: ['Lancaster', 'Cass', 'Otoe', 'Seward'] },
-          { name: 'Central Nebraska Chapter', counties: ['Hall', 'Buffalo', 'Adams', 'Kearney'] },
-          { name: 'Western Nebraska Chapter', counties: ['Scotts Bluff', 'Cheyenne', 'Box Butte'] }
-        ]
-      },
-      {
-        name: 'Iowa Region',
-        chapters: [
-          { name: 'Central Iowa Chapter', counties: ['Polk', 'Dallas', 'Warren', 'Madison', 'Marion'] },
-          { name: 'Eastern Iowa Chapter', counties: ['Linn', 'Johnson', 'Scott', 'Black Hawk'] },
-          { name: 'Western Iowa Chapter', counties: ['Pottawattamie', 'Woodbury', 'Harrison'] },
-          { name: 'Southern Iowa Chapter', counties: ['Wapello', 'Jefferson', 'Henry', 'Des Moines'] }
+        name: 'Nebraska Iowa Region',
+        code: '15R08',
+        chapters: 6,
+        counties: 193,
+        chapterDetails: [
+          { name: 'ARC of Central and Western Nebraska', code: '27172', states: ['NE'] },
+          { name: 'ARC of Omaha Council Bluffs and Southwest Iowa', code: '27186', states: ['NE', 'IA'] },
+          { name: 'ARC of Southeast Nebraska', code: '27234', states: ['NE'] },
+          { name: 'ARC of Northwest Iowa and Northeast Nebraska', code: '15422', states: ['NE', 'IA'] },
+          { name: 'ARC of Eastern Iowa', code: '15148', states: ['IA'] },
+          { name: 'ARC of Northern and Central Iowa', code: '15080', states: ['IA'] }
         ]
       }
     ]
   }
+}
+
+// Total counts from the data
+export const GEOGRAPHY_STATS = {
+  totalDivisions: 6,
+  totalRegions: 48,
+  totalChapters: 225,
+  totalStates: 55,
+  totalCounties: 3162
 }
 
 // Function to get chapter for a county
@@ -102,6 +108,16 @@ export function getRegionForState(state: string): string | null {
   if (state === 'NE' || state === 'IA') return 'NEBRASKA_IOWA'
   
   // Return division for other states
+  for (const [divKey, divData] of Object.entries(RED_CROSS_DIVISIONS)) {
+    if (divData.states.includes(state)) {
+      return divKey
+    }
+  }
+  return null
+}
+
+// Function to get division for a state
+export function getDivisionForState(state: string): string | null {
   for (const [divKey, divData] of Object.entries(RED_CROSS_DIVISIONS)) {
     if (divData.states.includes(state)) {
       return divKey
