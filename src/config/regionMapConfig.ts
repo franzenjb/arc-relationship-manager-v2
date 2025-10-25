@@ -119,6 +119,75 @@ export const REGION_FILTERS = {
       { value: 'woodbury', label: 'Woodbury County, IA' },
       { value: 'pottawattamie', label: 'Pottawattamie County, IA' }
     ]
+  },
+  NATIONAL: {
+    regions: [
+      // Florida regions
+      { value: 'north_and_central', label: 'North and Central Florida' },
+      { value: 'south', label: 'South Florida' },
+      // Nebraska/Iowa regions
+      { value: 'nebraska_iowa_region', label: 'Nebraska Iowa Region' },
+      // Other national regions can be added here
+      { value: 'mid_atlantic', label: 'Mid-Atlantic Region' },
+      { value: 'southeast', label: 'Southeast Region' }
+    ],
+    chapters: [
+      // Florida chapters
+      { value: 'northwest_florida', label: 'Northwest Florida' },
+      { value: 'capital_area', label: 'Capital Area (FL)' },
+      { value: 'north_central_florida', label: 'North Central Florida' },
+      { value: 'northeast_florida', label: 'Northeast Florida' },
+      { value: 'central_florida_coast', label: 'Central Florida Coast' },
+      { value: 'tampa_bay', label: 'Tampa Bay' },
+      { value: 'mid_florida', label: 'Mid Florida' },
+      { value: 'palm_beach_to_treasure_coast', label: 'Palm Beach to Treasure Coast' },
+      { value: 'southwest_gulf_coast_to_glades', label: 'Southwest Gulf Coast to Glades' },
+      { value: 'broward', label: 'Broward' },
+      { value: 'greater_miami_to_the_keys', label: 'Greater Miami to the Keys' },
+      // Nebraska/Iowa chapters
+      { value: 'central_western_nebraska', label: 'Central and Western Nebraska' },
+      { value: 'omaha_council_bluffs', label: 'Omaha Council Bluffs and Southwest Iowa' },
+      { value: 'southeast_nebraska', label: 'Southeast Nebraska' },
+      { value: 'northwest_iowa_northeast_nebraska', label: 'Northwest Iowa and Northeast Nebraska' },
+      { value: 'eastern_iowa', label: 'Eastern Iowa' },
+      { value: 'northern_central_iowa', label: 'Northern and Central Iowa' },
+      // Other national chapters can be added here
+      { value: 'national_capital', label: 'National Capital Area' },
+      { value: 'maryland', label: 'Maryland' },
+      { value: 'pennsylvania', label: 'Pennsylvania' }
+    ],
+    counties: [
+      // Florida counties
+      { value: 'miami_dade', label: 'Miami-Dade County, FL' },
+      { value: 'broward', label: 'Broward County, FL' },
+      { value: 'palm_beach', label: 'Palm Beach County, FL' },
+      { value: 'orange', label: 'Orange County, FL' },
+      { value: 'hillsborough', label: 'Hillsborough County, FL' },
+      { value: 'pinellas', label: 'Pinellas County, FL' },
+      { value: 'duval', label: 'Duval County, FL' },
+      { value: 'leon', label: 'Leon County, FL' },
+      { value: 'polk', label: 'Polk County, FL' },
+      // Nebraska counties
+      { value: 'douglas', label: 'Douglas County, NE' },
+      { value: 'lancaster', label: 'Lancaster County, NE' },
+      { value: 'sarpy', label: 'Sarpy County, NE' },
+      { value: 'hall', label: 'Hall County, NE' },
+      { value: 'buffalo', label: 'Buffalo County, NE' },
+      { value: 'adams', label: 'Adams County, NE' },
+      { value: 'scotts_bluff', label: 'Scotts Bluff County, NE' },
+      // Iowa counties
+      { value: 'polk_ia', label: 'Polk County, IA' },
+      { value: 'linn', label: 'Linn County, IA' },
+      { value: 'scott', label: 'Scott County, IA' },
+      { value: 'johnson', label: 'Johnson County, IA' },
+      { value: 'black_hawk', label: 'Black Hawk County, IA' },
+      { value: 'woodbury', label: 'Woodbury County, IA' },
+      { value: 'pottawattamie', label: 'Pottawattamie County, IA' },
+      // Other states
+      { value: 'baltimore_city', label: 'Baltimore City, MD' },
+      { value: 'philadelphia', label: 'Philadelphia County, PA' },
+      { value: 'arlington', label: 'Arlington County, VA' }
+    ]
   }
 }
 
@@ -136,10 +205,35 @@ export function getCoordinatesForRegion(city?: string): [number, number] | null 
   return regionCoords[normalized] || null
 }
 
-// Get filters for current region
+// Get filters for current region (DEPRECATED - use GeographyService instead)
 export function getFiltersForRegion() {
   const userRegion = getUserRegion()
   if (!userRegion) return REGION_FILTERS.FLORIDA // Default to Florida
   
   return REGION_FILTERS[userRegion as keyof typeof REGION_FILTERS] || REGION_FILTERS.FLORIDA
+}
+
+// New dynamic filters using geography service
+export async function getDynamicFiltersForRegion() {
+  const userRegion = getUserRegion()
+  if (!userRegion) return null
+
+  const { GeographyService } = await import('@/lib/geography')
+  
+  try {
+    const [regions, chapters] = await Promise.all([
+      GeographyService.getRegionsForUser(userRegion),
+      GeographyService.getChaptersForUser(userRegion)
+    ])
+
+    return {
+      regions,
+      chapters,
+      counties: [] // Can be populated based on selected state/region
+    }
+  } catch (error) {
+    console.error('Failed to load dynamic filters:', error)
+    // Fallback to static filters
+    return getFiltersForRegion()
+  }
 }

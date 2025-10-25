@@ -86,9 +86,22 @@ export class OrganizationService {
   static async create(data: Partial<Organization>): Promise<Organization> {
     // Add audit fields
     const auditFields = await AuditService.createAuditFields()
-    const organizationData = {
+    let organizationData = {
       ...data,
       ...auditFields
+    }
+
+    // Auto-assign county if we have city and state but no county_id
+    if (!organizationData.county_id && organizationData.city && organizationData.state) {
+      try {
+        const county = await this.inferCountyFromCityState(organizationData.city, organizationData.state)
+        if (county) {
+          organizationData.county_id = county.id
+        }
+      } catch (error) {
+        console.warn('Failed to auto-assign county:', error)
+        // Continue without county assignment
+      }
     }
 
     const { data: org, error } = await supabase
@@ -104,9 +117,29 @@ export class OrganizationService {
   static async update(id: string, data: Partial<Organization>): Promise<Organization> {
     // Add audit fields
     const auditFields = await AuditService.updateAuditFields()
-    const organizationData = {
+    let organizationData = {
       ...data,
       ...auditFields
+    }
+
+    // Auto-assign county if city/state changed but no county_id provided
+    if (!organizationData.county_id && (organizationData.city || organizationData.state)) {
+      // Get current org to check if we have the missing city or state
+      const current = await this.getById(id)
+      const city = organizationData.city || current?.city
+      const state = organizationData.state || current?.state
+      
+      if (city && state) {
+        try {
+          const county = await this.inferCountyFromCityState(city, state)
+          if (county) {
+            organizationData.county_id = county.id
+          }
+        } catch (error) {
+          console.warn('Failed to auto-assign county:', error)
+          // Continue without county assignment
+        }
+      }
     }
 
     const { data: org, error } = await supabase
@@ -275,5 +308,56 @@ export class OrganizationService {
 
     if (error) throw error
     return data || []
+  }
+
+  /**
+   * Attempt to infer county from city and state
+   * This is a simple lookup - in production you might want more sophisticated geocoding
+   */
+  private static async inferCountyFromCityState(city: string, state: string) {
+    // First try exact city match
+    const { data, error } = await supabase
+      .from('red_cross_geography')
+      .select('*')
+      .eq('state', state)
+      .ilike('city', city)
+      .limit(1)
+      .single()
+
+    if (data) return data
+
+    // If no exact match, try to find county that contains this city
+    // This would require more sophisticated logic or external geocoding service
+    console.warn(`Could not find county for ${city}, ${state}`)
+    return null
+  }
+
+  /**
+   * Get organization with full Red Cross hierarchy
+   */
+  static async getWithHierarchy(id: string) {
+    const { data, error } = await supabase
+      .from('organizations')
+      .select(`
+        *,
+        geography:county_id (
+          county,
+          state,
+          division,
+          region,
+          chapter,
+          division_code,
+          region_code,
+          chapter_code
+        )
+      `)
+      .eq('id', id)
+      .single()
+
+    if (error) {
+      if (error.code === 'PGRST116') return null
+      throw error
+    }
+    return data
   }
 }
