@@ -2,7 +2,8 @@
 
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { REGIONS, RegionCode, validateRegionAccess, setUserRegion } from '@/config/regions'
+import { REGIONS, RegionCode, validateRegionAccess } from '@/config/regions'
+import { setUserRegion } from '@/lib/auth'
 import { MapPin, Lock, AlertCircle } from 'lucide-react'
 
 export default function LoginPage() {
@@ -23,7 +24,7 @@ export default function LoginPage() {
         setUserRegion(selectedRegion, userName || 'User')
         router.push('/organizations')
       } else {
-        setError('Invalid password for selected region')
+        setError('Access denied for selected region')
       }
     } catch (err) {
       setError('Login failed. Please try again.')
@@ -102,20 +103,22 @@ export default function LoginPage() {
               </div>
             </div>
 
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                <Lock className="inline h-4 w-4 mr-1" />
-                Region Password
-              </label>
-              <input
-                type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
-                placeholder="Enter region password"
-                required
-              />
-            </div>
+            {/* Password field temporarily hidden - no authentication required */}
+            {false && (
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <Lock className="inline h-4 w-4 mr-1" />
+                  Region Password
+                </label>
+                <input
+                  type="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                  placeholder="Enter region password"
+                />
+              </div>
+            )}
 
             <button
               type="submit"
@@ -128,7 +131,7 @@ export default function LoginPage() {
 
           <div className="bg-gray-50 px-6 py-4 border-t">
             <p className="text-xs text-gray-500 text-center">
-              This is a temporary authentication system. Full user authentication coming soon.
+              Temporary open access - no password required. Simply select your region to continue.
             </p>
           </div>
         </div>

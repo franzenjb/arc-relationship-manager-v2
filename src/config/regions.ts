@@ -85,11 +85,11 @@ export function getCurrentRegion() {
   return REGIONS[regionCode] || REGIONS.FLORIDA;
 }
 
-// Validate region password
+// Validate region password (temporarily disabled - no password required)
 export function validateRegionAccess(regionCode: string, password: string): boolean {
   const region = REGIONS[regionCode as RegionCode];
   if (!region) return false;
-  return region.password === password;
+  return true; // Temporarily allow access without password validation
 }
 
 // Store region in session
