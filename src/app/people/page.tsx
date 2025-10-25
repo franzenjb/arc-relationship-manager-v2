@@ -260,6 +260,16 @@ export default function PeoplePage() {
                       )}
                     </div>
                   )}
+                  {person.county && (
+                    <div className="flex items-start text-xs text-red-600">
+                      <Building2 className="h-3 w-3 mr-2 mt-0.5 flex-shrink-0" />
+                      <div className="min-w-0">
+                        <div className="truncate font-medium">{person.county.region}</div>
+                        <div className="truncate">{person.county.chapter}</div>
+                        <div className="truncate">{person.county.county} County, {person.county.state}</div>
+                      </div>
+                    </div>
+                  )}
                   {person.email && (
                     <div className="flex items-center text-sm text-gray-600">
                       <Mail className="h-4 w-4 mr-2" />
@@ -331,6 +341,7 @@ export default function PeoplePage() {
                         )}
                       </button>
                     </th>
+                    <th className="text-left py-3 px-4 font-medium text-gray-900">Red Cross Assignment</th>
                     <th className="text-left py-3 px-4 font-medium text-gray-900">Contact</th>
                     <th className="text-left py-3 px-4 font-medium text-gray-900">
                       <button
@@ -364,6 +375,17 @@ export default function PeoplePage() {
                       </td>
                       <td className="py-3 px-4 text-sm text-gray-900">
                         {person.organization?.name || '-'}
+                      </td>
+                      <td className="py-3 px-4 text-xs text-red-600">
+                        {person.county ? (
+                          <div className="space-y-0.5">
+                            <div className="font-medium">{person.county.region}</div>
+                            <div>{person.county.chapter}</div>
+                            <div>{person.county.county} County, {person.county.state}</div>
+                          </div>
+                        ) : (
+                          <div className="text-gray-400 italic">Not assigned</div>
+                        )}
                       </td>
                       <td className="py-3 px-4 text-sm text-gray-900">
                         <div className="space-y-1">

@@ -8,7 +8,11 @@ export class PersonService {
   static async getAll(filters?: SearchFilters): Promise<Person[]> {
     let query = supabase
       .from('people')
-      .select('*, organization:org_id(id, name, city, state)')
+      .select(`
+        *,
+        organization:org_id(id, name, city, state),
+        county:red_cross_geography(id, county, state, chapter, region, division)
+      `)
       .order('updated_at', { ascending: false })
 
     // Apply region filter - people belong to organizations in specific states
@@ -79,7 +83,11 @@ export class PersonService {
   static async getById(id: string): Promise<Person | null> {
     const { data, error } = await supabase
       .from('people')
-      .select('*, organization:org_id(id, name)')
+      .select(`
+        *,
+        organization:org_id(id, name),
+        county:red_cross_geography(id, county, state, chapter, region, division)
+      `)
       .eq('id', id)
       .single()
 

@@ -227,6 +227,22 @@ export default function OrganizationDetailPage() {
                 </div>
               )}
 
+              {/* Red Cross Hierarchy */}
+              {organization.county && (
+                <div className="flex items-start space-x-3">
+                  <Building2 className="h-5 w-5 text-red-600 mt-0.5" />
+                  <div>
+                    <p className="font-medium">Red Cross Assignment</p>
+                    <div className="text-gray-600 space-y-1">
+                      <p><span className="font-medium">Division:</span> {organization.county.division}</p>
+                      <p><span className="font-medium">Region:</span> {organization.county.region}</p>
+                      <p><span className="font-medium">Chapter:</span> {organization.county.chapter}</p>
+                      <p><span className="font-medium">County:</span> {organization.county.county}, {organization.county.state}</p>
+                    </div>
+                  </div>
+                </div>
+              )}
+
               {/* Website */}
               {organization.website && (
                 <div className="flex items-start space-x-3">

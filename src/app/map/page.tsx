@@ -110,92 +110,28 @@ function MapPageContent() {
       filtered = filtered.filter(org => org.organization_type === filterType)
     }
 
-    // Region filter - using real Red Cross regions
+    // Region filter - using actual Red Cross hierarchy
     if (filterRegion !== 'all') {
-      // Map regions to actual cities in our database (case-insensitive)
-      const regionCities: Record<string, string[]> = {
-        'north_and_central': [
-          'jacksonville', 'tallahassee', 'gainesville', 'pensacola', 'orlando', 'tampa', 
-          'st. petersburg', 'saint petersburg', 'clearwater', 'lakeland', 'ocala', 
-          'sanford', 'kissimmee', 'melbourne', 'cocoa', 'titusville', 'st. augustine'
-        ],
-        'south': [
-          'miami', 'fort lauderdale', 'west palm beach', 'palm beach', 'naples', 'fort myers',
-          'cape coral', 'sarasota', 'bradenton', 'key west', 'marathon', 'port st. lucie', 
-          'stuart', 'vero beach'
-        ]
-      }
       filtered = filtered.filter(org => {
-        if (!org.city) return false
-        const orgCityLower = org.city.toLowerCase().trim()
-        return regionCities[filterRegion]?.some(city => 
-          orgCityLower.includes(city) || city.includes(orgCityLower)
-        )
+        if (!org.county?.region) return false
+        return org.county.region.toLowerCase().includes(filterRegion.toLowerCase().replace('_', ' '))
       })
     }
 
-    // Chapter filter - using real Red Cross chapters
+    // Chapter filter - using actual Red Cross hierarchy
     if (filterChapter !== 'all') {
-      const chapterCities: Record<string, string[]> = {
-        'northwest_florida': ['Pensacola', 'Panama City', 'Crestview', 'Fort Walton Beach'],
-        'capital_area': ['Tallahassee', 'Quincy', 'Crawfordville'],
-        'north_central_florida': ['Gainesville', 'Ocala', 'Lake City', 'Live Oak'],
-        'northeast_florida': ['Jacksonville', 'St. Augustine', 'Fernandina Beach'],
-        'central_florida_coast': ['Orlando', 'Daytona Beach', 'Sanford', 'Kissimmee'],
-        'tampa_bay': ['Tampa', 'St. Petersburg', 'Clearwater', 'Brandon', 'Pinellas Park'],
-        'mid_florida': ['Lakeland', 'Sebring', 'Bartow'],
-        'palm_beach_to_treasure_coast': ['West Palm Beach', 'Boca Raton', 'Stuart', 'Vero Beach'],
-        'southwest_gulf_coast_to_glades': ['Fort Myers', 'Naples', 'Sarasota', 'Bradenton'],
-        'broward': ['Fort Lauderdale', 'Hollywood', 'Pompano Beach', 'Sunrise'],
-        'greater_miami_to_the_keys': ['Miami', 'Homestead', 'Key West', 'Coral Gables']
-      }
-      filtered = filtered.filter(org => 
-        chapterCities[filterChapter]?.some(city => 
-          org.city?.toLowerCase().includes(city.toLowerCase())
-        )
-      )
+      filtered = filtered.filter(org => {
+        if (!org.county?.chapter) return false
+        return org.county.chapter.toLowerCase().includes(filterChapter.toLowerCase().replace('_', ' '))
+      })
     }
 
-    // County filter - this would be much better with a proper county field in the database
+    // County filter - using actual county assignments!
     if (filterCounty !== 'all') {
-      // Temporary city-based mapping until county field is added
-      const countyCities: Record<string, string[]> = {
-        'miami_dade': ['Miami', 'Homestead', 'Coral Gables', 'Hialeah', 'Kendall'],
-        'broward': ['Fort Lauderdale', 'Hollywood', 'Pompano Beach', 'Sunrise', 'Plantation'],
-        'palm_beach': ['West Palm Beach', 'Boca Raton', 'Delray Beach', 'Boynton Beach'],
-        'orange': ['Orlando', 'Winter Park', 'Apopka', 'Ocoee'],
-        'hillsborough': ['Tampa', 'Plant City', 'Temple Terrace', 'Brandon'],
-        'pinellas': ['St. Petersburg', 'Clearwater', 'Largo', 'Pinellas Park'],
-        'duval': ['Jacksonville', 'Atlantic Beach', 'Neptune Beach', 'Jacksonville Beach'],
-        'leon': ['Tallahassee'],
-        'alachua': ['Gainesville'],
-        'volusia': ['Daytona Beach', 'DeLand'],
-        'brevard': ['Melbourne', 'Cocoa', 'Titusville'],
-        'polk': ['Lakeland', 'Bartow'],
-        'lee': ['Fort Myers', 'Cape Coral'],
-        'collier': ['Naples'],
-        'sarasota': ['Sarasota'],
-        'manatee': ['Bradenton'],
-        'monroe': ['Key West', 'Marathon'],
-        'escambia': ['Pensacola'],
-        'bay': ['Panama City'],
-        'st_johns': ['St. Augustine'],
-        'seminole': ['Sanford'],
-        'osceola': ['Kissimmee'],
-        'marion': ['Ocala'],
-        'clay': ['Green Cove Springs'],
-        'nassau': ['Fernandina Beach'],
-        'flagler': ['Palm Coast'],
-        'putnam': ['Palatka'],
-        'st_lucie': ['Port St. Lucie'],
-        'martin': ['Stuart'],
-        'indian_river': ['Vero Beach']
-      }
-      filtered = filtered.filter(org => 
-        countyCities[filterCounty]?.some(city => 
-          org.city?.toLowerCase().includes(city.toLowerCase())
-        )
-      )
+      filtered = filtered.filter(org => {
+        if (!org.county?.county) return false
+        return org.county.county.toLowerCase().includes(filterCounty.toLowerCase().replace('_', ' '))
+      })
     }
 
     // City filter

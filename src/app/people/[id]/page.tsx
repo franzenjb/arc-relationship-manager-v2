@@ -239,6 +239,22 @@ export default function PersonDetailPage() {
                 </div>
               )}
 
+              {/* Red Cross Hierarchy */}
+              {person.county && (
+                <div className="flex items-start space-x-2">
+                  <Building2 className="h-4 w-4 text-red-600 mt-0.5" />
+                  <div>
+                    <p className="font-medium text-red-800">Red Cross Assignment</p>
+                    <div className="text-gray-600 text-sm space-y-0.5">
+                      <p><span className="font-medium">Division:</span> {person.county.division}</p>
+                      <p><span className="font-medium">Region:</span> {person.county.region}</p>
+                      <p><span className="font-medium">Chapter:</span> {person.county.chapter}</p>
+                      <p><span className="font-medium">County:</span> {person.county.county}, {person.county.state}</p>
+                    </div>
+                  </div>
+                </div>
+              )}
+
               {/* Address */}
               {organization?.address && (
                 <div className="flex items-start space-x-2">

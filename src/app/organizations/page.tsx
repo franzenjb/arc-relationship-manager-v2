@@ -254,6 +254,16 @@ export default function OrganizationsPage() {
                       </div>
                     </div>
                   )}
+                  {org.county && (
+                    <div className="flex items-start text-xs text-red-600">
+                      <Building2 className="h-3 w-3 mr-2 mt-0.5 flex-shrink-0" />
+                      <div className="min-w-0">
+                        <div className="truncate font-medium">{org.county.region}</div>
+                        <div className="truncate">{org.county.chapter}</div>
+                        <div className="truncate">{org.county.county} County, {org.county.state}</div>
+                      </div>
+                    </div>
+                  )}
                   {org.website && (
                     <div className="flex items-center text-sm text-gray-600">
                       <Globe className="h-4 w-4 mr-2" />
@@ -324,6 +334,7 @@ export default function OrganizationsPage() {
                         )}
                       </button>
                     </th>
+                    <th className="text-left py-3 px-4 font-medium text-gray-900">Red Cross Assignment</th>
                     <th className="text-left py-3 px-4 font-medium text-gray-900">Contact</th>
                     <th className="text-left py-3 px-4 font-medium text-gray-900">
                       <button
@@ -368,6 +379,17 @@ export default function OrganizationsPage() {
                       </td>
                       <td className="py-3 px-4 text-sm text-gray-900">
                         {org.city && org.state ? `${org.city}, ${org.state}` : '-'}
+                      </td>
+                      <td className="py-3 px-4 text-xs text-red-600">
+                        {org.county ? (
+                          <div className="space-y-0.5">
+                            <div className="font-medium">{org.county.region}</div>
+                            <div>{org.county.chapter}</div>
+                            <div>{org.county.county} County, {org.county.state}</div>
+                          </div>
+                        ) : (
+                          <div className="text-gray-400 italic">Not assigned</div>
+                        )}
                       </td>
                       <td className="py-3 px-4 text-sm text-gray-900">
                         <div className="space-y-1">
