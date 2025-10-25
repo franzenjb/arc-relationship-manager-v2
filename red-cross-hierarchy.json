@@ -1,0 +1,2472 @@
+{
+  "divisions": {
+    "Southeast and Caribbean Division": {
+      "name": "Southeast and Caribbean Division",
+      "regions": {
+        "Alabama and Mississippi Region": {
+          "name": "Alabama and Mississippi Region",
+          "chapters": {
+            "American Red Cross serving North Alabama": {
+              "name": "American Red Cross serving North Alabama",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross serving Central East Alabama": {
+              "name": "American Red Cross serving Central East Alabama",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross serving South Alabama": {
+              "name": "American Red Cross serving South Alabama",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross serving Central West Alabama": {
+              "name": "American Red Cross serving Central West Alabama",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Southwest Mississippi": {
+              "name": "American Red Cross of Southwest Mississippi",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Southeast Mississippi": {
+              "name": "American Red Cross of Southeast Mississippi",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross serving Mid Alabama": {
+              "name": "American Red Cross serving Mid Alabama",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of North Mississippi": {
+              "name": "American Red Cross of North Mississippi",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            }
+          },
+          "states": [
+            null
+          ]
+        },
+        "North and Central Florida Region": {
+          "name": "North and Central Florida Region",
+          "chapters": {
+            "American Red Cross of Greater Orlando": {
+              "name": "American Red Cross of Greater Orlando",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Tampa Bay": {
+              "name": "American Red Cross of Tampa Bay",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Northeast Florida": {
+              "name": "American Red Cross of Northeast Florida",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Northwest Florida": {
+              "name": "American Red Cross of Northwest Florida",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Capital Area Florida": {
+              "name": "American Red Cross of Capital Area Florida",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "ARC of North Central Florida": {
+              "name": "ARC of North Central Florida",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of the Virgin Islands": {
+              "name": "American Red Cross of the Virgin Islands",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            }
+          },
+          "states": [
+            null
+          ]
+        },
+        "South Florida Region": {
+          "name": "South Florida Region",
+          "chapters": {
+            "American Red Cross of Broward County": {
+              "name": "American Red Cross of Broward County",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Greater Miami and the Keys": {
+              "name": "American Red Cross of Greater Miami and the Keys",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Mid Florida": {
+              "name": "American Red Cross of Mid Florida",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Florida Gulf Coast to Heartland ": {
+              "name": "American Red Cross of Florida Gulf Coast to Heartland ",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Palm Beach and Treasure Coast": {
+              "name": "American Red Cross of Palm Beach and Treasure Coast",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            }
+          },
+          "states": [
+            null
+          ]
+        },
+        "Georgia Region": {
+          "name": "Georgia Region",
+          "chapters": {
+            "American Red Cross of Southwest Georgia": {
+              "name": "American Red Cross of Southwest Georgia",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Central Midwest Georgia": {
+              "name": "American Red Cross of Central Midwest Georgia",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Greater Atlanta": {
+              "name": "American Red Cross of Greater Atlanta",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Southeast Georgia": {
+              "name": "American Red Cross of Southeast Georgia",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of South Central Georgia": {
+              "name": "American Red Cross of South Central Georgia",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Northeast Georgia": {
+              "name": "American Red Cross of Northeast Georgia",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of East Central Georgia": {
+              "name": "American Red Cross of East Central Georgia",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Northwest Georgia": {
+              "name": "American Red Cross of Northwest Georgia",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            }
+          },
+          "states": [
+            null
+          ]
+        },
+        "North Carolina Region": {
+          "name": "North Carolina Region",
+          "chapters": {
+            "The American Red Cross serving Western North Carolina": {
+              "name": "The American Red Cross serving Western North Carolina",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "The American Red Cross serving the Charlotte Metro Area": {
+              "name": "The American Red Cross serving the Charlotte Metro Area",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of the Sandhills of North Carolina": {
+              "name": "American Red Cross of the Sandhills of North Carolina",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of the Greater Triangle Area of North Carolina": {
+              "name": "American Red Cross of the Greater Triangle Area of North Carolina",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of the Cape Fear Area Of North Carolina": {
+              "name": "American Red Cross of the Cape Fear Area Of North Carolina",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "The American Red Cross serving the Southern Piedmont of North Carolina": {
+              "name": "The American Red Cross serving the Southern Piedmont of North Carolina",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "The American Red Cross serving the Piedmont Triad of North Carolina": {
+              "name": "The American Red Cross serving the Piedmont Triad of North Carolina",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Northeastern North Carolina": {
+              "name": "American Red Cross of Northeastern North Carolina",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross serving the Blue Ridge Piedmont of North Carolina": {
+              "name": "American Red Cross serving the Blue Ridge Piedmont of North Carolina",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            }
+          },
+          "states": [
+            null
+          ]
+        },
+        "South Carolina Region": {
+          "name": "South Carolina Region",
+          "chapters": {
+            "American Red Cross of UpState South Carolina": {
+              "name": "American Red Cross of UpState South Carolina",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Eastern South Carolina": {
+              "name": "American Red Cross of Eastern South Carolina",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Central South Carolina": {
+              "name": "American Red Cross of Central South Carolina",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Lowcountry South Carolina": {
+              "name": "American Red Cross of Lowcountry South Carolina",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            }
+          },
+          "states": [
+            null
+          ]
+        },
+        "Tennessee Region": {
+          "name": "Tennessee Region",
+          "chapters": {
+            "American Red Cross of Mid-West Tennessee": {
+              "name": "American Red Cross of Mid-West Tennessee",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Southeast Tennessee": {
+              "name": "American Red Cross of Southeast Tennessee",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Tennessee River": {
+              "name": "American Red Cross of Tennessee River",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Nashville Area": {
+              "name": "American Red Cross of Nashville Area",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross Heart of Tennessee": {
+              "name": "American Red Cross Heart of Tennessee",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of East Tennessee": {
+              "name": "American Red Cross of East Tennessee",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Northeast Tennessee": {
+              "name": "American Red Cross of Northeast Tennessee",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Mid-South Tennessee": {
+              "name": "American Red Cross of Mid-South Tennessee",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            }
+          },
+          "states": [
+            null
+          ]
+        },
+        "Puerto Rico Region": {
+          "name": "Puerto Rico Region",
+          "chapters": {
+            "American Red Cross of Puerto Rico": {
+              "name": "American Red Cross of Puerto Rico",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            }
+          },
+          "states": [
+            null
+          ]
+        }
+      },
+      "states": [
+        null
+      ]
+    },
+    "Pacific Division": {
+      "name": "Pacific Division",
+      "regions": {
+        "Alaska Region": {
+          "name": "Alaska Region",
+          "chapters": {
+            "American Red Cross serving Alaska": {
+              "name": "American Red Cross serving Alaska",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            }
+          },
+          "states": [
+            null
+          ]
+        },
+        "Northern California Coastal Region": {
+          "name": "Northern California Coastal Region",
+          "chapters": {
+            "American Red Cross of the Central Coast": {
+              "name": "American Red Cross of the Central Coast",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of the North Bay": {
+              "name": "American Red Cross of the North Bay",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of the Heart of the Valley": {
+              "name": "American Red Cross of the Heart of the Valley",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of the Silicon Valley": {
+              "name": "American Red Cross of the Silicon Valley",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of the Bay Area": {
+              "name": "American Red Cross of the Bay Area",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            }
+          },
+          "states": [
+            null
+          ]
+        },
+        "Central California Region": {
+          "name": "Central California Region",
+          "chapters": {
+            "American Red Cross of Central Valley": {
+              "name": "American Red Cross of Central Valley",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Kern County and Eastern Sierra": {
+              "name": "American Red Cross of Kern County and Eastern Sierra",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of the Pacific Coast": {
+              "name": "American Red Cross of the Pacific Coast",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            }
+          },
+          "states": [
+            null
+          ]
+        },
+        "Los Angeles Region": {
+          "name": "Los Angeles Region",
+          "chapters": {
+            "American Red Cross serving Greater Long Beach and South Bay": {
+              "name": "American Red Cross serving Greater Long Beach and South Bay",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross serving Metro and Southeast Los Angeles": {
+              "name": "American Red Cross serving Metro and Southeast Los Angeles",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross serving Western Los Angeles": {
+              "name": "American Red Cross serving Western Los Angeles",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross serving the Northern Valleys": {
+              "name": "American Red Cross serving the Northern Valleys",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross serving the Greater San Gabriel and Pomona Valleys": {
+              "name": "American Red Cross serving the Greater San Gabriel and Pomona Valleys",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            }
+          },
+          "states": [
+            null
+          ]
+        },
+        "Southern California Region": {
+          "name": "Southern California Region",
+          "chapters": {
+            "American Red Cross of Orange County": {
+              "name": "American Red Cross of Orange County",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Riverside County": {
+              "name": "American Red Cross of Riverside County",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of San Diego and Imperial Counties": {
+              "name": "American Red Cross of San Diego and Imperial Counties",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of San Bernardino County": {
+              "name": "American Red Cross of San Bernardino County",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            }
+          },
+          "states": [
+            null
+          ]
+        },
+        "California Gold Country Region": {
+          "name": "California Gold Country Region",
+          "chapters": {
+            "American Red Cross of Sierra-Delta": {
+              "name": "American Red Cross of Sierra-Delta",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Northern California": {
+              "name": "American Red Cross of Northern California",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            }
+          },
+          "states": [
+            null
+          ]
+        },
+        "Cascades Region": {
+          "name": "Cascades Region",
+          "chapters": {
+            "American Red Cross of Central and Eastern Oregon": {
+              "name": "American Red Cross of Central and Eastern Oregon",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Southwest Oregon": {
+              "name": "American Red Cross of Southwest Oregon",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Northwest Oregon": {
+              "name": "American Red Cross of Northwest Oregon",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Southwest Washington": {
+              "name": "American Red Cross of Southwest Washington",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            }
+          },
+          "states": [
+            null
+          ]
+        },
+        "Northwest Region": {
+          "name": "Northwest Region",
+          "chapters": {
+            "American Red Cross serving Central and Southeastern Washington": {
+              "name": "American Red Cross serving Central and Southeastern Washington",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "The American Red Cross serving the Greater Inland Northwest": {
+              "name": "The American Red Cross serving the Greater Inland Northwest",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross serving Northwest Washington": {
+              "name": "American Red Cross serving Northwest Washington",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross serving King County": {
+              "name": "American Red Cross serving King County",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross serving South Puget Sound and Olympics": {
+              "name": "American Red Cross serving South Puget Sound and Olympics",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            }
+          },
+          "states": [
+            null
+          ]
+        },
+        "Pacific Islands Region": {
+          "name": "Pacific Islands Region",
+          "chapters": {
+            "American Red Cross of Hawaii": {
+              "name": "American Red Cross of Hawaii",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Guam": {
+              "name": "American Red Cross of Guam",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Northern Mariana Islands": {
+              "name": "American Red Cross of Northern Mariana Islands",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            }
+          },
+          "states": [
+            null
+          ]
+        },
+        "Idaho, Montana and Est Oregon Region": {
+          "name": "Idaho, Montana and Est Oregon Region",
+          "chapters": {
+            "American Red Cross of Greater Idaho": {
+              "name": "American Red Cross of Greater Idaho",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Montana": {
+              "name": "American Red Cross of Montana",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            }
+          },
+          "states": [
+            null
+          ]
+        }
+      },
+      "states": [
+        null
+      ]
+    },
+    "Southwest and Rocky Mountain Division": {
+      "name": "Southwest and Rocky Mountain Division",
+      "regions": {
+        "Arizona and New Mexico Region": {
+          "name": "Arizona and New Mexico Region",
+          "chapters": {
+            "American Red Cross of Central and Northern Arizona": {
+              "name": "American Red Cross of Central and Northern Arizona",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Southern Arizona": {
+              "name": "American Red Cross of Southern Arizona",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of New Mexico": {
+              "name": "American Red Cross of New Mexico",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "ARC of Northern Arizona": {
+              "name": "ARC of Northern Arizona",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            }
+          },
+          "states": [
+            null
+          ]
+        },
+        "Missouri and Arkansas Region": {
+          "name": "Missouri and Arkansas Region",
+          "chapters": {
+            "American Red Cross serving Northwest Arkansas": {
+              "name": "American Red Cross serving Northwest Arkansas",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross serving Greater Arkansas": {
+              "name": "American Red Cross serving Greater Arkansas",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Central and Northern Missouri": {
+              "name": "American Red Cross of Central and Northern Missouri",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Greater Kansas City and Northwest Missouri": {
+              "name": "American Red Cross of Greater Kansas City and Northwest Missouri",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Southeast Missouri and Northeast Arkansas": {
+              "name": "American Red Cross of Southeast Missouri and Northeast Arkansas",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Greater St Louis": {
+              "name": "American Red Cross of Greater St Louis",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Southern Missouri": {
+              "name": "American Red Cross of Southern Missouri",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            }
+          },
+          "states": [
+            null
+          ]
+        },
+        "Colorado and Wyoming Region": {
+          "name": "Colorado and Wyoming Region",
+          "chapters": {
+            "American Red Cross of Northern Colorado": {
+              "name": "American Red Cross of Northern Colorado",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Western Colorado": {
+              "name": "American Red Cross of Western Colorado",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Southeastern Colorado": {
+              "name": "American Red Cross of Southeastern Colorado",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Wyoming": {
+              "name": "American Red Cross of Wyoming",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of the Mile High Area": {
+              "name": "American Red Cross of the Mile High Area",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            }
+          },
+          "states": [
+            null
+          ]
+        },
+        "Louisiana Region": {
+          "name": "Louisiana Region",
+          "chapters": {
+            "American Red Cross of North Louisiana": {
+              "name": "American Red Cross of North Louisiana",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Southeast Louisiana": {
+              "name": "American Red Cross of Southeast Louisiana",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Capital West Louisiana": {
+              "name": "American Red Cross of Capital West Louisiana",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            }
+          },
+          "states": [
+            null
+          ]
+        },
+        "Utah and Nevada Region": {
+          "name": "Utah and Nevada Region",
+          "chapters": {
+            "American Red Cross of Northern Nevada": {
+              "name": "American Red Cross of Northern Nevada",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Greater Salt Lake": {
+              "name": "American Red Cross of Greater Salt Lake",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Southern Nevada": {
+              "name": "American Red Cross of Southern Nevada",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Northern Utah and Southwest Wyoming": {
+              "name": "American Red Cross of Northern Utah and Southwest Wyoming",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross Central and Southern Utah": {
+              "name": "American Red Cross Central and Southern Utah",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            }
+          },
+          "states": [
+            null
+          ]
+        },
+        "Kansas and Oklahoma Region": {
+          "name": "Kansas and Oklahoma Region",
+          "chapters": {
+            "American Red Cross serving Central and Southwest Oklahoma": {
+              "name": "American Red Cross serving Central and Southwest Oklahoma",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross serving Tulsa Area Oklahoma": {
+              "name": "American Red Cross serving Tulsa Area Oklahoma",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Capital Area Kansas": {
+              "name": "American Red Cross of Capital Area Kansas",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross serving South Central and Southeast Oklahoma": {
+              "name": "American Red Cross serving South Central and Southeast Oklahoma",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross serving Northern Oklahoma": {
+              "name": "American Red Cross serving Northern Oklahoma",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of South Central and Southeast Kansas": {
+              "name": "American Red Cross of South Central and Southeast Kansas",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            }
+          },
+          "states": [
+            null
+          ]
+        },
+        "Texas Gulf Coast Region": {
+          "name": "Texas Gulf Coast Region",
+          "chapters": {
+            "American Red Cross of Southeast & Deep East Texas": {
+              "name": "American Red Cross of Southeast & Deep East Texas",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of South Texas": {
+              "name": "American Red Cross of South Texas",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Coastal Plains Texas": {
+              "name": "American Red Cross of Coastal Plains Texas",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of  Central Houston": {
+              "name": "American Red Cross of  Central Houston",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Coastal Bend-Texas": {
+              "name": "American Red Cross of Coastal Bend-Texas",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            }
+          },
+          "states": [
+            null
+          ]
+        },
+        "Central and South Texas Region": {
+          "name": "Central and South Texas Region",
+          "chapters": {
+            "American Red Cross serving Central Texas": {
+              "name": "American Red Cross serving Central Texas",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross serving West Texas": {
+              "name": "American Red Cross serving West Texas",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross serving Greater San Antonio Texas": {
+              "name": "American Red Cross serving Greater San Antonio Texas",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross serving the Hill Country of Texas": {
+              "name": "American Red Cross serving the Hill Country of Texas",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross serving the Permian Basin of Texas": {
+              "name": "American Red Cross serving the Permian Basin of Texas",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross serving the Heart of Texas": {
+              "name": "American Red Cross serving the Heart of Texas",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            }
+          },
+          "states": [
+            null
+          ]
+        },
+        "North Texas Region": {
+          "name": "North Texas Region",
+          "chapters": {
+            "American Red Cross serving DFW West": {
+              "name": "American Red Cross serving DFW West",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross serving DFW East": {
+              "name": "American Red Cross serving DFW East",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross serving East Texas": {
+              "name": "American Red Cross serving East Texas",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross serving Texas Big Country": {
+              "name": "American Red Cross serving Texas Big Country",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross serving Panhandle Plains": {
+              "name": "American Red Cross serving Panhandle Plains",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            }
+          },
+          "states": [
+            null
+          ]
+        }
+      },
+      "states": [
+        null
+      ]
+    },
+    "Central Atlantic Division": {
+      "name": "Central Atlantic Division",
+      "regions": {
+        "National Capital  and Greater Chesapeake Region": {
+          "name": "National Capital  and Greater Chesapeake Region",
+          "chapters": {
+            "American Red Cross of Delmarva": {
+              "name": "American Red Cross of Delmarva",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Central Maryland": {
+              "name": "American Red Cross of Central Maryland",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Montgomery, Howard and Frederick Counties": {
+              "name": "American Red Cross of Montgomery, Howard and Frederick Counties",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Southern Maryland": {
+              "name": "American Red Cross of Southern Maryland",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of the District of Columbia": {
+              "name": "American Red Cross of the District of Columbia",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Northern Virginia": {
+              "name": "American Red Cross of Northern Virginia",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            }
+          },
+          "states": [
+            null
+          ]
+        },
+        "Kentucky Region": {
+          "name": "Kentucky Region",
+          "chapters": {
+            "American Red Cross of South Central Kentucky": {
+              "name": "American Red Cross of South Central Kentucky",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross Louisville Area": {
+              "name": "American Red Cross Louisville Area",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Western Kentucky": {
+              "name": "American Red Cross of Western Kentucky",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Eastern Kentucky": {
+              "name": "American Red Cross of Eastern Kentucky",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross Bluegrass Area": {
+              "name": "American Red Cross Bluegrass Area",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            }
+          },
+          "states": [
+            null
+          ]
+        },
+        "Northern Ohio Region": {
+          "name": "Northern Ohio Region",
+          "chapters": {
+            "American Red Cross of Heartland, Stark and Muskingum Lakes": {
+              "name": "American Red Cross of Heartland, Stark and Muskingum Lakes",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Northeast Ohio": {
+              "name": "American Red Cross of Northeast Ohio",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Western Lake Erie": {
+              "name": "American Red Cross of Western Lake Erie",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of North Central Ohio": {
+              "name": "American Red Cross of North Central Ohio",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Greater Akron and the Mahoning Valley": {
+              "name": "American Red Cross of Greater Akron and the Mahoning Valley",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            }
+          },
+          "states": [
+            null
+          ]
+        },
+        "Central and Southern Ohio Region": {
+          "name": "Central and Southern Ohio Region",
+          "chapters": {
+            "American Red Cross of Greater Columbus Ohio": {
+              "name": "American Red Cross of Greater Columbus Ohio",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Greater Cincinnati Tri-state": {
+              "name": "American Red Cross of Greater Cincinnati Tri-state",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of East Central Ohio": {
+              "name": "American Red Cross of East Central Ohio",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Miami Valley Ohio": {
+              "name": "American Red Cross of Miami Valley Ohio",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            }
+          },
+          "states": [
+            null
+          ]
+        },
+        "Virginia Region": {
+          "name": "Virginia Region",
+          "chapters": {
+            "American Red Cross of Blue Ridge Virginia": {
+              "name": "American Red Cross of Blue Ridge Virginia",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Central Virginia": {
+              "name": "American Red Cross of Central Virginia",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Rappahannock Virginia": {
+              "name": "American Red Cross of Rappahannock Virginia",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Southwest Virginia ": {
+              "name": "American Red Cross of Southwest Virginia ",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Capital Virginia": {
+              "name": "American Red Cross of Capital Virginia",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Coastal Virginia": {
+              "name": "American Red Cross of Coastal Virginia",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            }
+          },
+          "states": [
+            null
+          ]
+        },
+        "Central Appalachia Region": {
+          "name": "Central Appalachia Region",
+          "chapters": {
+            "American Red Cross of the Tri-State": {
+              "name": "American Red Cross of the Tri-State",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of the Ohio River Valley": {
+              "name": "American Red Cross of the Ohio River Valley",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Central and Southern West Virginia": {
+              "name": "American Red Cross of Central and Southern West Virginia",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of the Greater Shenandoah Valley": {
+              "name": "American Red Cross of the Greater Shenandoah Valley",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of the Allegheny Highlands": {
+              "name": "American Red Cross of the Allegheny Highlands",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            }
+          },
+          "states": [
+            null
+          ]
+        }
+      },
+      "states": [
+        null
+      ]
+    },
+    "North Central Division": {
+      "name": "North Central Division",
+      "regions": {
+        "Illinois Region": {
+          "name": "Illinois Region",
+          "chapters": {
+            "American Red Cross of Central Illinois": {
+              "name": "American Red Cross of Central Illinois",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross the Quad Cities and West Central Illinois": {
+              "name": "American Red Cross the Quad Cities and West Central Illinois",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross serving South Central Illinois": {
+              "name": "American Red Cross serving South Central Illinois",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Greater Chicago": {
+              "name": "American Red Cross of Greater Chicago",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of the Illinois River Valley": {
+              "name": "American Red Cross of the Illinois River Valley",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            }
+          },
+          "states": [
+            null
+          ]
+        },
+        "Indiana Region": {
+          "name": "Indiana Region",
+          "chapters": {
+            "American Red Cross of Northeast Indiana": {
+              "name": "American Red Cross of Northeast Indiana",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Northwest Indiana": {
+              "name": "American Red Cross of Northwest Indiana",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Southeast Indiana": {
+              "name": "American Red Cross of Southeast Indiana",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Greater Indianapolis": {
+              "name": "American Red Cross of Greater Indianapolis",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Southwest Indiana": {
+              "name": "American Red Cross of Southwest Indiana",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            }
+          },
+          "states": [
+            null
+          ]
+        },
+        "Nebraska Iowa Region": {
+          "name": "Nebraska Iowa Region",
+          "chapters": {
+            "American Red Cross of Eastern Iowa": {
+              "name": "American Red Cross of Eastern Iowa",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Northern and Central Iowa": {
+              "name": "American Red Cross of Northern and Central Iowa",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Omaha Council Bluffs and Southwest Iowa": {
+              "name": "American Red Cross of Omaha Council Bluffs and Southwest Iowa",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Central and Western Nebraska": {
+              "name": "American Red Cross of Central and Western Nebraska",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Southeast Nebraska": {
+              "name": "American Red Cross of Southeast Nebraska",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Northwest Iowa and Northeast Nebraska": {
+              "name": "American Red Cross of Northwest Iowa and Northeast Nebraska",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            }
+          },
+          "states": [
+            null
+          ]
+        },
+        "Michigan Region": {
+          "name": "Michigan Region",
+          "chapters": {
+            "American Red Cross of East Central Bay Michigan": {
+              "name": "American Red Cross of East Central Bay Michigan",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of West Michigan": {
+              "name": "American Red Cross of West Michigan",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Mid Michigan": {
+              "name": "American Red Cross of Mid Michigan",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Northern Michigan": {
+              "name": "American Red Cross of Northern Michigan",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Southeast Michigan": {
+              "name": "American Red Cross of Southeast Michigan",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Southwest Michigan": {
+              "name": "American Red Cross of Southwest Michigan",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            }
+          },
+          "states": [
+            null
+          ]
+        },
+        "Minnesota and Dakotas Region": {
+          "name": "Minnesota and Dakotas Region",
+          "chapters": {
+            "American Red Cross serving Twin Cities Area": {
+              "name": "American Red Cross serving Twin Cities Area",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross serving Southern Minnesota": {
+              "name": "American Red Cross serving Southern Minnesota",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross serving Eastern North Dakota and Northwest Minnesota": {
+              "name": "American Red Cross serving Eastern North Dakota and Northwest Minnesota",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross serving Western North Dakota": {
+              "name": "American Red Cross serving Western North Dakota",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross serving Eastern South Dakota": {
+              "name": "American Red Cross serving Eastern South Dakota",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross serving Northern and Central Minnesota": {
+              "name": "American Red Cross serving Northern and Central Minnesota",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross serving Central and Western South Dakota": {
+              "name": "American Red Cross serving Central and Western South Dakota",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            }
+          },
+          "states": [
+            null
+          ]
+        },
+        "Wisconsin Region": {
+          "name": "Wisconsin Region",
+          "chapters": {
+            "American Red Cross of Southwest Wisconsin": {
+              "name": "American Red Cross of Southwest Wisconsin",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Southeast Wisconsin": {
+              "name": "American Red Cross of Southeast Wisconsin",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of North Central Wisconsin": {
+              "name": "American Red Cross of North Central Wisconsin",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Northwest Wisconsin": {
+              "name": "American Red Cross of Northwest Wisconsin",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Northeast Wisconsin": {
+              "name": "American Red Cross of Northeast Wisconsin",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            }
+          },
+          "states": [
+            null
+          ]
+        }
+      },
+      "states": [
+        null
+      ]
+    },
+    "Northeast Division": {
+      "name": "Northeast Division",
+      "regions": {
+        "Northern New England Region": {
+          "name": "Northern New England Region",
+          "chapters": {
+            "American Red Cross of Central and Mid Coast Maine": {
+              "name": "American Red Cross of Central and Mid Coast Maine",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Northern and Eastern Maine": {
+              "name": "American Red Cross of Northern and Eastern Maine",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Southern Maine": {
+              "name": "American Red Cross of Southern Maine",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of New Hampshire": {
+              "name": "American Red Cross of New Hampshire",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Vermont": {
+              "name": "American Red Cross of Vermont",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            }
+          },
+          "states": [
+            null
+          ]
+        },
+        "Massachusetts Region": {
+          "name": "Massachusetts Region",
+          "chapters": {
+            "American Red Cross of Northeast MA": {
+              "name": "American Red Cross of Northeast MA",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Southeastern MA": {
+              "name": "American Red Cross of Southeastern MA",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Central and Western MA": {
+              "name": "American Red Cross of Central and Western MA",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Greater Boston MA": {
+              "name": "American Red Cross of Greater Boston MA",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            }
+          },
+          "states": [
+            null
+          ]
+        },
+        "New Jersey Region": {
+          "name": "New Jersey Region",
+          "chapters": {
+            "American Red Cross of Northern New Jersey": {
+              "name": "American Red Cross of Northern New Jersey",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Southern New Jersey": {
+              "name": "American Red Cross of Southern New Jersey",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Central New Jersey": {
+              "name": "American Red Cross of Central New Jersey",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            }
+          },
+          "states": [
+            null
+          ]
+        },
+        "Eastern New York Region": {
+          "name": "Eastern New York Region",
+          "chapters": {
+            "American Red Cross of Northeastern New York": {
+              "name": "American Red Cross of Northeastern New York",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Hudson Valley New York": {
+              "name": "American Red Cross of Hudson Valley New York",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Central and Northern New York": {
+              "name": "American Red Cross of Central and Northern New York",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            }
+          },
+          "states": [
+            null
+          ]
+        },
+        "Western New York Region": {
+          "name": "Western New York Region",
+          "chapters": {
+            "American Red Cross of Southern Tier New York": {
+              "name": "American Red Cross of Southern Tier New York",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Greater Rochester New York": {
+              "name": "American Red Cross of Greater Rochester New York",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Western New York": {
+              "name": "American Red Cross of Western New York",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            }
+          },
+          "states": [
+            null
+          ]
+        },
+        "Greater New York Region": {
+          "name": "Greater New York Region",
+          "chapters": {
+            "American Red Cross of Long Island New York": {
+              "name": "American Red Cross of Long Island New York",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Metro New York North": {
+              "name": "American Red Cross of Metro New York North",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Greater New York": {
+              "name": "American Red Cross of Greater New York",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            }
+          },
+          "states": [
+            null
+          ]
+        },
+        "Greater Pennsylvania Region": {
+          "name": "Greater Pennsylvania Region",
+          "chapters": {
+            "American Red Cross of Northwestern Pennsylvania": {
+              "name": "American Red Cross of Northwestern Pennsylvania",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Pennsylvania Rivers": {
+              "name": "American Red Cross of Pennsylvania Rivers",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Central Pennsylvania": {
+              "name": "American Red Cross of Central Pennsylvania",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Southwestern Pennsylvania": {
+              "name": "American Red Cross of Southwestern Pennsylvania",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Northeastern Pennsylvania": {
+              "name": "American Red Cross of Northeastern Pennsylvania",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "ARC of Chestnut Ridge and Allegheny Mountains": {
+              "name": "ARC of Chestnut Ridge and Allegheny Mountains",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            }
+          },
+          "states": [
+            null
+          ]
+        },
+        "Connecticut and Rhode Island Region": {
+          "name": "Connecticut and Rhode Island Region",
+          "chapters": {
+            "American Red Cross of Rhode Island": {
+              "name": "American Red Cross of Rhode Island",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Connecticut": {
+              "name": "American Red Cross of Connecticut",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            }
+          },
+          "states": [
+            null
+          ]
+        },
+        "Southeastern Pennsylvania Region": {
+          "name": "Southeastern Pennsylvania Region",
+          "chapters": {
+            "American Red Cross of Delaware Valley PA": {
+              "name": "American Red Cross of Delaware Valley PA",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            },
+            "American Red Cross of Philadelphia": {
+              "name": "American Red Cross of Philadelphia",
+              "counties": [
+                {}
+              ],
+              "states": [
+                null
+              ]
+            }
+          },
+          "states": [
+            null
+          ]
+        }
+      },
+      "states": [
+        null
+      ]
+    }
+  },
+  "totalCounties": 226,
+  "generated": "2025-10-25T09:13:36.512Z"
+}

@@ -31,13 +31,13 @@ export const REGIONS = {
     password: 'RedCrossMidwest2025!', // Change this!
     states: ['NE', 'IA'],
     map: {
-      center: [41.5, -95.9] as [number, number],
-      zoom: 6,
+      center: [41.5, -94.5] as [number, number], // Center between Des Moines and Omaha
+      zoom: 7,
       bounds: {
-        north: 43.5,
-        south: 40.0,
+        north: 43.6,
+        south: 40.3,
         east: -90.0,
-        west: -104.0
+        west: -97.0
       }
     },
     colors: {

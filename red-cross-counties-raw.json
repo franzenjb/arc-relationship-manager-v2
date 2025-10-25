@@ -1,0 +1,6106 @@
+{
+  "features": [
+    {
+      "attributes": {
+        "OBJECTID": 1,
+        "ECODE": "01192",
+        "Chapter": "American Red Cross serving North Alabama",
+        "Region_Type": "C",
+        "RCODE": "01R04",
+        "Region": "Alabama and Mississippi Region",
+        "DCODE": "D25",
+        "Division": "Southeast and Caribbean Division",
+        "Chapter_Address": "1015 Airport Road SW",
+        "Chapter_Address_2": "Suite 202",
+        "Chapter_City": "Huntsville",
+        "Chapter_State": "AL",
+        "Chapter_Zip": "35802",
+        "Chapter_Phone": "256-536-0884",
+        "Time_Zone": "Central",
+        "FEMA_Region": "IV",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9637954.469828546,
+        "y": 4121942.8333342923
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 2,
+        "ECODE": "01216",
+        "Chapter": "American Red Cross serving Central East Alabama",
+        "Region_Type": "C",
+        "RCODE": "01R04",
+        "Region": "Alabama and Mississippi Region",
+        "DCODE": "D25",
+        "Division": "Southeast and Caribbean Division",
+        "Chapter_Address": "5015 Woods Crossing Dr",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Montgomery",
+        "Chapter_State": "AL",
+        "Chapter_Zip": "36106",
+        "Chapter_Phone": "334-260-3980",
+        "Time_Zone": "Central",
+        "FEMA_Region": "IV",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9598070.089754486,
+        "y": 3810776.6210079533
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 3,
+        "ECODE": "01208",
+        "Chapter": "American Red Cross serving South Alabama",
+        "Region_Type": "C",
+        "RCODE": "01R04",
+        "Region": "Alabama and Mississippi Region",
+        "DCODE": "D25",
+        "Division": "Southeast and Caribbean Division",
+        "Chapter_Address": "35 N Sage Ave",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Mobile",
+        "Chapter_State": "AL",
+        "Chapter_Zip": "36607",
+        "Chapter_Phone": "251-544-6100",
+        "Time_Zone": "Central",
+        "FEMA_Region": "IV",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9808876.039700225,
+        "y": 3592795.6145991143
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 4,
+        "ECODE": "01288",
+        "Chapter": "American Red Cross serving Central West Alabama",
+        "Region_Type": "C",
+        "RCODE": "01R04",
+        "Region": "Alabama and Mississippi Region",
+        "DCODE": "D25",
+        "Division": "Southeast and Caribbean Division",
+        "Chapter_Address": "2130 Paul W. Bryant Dr,",
+        "Chapter_Address_2": "Ste B",
+        "Chapter_City": "Tuscaloosa",
+        "Chapter_State": "AL",
+        "Chapter_Zip": "35401",
+        "Chapter_Phone": "205-758-3608",
+        "Time_Zone": "Central",
+        "FEMA_Region": "IV",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9747464.99902557,
+        "y": 3922681.2912021526
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 5,
+        "ECODE": "02012",
+        "Chapter": "American Red Cross serving Alaska",
+        "Region_Type": "R",
+        "RCODE": "02R04",
+        "Region": "Alaska Region",
+        "DCODE": "D21",
+        "Division": "Pacific Division",
+        "Chapter_Address": "235 East 8th Avenue",
+        "Chapter_Address_2": "Ste 200",
+        "Chapter_City": "Anchorage",
+        "Chapter_State": "AK",
+        "Chapter_Zip": "99501",
+        "Chapter_Phone": "907-646-5400",
+        "Time_Zone": "Alaska",
+        "FEMA_Region": "X",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -16684528.494037192,
+        "y": 8675274.419951323
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 6,
+        "ECODE": "03008",
+        "Chapter": "American Red Cross of Central and Northern Arizona",
+        "Region_Type": "R",
+        "RCODE": "03R04",
+        "Region": "Arizona and New Mexico Region",
+        "DCODE": "D22",
+        "Division": "Southwest and Rocky Mountain Division",
+        "Chapter_Address": "4747 N. 22nd Street",
+        "Chapter_Address_2": "Suite 100",
+        "Chapter_City": "Phoenix",
+        "Chapter_State": "AZ",
+        "Chapter_Zip": "85016",
+        "Chapter_Phone": "602-336-6660",
+        "Time_Zone": "Mountain",
+        "FEMA_Region": "IX",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -12471624.329425538,
+        "y": 3962830.832579055
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 7,
+        "ECODE": "03060",
+        "Chapter": "American Red Cross of Southern Arizona",
+        "Region_Type": "C",
+        "RCODE": "03R04",
+        "Region": "Arizona and New Mexico Region",
+        "DCODE": "D22",
+        "Division": "Southwest and Rocky Mountain Division",
+        "Chapter_Address": "2916 East Broadway Blvd.",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Tucson",
+        "Chapter_State": "AZ",
+        "Chapter_Zip": "85716",
+        "Chapter_Phone": "520-318-6740",
+        "Time_Zone": "Mountain",
+        "FEMA_Region": "IX",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -12348526.479462182,
+        "y": 3792428.201396329
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 8,
+        "ECODE": "04304",
+        "Chapter": "American Red Cross serving Northwest Arkansas",
+        "Region_Type": "C",
+        "RCODE": "25R16",
+        "Region": "Missouri and Arkansas Region",
+        "DCODE": "D22",
+        "Division": "Southwest and Rocky Mountain Division",
+        "Chapter_Address": "1200 West Walnut St.",
+        "Chapter_Address_2": "Suite 2310",
+        "Chapter_City": "Rogers",
+        "Chapter_State": "AR",
+        "Chapter_Zip": "72756",
+        "Chapter_Phone": "479-633-8330",
+        "Time_Zone": "Central",
+        "FEMA_Region": "VI",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -10478894.582597708,
+        "y": 4346640.280868792
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 9,
+        "ECODE": "05058",
+        "Chapter": "American Red Cross of the Central Coast",
+        "Region_Type": "C",
+        "RCODE": "05R28",
+        "Region": "Northern California Coastal Region",
+        "DCODE": "D21",
+        "Division": "Pacific Division",
+        "Chapter_Address": "2960 Soquel Avenue",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Santa Cruz",
+        "Chapter_State": "CA",
+        "Chapter_Zip": "95062",
+        "Chapter_Phone": "831-624-6921",
+        "Time_Zone": "Pacific",
+        "FEMA_Region": "IX",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -13579328.119907593,
+        "y": 4437218.696912086
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 10,
+        "ECODE": "05112",
+        "Chapter": "American Red Cross of Central Valley",
+        "Region_Type": "C",
+        "RCODE": "05R04",
+        "Region": "Central California Region",
+        "DCODE": "D21",
+        "Division": "Pacific Division",
+        "Chapter_Address": "1300 W Shaw Ave. ",
+        "Chapter_Address_2": "4B",
+        "Chapter_City": "Fresno",
+        "Chapter_State": "CA",
+        "Chapter_Zip": "93711",
+        "Chapter_Phone": "559-455-1000",
+        "Time_Zone": "Pacific",
+        "FEMA_Region": "IX",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -13337800.347374693,
+        "y": 4412447.4129377445
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 11,
+        "ECODE": "05132",
+        "Chapter": "American Red Cross serving Greater Long Beach and South Bay",
+        "Region_Type": "C",
+        "RCODE": "05R12",
+        "Region": "Los Angeles Region",
+        "DCODE": "D21",
+        "Division": "Pacific Division",
+        "Chapter_Address": "3150 E. 29th Street",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Long Beach",
+        "Chapter_State": "CA",
+        "Chapter_Zip": "90806",
+        "Chapter_Phone": "562-595-6341",
+        "Time_Zone": "Pacific",
+        "FEMA_Region": "IX",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -13152847.459796462,
+        "y": 4002932.9223976983
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 12,
+        "ECODE": "05147",
+        "Chapter": "American Red Cross of Kern County and Eastern Sierra",
+        "Region_Type": "C",
+        "RCODE": "05R04",
+        "Region": "Central California Region",
+        "DCODE": "D21",
+        "Division": "Pacific Division",
+        "Chapter_Address": "5035 Gilmore Ave.",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Bakersfield",
+        "Chapter_State": "CA",
+        "Chapter_Zip": "93308",
+        "Chapter_Phone": "661-324-6427",
+        "Time_Zone": "Pacific",
+        "FEMA_Region": "IX",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -13253489.557070663,
+        "y": 4216957.654871033
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 13,
+        "ECODE": "05264",
+        "Chapter": "American Red Cross of Orange County",
+        "Region_Type": "C",
+        "RCODE": "05R32",
+        "Region": "Southern California Region",
+        "DCODE": "D21",
+        "Division": "Pacific Division",
+        "Chapter_Address": "600 Parkcenter Drive",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Santa Ana",
+        "Chapter_State": "CA",
+        "Chapter_Zip": "92705",
+        "Chapter_Phone": "714-481-5300",
+        "Time_Zone": "Pacific",
+        "FEMA_Region": "IX",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -13117479.354846396,
+        "y": 3995325.3313211314
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 14,
+        "ECODE": "05180",
+        "Chapter": "American Red Cross serving Metro and Southeast Los Angeles",
+        "Region_Type": "R",
+        "RCODE": "05R12",
+        "Region": "Los Angeles Region",
+        "DCODE": "D21",
+        "Division": "Pacific Division",
+        "Chapter_Address": "1450 S Central Ave",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Los Angeles",
+        "Chapter_State": "CA",
+        "Chapter_Zip": "90021",
+        "Chapter_Phone": "310-445-9900",
+        "Time_Zone": "Pacific",
+        "FEMA_Region": "IX",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -13163235.70099664,
+        "y": 4032547.4213885753
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 15,
+        "ECODE": "05324",
+        "Chapter": "American Red Cross of Riverside County",
+        "Region_Type": "C",
+        "RCODE": "05R32",
+        "Region": "Southern California Region",
+        "DCODE": "D21",
+        "Division": "Pacific Division",
+        "Chapter_Address": "6177 River Crest Drive",
+        "Chapter_Address_2": "Ste B",
+        "Chapter_City": "Riverside",
+        "Chapter_State": "CA",
+        "Chapter_Zip": "92507",
+        "Chapter_Phone": "888-831-0031",
+        "Time_Zone": "Pacific",
+        "FEMA_Region": "IX",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -13056958.225999268,
+        "y": 4020787.689830401
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 16,
+        "ECODE": "05332",
+        "Chapter": "American Red Cross of Sierra-Delta",
+        "Region_Type": "R",
+        "RCODE": "05R20",
+        "Region": "California Gold Country Region",
+        "DCODE": "D21",
+        "Division": "Pacific Division",
+        "Chapter_Address": "1565 Exposition Blvd.",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Sacramento",
+        "Chapter_State": "CA",
+        "Chapter_Zip": "95815",
+        "Chapter_Phone": "916-993-7070",
+        "Time_Zone": "Pacific",
+        "FEMA_Region": "IX",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -13518074.211137025,
+        "y": 4663907.435472132
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 17,
+        "ECODE": "05310",
+        "Chapter": "American Red Cross of the North Bay",
+        "Region_Type": "C",
+        "RCODE": "05R28",
+        "Region": "Northern California Coastal Region",
+        "DCODE": "D21",
+        "Division": "Pacific Division",
+        "Chapter_Address": "5297 Aero Dr.",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Santa Rosa",
+        "Chapter_State": "CA",
+        "Chapter_Zip": "95403",
+        "Chapter_Phone": "707-577-7600",
+        "Time_Zone": "Pacific",
+        "FEMA_Region": "IX",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -13666155.486637576,
+        "y": 4651830.194654183
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 18,
+        "ECODE": "05350",
+        "Chapter": "American Red Cross of the Heart of the Valley",
+        "Region_Type": "C",
+        "RCODE": "05R28",
+        "Region": "Northern California Coastal Region",
+        "DCODE": "D21",
+        "Division": "Pacific Division",
+        "Chapter_Address": "65 North Commerce Street",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Stockton",
+        "Chapter_State": "CA",
+        "Chapter_Zip": "95202",
+        "Chapter_Phone": "800-733-2767",
+        "Time_Zone": "Pacific",
+        "FEMA_Region": "IX",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -13502220.73848693,
+        "y": 4572746.355090673
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 19,
+        "ECODE": "05348",
+        "Chapter": "American Red Cross of San Diego and Imperial Counties",
+        "Region_Type": "R",
+        "RCODE": "05R32",
+        "Region": "Southern California Region",
+        "DCODE": "D21",
+        "Division": "Pacific Division",
+        "Chapter_Address": "3950 Calle Fortunada",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "San Diego",
+        "Chapter_State": "CA",
+        "Chapter_Zip": "92123",
+        "Chapter_Phone": "858-309-1200",
+        "Time_Zone": "Pacific",
+        "FEMA_Region": "IX",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -13038079.792903746,
+        "y": 3870557.9103617193
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 20,
+        "ECODE": "05378",
+        "Chapter": "American Red Cross of the Silicon Valley",
+        "Region_Type": "C",
+        "RCODE": "05R28",
+        "Region": "Northern California Coastal Region",
+        "DCODE": "D21",
+        "Division": "Pacific Division",
+        "Chapter_Address": "2731 N. 1st Street",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "San Jose",
+        "Chapter_State": "CA",
+        "Chapter_Zip": "95134",
+        "Chapter_Phone": "877-727-6771",
+        "Time_Zone": "Pacific",
+        "FEMA_Region": "IX",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -13573338.4761951,
+        "y": 4493690.973322488
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 21,
+        "ECODE": "05468",
+        "Chapter": "American Red Cross of the Pacific Coast",
+        "Region_Type": "R",
+        "RCODE": "05R04",
+        "Region": "Central California Region",
+        "DCODE": "D21",
+        "Division": "Pacific Division",
+        "Chapter_Address": "836 Calle Plano",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Camarillo",
+        "Chapter_State": "CA",
+        "Chapter_Zip": "93012",
+        "Chapter_Phone": "805-687-1331",
+        "Time_Zone": "Pacific",
+        "FEMA_Region": "IX",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -13247938.430564003,
+        "y": 4055504.5962335547
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 22,
+        "ECODE": "05388",
+        "Chapter": "American Red Cross serving Western Los Angeles",
+        "Region_Type": "C",
+        "RCODE": "05R12",
+        "Region": "Los Angeles Region",
+        "DCODE": "D21",
+        "Division": "Pacific Division",
+        "Chapter_Address": "1450 11th Street",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Santa Monica",
+        "Chapter_State": "CA",
+        "Chapter_Zip": "90401",
+        "Chapter_Phone": "310-394-3773",
+        "Time_Zone": "Pacific",
+        "FEMA_Region": "IX",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -13189946.892612098,
+        "y": 4031578.9774238477
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 23,
+        "ECODE": "05503",
+        "Chapter": "American Red Cross of the Bay Area",
+        "Region_Type": "R",
+        "RCODE": "05R28",
+        "Region": "Northern California Coastal Region",
+        "DCODE": "D21",
+        "Division": "Pacific Division",
+        "Chapter_Address": "1663 Market Street",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "San Francisco",
+        "Chapter_State": "CA",
+        "Chapter_Zip": "94103",
+        "Chapter_Phone": "415-427-8000",
+        "Time_Zone": "Pacific",
+        "FEMA_Region": "IX",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -13627924.758873818,
+        "y": 4547435.621133258
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 24,
+        "ECODE": "06144",
+        "Chapter": "American Red Cross of Northern Colorado",
+        "Region_Type": "C",
+        "RCODE": "06R08",
+        "Region": "Colorado and Wyoming Region",
+        "DCODE": "D22",
+        "Division": "Southwest and Rocky Mountain Division",
+        "Chapter_Address": "1808 N Boise Ave",
+        "Chapter_Address_2": "suite 110",
+        "Chapter_City": "Loveland",
+        "Chapter_State": "CO",
+        "Chapter_Zip": "80538",
+        "Chapter_Phone": "970-226-5728",
+        "Time_Zone": "Mountain",
+        "FEMA_Region": "IX",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -11694518.267012035,
+        "y": 4925911.522907048
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 25,
+        "ECODE": "06164",
+        "Chapter": "American Red Cross of Western Colorado",
+        "Region_Type": "C",
+        "RCODE": "06R08",
+        "Region": "Colorado and Wyoming Region",
+        "DCODE": "D22",
+        "Division": "Southwest and Rocky Mountain Division",
+        "Chapter_Address": "506 Gunnison Ave.",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Grand Junction",
+        "Chapter_State": "CO",
+        "Chapter_Zip": "81501",
+        "Chapter_Phone": "970-242-4851",
+        "Time_Zone": "Mountain",
+        "FEMA_Region": "VIII",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -12085308.201810038,
+        "y": 4732193.538907647
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 26,
+        "ECODE": "06204",
+        "Chapter": "American Red Cross of Southeastern Colorado",
+        "Region_Type": "C",
+        "RCODE": "06R08",
+        "Region": "Colorado and Wyoming Region",
+        "DCODE": "D22",
+        "Division": "Southwest and Rocky Mountain Division",
+        "Chapter_Address": "1040 S. 8th Street",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Colorado Springs",
+        "Chapter_State": "CO",
+        "Chapter_Zip": "80905",
+        "Chapter_Phone": "719-632-3563",
+        "Time_Zone": "Mountain",
+        "FEMA_Region": "VIII",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -11670993.14059356,
+        "y": 4695654.149023389
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 27,
+        "ECODE": "08004",
+        "Chapter": "American Red Cross of Delmarva",
+        "Region_Type": "C",
+        "RCODE": "09R04",
+        "Region": "National Capital  and Greater Chesapeake Region",
+        "DCODE": "D24",
+        "Division": "Central Atlantic Division",
+        "Chapter_Address": "100 West 10th St.",
+        "Chapter_Address_2": "Suite 401",
+        "Chapter_City": "Wilmington",
+        "Chapter_State": "DE",
+        "Chapter_Zip": "19801",
+        "Chapter_Phone": "302-656-6620",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "III",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -8410044.083949147,
+        "y": 4829086.185259169
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 28,
+        "ECODE": "10029",
+        "Chapter": "American Red Cross of Greater Orlando",
+        "Region_Type": "C",
+        "RCODE": "10R08",
+        "Region": "North and Central Florida Region",
+        "DCODE": "D25",
+        "Division": "Southeast and Caribbean Division",
+        "Chapter_Address": "5 N. Bumby Avenue",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Orlando",
+        "Chapter_State": "FL",
+        "Chapter_Zip": "32803",
+        "Chapter_Phone": "407-894-4141",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "IV",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9056047.610712456,
+        "y": 3317566.1486772136
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 29,
+        "ECODE": "10024",
+        "Chapter": "American Red Cross of Broward County",
+        "Region_Type": "C",
+        "RCODE": "10R12",
+        "Region": "South Florida Region",
+        "DCODE": "D25",
+        "Division": "Southeast and Caribbean Division",
+        "Chapter_Address": "600 NE 3rd Avenue",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Ft. Lauderdale",
+        "Chapter_State": "FL",
+        "Chapter_Zip": "33304",
+        "Chapter_Phone": "954-797-3800",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "IV",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -8921228.569654614,
+        "y": 3015225.908312125
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 30,
+        "ECODE": "10060",
+        "Chapter": "American Red Cross of Greater Miami and the Keys",
+        "Region_Type": "C",
+        "RCODE": "10R12",
+        "Region": "South Florida Region",
+        "DCODE": "D25",
+        "Division": "Southeast and Caribbean Division",
+        "Chapter_Address": "335 SW 27th Avenue",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Miami",
+        "Chapter_State": "FL",
+        "Chapter_Zip": "33135",
+        "Chapter_Phone": "305-644-1200",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "IV",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -8932150.127785856,
+        "y": 2970495.18112094
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 31,
+        "ECODE": "10090",
+        "Chapter": "American Red Cross of Mid Florida",
+        "Region_Type": "C",
+        "RCODE": "10R12",
+        "Region": "South Florida Region",
+        "DCODE": "D25",
+        "Division": "Southeast and Caribbean Division",
+        "Chapter_Address": "147 Avenue A, NW",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Winter Haven",
+        "Chapter_State": "FL",
+        "Chapter_Zip": "33881",
+        "Chapter_Phone": "863-294-5941",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "IV",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9097856.890950017,
+        "y": 3251874.9170971545
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 32,
+        "ECODE": "10164",
+        "Chapter": "American Red Cross of Florida Gulf Coast to Heartland ",
+        "Region_Type": "C",
+        "RCODE": "10R12",
+        "Region": "South Florida Region",
+        "DCODE": "D25",
+        "Division": "Southeast and Caribbean Division",
+        "Chapter_Address": "7051 Cypress Terrace 110",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Fort Myers",
+        "Chapter_State": "FL",
+        "Chapter_Zip": "33907",
+        "Chapter_Phone": "239-278-3401",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "IV",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9113990.652874896,
+        "y": 3066364.1811493067
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 33,
+        "ECODE": "10091",
+        "Chapter": "American Red Cross of Tampa Bay",
+        "Region_Type": "C",
+        "RCODE": "10R08",
+        "Region": "North and Central Florida Region",
+        "DCODE": "D25",
+        "Division": "Southeast and Caribbean Division",
+        "Chapter_Address": "3310 W. Main Street",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Tampa",
+        "Chapter_State": "FL",
+        "Chapter_Zip": "33607",
+        "Chapter_Phone": "813-348-4820",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "IV",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9183693.381426062,
+        "y": 3243581.706200266
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 34,
+        "ECODE": "10228",
+        "Chapter": "American Red Cross of Palm Beach and Treasure Coast",
+        "Region_Type": "R",
+        "RCODE": "10R12",
+        "Region": "South Florida Region",
+        "DCODE": "D25",
+        "Division": "Southeast and Caribbean Division",
+        "Chapter_Address": "1250 Northpoint Parkway",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "West Palm Beach",
+        "Chapter_State": "FL",
+        "Chapter_Zip": "33407",
+        "Chapter_Phone": "561-833-7711",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "IV",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -8916413.37399875,
+        "y": 3093981.8302818653
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 35,
+        "ECODE": "10198",
+        "Chapter": "American Red Cross of Northeast Florida",
+        "Region_Type": "R",
+        "RCODE": "10R08",
+        "Region": "North and Central Florida Region",
+        "DCODE": "D25",
+        "Division": "Southeast and Caribbean Division",
+        "Chapter_Address": "751 Riverside Ave.",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Jacksonville",
+        "Chapter_State": "FL",
+        "Chapter_Zip": "32204",
+        "Chapter_Phone": "904-358-8091",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "IV",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9092208.909817735,
+        "y": 3544256.744439062
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 36,
+        "ECODE": "10240",
+        "Chapter": "American Red Cross of Northwest Florida",
+        "Region_Type": "C",
+        "RCODE": "10R08",
+        "Region": "North and Central Florida Region",
+        "DCODE": "D25",
+        "Division": "Southeast and Caribbean Division",
+        "Chapter_Address": "9111 Sturdevant Street",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Pensacola",
+        "Chapter_State": "FL",
+        "Chapter_Zip": "32514",
+        "Chapter_Phone": "850-432-7601",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "IV",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9706912.910974022,
+        "y": 3571628.9217928075
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 37,
+        "ECODE": "10296",
+        "Chapter": "American Red Cross of Capital Area Florida",
+        "Region_Type": "C",
+        "RCODE": "10R08",
+        "Region": "North and Central Florida Region",
+        "DCODE": "D25",
+        "Division": "Southeast and Caribbean Division",
+        "Chapter_Address": "1115 Easterwood Drive",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Tallahassee",
+        "Chapter_State": "FL",
+        "Chapter_Zip": "32311",
+        "Chapter_Phone": "850-878-6080",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "IV",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9375417.05147637,
+        "y": 3561466.3943760814
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 38,
+        "ECODE": "11008",
+        "Chapter": "American Red Cross of Southwest Georgia",
+        "Region_Type": "C",
+        "RCODE": "11R04",
+        "Region": "Georgia Region",
+        "DCODE": "D25",
+        "Division": "Southeast and Caribbean Division",
+        "Chapter_Address": "6501 Veterans Parkway",
+        "Chapter_Address_2": "#3B",
+        "Chapter_City": "Columbus",
+        "Chapter_State": "GA",
+        "Chapter_Zip": "31909",
+        "Chapter_Phone": "706-323-5614",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "IV",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9457116.465529114,
+        "y": 3834391.478267606
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 39,
+        "ECODE": "11364",
+        "Chapter": "American Red Cross of Central Midwest Georgia",
+        "Region_Type": "C",
+        "RCODE": "11R04",
+        "Region": "Georgia Region",
+        "DCODE": "D25",
+        "Division": "Southeast and Caribbean Division",
+        "Chapter_Address": "900 Dallis Street",
+        "Chapter_Address_2": "Suite C",
+        "Chapter_City": "LaGrange",
+        "Chapter_State": "GA",
+        "Chapter_Zip": "30240",
+        "Chapter_Phone": "706-884-5818",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "IV",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9467377.850517865,
+        "y": 3898853.8171866024
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 40,
+        "ECODE": "11378",
+        "Chapter": "American Red Cross of Greater Atlanta",
+        "Region_Type": "R",
+        "RCODE": "11R04",
+        "Region": "Georgia Region",
+        "DCODE": "D25",
+        "Division": "Southeast and Caribbean Division",
+        "Chapter_Address": "1955 Monroe Drive, NE",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Atlanta",
+        "Chapter_State": "GA",
+        "Chapter_Zip": "30324",
+        "Chapter_Phone": "404-876-3302",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "IV",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9392588.815511055,
+        "y": 4003155.830132003
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 41,
+        "ECODE": "11472",
+        "Chapter": "American Red Cross of Southeast Georgia",
+        "Region_Type": "C",
+        "RCODE": "11R04",
+        "Region": "Georgia Region",
+        "DCODE": "D25",
+        "Division": "Southeast and Caribbean Division",
+        "Chapter_Address": "41 Park of Commerce Way",
+        "Chapter_Address_2": "Bldg 200",
+        "Chapter_City": "Savannah",
+        "Chapter_State": "GA",
+        "Chapter_Zip": "31405",
+        "Chapter_Phone": "912-651-5300",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "IV",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9035180.712294295,
+        "y": 3771854.3630424556
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 42,
+        "ECODE": "11542",
+        "Chapter": "American Red Cross of South Central Georgia",
+        "Region_Type": "C",
+        "RCODE": "11R04",
+        "Region": "Georgia Region",
+        "DCODE": "D25",
+        "Division": "Southeast and Caribbean Division",
+        "Chapter_Address": "385 Connell Rd.",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Valdosta",
+        "Chapter_State": "GA",
+        "Chapter_Zip": "31602",
+        "Chapter_Phone": "229-242-7404",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "IV",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9270842.272592252,
+        "y": 3611429.2455998776
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 43,
+        "ECODE": "13054",
+        "Chapter": "American Red Cross of Central Illinois",
+        "Region_Type": "C",
+        "RCODE": "13R04",
+        "Region": "Illinois Region",
+        "DCODE": "D23",
+        "Division": "North Central Division",
+        "Chapter_Address": "311 W John H Gwynn Jr Ave.",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Peoria",
+        "Chapter_State": "IL",
+        "Chapter_Zip": "61605",
+        "Chapter_Phone": "309-677-7272",
+        "Time_Zone": "Central",
+        "FEMA_Region": "V",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9973972.632298168,
+        "y": 4966909.868749424
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 44,
+        "ECODE": "13364",
+        "Chapter": "American Red Cross the Quad Cities and West Central Illinois",
+        "Region_Type": "C",
+        "RCODE": "13R04",
+        "Region": "Illinois Region",
+        "DCODE": "D23",
+        "Division": "North Central Division",
+        "Chapter_Address": "1100 River Drive",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Moline",
+        "Chapter_State": "IL",
+        "Chapter_Zip": "61265",
+        "Chapter_Phone": "309-743-2166",
+        "Time_Zone": "Central",
+        "FEMA_Region": "V",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -10077057.877397368,
+        "y": 5087380.337119067
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 45,
+        "ECODE": "14006",
+        "Chapter": "American Red Cross of Northeast Indiana",
+        "Region_Type": "C",
+        "RCODE": "14R12",
+        "Region": "Indiana Region",
+        "DCODE": "D23",
+        "Division": "North Central Division",
+        "Chapter_Address": "1212 E Calfornia Road",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Fort Wayne",
+        "Chapter_State": "IN",
+        "Chapter_Zip": "46825",
+        "Chapter_Phone": "260-484-9336",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "V",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9475965.85591226,
+        "y": 5029842.596433524
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 46,
+        "ECODE": "14026",
+        "Chapter": "American Red Cross of Northwest Indiana",
+        "Region_Type": "C",
+        "RCODE": "14R12",
+        "Region": "Indiana Region",
+        "DCODE": "D23",
+        "Division": "North Central Division",
+        "Chapter_Address": "791 E 83rd Ave",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Merrillville",
+        "Chapter_State": "IN",
+        "Chapter_Zip": "46410",
+        "Chapter_Phone": "219-756-5360",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "V",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9721151.637468003,
+        "y": 5081532.854972438
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 47,
+        "ECODE": "14088",
+        "Chapter": "American Red Cross of Southeast Indiana",
+        "Region_Type": "C",
+        "RCODE": "14R12",
+        "Region": "Indiana Region",
+        "DCODE": "D23",
+        "Division": "North Central Division",
+        "Chapter_Address": "441 S. College Ave",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Bloomington",
+        "Chapter_State": "IN",
+        "Chapter_Zip": "47403",
+        "Chapter_Phone": "812-332-7292",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "V",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9633020.500509406,
+        "y": 4744843.138645872
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 48,
+        "ECODE": "14340",
+        "Chapter": "American Red Cross of Greater Indianapolis",
+        "Region_Type": "R",
+        "RCODE": "14R12",
+        "Region": "Indiana Region",
+        "DCODE": "D23",
+        "Division": "North Central Division",
+        "Chapter_Address": "1510 N. Meridian Street",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Indianapolis",
+        "Chapter_State": "IN",
+        "Chapter_Zip": "46202",
+        "Chapter_Phone": "888-684-1441",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "V",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9590991.893142216,
+        "y": 4835045.306451057
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 49,
+        "ECODE": "15148",
+        "Chapter": "American Red Cross of Eastern Iowa",
+        "Region_Type": "C",
+        "RCODE": "15R08",
+        "Region": "Nebraska Iowa Region",
+        "DCODE": "D23",
+        "Division": "North Central Division",
+        "Chapter_Address": "317 7th Ave SE",
+        "Chapter_Address_2": "Ste. 205",
+        "Chapter_City": "Cedar Rapids",
+        "Chapter_State": "IA",
+        "Chapter_Zip": "52401",
+        "Chapter_Phone": "319-393-3500",
+        "Time_Zone": "Central",
+        "FEMA_Region": "VII",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -10203726.608146325,
+        "y": 5157186.689376436
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 50,
+        "ECODE": "15080",
+        "Chapter": "American Red Cross of Northern and Central Iowa",
+        "Region_Type": "C",
+        "RCODE": "15R08",
+        "Region": "Nebraska Iowa Region",
+        "DCODE": "D23",
+        "Division": "North Central Division",
+        "Chapter_Address": "2116 Grand Avenue",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Des Moines",
+        "Chapter_State": "IA",
+        "Chapter_Zip": "50312",
+        "Chapter_Phone": "515-243-7681",
+        "Time_Zone": "Central",
+        "FEMA_Region": "VII",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -10424551.600986669,
+        "y": 5098925.347358239
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 51,
+        "ECODE": "17052",
+        "Chapter": "American Red Cross of South Central Kentucky",
+        "Region_Type": "C",
+        "RCODE": "17R08",
+        "Region": "Kentucky Region",
+        "DCODE": "D24",
+        "Division": "Central Atlantic Division",
+        "Chapter_Address": "958 Collett Avenue",
+        "Chapter_Address_2": "Suite 800",
+        "Chapter_City": "Bowling Green",
+        "Chapter_State": "KY",
+        "Chapter_Zip": "42101",
+        "Chapter_Phone": "270-781-7377",
+        "Time_Zone": "Central",
+        "FEMA_Region": "IV",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9621805.77558742,
+        "y": 4437179.936941962
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 52,
+        "ECODE": "17340",
+        "Chapter": "American Red Cross Louisville Area",
+        "Region_Type": "R",
+        "RCODE": "17R08",
+        "Region": "Kentucky Region",
+        "DCODE": "D24",
+        "Division": "Central Atlantic Division",
+        "Chapter_Address": "510 E Chestnut St.",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Louisville",
+        "Chapter_State": "KY",
+        "Chapter_Zip": "40202",
+        "Chapter_Phone": "502-589-4450",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "IV",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9545091.292503739,
+        "y": 4614454.579755423
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 53,
+        "ECODE": "17381",
+        "Chapter": "American Red Cross of Western Kentucky",
+        "Region_Type": "C",
+        "RCODE": "17R08",
+        "Region": "Kentucky Region",
+        "DCODE": "D24",
+        "Division": "Central Atlantic Division",
+        "Chapter_Address": "1700 Frederica St",
+        "Chapter_Address_2": "Suite 105",
+        "Chapter_City": "Owensboro",
+        "Chapter_State": "KY",
+        "Chapter_Zip": "42301",
+        "Chapter_Phone": "270-693-2438",
+        "Time_Zone": "Central",
+        "FEMA_Region": "IV",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9697285.259429373,
+        "y": 4545503.533600524
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 54,
+        "ECODE": "18142",
+        "Chapter": "American Red Cross of North Louisiana",
+        "Region_Type": "C",
+        "RCODE": "18R08",
+        "Region": "Louisiana Region",
+        "DCODE": "D22",
+        "Division": "Southwest and Rocky Mountain Division",
+        "Chapter_Address": "805 Brook Hollow Drive",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Shreveport",
+        "Chapter_State": "LA",
+        "Chapter_Zip": "71105",
+        "Chapter_Phone": "318-865-9545",
+        "Time_Zone": "Central",
+        "FEMA_Region": "VI",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -10433509.626706852,
+        "y": 3818398.517339703
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 55,
+        "ECODE": "18206",
+        "Chapter": "American Red Cross of Southeast Louisiana",
+        "Region_Type": "R",
+        "RCODE": "18R08",
+        "Region": "Louisiana Region",
+        "DCODE": "D22",
+        "Division": "Southwest and Rocky Mountain Division",
+        "Chapter_Address": "2640 Canal Street",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "New Orleans",
+        "Chapter_State": "LA",
+        "Chapter_Zip": "70119",
+        "Chapter_Phone": "504-620-3105",
+        "Time_Zone": "Central",
+        "FEMA_Region": "VI",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -10028415.20850213,
+        "y": 3499052.5702567445
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 56,
+        "ECODE": "19010",
+        "Chapter": "American Red Cross of Central and Mid Coast Maine",
+        "Region_Type": "C",
+        "RCODE": "29R04",
+        "Region": "Northern New England Region",
+        "DCODE": "D27",
+        "Division": "Northeast Division",
+        "Chapter_Address": "16 Community Way",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Topsham",
+        "Chapter_State": "ME",
+        "Chapter_Zip": "04086",
+        "Chapter_Phone": "207-729-6779",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "I",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -7787503.077518825,
+        "y": 5455345.092746389
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 57,
+        "ECODE": "19096",
+        "Chapter": "American Red Cross of Northern and Eastern Maine",
+        "Region_Type": "C",
+        "RCODE": "29R04",
+        "Region": "Northern New England Region",
+        "DCODE": "D27",
+        "Division": "Northeast Division",
+        "Chapter_Address": "145 Exchange St.",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Bangor",
+        "Chapter_State": "ME",
+        "Chapter_Zip": "04401",
+        "Chapter_Phone": "207-874-1192",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "I",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -7655277.603475401,
+        "y": 5590237.257115159
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 58,
+        "ECODE": "20012",
+        "Chapter": "American Red Cross of Central Maryland",
+        "Region_Type": "C",
+        "RCODE": "09R04",
+        "Region": "National Capital  and Greater Chesapeake Region",
+        "DCODE": "D24",
+        "Division": "Central Atlantic Division",
+        "Chapter_Address": "4800 Mount Hope Drive",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Baltimore",
+        "Chapter_State": "MD",
+        "Chapter_Zip": "21215",
+        "Chapter_Phone": "410-624-2000",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "III",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -8539346.79495384,
+        "y": 4771242.363931506
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 59,
+        "ECODE": "19104",
+        "Chapter": "American Red Cross of Southern Maine",
+        "Region_Type": "C",
+        "RCODE": "29R04",
+        "Region": "Northern New England Region",
+        "DCODE": "D27",
+        "Division": "Northeast Division",
+        "Chapter_Address": "2401 Congress St.",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Portland",
+        "Chapter_State": "ME",
+        "Chapter_Zip": "04102",
+        "Chapter_Phone": "207-874-1192",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "I",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -7830088.427741637,
+        "y": 5411549.721033028
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 60,
+        "ECODE": "20044",
+        "Chapter": "American Red Cross of Montgomery, Howard and Frederick Counties",
+        "Region_Type": "C",
+        "RCODE": "09R04",
+        "Region": "National Capital  and Greater Chesapeake Region",
+        "DCODE": "D24",
+        "Division": "Central Atlantic Division",
+        "Chapter_Address": "2020 E W Hwy",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Silver Springs",
+        "Chapter_State": "MD",
+        "Chapter_Zip": "20910",
+        "Chapter_Phone": "301-588-2515",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "III",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -8576592.94811816,
+        "y": 4720924.46137164
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 61,
+        "ECODE": "20032",
+        "Chapter": "American Red Cross of Southern Maryland",
+        "Region_Type": "C",
+        "RCODE": "09R04",
+        "Region": "National Capital  and Greater Chesapeake Region",
+        "DCODE": "D24",
+        "Division": "Central Atlantic Division",
+        "Chapter_Address": "80 West Street",
+        "Chapter_Address_2": "Suite A",
+        "Chapter_City": "Annapolis",
+        "Chapter_State": "MD",
+        "Chapter_Zip": "21401",
+        "Chapter_Phone": "410-624-2000",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "III",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -8515523.15896355,
+        "y": 4718551.858155894
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 62,
+        "ECODE": "21115",
+        "Chapter": "American Red Cross of Northeast MA",
+        "Region_Type": "C",
+        "RCODE": "21R04",
+        "Region": "Massachusetts Region",
+        "DCODE": "D27",
+        "Division": "Northeast Division",
+        "Chapter_Address": "60 Island Street",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Lawrence",
+        "Chapter_State": "MA",
+        "Chapter_Zip": "01840",
+        "Chapter_Phone": "978-922-2224",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "I",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -7920736.825992873,
+        "y": 5267345.651996335
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 63,
+        "ECODE": "21064",
+        "Chapter": "American Red Cross of Southeastern MA",
+        "Region_Type": "C",
+        "RCODE": "21R04",
+        "Region": "Massachusetts Region",
+        "DCODE": "D27",
+        "Division": "Northeast Division",
+        "Chapter_Address": "286 South St.",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Hyannis",
+        "Chapter_State": "MA",
+        "Chapter_Zip": "02601",
+        "Chapter_Phone": "508-775-1540",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "I",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -7824070.700290306,
+        "y": 5108777.381055431
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 64,
+        "ECODE": "21254",
+        "Chapter": "American Red Cross of Central and Western MA",
+        "Region_Type": "C",
+        "RCODE": "21R04",
+        "Region": "Massachusetts Region",
+        "DCODE": "D27",
+        "Division": "Northeast Division",
+        "Chapter_Address": "150 Brookdale Drive",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Springfield",
+        "Chapter_State": "MA",
+        "Chapter_Zip": "01104",
+        "Chapter_Phone": "508-595-3700",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "I",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -8073671.107576834,
+        "y": 5182866.502189405
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 65,
+        "ECODE": "22108",
+        "Chapter": "American Red Cross of East Central Bay Michigan",
+        "Region_Type": "C",
+        "RCODE": "22R08",
+        "Region": "Michigan Region",
+        "DCODE": "D23",
+        "Division": "North Central Division",
+        "Chapter_Address": "1401 S. Grand Traverse St",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Flint",
+        "Chapter_State": "MI",
+        "Chapter_Zip": "48503",
+        "Chapter_Phone": "810-232-1401",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "V",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9315930.773911797,
+        "y": 5312838.93413828
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 66,
+        "ECODE": "22178",
+        "Chapter": "American Red Cross of West Michigan",
+        "Region_Type": "C",
+        "RCODE": "22R08",
+        "Region": "Michigan Region",
+        "DCODE": "D23",
+        "Division": "North Central Division",
+        "Chapter_Address": "1050 Fuller Avenue NE",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Grand Rapids",
+        "Chapter_State": "MI",
+        "Chapter_Zip": "49503",
+        "Chapter_Phone": "616-456-8661",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "V",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9533384.896772176,
+        "y": 5309281.4121224675
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 67,
+        "ECODE": "22234",
+        "Chapter": "American Red Cross of Mid Michigan",
+        "Region_Type": "C",
+        "RCODE": "22R08",
+        "Region": "Michigan Region",
+        "DCODE": "D23",
+        "Division": "North Central Division",
+        "Chapter_Address": "1800 E. Grand River Ave",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Lansing",
+        "Chapter_State": "MI",
+        "Chapter_Zip": "48912",
+        "Chapter_Phone": "517-484-7461",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "V",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9409165.34149599,
+        "y": 5272963.04504798
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 68,
+        "ECODE": "22216",
+        "Chapter": "American Red Cross of Northern Michigan",
+        "Region_Type": "C",
+        "RCODE": "22R08",
+        "Region": "Michigan Region",
+        "DCODE": "D23",
+        "Division": "North Central Division",
+        "Chapter_Address": "735 S Garfield Ave, #B100,",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Traverse City",
+        "Chapter_State": "MI",
+        "Chapter_Zip": "49686",
+        "Chapter_Phone": "231-947-7286",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "V",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9528422.021794088,
+        "y": 5582817.185398177
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 69,
+        "ECODE": "22322",
+        "Chapter": "American Red Cross of Southeast Michigan",
+        "Region_Type": "R",
+        "RCODE": "22R08",
+        "Region": "Michigan Region",
+        "DCODE": "D23",
+        "Division": "North Central Division",
+        "Chapter_Address": "7800 Outer Drive West",
+        "Chapter_Address_2": "Ste 205",
+        "Chapter_City": "Detroit",
+        "Chapter_State": "MI",
+        "Chapter_Zip": "48235",
+        "Chapter_Phone": "313-833-4440",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "V",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9263412.549857851,
+        "y": 5224008.744233456
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 70,
+        "ECODE": "23193",
+        "Chapter": "American Red Cross serving Twin Cities Area",
+        "Region_Type": "R",
+        "RCODE": "23R12",
+        "Region": "Minnesota and Dakotas Region",
+        "DCODE": "D23",
+        "Division": "North Central Division",
+        "Chapter_Address": "1201 West River Parkway",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Minneapolis",
+        "Chapter_State": "MN",
+        "Chapter_Zip": "55454",
+        "Chapter_Phone": "612-871-7676",
+        "Time_Zone": "Central",
+        "FEMA_Region": "V",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -10380399.178477088,
+        "y": 5617983.626685012
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 71,
+        "ECODE": "23294",
+        "Chapter": "American Red Cross serving Southern Minnesota",
+        "Region_Type": "C",
+        "RCODE": "23R12",
+        "Region": "Minnesota and Dakotas Region",
+        "DCODE": "D23",
+        "Division": "North Central Division",
+        "Chapter_Address": "305 Alliance Place NE",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Rochester",
+        "Chapter_State": "MN",
+        "Chapter_Zip": "55906",
+        "Chapter_Phone": "507-287-2200",
+        "Time_Zone": "Central",
+        "FEMA_Region": "V",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -10292400.651571158,
+        "y": 5474895.941732948
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 72,
+        "ECODE": "24045",
+        "Chapter": "American Red Cross of Southwest Mississippi",
+        "Region_Type": "C",
+        "RCODE": "01R04",
+        "Region": "Alabama and Mississippi Region",
+        "DCODE": "D25",
+        "Division": "Southeast and Caribbean Division",
+        "Chapter_Address": "9 River Bend Place",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Flowood",
+        "Chapter_State": "MS",
+        "Chapter_Zip": "39232",
+        "Chapter_Phone": "601-353-5442",
+        "Time_Zone": "Central",
+        "FEMA_Region": "IV",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -10032705.032921879,
+        "y": 3806437.9153224956
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 73,
+        "ECODE": "24277",
+        "Chapter": "American Red Cross of Southeast Mississippi",
+        "Region_Type": "C",
+        "RCODE": "01R04",
+        "Region": "Alabama and Mississippi Region",
+        "DCODE": "D25",
+        "Division": "Southeast and Caribbean Division",
+        "Chapter_Address": "612 E Pass Road",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Gulfport",
+        "Chapter_State": "MS",
+        "Chapter_Zip": "39507",
+        "Chapter_Phone": "228-896-4511",
+        "Time_Zone": "Central",
+        "FEMA_Region": "IV",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9911826.071832886,
+        "y": 3554487.978670483
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 74,
+        "ECODE": "27186",
+        "Chapter": "American Red Cross of Omaha Council Bluffs and Southwest Iowa",
+        "Region_Type": "R",
+        "RCODE": "15R08",
+        "Region": "Nebraska Iowa Region",
+        "DCODE": "D23",
+        "Division": "North Central Division",
+        "Chapter_Address": "2912 S. 80th Ave.",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Omaha",
+        "Chapter_State": "NE",
+        "Chapter_Zip": "68124",
+        "Chapter_Phone": "402-343-7700",
+        "Time_Zone": "Central",
+        "FEMA_Region": "VII",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -10691001.151844705,
+        "y": 5046673.961131337
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 75,
+        "ECODE": "27172",
+        "Chapter": "American Red Cross of Central and Western Nebraska",
+        "Region_Type": "C",
+        "RCODE": "15R08",
+        "Region": "Nebraska Iowa Region",
+        "DCODE": "D23",
+        "Division": "North Central Division",
+        "Chapter_Address": "404 East Third St.",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Grand Island",
+        "Chapter_State": "NE",
+        "Chapter_Zip": "68801",
+        "Chapter_Phone": "308-382-3790",
+        "Time_Zone": "Central",
+        "FEMA_Region": "VII",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -10946773.678619456,
+        "y": 5001622.401478921
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 76,
+        "ECODE": "29020",
+        "Chapter": "American Red Cross of New Hampshire",
+        "Region_Type": "R",
+        "RCODE": "29R04",
+        "Region": "Northern New England Region",
+        "DCODE": "D27",
+        "Division": "Northeast Division",
+        "Chapter_Address": "2 Maitland Street",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Concord",
+        "Chapter_State": "NH",
+        "Chapter_Zip": "03301",
+        "Chapter_Phone": "603-225-6697",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "I",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -7963012.844228531,
+        "y": 5341075.34183043
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 77,
+        "ECODE": "28066",
+        "Chapter": "American Red Cross of Northern Nevada",
+        "Region_Type": "C",
+        "RCODE": "44R04",
+        "Region": "Utah and Nevada Region",
+        "DCODE": "D22",
+        "Division": "Southwest and Rocky Mountain Division",
+        "Chapter_Address": "4750 Longley Lane",
+        "Chapter_Address_2": "Suite 101",
+        "Chapter_City": "Reno",
+        "Chapter_State": "NV",
+        "Chapter_Zip": "89502",
+        "Chapter_Phone": "775-856-1000",
+        "Time_Zone": "Pacific",
+        "FEMA_Region": "IX",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -13331706.725361846,
+        "y": 4791527.395435022
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 78,
+        "ECODE": "30140",
+        "Chapter": "American Red Cross of Northern New Jersey",
+        "Region_Type": "R",
+        "RCODE": "30R08",
+        "Region": "New Jersey Region",
+        "DCODE": "D27",
+        "Division": "Northeast Division",
+        "Chapter_Address": "209 Fairfield Road",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Fairfield",
+        "Chapter_State": "NJ",
+        "Chapter_Zip": "07004",
+        "Chapter_Phone": "973-797-3300",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "II",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -8270270.661521531,
+        "y": 4994396.4499865305
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 79,
+        "ECODE": "30076",
+        "Chapter": "American Red Cross of Southern New Jersey",
+        "Region_Type": "C",
+        "RCODE": "30R08",
+        "Region": "New Jersey Region",
+        "DCODE": "D27",
+        "Division": "Northeast Division",
+        "Chapter_Address": "5425 Route 70 West",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Pennsauken",
+        "Chapter_State": "NJ",
+        "Chapter_Zip": "08109",
+        "Chapter_Phone": "856-365-7100",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "II",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -8355993.721115373,
+        "y": 4856021.466625236
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 80,
+        "ECODE": "31061",
+        "Chapter": "American Red Cross of New Mexico",
+        "Region_Type": "C",
+        "RCODE": "03R04",
+        "Region": "Arizona and New Mexico Region",
+        "DCODE": "D22",
+        "Division": "Southwest and Rocky Mountain Division",
+        "Chapter_Address": "2121 Osuna Rd NE",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Albuquerque",
+        "Chapter_State": "NM",
+        "Chapter_Zip": "87113",
+        "Chapter_Phone": "505-265-8514",
+        "Time_Zone": "Mountain",
+        "FEMA_Region": "VI",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -11867280.896690652,
+        "y": 4184764.5096689863
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 81,
+        "ECODE": "32004",
+        "Chapter": "American Red Cross of Northeastern New York",
+        "Region_Type": "R",
+        "RCODE": "32R04",
+        "Region": "Eastern New York Region",
+        "DCODE": "D27",
+        "Division": "Northeast Division",
+        "Chapter_Address": "33 Everett Road",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Albany",
+        "Chapter_State": "NY",
+        "Chapter_Zip": "12205",
+        "Chapter_Phone": "518-458-8111",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "II",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -8212957.105948978,
+        "y": 5264810.5979240155
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 82,
+        "ECODE": "30176",
+        "Chapter": "American Red Cross of Central New Jersey",
+        "Region_Type": "C",
+        "RCODE": "30R08",
+        "Region": "New Jersey Region",
+        "DCODE": "D27",
+        "Division": "Northeast Division",
+        "Chapter_Address": "1540 W. Park Avenue",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Ocean",
+        "Chapter_State": "NJ",
+        "Chapter_Zip": "07712",
+        "Chapter_Phone": "609-951-8550",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "II",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -8247735.8634436205,
+        "y": 4903434.234259892
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 83,
+        "ECODE": "32102",
+        "Chapter": "American Red Cross of Hudson Valley New York",
+        "Region_Type": "C",
+        "RCODE": "32R04",
+        "Region": "Eastern New York Region",
+        "DCODE": "D27",
+        "Division": "Northeast Division",
+        "Chapter_Address": "4 Jefferson Plaza",
+        "Chapter_Address_2": "Suite 302",
+        "Chapter_City": "Poughkeepsie",
+        "Chapter_State": "NY",
+        "Chapter_Zip": "12601",
+        "Chapter_Phone": "845-471-0200",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "II",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -8230350.663073856,
+        "y": 5116420.384425444
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 84,
+        "ECODE": "32036",
+        "Chapter": "American Red Cross of Southern Tier New York",
+        "Region_Type": "C",
+        "RCODE": "32R20",
+        "Region": "Western New York Region",
+        "DCODE": "D27",
+        "Division": "Northeast Division",
+        "Chapter_Address": "620 East Main St.",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Endicott",
+        "Chapter_State": "NY",
+        "Chapter_Zip": "13760",
+        "Chapter_Phone": "607-785-7207",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "II",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -8466193.329113843,
+        "y": 5175428.261487893
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 85,
+        "ECODE": "32236",
+        "Chapter": "American Red Cross of Long Island New York",
+        "Region_Type": "C",
+        "RCODE": "32R16",
+        "Region": "Greater New York Region",
+        "DCODE": "D27",
+        "Division": "Northeast Division",
+        "Chapter_Address": "195 Willis Ave.",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Mineola",
+        "Chapter_State": "NY",
+        "Chapter_Zip": "11501",
+        "Chapter_Phone": "516-747-3500",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "II",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -8197473.790678101,
+        "y": 4974918.310852853
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 86,
+        "ECODE": "32336",
+        "Chapter": "American Red Cross of Greater Rochester New York",
+        "Region_Type": "C",
+        "RCODE": "32R20",
+        "Region": "Western New York Region",
+        "DCODE": "D27",
+        "Division": "Northeast Division",
+        "Chapter_Address": "50 Prince Street",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Rochester",
+        "Chapter_State": "NY",
+        "Chapter_Zip": "14607",
+        "Chapter_Phone": "585-241-4400",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "II",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -8637218.055265639,
+        "y": 5336292.4401689945
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 87,
+        "ECODE": "32400",
+        "Chapter": "American Red Cross of Central and Northern New York",
+        "Region_Type": "C",
+        "RCODE": "32R04",
+        "Region": "Eastern New York Region",
+        "DCODE": "D27",
+        "Division": "Northeast Division",
+        "Chapter_Address": "344 W Genesee St.",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Syracuse",
+        "Chapter_State": "NY",
+        "Chapter_Zip": "13202",
+        "Chapter_Phone": "315-234-2200",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "II",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -8477686.014503581,
+        "y": 5319971.914927591
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 88,
+        "ECODE": "32442",
+        "Chapter": "American Red Cross of Metro New York North",
+        "Region_Type": "C",
+        "RCODE": "32R16",
+        "Region": "Greater New York Region",
+        "DCODE": "D27",
+        "Division": "Northeast Division",
+        "Chapter_Address": "99 Indian Field Road",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Greenwich",
+        "Chapter_State": "CT",
+        "Chapter_Zip": "06830",
+        "Chapter_Phone": "203-869-8444",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "I",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -8193746.188848363,
+        "y": 5016428.54254552
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 89,
+        "ECODE": "32500",
+        "Chapter": "American Red Cross of Greater New York",
+        "Region_Type": "R",
+        "RCODE": "32R16",
+        "Region": "Greater New York Region",
+        "DCODE": "D27",
+        "Division": "Northeast Division",
+        "Chapter_Address": "520 West 49th Street",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "New York",
+        "Chapter_State": "NY",
+        "Chapter_Zip": "10019",
+        "Chapter_Phone": "877-733-2767",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "II",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -8236944.449504593,
+        "y": 4977688.549935988
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 90,
+        "ECODE": "33029",
+        "Chapter": "The American Red Cross serving Western North Carolina",
+        "Region_Type": "C",
+        "RCODE": "33R08",
+        "Region": "North Carolina Region",
+        "DCODE": "D25",
+        "Division": "Southeast and Caribbean Division",
+        "Chapter_Address": "100 Edgewood Rd.",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Asheville",
+        "Chapter_State": "NC",
+        "Chapter_Zip": "28804",
+        "Chapter_Phone": "828-258-3888",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "IV",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9189810.292310044,
+        "y": 4248500.607999455
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 91,
+        "ECODE": "33181",
+        "Chapter": "The American Red Cross serving the Charlotte Metro Area",
+        "Region_Type": "R",
+        "RCODE": "33R08",
+        "Region": "North Carolina Region",
+        "DCODE": "D25",
+        "Division": "Southeast and Caribbean Division",
+        "Chapter_Address": "2425 Park Road",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Charlotte",
+        "Chapter_State": "NC",
+        "Chapter_Zip": "28203",
+        "Chapter_Phone": "704-376-1661",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "IV",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9000362.08957182,
+        "y": 4190717.611508505
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 92,
+        "ECODE": "33132",
+        "Chapter": "American Red Cross of the Sandhills of North Carolina",
+        "Region_Type": "C",
+        "RCODE": "33R08",
+        "Region": "North Carolina Region",
+        "DCODE": "D25",
+        "Division": "Southeast and Caribbean Division",
+        "Chapter_Address": "807 Carol St.",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Fayetteville",
+        "Chapter_State": "NC",
+        "Chapter_Zip": "28303",
+        "Chapter_Phone": "910-867-8151",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "IV",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -8787321.222508626,
+        "y": 4174738.2851572535
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 93,
+        "ECODE": "33430",
+        "Chapter": "American Red Cross of the Greater Triangle Area of North Carolina",
+        "Region_Type": "C",
+        "RCODE": "33R08",
+        "Region": "North Carolina Region",
+        "DCODE": "D25",
+        "Division": "Southeast and Caribbean Division",
+        "Chapter_Address": "100 N. Peartree Lane",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Raleigh",
+        "Chapter_State": "NC",
+        "Chapter_Zip": "27610",
+        "Chapter_Phone": "919-231-1602",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "IV",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -8748878.976356873,
+        "y": 4270981.636084646
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 94,
+        "ECODE": "34118",
+        "Chapter": "American Red Cross serving Eastern North Dakota and Northwest Minnesota",
+        "Region_Type": "C",
+        "RCODE": "23R12",
+        "Region": "Minnesota and Dakotas Region",
+        "DCODE": "D23",
+        "Division": "North Central Division",
+        "Chapter_Address": "2602 12th St N",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Fargo",
+        "Chapter_State": "ND",
+        "Chapter_Zip": "58102",
+        "Chapter_Phone": "701-364-1800",
+        "Time_Zone": "Central",
+        "FEMA_Region": "VIII",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -10775302.626620302,
+        "y": 5927541.105002968
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 95,
+        "ECODE": "33468",
+        "Chapter": "American Red Cross of the Cape Fear Area Of North Carolina",
+        "Region_Type": "C",
+        "RCODE": "33R08",
+        "Region": "North Carolina Region",
+        "DCODE": "D25",
+        "Division": "Southeast and Caribbean Division",
+        "Chapter_Address": "1102 South 16TH Street",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Wilmington",
+        "Chapter_State": "NC",
+        "Chapter_Zip": "28401",
+        "Chapter_Phone": "910-762-2683",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "IV",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -8674829.981901541,
+        "y": 4058811.438163031
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 96,
+        "ECODE": "34204",
+        "Chapter": "American Red Cross serving Western North Dakota",
+        "Region_Type": "C",
+        "RCODE": "23R12",
+        "Region": "Minnesota and Dakotas Region",
+        "DCODE": "D23",
+        "Division": "North Central Division",
+        "Chapter_Address": "2021 4th Ave. NW",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Minot",
+        "Chapter_State": "ND",
+        "Chapter_Zip": "58703",
+        "Chapter_Phone": "701-368-4035",
+        "Time_Zone": "Central",
+        "FEMA_Region": "VIII",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -11279403.983892474,
+        "y": 6146877.472700248
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 97,
+        "ECODE": "35060",
+        "Chapter": "American Red Cross of Heartland, Stark and Muskingum Lakes",
+        "Region_Type": "C",
+        "RCODE": "35R16",
+        "Region": "Northern Ohio Region",
+        "DCODE": "D24",
+        "Division": "Central Atlantic Division",
+        "Chapter_Address": "408 9th St., SW Unit 1800",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Canton",
+        "Chapter_State": "OH",
+        "Chapter_Zip": "44707",
+        "Chapter_Phone": "330-453-0146",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "V",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9059234.360876244,
+        "y": 4981773.725743275
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 98,
+        "ECODE": "35086",
+        "Chapter": "American Red Cross of Greater Columbus Ohio",
+        "Region_Type": "C",
+        "RCODE": "35R12",
+        "Region": "Central and Southern Ohio Region",
+        "DCODE": "D24",
+        "Division": "Central Atlantic Division",
+        "Chapter_Address": "995 E Broad St.",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Columbus",
+        "Chapter_State": "OH",
+        "Chapter_Zip": "43205",
+        "Chapter_Phone": "614-253-2740",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "V",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9236626.422654428,
+        "y": 4860902.961030771
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 99,
+        "ECODE": "35072",
+        "Chapter": "American Red Cross of Greater Cincinnati Tri-state",
+        "Region_Type": "R",
+        "RCODE": "35R12",
+        "Region": "Central and Southern Ohio Region",
+        "DCODE": "D24",
+        "Division": "Central Atlantic Division",
+        "Chapter_Address": "2111 Dana Avenue",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Cincinnati",
+        "Chapter_State": "OH",
+        "Chapter_Zip": "45207",
+        "Chapter_Phone": "513-579-3000",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "V",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9402162.354478426,
+        "y": 4742561.014498918
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 100,
+        "ECODE": "35168",
+        "Chapter": "American Red Cross of Northeast Ohio",
+        "Region_Type": "R",
+        "RCODE": "35R16",
+        "Region": "Northern Ohio Region",
+        "DCODE": "D24",
+        "Division": "Central Atlantic Division",
+        "Chapter_Address": "3747 Euclid Avenue",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Cleveland",
+        "Chapter_State": "OH",
+        "Chapter_Zip": "44115",
+        "Chapter_Phone": "216-431-3010",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "V",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9090429.086162692,
+        "y": 5086868.323322788
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 101,
+        "ECODE": "35170",
+        "Chapter": "American Red Cross of Western Lake Erie",
+        "Region_Type": "C",
+        "RCODE": "35R16",
+        "Region": "Northern Ohio Region",
+        "DCODE": "D24",
+        "Division": "Central Atlantic Division",
+        "Chapter_Address": "1111 Research Dr.",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Toledo",
+        "Chapter_State": "OH",
+        "Chapter_Zip": "43614",
+        "Chapter_Phone": "419-329-2900",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "V",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9306857.947275694,
+        "y": 5103909.839180078
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 102,
+        "ECODE": "35240",
+        "Chapter": "American Red Cross of East Central Ohio",
+        "Region_Type": "C",
+        "RCODE": "35R12",
+        "Region": "Central and Southern Ohio Region",
+        "DCODE": "D24",
+        "Division": "Central Atlantic Division",
+        "Chapter_Address": "143 S 30th St.",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Newark",
+        "Chapter_State": "OH",
+        "Chapter_Zip": "43055",
+        "Chapter_Phone": "740-349-9442",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "V",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9177405.502148496,
+        "y": 4872481.288302778
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 103,
+        "ECODE": "35248",
+        "Chapter": "American Red Cross of North Central Ohio",
+        "Region_Type": "C",
+        "RCODE": "35R16",
+        "Region": "Northern Ohio Region",
+        "DCODE": "D24",
+        "Division": "Central Atlantic Division",
+        "Chapter_Address": "125 Fair St.",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Findlay",
+        "Chapter_State": "OH",
+        "Chapter_Zip": "45840",
+        "Chapter_Phone": "419-422-9322",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "V",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9312040.149483528,
+        "y": 5018940.506808923
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 104,
+        "ECODE": "35384",
+        "Chapter": "American Red Cross of Greater Akron and the Mahoning Valley",
+        "Region_Type": "C",
+        "RCODE": "35R16",
+        "Region": "Northern Ohio Region",
+        "DCODE": "D24",
+        "Division": "Central Atlantic Division",
+        "Chapter_Address": "501 W. Market St.",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Akron",
+        "Chapter_State": "OH",
+        "Chapter_Zip": "44303",
+        "Chapter_Phone": "330-535-6131",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "V",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9076277.624759162,
+        "y": 5025982.591306826
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 105,
+        "ECODE": "36232",
+        "Chapter": "American Red Cross serving Central and Southwest Oklahoma",
+        "Region_Type": "C",
+        "RCODE": "36R04",
+        "Region": "Kansas and Oklahoma Region",
+        "DCODE": "D22",
+        "Division": "Southwest and Rocky Mountain Division",
+        "Chapter_Address": "601 NE 6th St.",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Oklahoma City",
+        "Chapter_State": "OK",
+        "Chapter_Zip": "73104",
+        "Chapter_Phone": "405-228-9500",
+        "Time_Zone": "Central",
+        "FEMA_Region": "VI",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -10853839.538454048,
+        "y": 4228474.093436544
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 106,
+        "ECODE": "37036",
+        "Chapter": "American Red Cross of Central and Eastern Oregon",
+        "Region_Type": "C",
+        "RCODE": "37R04",
+        "Region": "Cascades Region",
+        "DCODE": "D21",
+        "Division": "Pacific Division",
+        "Chapter_Address": "815 SW Bond St",
+        "Chapter_Address_2": "Ste 110",
+        "Chapter_City": "Bend",
+        "Chapter_State": "OR",
+        "Chapter_Zip": "97702",
+        "Chapter_Phone": "541-382-2142",
+        "Time_Zone": "Pacific",
+        "FEMA_Region": "X",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -13504742.931700692,
+        "y": 5471849.256148711
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 107,
+        "ECODE": "36308",
+        "Chapter": "American Red Cross serving Tulsa Area Oklahoma",
+        "Region_Type": "R",
+        "RCODE": "36R04",
+        "Region": "Kansas and Oklahoma Region",
+        "DCODE": "D22",
+        "Division": "Southwest and Rocky Mountain Division",
+        "Chapter_Address": "10151 E 11th St.",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Tulsa",
+        "Chapter_State": "OK",
+        "Chapter_Zip": "74128",
+        "Chapter_Phone": "918-831-1100",
+        "Time_Zone": "Central",
+        "FEMA_Region": "VI",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -10671332.5384679,
+        "y": 4321019.978214027
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 108,
+        "ECODE": "37080",
+        "Chapter": "American Red Cross of Southwest Oregon",
+        "Region_Type": "C",
+        "RCODE": "37R04",
+        "Region": "Cascades Region",
+        "DCODE": "D21",
+        "Division": "Pacific Division",
+        "Chapter_Address": "862 Bethel Dr..",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Eugene",
+        "Chapter_State": "OR",
+        "Chapter_Zip": "97402",
+        "Chapter_Phone": "541-344-5244",
+        "Time_Zone": "Pacific",
+        "FEMA_Region": "X",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -13707552.963474534,
+        "y": 5476374.093695788
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 109,
+        "ECODE": "37104",
+        "Chapter": "American Red Cross of Northwest Oregon",
+        "Region_Type": "R",
+        "RCODE": "37R04",
+        "Region": "Cascades Region",
+        "DCODE": "D21",
+        "Division": "Pacific Division",
+        "Chapter_Address": "3131 N Vancouver Avenue",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Portland",
+        "Chapter_State": "OR",
+        "Chapter_Zip": "97227",
+        "Chapter_Phone": "503-284-1234",
+        "Time_Zone": "Pacific",
+        "FEMA_Region": "X",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -13655338.043759996,
+        "y": 5707896.309341455
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 110,
+        "ECODE": "38116",
+        "Chapter": "American Red Cross of Northwestern Pennsylvania",
+        "Region_Type": "C",
+        "RCODE": "38R28",
+        "Region": "Greater Pennsylvania Region",
+        "DCODE": "D27",
+        "Division": "Northeast Division",
+        "Chapter_Address": "4961 Pittsburgh Ave.",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Erie",
+        "Chapter_State": "PA",
+        "Chapter_Zip": "16509",
+        "Chapter_Phone": "814-833-0942",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "III",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -8917870.57719061,
+        "y": 5172040.658269146
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 111,
+        "ECODE": "38024",
+        "Chapter": "American Red Cross of Pennsylvania Rivers",
+        "Region_Type": "C",
+        "RCODE": "38R28",
+        "Region": "Greater Pennsylvania Region",
+        "DCODE": "D27",
+        "Division": "Northeast Division",
+        "Chapter_Address": "3939 Broadway",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Allentown",
+        "Chapter_State": "PA",
+        "Chapter_Zip": "18104",
+        "Chapter_Phone": "610-865-4400",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "III",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -8409070.742925337,
+        "y": 4951090.113912372
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 112,
+        "ECODE": "38196",
+        "Chapter": "American Red Cross of Central Pennsylvania",
+        "Region_Type": "C",
+        "RCODE": "38R28",
+        "Region": "Greater Pennsylvania Region",
+        "DCODE": "D27",
+        "Division": "Northeast Division",
+        "Chapter_Address": "1804 N 6th St.",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Harrisburg",
+        "Chapter_State": "PA",
+        "Chapter_Zip": "17102",
+        "Chapter_Phone": "866-311-3832",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "III",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -8559223.227978019,
+        "y": 4906327.666180431
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 113,
+        "ECODE": "38300",
+        "Chapter": "American Red Cross of Southwestern Pennsylvania",
+        "Region_Type": "R",
+        "RCODE": "38R28",
+        "Region": "Greater Pennsylvania Region",
+        "DCODE": "D27",
+        "Division": "Northeast Division",
+        "Chapter_Address": "2801 Liberty Avenue",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Pittsburgh",
+        "Chapter_State": "PA",
+        "Chapter_Zip": "15222",
+        "Chapter_Phone": "412-263-3100",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "III",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -8902735.911221355,
+        "y": 4932505.335210796
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 114,
+        "ECODE": "38332",
+        "Chapter": "American Red Cross of Northeastern Pennsylvania",
+        "Region_Type": "C",
+        "RCODE": "38R28",
+        "Region": "Greater Pennsylvania Region",
+        "DCODE": "D27",
+        "Division": "Northeast Division",
+        "Chapter_Address": "256 N Sherman Street",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Wilkes-Barre",
+        "Chapter_State": "PA",
+        "Chapter_Zip": "18702",
+        "Chapter_Phone": "570-823-7161",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "III",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -8445224.507395834,
+        "y": 5048256.716149598
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 115,
+        "ECODE": "39004",
+        "Chapter": "American Red Cross of Rhode Island",
+        "Region_Type": "C",
+        "RCODE": "07R08",
+        "Region": "Connecticut and Rhode Island Region",
+        "DCODE": "D27",
+        "Division": "Northeast Division",
+        "Chapter_Address": "100 Niantic Avenue, Suite A",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Providence",
+        "Chapter_State": "RI",
+        "Chapter_Zip": "02907",
+        "Chapter_Phone": "401-831-7700",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "I",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -7952574.737305285,
+        "y": 5131137.726449096
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 116,
+        "ECODE": "40104",
+        "Chapter": "American Red Cross of UpState South Carolina",
+        "Region_Type": "C",
+        "RCODE": "40R08",
+        "Region": "South Carolina Region",
+        "DCODE": "D25",
+        "Division": "Southeast and Caribbean Division",
+        "Chapter_Address": "940 Grove Road",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Greenville",
+        "Chapter_State": "SC",
+        "Chapter_Zip": "29605",
+        "Chapter_Phone": "864-271-8222",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "IV",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9174640.55588054,
+        "y": 4138848.1597881853
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 117,
+        "ECODE": "40120",
+        "Chapter": "American Red Cross of Eastern South Carolina",
+        "Region_Type": "C",
+        "RCODE": "40R08",
+        "Region": "South Carolina Region",
+        "DCODE": "D25",
+        "Division": "Southeast and Caribbean Division",
+        "Chapter_Address": "3531 Pampas Drive",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Myrtle Beach",
+        "Chapter_State": "SC",
+        "Chapter_Zip": "29577",
+        "Chapter_Phone": "843-477-0020",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "IV",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -8787517.808680492,
+        "y": 3983416.270394003
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 118,
+        "ECODE": "41208",
+        "Chapter": "American Red Cross serving Eastern South Dakota",
+        "Region_Type": "C",
+        "RCODE": "23R12",
+        "Region": "Minnesota and Dakotas Region",
+        "DCODE": "D23",
+        "Division": "North Central Division",
+        "Chapter_Address": "2925 E 57th St",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Sioux Falls",
+        "Chapter_State": "SD",
+        "Chapter_Zip": "57108",
+        "Chapter_Phone": "605-336-2448",
+        "Time_Zone": "Central",
+        "FEMA_Region": "VIII",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -10763280.1860868,
+        "y": 5388426.659525482
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 119,
+        "ECODE": "42170",
+        "Chapter": "American Red Cross of Mid-West Tennessee",
+        "Region_Type": "C",
+        "RCODE": "42R20",
+        "Region": "Tennessee Region",
+        "DCODE": "D25",
+        "Division": "Southeast and Caribbean Division",
+        "Chapter_Address": "19 Stonecreek Circle",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Jackson",
+        "Chapter_State": "TN",
+        "Chapter_Zip": "38305",
+        "Chapter_Phone": "731-427-5543",
+        "Time_Zone": "Central",
+        "FEMA_Region": "IV",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9891073.974330632,
+        "y": 4255939.848990287
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 120,
+        "ECODE": "42036",
+        "Chapter": "American Red Cross of Southeast Tennessee",
+        "Region_Type": "C",
+        "RCODE": "42R20",
+        "Region": "Tennessee Region",
+        "DCODE": "D25",
+        "Division": "Southeast and Caribbean Division",
+        "Chapter_Address": "4115 S Access Road",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Chattanooga",
+        "Chapter_State": "TN",
+        "Chapter_Zip": "37406",
+        "Chapter_Phone": "423-265-3455",
+        "Time_Zone": "Central",
+        "FEMA_Region": "IV",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9486382.04389796,
+        "y": 4175882.2027291288
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 121,
+        "ECODE": "42204",
+        "Chapter": "American Red Cross of Tennessee River",
+        "Region_Type": "C",
+        "RCODE": "42R20",
+        "Region": "Tennessee Region",
+        "DCODE": "D25",
+        "Division": "Southeast and Caribbean Division",
+        "Chapter_Address": "1760 Madison Street",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Clarksville",
+        "Chapter_State": "TN",
+        "Chapter_Zip": "37043",
+        "Chapter_Phone": "931-645-6401",
+        "Time_Zone": "Central",
+        "FEMA_Region": "IV",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9719968.695803056,
+        "y": 4371597.941779649
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 122,
+        "ECODE": "42296",
+        "Chapter": "American Red Cross of Nashville Area",
+        "Region_Type": "R",
+        "RCODE": "42R20",
+        "Region": "Tennessee Region",
+        "DCODE": "D25",
+        "Division": "Southeast and Caribbean Division",
+        "Chapter_Address": "2201 Charlotte Ave.",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Nashville",
+        "Chapter_State": "TN",
+        "Chapter_Zip": "37203",
+        "Chapter_Phone": "615-250-4300",
+        "Time_Zone": "Central",
+        "FEMA_Region": "IV",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9663435.182963124,
+        "y": 4322122.269099592
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 123,
+        "ECODE": "42344",
+        "Chapter": "American Red Cross Heart of Tennessee",
+        "Region_Type": "C",
+        "RCODE": "42R20",
+        "Region": "Tennessee Region",
+        "DCODE": "D25",
+        "Division": "Southeast and Caribbean Division",
+        "Chapter_Address": "501 Memorial Blvd",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Murfreesboro",
+        "Chapter_State": "TN",
+        "Chapter_Zip": "37129",
+        "Chapter_Phone": "615-893-4272",
+        "Time_Zone": "Central",
+        "FEMA_Region": "IV",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9617760.896175686,
+        "y": 4280218.001587119
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 124,
+        "ECODE": "43044",
+        "Chapter": "American Red Cross of Southeast & Deep East Texas",
+        "Region_Type": "C",
+        "RCODE": "43R28",
+        "Region": "Texas Gulf Coast Region",
+        "DCODE": "D22",
+        "Division": "Southwest and Rocky Mountain Division",
+        "Chapter_Address": "3260 Eastex Freeway",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Beaumont",
+        "Chapter_State": "TX",
+        "Chapter_Zip": "77703",
+        "Chapter_Phone": "409-883-2322",
+        "Time_Zone": "Central",
+        "FEMA_Region": "VI",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -10479393.103175374,
+        "y": 3517755.32060755
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 125,
+        "ECODE": "43129",
+        "Chapter": "American Red Cross serving Central Texas",
+        "Region_Type": "R",
+        "RCODE": "43R08",
+        "Region": "Central and South Texas Region",
+        "DCODE": "D22",
+        "Division": "Southwest and Rocky Mountain Division",
+        "Chapter_Address": "2218 Pershing Drive",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Austin",
+        "Chapter_State": "TX",
+        "Chapter_Zip": "78723",
+        "Chapter_Phone": "512-928-4271",
+        "Time_Zone": "Central",
+        "FEMA_Region": "VI",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -10875768.138913322,
+        "y": 3540583.8096807515
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 126,
+        "ECODE": "43092",
+        "Chapter": "American Red Cross of South Texas",
+        "Region_Type": "C",
+        "RCODE": "43R28",
+        "Region": "Texas Gulf Coast Region",
+        "DCODE": "D22",
+        "Division": "Southwest and Rocky Mountain Division",
+        "Chapter_Address": "6914 West Expressway 83",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Harlingen",
+        "Chapter_State": "TX",
+        "Chapter_Zip": "78552",
+        "Chapter_Phone": "956-423-0523",
+        "Time_Zone": "Central",
+        "FEMA_Region": "VI",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -10882816.059832936,
+        "y": 3022299.688825016
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 127,
+        "ECODE": "43238",
+        "Chapter": "American Red Cross serving DFW West",
+        "Region_Type": "C",
+        "RCODE": "43R16",
+        "Region": "North Texas Region",
+        "DCODE": "D22",
+        "Division": "Southwest and Rocky Mountain Division",
+        "Chapter_Address": "6000 Western Place",
+        "Chapter_Address_2": "Suite 100",
+        "Chapter_City": "Ft Worth",
+        "Chapter_State": "TX",
+        "Chapter_Zip": "76107",
+        "Chapter_Phone": "817-335-9137",
+        "Time_Zone": "Central",
+        "FEMA_Region": "VI",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -10844342.989975039,
+        "y": 3860179.3905887906
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 128,
+        "ECODE": "43256",
+        "Chapter": "American Red Cross serving West Texas",
+        "Region_Type": "C",
+        "RCODE": "43R08",
+        "Region": "Central and South Texas Region",
+        "DCODE": "D22",
+        "Division": "Southwest and Rocky Mountain Division",
+        "Chapter_Address": "3620 Admiral St.",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "El Paso",
+        "Chapter_State": "TX",
+        "Chapter_Zip": "79925",
+        "Chapter_Phone": "915-592-0208",
+        "Time_Zone": "Central",
+        "FEMA_Region": "VI",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -11840387.229399573,
+        "y": 3736403.9214873556
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 129,
+        "ECODE": "43338",
+        "Chapter": "American Red Cross of Coastal Plains Texas",
+        "Region_Type": "C",
+        "RCODE": "43R28",
+        "Region": "Texas Gulf Coast Region",
+        "DCODE": "D22",
+        "Division": "Southwest and Rocky Mountain Division",
+        "Chapter_Address": "2610 B F Terry Blvd",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Rosenberg",
+        "Chapter_State": "TX",
+        "Chapter_Zip": "77471",
+        "Chapter_Phone": "281-342-9480",
+        "Time_Zone": "Central",
+        "FEMA_Region": "VI",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -10661151.979861675,
+        "y": 3445304.9568831595
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 130,
+        "ECODE": "43336",
+        "Chapter": "American Red Cross of  Central Houston",
+        "Region_Type": "R",
+        "RCODE": "43R28",
+        "Region": "Texas Gulf Coast Region",
+        "DCODE": "D22",
+        "Division": "Southwest and Rocky Mountain Division",
+        "Chapter_Address": "2700 Southwest Freeway",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Houston",
+        "Chapter_State": "TX",
+        "Chapter_Zip": "77098",
+        "Chapter_Phone": "713-526-8300",
+        "Time_Zone": "Central",
+        "FEMA_Region": "VI",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -10622143.81217906,
+        "y": 3469017.4672404225
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 131,
+        "ECODE": "43746",
+        "Chapter": "American Red Cross serving Greater San Antonio Texas",
+        "Region_Type": "C",
+        "RCODE": "43R08",
+        "Region": "Central and South Texas Region",
+        "DCODE": "D22",
+        "Division": "Southwest and Rocky Mountain Division",
+        "Chapter_Address": "3642 E. Houston Street",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "San Antonio",
+        "Chapter_State": "TX",
+        "Chapter_Zip": "78219",
+        "Chapter_Phone": "210-224-5151",
+        "Time_Zone": "Central",
+        "FEMA_Region": "VI",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -10956860.25942057,
+        "y": 3429815.598829229
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 132,
+        "ECODE": "44084",
+        "Chapter": "American Red Cross of Greater Salt Lake",
+        "Region_Type": "R",
+        "RCODE": "44R04",
+        "Region": "Utah and Nevada Region",
+        "DCODE": "D22",
+        "Division": "Southwest and Rocky Mountain Division",
+        "Chapter_Address": "6616 South 900 East",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Salt Lake City",
+        "Chapter_State": "UT",
+        "Chapter_Zip": "84121",
+        "Chapter_Phone": "801-892-4000",
+        "Time_Zone": "Mountain",
+        "FEMA_Region": "VIII",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -12452869.190754142,
+        "y": 4958080.475126156
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 133,
+        "ECODE": "46008",
+        "Chapter": "American Red Cross of the District of Columbia",
+        "Region_Type": "R",
+        "RCODE": "09R04",
+        "Region": "National Capital  and Greater Chesapeake Region",
+        "DCODE": "D24",
+        "Division": "Central Atlantic Division",
+        "Chapter_Address": "8550 Arlington Blvd",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Fairfax",
+        "Chapter_State": "VA",
+        "Chapter_Zip": "22031",
+        "Chapter_Phone": "703-584-8400",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "III",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -8598101.525475152,
+        "y": 4702436.476570753
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 134,
+        "ECODE": "45061",
+        "Chapter": "American Red Cross of Vermont",
+        "Region_Type": "C",
+        "RCODE": "29R04",
+        "Region": "Northern New England Region",
+        "DCODE": "D27",
+        "Division": "Northeast Division",
+        "Chapter_Address": "32 N. Prospect Street",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Burlington",
+        "Chapter_State": "VT",
+        "Chapter_Zip": "05401",
+        "Chapter_Phone": "800-464-6692",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "I",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -8148675.085805629,
+        "y": 5540258.408224919
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 135,
+        "ECODE": "46036",
+        "Chapter": "American Red Cross of Blue Ridge Virginia",
+        "Region_Type": "C",
+        "RCODE": "46R08",
+        "Region": "Virginia Region",
+        "DCODE": "D24",
+        "Division": "Central Atlantic Division",
+        "Chapter_Address": "1007 Sheffield Drive",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Lynchburg",
+        "Chapter_State": "VA",
+        "Chapter_Zip": "24502",
+        "Chapter_Phone": "434-845-1234",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "III",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -8814881.090790173,
+        "y": 4490796.190782418
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 136,
+        "ECODE": "46081",
+        "Chapter": "American Red Cross of Central Virginia",
+        "Region_Type": "C",
+        "RCODE": "46R08",
+        "Region": "Virginia Region",
+        "DCODE": "D24",
+        "Division": "Central Atlantic Division",
+        "Chapter_Address": "1105 Rose Hill Dr.",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Charlottesville",
+        "Chapter_State": "VA",
+        "Chapter_Zip": "22903",
+        "Chapter_Phone": "434-979-7143",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "III",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -8736811.464867895,
+        "y": 4585279.054582535
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 137,
+        "ECODE": "46168",
+        "Chapter": "American Red Cross of Rappahannock Virginia",
+        "Region_Type": "C",
+        "RCODE": "46R08",
+        "Region": "Virginia Region",
+        "DCODE": "D24",
+        "Division": "Central Atlantic Division",
+        "Chapter_Address": "2217 Princess Anne Street",
+        "Chapter_Address_2": "Unit B26",
+        "Chapter_City": "Fredericksburg",
+        "Chapter_State": "VA",
+        "Chapter_Zip": "22401",
+        "Chapter_Phone": "540-735-0500",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "III",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -8623839.513020115,
+        "y": 4623913.2924335925
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 138,
+        "ECODE": "46248",
+        "Chapter": "American Red Cross of Northern Virginia",
+        "Region_Type": "C",
+        "RCODE": "09R04",
+        "Region": "National Capital  and Greater Chesapeake Region",
+        "DCODE": "D24",
+        "Division": "Central Atlantic Division",
+        "Chapter_Address": "215 Depot Ct. SE",
+        "Chapter_Address_2": "Suite 204",
+        "Chapter_City": "Leesburg",
+        "Chapter_State": "VA",
+        "Chapter_Zip": "20175",
+        "Chapter_Phone": "571-293-1771",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "III",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -8634206.520149438,
+        "y": 4737492.825826251
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 139,
+        "ECODE": "46380",
+        "Chapter": "American Red Cross of Southwest Virginia ",
+        "Region_Type": "C",
+        "RCODE": "46R08",
+        "Region": "Virginia Region",
+        "DCODE": "D24",
+        "Division": "Central Atlantic Division",
+        "Chapter_Address": "352 Church Ave. SW.",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Roanoke",
+        "Chapter_State": "VA",
+        "Chapter_Zip": "24016",
+        "Chapter_Phone": "540-985-3535",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "III",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -8899738.34944786,
+        "y": 4476849.448506137
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 140,
+        "ECODE": "46372",
+        "Chapter": "American Red Cross of Capital Virginia",
+        "Region_Type": "R",
+        "RCODE": "46R08",
+        "Region": "Virginia Region",
+        "DCODE": "D24",
+        "Division": "Central Atlantic Division",
+        "Chapter_Address": "2825 Emerywood Parkway",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Richmond",
+        "Chapter_State": "VA",
+        "Chapter_Zip": "23294",
+        "Chapter_Phone": "804-780-2250",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "III",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -8629900.119473105,
+        "y": 4524299.587692659
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 141,
+        "ECODE": "47018",
+        "Chapter": "American Red Cross serving Central and Southeastern Washington",
+        "Region_Type": "C",
+        "RCODE": "47R08",
+        "Region": "Northwest Region",
+        "DCODE": "D21",
+        "Division": "Pacific Division",
+        "Chapter_Address": "7202 W Deschutes Ave",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Kennewick",
+        "Chapter_State": "WA",
+        "Chapter_Zip": "99336",
+        "Chapter_Phone": "509-783-6195",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "X",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -13271451.775493477,
+        "y": 5814480.57261981
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 142,
+        "ECODE": "46441",
+        "Chapter": "American Red Cross of Coastal Virginia",
+        "Region_Type": "C",
+        "RCODE": "46R08",
+        "Region": "Virginia Region",
+        "DCODE": "D24",
+        "Division": "Central Atlantic Division",
+        "Chapter_Address": "611 W. Brambleton Ave.",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Norfolk",
+        "Chapter_State": "VA",
+        "Chapter_Zip": "23510",
+        "Chapter_Phone": "757-446-7700",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "III",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -8493855.805762134,
+        "y": 4419169.678779673
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 143,
+        "ECODE": "47028",
+        "Chapter": "American Red Cross of Southwest Washington",
+        "Region_Type": "C",
+        "RCODE": "37R04",
+        "Region": "Cascades Region",
+        "DCODE": "D21",
+        "Division": "Pacific Division",
+        "Chapter_Address": "3114 E 4th Plain Blvd.",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Vancouver",
+        "Chapter_State": "WA",
+        "Chapter_Zip": "98661",
+        "Chapter_Phone": "360-553-3619",
+        "Time_Zone": "Pacific",
+        "FEMA_Region": "X",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -13652002.792253757,
+        "y": 5722485.191792509
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 144,
+        "ECODE": "47066",
+        "Chapter": "The American Red Cross serving the Greater Inland Northwest",
+        "Region_Type": "C",
+        "RCODE": "47R08",
+        "Region": "Northwest Region",
+        "DCODE": "D21",
+        "Division": "Pacific Division",
+        "Chapter_Address": "315 West Nora Avenue",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Spokane",
+        "Chapter_State": "WA",
+        "Chapter_Zip": "99205",
+        "Chapter_Phone": "509-326-3330",
+        "Time_Zone": "Pacific",
+        "FEMA_Region": "X",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -13070803.91710283,
+        "y": 6052789.162877632
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 145,
+        "ECODE": "47128",
+        "Chapter": "American Red Cross serving Northwest Washington",
+        "Region_Type": "C",
+        "RCODE": "47R08",
+        "Region": "Northwest Region",
+        "DCODE": "D21",
+        "Division": "Pacific Division",
+        "Chapter_Address": "2530 Lombard Avenue",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Everertt",
+        "Chapter_State": "WA",
+        "Chapter_Zip": "98201",
+        "Chapter_Phone": "425-252-4103",
+        "Time_Zone": "Pacific",
+        "FEMA_Region": "X",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -13603566.847079039,
+        "y": 6104098.600842158
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 146,
+        "ECODE": "47116",
+        "Chapter": "American Red Cross serving King County",
+        "Region_Type": "R",
+        "RCODE": "47R08",
+        "Region": "Northwest Region",
+        "DCODE": "D21",
+        "Division": "Pacific Division",
+        "Chapter_Address": "1900 25TH Ave.South",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Seattle",
+        "Chapter_State": "WA",
+        "Chapter_Zip": "98144",
+        "Chapter_Phone": "206-323-2345",
+        "Time_Zone": "Pacific",
+        "FEMA_Region": "X",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -13614403.606080394,
+        "y": 6038239.176334588
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 147,
+        "ECODE": "48036",
+        "Chapter": "American Red Cross of the Tri-State",
+        "Region_Type": "C",
+        "RCODE": "48R04",
+        "Region": "Central Appalachia Region",
+        "DCODE": "D24",
+        "Division": "Central Atlantic Division",
+        "Chapter_Address": "1111 Veterans Memorial Blvd.",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Huntington",
+        "Chapter_State": "WV",
+        "Chapter_Zip": "25701",
+        "Chapter_Phone": "800-733-2767",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "III",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9177126.445753882,
+        "y": 4639489.140163318
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 148,
+        "ECODE": "47138",
+        "Chapter": "American Red Cross serving South Puget Sound and Olympics",
+        "Region_Type": "C",
+        "RCODE": "47R08",
+        "Region": "Northwest Region",
+        "DCODE": "D21",
+        "Division": "Pacific Division",
+        "Chapter_Address": "1235 S. Tacoma Way",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Tacoma",
+        "Chapter_State": "WA",
+        "Chapter_Zip": "98409",
+        "Chapter_Phone": "253-474-0400",
+        "Time_Zone": "Pacific",
+        "FEMA_Region": "X",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -13631063.013248133,
+        "y": 5979909.673455544
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 149,
+        "ECODE": "48119",
+        "Chapter": "American Red Cross of the Ohio River Valley",
+        "Region_Type": "C",
+        "RCODE": "48R04",
+        "Region": "Central Appalachia Region",
+        "DCODE": "D24",
+        "Division": "Central Atlantic Division",
+        "Chapter_Address": "220 8th Street",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Parkersburg",
+        "Chapter_State": "WV",
+        "Chapter_Zip": "26101",
+        "Chapter_Phone": "800-733-2767",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "III",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9078962.155604655,
+        "y": 4760111.728985351
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 150,
+        "ECODE": "48048",
+        "Chapter": "American Red Cross of Central and Southern West Virginia",
+        "Region_Type": "R",
+        "RCODE": "48R04",
+        "Region": "Central Appalachia Region",
+        "DCODE": "D24",
+        "Division": "Central Atlantic Division",
+        "Chapter_Address": "113 Lakeview Dr.",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Charleston",
+        "Chapter_State": "WV",
+        "Chapter_Zip": "25313",
+        "Chapter_Phone": "800-733-2767",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "III",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9106248.31027266,
+        "y": 4637833.842859448
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 151,
+        "ECODE": "48248",
+        "Chapter": "American Red Cross of the Greater Shenandoah Valley",
+        "Region_Type": "C",
+        "RCODE": "48R04",
+        "Region": "Central Appalachia Region",
+        "DCODE": "D24",
+        "Division": "Central Atlantic Division",
+        "Chapter_Address": "1131 Conrad Ct.",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Hagerstown",
+        "Chapter_State": "MD",
+        "Chapter_Zip": "21740",
+        "Chapter_Phone": "800-733-2767",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "III",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -8649143.23011335,
+        "y": 4812810.134187249
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 152,
+        "ECODE": "49064",
+        "Chapter": "American Red Cross of Southwest Wisconsin",
+        "Region_Type": "C",
+        "RCODE": "49R12",
+        "Region": "Wisconsin Region",
+        "DCODE": "D23",
+        "Division": "North Central Division",
+        "Chapter_Address": "4860 Sheboygan Ave.",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Madison",
+        "Chapter_State": "WI",
+        "Chapter_Zip": "53705",
+        "Chapter_Phone": "877-618-6628",
+        "Time_Zone": "Central",
+        "FEMA_Region": "V",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9958987.837504841,
+        "y": 5323092.595792348
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 153,
+        "ECODE": "49110",
+        "Chapter": "American Red Cross of Southeast Wisconsin",
+        "Region_Type": "R",
+        "RCODE": "49R12",
+        "Region": "Wisconsin Region",
+        "DCODE": "D23",
+        "Division": "North Central Division",
+        "Chapter_Address": "2600 W. Wisconsin Avenue",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Milwaukee",
+        "Chapter_State": "WI",
+        "Chapter_Zip": "53233",
+        "Chapter_Phone": "414-342-8680",
+        "Time_Zone": "Central",
+        "FEMA_Region": "V",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9790175.287612846,
+        "y": 5317876.170653335
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 154,
+        "ECODE": "49248",
+        "Chapter": "American Red Cross of North Central Wisconsin",
+        "Region_Type": "C",
+        "RCODE": "49R12",
+        "Region": "Wisconsin Region",
+        "DCODE": "D23",
+        "Division": "North Central Division",
+        "Chapter_Address": "330 Grand Avenue",
+        "Chapter_Address_2": "Ste 104",
+        "Chapter_City": "Wausau",
+        "Chapter_State": "WI",
+        "Chapter_Zip": "54403",
+        "Chapter_Phone": "877-618-6628",
+        "Time_Zone": "Central",
+        "FEMA_Region": "V",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9976871.832459016,
+        "y": 5614328.018009761
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 155,
+        "ECODE": "50060",
+        "Chapter": "American Red Cross of Wyoming",
+        "Region_Type": "C",
+        "RCODE": "06R08",
+        "Region": "Colorado and Wyoming Region",
+        "DCODE": "D22",
+        "Division": "Southwest and Rocky Mountain Division",
+        "Chapter_Address": "5500 Bishop Blvd",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Cheyenne",
+        "Chapter_State": "WY",
+        "Chapter_Zip": "82009",
+        "Chapter_Phone": "307-757-3426",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "III",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -11670797.10243518,
+        "y": 5037450.745559448
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 156,
+        "ECODE": "54004",
+        "Chapter": "American Red Cross of Hawaii",
+        "Region_Type": "R",
+        "RCODE": "54R04",
+        "Region": "Pacific Islands Region",
+        "DCODE": "D21",
+        "Division": "Pacific Division",
+        "Chapter_Address": "4155 Diamond Head Road",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Honolulu",
+        "Chapter_State": "HI",
+        "Chapter_Zip": "96816",
+        "Chapter_Phone": "808-734-2101",
+        "Time_Zone": "Hawaii",
+        "FEMA_Region": "X",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -17566064.258826356,
+        "y": 2423683.426440825
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 157,
+        "ECODE": "04244",
+        "Chapter": "American Red Cross serving Greater Arkansas",
+        "Region_Type": "C",
+        "RCODE": "25R16",
+        "Region": "Missouri and Arkansas Region",
+        "DCODE": "D22",
+        "Division": "Southwest and Rocky Mountain Division",
+        "Chapter_Address": "401 S. Monroe St.",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Little Rock",
+        "Chapter_State": "AR",
+        "Chapter_Zip": "72205",
+        "Chapter_Phone": "501-748-1000",
+        "Time_Zone": "Central",
+        "FEMA_Region": "VI",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -10277903.003723092,
+        "y": 4129605.4273681757
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 158,
+        "ECODE": "01019",
+        "Chapter": "American Red Cross serving Mid Alabama",
+        "Region_Type": "R",
+        "RCODE": "01R04",
+        "Region": "Alabama and Mississippi Region",
+        "DCODE": "D25",
+        "Division": "Southeast and Caribbean Division",
+        "Chapter_Address": "114 22nd Street South",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Birmingham",
+        "Chapter_State": "AL",
+        "Chapter_Zip": "35233",
+        "Chapter_Phone": "205-795-8700",
+        "Time_Zone": "Central",
+        "FEMA_Region": "IV",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9662638.641660884,
+        "y": 3963581.8332827585
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 159,
+        "ECODE": "05022",
+        "Chapter": "American Red Cross serving the Northern Valleys",
+        "Region_Type": "C",
+        "RCODE": "05R12",
+        "Region": "Los Angeles Region",
+        "DCODE": "D21",
+        "Division": "Pacific Division",
+        "Chapter_Address": "1501 S BRAND BLVD",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Glendale",
+        "Chapter_State": "CA",
+        "Chapter_Zip": "91204",
+        "Chapter_Phone": "818-243-3121",
+        "Time_Zone": "Pacific",
+        "FEMA_Region": "IX",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -13164085.199082281,
+        "y": 4045935.1066315453
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 160,
+        "ECODE": "05280",
+        "Chapter": "American Red Cross serving the Greater San Gabriel and Pomona Valleys",
+        "Region_Type": "C",
+        "RCODE": "05R12",
+        "Region": "Los Angeles Region",
+        "DCODE": "D21",
+        "Division": "Pacific Division",
+        "Chapter_Address": "376 W Huntington Drive",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Arcadia",
+        "Chapter_State": "CA",
+        "Chapter_Zip": "91007",
+        "Chapter_Phone": "626-447-2193",
+        "Time_Zone": "Pacific",
+        "FEMA_Region": "IX",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -13140700.827434221,
+        "y": 4046498.971187967
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 161,
+        "ECODE": "05344",
+        "Chapter": "American Red Cross of San Bernardino County",
+        "Region_Type": "C",
+        "RCODE": "05R32",
+        "Region": "Southern California Region",
+        "DCODE": "D21",
+        "Division": "Pacific Division",
+        "Chapter_Address": "10600 Trademark Parkway N.",
+        "Chapter_Address_2": "Ste. 406",
+        "Chapter_City": "Rancho Cucamonga",
+        "Chapter_State": "CA",
+        "Chapter_Zip": "91730",
+        "Chapter_Phone": "909-888-1481",
+        "Time_Zone": "Pacific",
+        "FEMA_Region": "IX",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -13088429.401462754,
+        "y": 4039609.310770193
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 162,
+        "ECODE": "07038",
+        "Chapter": "American Red Cross of Connecticut",
+        "Region_Type": "R",
+        "RCODE": "07R08",
+        "Region": "Connecticut and Rhode Island Region",
+        "DCODE": "D27",
+        "Division": "Northeast Division",
+        "Chapter_Address": "209 Farmington Ave.",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Farmington",
+        "Chapter_State": "CT",
+        "Chapter_Zip": "06032",
+        "Chapter_Phone": "877-287-3327",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "VIII",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -8103259.459680441,
+        "y": 5121875.02998843
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 163,
+        "ECODE": "11189",
+        "Chapter": "American Red Cross of Northeast Georgia",
+        "Region_Type": "C",
+        "RCODE": "11R04",
+        "Region": "Georgia Region",
+        "DCODE": "D25",
+        "Division": "Southeast and Caribbean Division",
+        "Chapter_Address": "490 Pulaski St.",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Athens",
+        "Chapter_State": "GA",
+        "Chapter_Zip": "30601",
+        "Chapter_Phone": "706-353-1645",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "IV",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9281911.222123398,
+        "y": 4023425.839594361
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 164,
+        "ECODE": "11024",
+        "Chapter": "American Red Cross of East Central Georgia",
+        "Region_Type": "C",
+        "RCODE": "11R04",
+        "Region": "Georgia Region",
+        "DCODE": "D25",
+        "Division": "Southeast and Caribbean Division",
+        "Chapter_Address": "1322 Ellis St.",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Augusta",
+        "Chapter_State": "GA",
+        "Chapter_Zip": "30901",
+        "Chapter_Phone": "706-724-8481",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "IV",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9125557.995140597,
+        "y": 3958896.851308823
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 165,
+        "ECODE": "11468",
+        "Chapter": "American Red Cross of Northwest Georgia",
+        "Region_Type": "C",
+        "RCODE": "11R04",
+        "Region": "Georgia Region",
+        "DCODE": "D25",
+        "Division": "Southeast and Caribbean Division",
+        "Chapter_Address": "112 John Maddox Dr.",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Rome",
+        "Chapter_State": "GA",
+        "Chapter_Zip": "30165",
+        "Chapter_Phone": "844-536-6226",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "IV",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9484102.31811865,
+        "y": 4065904.9896700224
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 166,
+        "ECODE": "06166",
+        "Chapter": "American Red Cross of the Mile High Area",
+        "Region_Type": "R",
+        "RCODE": "06R08",
+        "Region": "Colorado and Wyoming Region",
+        "DCODE": "D22",
+        "Division": "Southwest and Rocky Mountain Division",
+        "Chapter_Address": "444 Sherman St.",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Denver",
+        "Chapter_State": "CO",
+        "Chapter_Zip": "80203",
+        "Chapter_Phone": "303-722-7474",
+        "Time_Zone": "Mountain",
+        "FEMA_Region": "VIII",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -11686874.664546184,
+        "y": 4825764.353325298
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 167,
+        "ECODE": "12024",
+        "Chapter": "American Red Cross of Greater Idaho",
+        "Region_Type": "R",
+        "RCODE": "12R04",
+        "Region": "Idaho, Montana and Est Oregon Region",
+        "DCODE": "D21",
+        "Division": "Pacific Division",
+        "Chapter_Address": "5380 W Franklin Rd",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Boise",
+        "Chapter_State": "ID",
+        "Chapter_Zip": "83705",
+        "Chapter_Phone": "208-947-4357",
+        "Time_Zone": "Mountain",
+        "FEMA_Region": "X",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -12941344.507979663,
+        "y": 5404264.337888558
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 168,
+        "ECODE": "13392",
+        "Chapter": "American Red Cross serving South Central Illinois",
+        "Region_Type": "C",
+        "RCODE": "13R04",
+        "Region": "Illinois Region",
+        "DCODE": "D23",
+        "Division": "North Central Division",
+        "Chapter_Address": "769 S. Durkin Drive",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Springfield",
+        "Chapter_State": "IL",
+        "Chapter_Zip": "62704",
+        "Chapter_Phone": "217-787-7602",
+        "Time_Zone": "Central",
+        "FEMA_Region": "V",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9985897.749681544,
+        "y": 4835956.712409295
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 169,
+        "ECODE": "13302",
+        "Chapter": "American Red Cross of Greater Chicago",
+        "Region_Type": "R",
+        "RCODE": "13R04",
+        "Region": "Illinois Region",
+        "DCODE": "D23",
+        "Division": "North Central Division",
+        "Chapter_Address": "2200 W. Harrison Street",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Chicago",
+        "Chapter_State": "IL",
+        "Chapter_Zip": "60612",
+        "Chapter_Phone": "312-729-6100",
+        "Time_Zone": "Central",
+        "FEMA_Region": "V",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9760655.398651516,
+        "y": 5142125.27337148
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 170,
+        "ECODE": "14386",
+        "Chapter": "American Red Cross of Southwest Indiana",
+        "Region_Type": "C",
+        "RCODE": "14R12",
+        "Region": "Indiana Region",
+        "DCODE": "D23",
+        "Division": "North Central Division",
+        "Chapter_Address": "29 S Stockwell Rd",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Evansville",
+        "Chapter_State": "IN",
+        "Chapter_Zip": "47714",
+        "Chapter_Phone": "812-471-7200",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "V",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9740700.037970375,
+        "y": 4576039.049495116
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 171,
+        "ECODE": "13490",
+        "Chapter": "American Red Cross of the Illinois River Valley",
+        "Region_Type": "C",
+        "RCODE": "13R04",
+        "Region": "Illinois Region",
+        "DCODE": "D23",
+        "Division": "North Central Division",
+        "Chapter_Address": "1293 Windham Parkway",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Romeoville",
+        "Chapter_State": "IL",
+        "Chapter_Zip": "60446",
+        "Chapter_Phone": "630-378-0344",
+        "Time_Zone": "Central",
+        "FEMA_Region": "V",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9809938.778401842,
+        "y": 5110529.732964011
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 172,
+        "ECODE": "17047",
+        "Chapter": "American Red Cross of Eastern Kentucky",
+        "Region_Type": "C",
+        "RCODE": "17R08",
+        "Region": "Kentucky Region",
+        "DCODE": "D24",
+        "Division": "Central Atlantic Division",
+        "Chapter_Address": "101 Bulldog Lane",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Hazard",
+        "Chapter_State": "KY",
+        "Chapter_Zip": "41701",
+        "Chapter_Phone": "606-629-3344",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "IV",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9260280.08486456,
+        "y": 4472698.073253986
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 173,
+        "ECODE": "16213",
+        "Chapter": "American Red Cross of Capital Area Kansas",
+        "Region_Type": "C",
+        "RCODE": "36R04",
+        "Region": "Kansas and Oklahoma Region",
+        "DCODE": "D22",
+        "Division": "Southwest and Rocky Mountain Division",
+        "Chapter_Address": "1321 SW Topeka Blvd",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Topeka",
+        "Chapter_State": "KS",
+        "Chapter_Zip": "66612",
+        "Chapter_Phone": "785-354-9238",
+        "Time_Zone": "Central",
+        "FEMA_Region": "VII",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -10652511.647288691,
+        "y": 4726957.960326445
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 174,
+        "ECODE": "18125",
+        "Chapter": "American Red Cross of Capital West Louisiana",
+        "Region_Type": "C",
+        "RCODE": "18R08",
+        "Region": "Louisiana Region",
+        "DCODE": "D22",
+        "Division": "Southwest and Rocky Mountain Division",
+        "Chapter_Address": "4655 Sherwood Common",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Baton Rouge",
+        "Chapter_State": "LA",
+        "Chapter_Zip": "70816",
+        "Chapter_Phone": "225-291-4533",
+        "Time_Zone": "Central",
+        "FEMA_Region": "VI",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -10136412.921650497,
+        "y": 3556016.7536668684
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 175,
+        "ECODE": "21501",
+        "Chapter": "American Red Cross of Greater Boston MA",
+        "Region_Type": "R",
+        "RCODE": "21R04",
+        "Region": "Massachusetts Region",
+        "DCODE": "D27",
+        "Division": "Northeast Division",
+        "Chapter_Address": "101 Station Landing",
+        "Chapter_Address_2": "Suite 510",
+        "Chapter_City": "Medford",
+        "Chapter_State": "MA",
+        "Chapter_Zip": "02155",
+        "Chapter_Phone": "781-410-3670",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "I",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -7912681.894557541,
+        "y": 5221574.488406075
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 176,
+        "ECODE": "23222",
+        "Chapter": "American Red Cross serving Northern and Central Minnesota",
+        "Region_Type": "C",
+        "RCODE": "23R12",
+        "Region": "Minnesota and Dakotas Region",
+        "DCODE": "D23",
+        "Division": "North Central Division",
+        "Chapter_Address": "2524 West Maple Grove Rd.",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Duluth",
+        "Chapter_State": "MN",
+        "Chapter_Zip": "55811",
+        "Chapter_Phone": "218-722-0071",
+        "Time_Zone": "Central",
+        "FEMA_Region": "V",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -10260601.753833182,
+        "y": 5910710.623415247
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 177,
+        "ECODE": "24180",
+        "Chapter": "American Red Cross of North Mississippi",
+        "Region_Type": "C",
+        "RCODE": "01R04",
+        "Region": "Alabama and Mississippi Region",
+        "DCODE": "D25",
+        "Division": "Southeast and Caribbean Division",
+        "Chapter_Address": "4127 Westside Drive",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Tupelo",
+        "Chapter_State": "MS",
+        "Chapter_Zip": "38802",
+        "Chapter_Phone": "662-842-6101",
+        "Time_Zone": "Central",
+        "FEMA_Region": "IV",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9882356.588799357,
+        "y": 4062511.9355277303
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 178,
+        "ECODE": "25062",
+        "Chapter": "American Red Cross of Central and Northern Missouri",
+        "Region_Type": "C",
+        "RCODE": "25R16",
+        "Region": "Missouri and Arkansas Region",
+        "DCODE": "D22",
+        "Division": "Southwest and Rocky Mountain Division",
+        "Chapter_Address": "1511 S. Providence Rd.",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Columbia",
+        "Chapter_State": "MO",
+        "Chapter_Zip": "65203",
+        "Chapter_Phone": "573-635-1132",
+        "Time_Zone": "Central",
+        "FEMA_Region": "VII",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -10279042.15736877,
+        "y": 4711833.335703148
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 179,
+        "ECODE": "25150",
+        "Chapter": "American Red Cross of Greater Kansas City and Northwest Missouri",
+        "Region_Type": "C",
+        "RCODE": "25R16",
+        "Region": "Missouri and Arkansas Region",
+        "DCODE": "D22",
+        "Division": "Southwest and Rocky Mountain Division",
+        "Chapter_Address": "6601 Winchester Avenue",
+        "Chapter_Address_2": "Suite 110",
+        "Chapter_City": "Kansas City",
+        "Chapter_State": "MO",
+        "Chapter_Zip": "64133",
+        "Chapter_Phone": "816-931-8400",
+        "Time_Zone": "Central",
+        "FEMA_Region": "VII",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -10520272.723989267,
+        "y": 4722400.644742674
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 180,
+        "ECODE": "25060",
+        "Chapter": "American Red Cross of Southeast Missouri and Northeast Arkansas",
+        "Region_Type": "C",
+        "RCODE": "25R16",
+        "Region": "Missouri and Arkansas Region",
+        "DCODE": "D22",
+        "Division": "Southwest and Rocky Mountain Division",
+        "Chapter_Address": "2430 Myra Drive",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Cape Girardeau",
+        "Chapter_State": "MO",
+        "Chapter_Zip": "63703",
+        "Chapter_Phone": "573-335-9471",
+        "Time_Zone": "Central",
+        "FEMA_Region": "VII",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9969360.612591207,
+        "y": 4481744.861463498
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 181,
+        "ECODE": "25380",
+        "Chapter": "American Red Cross of Greater St Louis",
+        "Region_Type": "R",
+        "RCODE": "25R16",
+        "Region": "Missouri and Arkansas Region",
+        "DCODE": "D22",
+        "Division": "Southwest and Rocky Mountain Division",
+        "Chapter_Address": "10195 Corporate Square",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "St. Louis",
+        "Chapter_State": "MO",
+        "Chapter_Zip": "63132",
+        "Chapter_Phone": "314-516-2800",
+        "Time_Zone": "Central",
+        "FEMA_Region": "VII",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -10063699.223616343,
+        "y": 4675905.667538683
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 182,
+        "ECODE": "25152",
+        "Chapter": "American Red Cross of Southern Missouri",
+        "Region_Type": "C",
+        "RCODE": "25R16",
+        "Region": "Missouri and Arkansas Region",
+        "DCODE": "D22",
+        "Division": "Southwest and Rocky Mountain Division",
+        "Chapter_Address": "1545 N West Bypass",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Springfield",
+        "Chapter_State": "MO",
+        "Chapter_Zip": "65803",
+        "Chapter_Phone": "417-832-9500",
+        "Time_Zone": "Central",
+        "FEMA_Region": "VII",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -10391479.518059034,
+        "y": 4470843.476614498
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 183,
+        "ECODE": "26036",
+        "Chapter": "American Red Cross of Montana",
+        "Region_Type": "C",
+        "RCODE": "12R04",
+        "Region": "Idaho, Montana and Est Oregon Region",
+        "DCODE": "D21",
+        "Division": "Pacific Division",
+        "Chapter_Address": "1300 28th St. South",
+        "Chapter_Address_2": "3rd Fl.",
+        "Chapter_City": "Great Falls",
+        "Chapter_State": "MT",
+        "Chapter_Zip": "59403",
+        "Chapter_Phone": "800-272-6668",
+        "Time_Zone": "Mountain",
+        "FEMA_Region": "VIII",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -12385315.566555817,
+        "y": 6022618.078058045
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 184,
+        "ECODE": "28016",
+        "Chapter": "American Red Cross of Southern Nevada",
+        "Region_Type": "C",
+        "RCODE": "44R04",
+        "Region": "Utah and Nevada Region",
+        "DCODE": "D22",
+        "Division": "Southwest and Rocky Mountain Division",
+        "Chapter_Address": "444 E Warm Springs Rd",
+        "Chapter_Address_2": "Suite 110",
+        "Chapter_City": "Las Vegas",
+        "Chapter_State": "NV",
+        "Chapter_Zip": "89119",
+        "Chapter_Phone": "702-791-3311",
+        "Time_Zone": "Pacific",
+        "FEMA_Region": "IX",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -12818797.714506231,
+        "y": 4308469.481564761
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 185,
+        "ECODE": "27234",
+        "Chapter": "American Red Cross of Southeast Nebraska",
+        "Region_Type": "C",
+        "RCODE": "15R08",
+        "Region": "Nebraska Iowa Region",
+        "DCODE": "D23",
+        "Division": "North Central Division",
+        "Chapter_Address": "4600 Valley Road",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Lincoln",
+        "Chapter_State": "NE",
+        "Chapter_Zip": "68501",
+        "Chapter_Phone": "402-441-7997",
+        "Time_Zone": "Central",
+        "FEMA_Region": "VII",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -10759714.727070704,
+        "y": 4983330.618159043
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 186,
+        "ECODE": "32140",
+        "Chapter": "American Red Cross of Western New York",
+        "Region_Type": "R",
+        "RCODE": "32R20",
+        "Region": "Western New York Region",
+        "DCODE": "D27",
+        "Division": "Northeast Division",
+        "Chapter_Address": "786 Delaware Ave.",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Buffalo",
+        "Chapter_State": "NY",
+        "Chapter_Zip": "14209",
+        "Chapter_Phone": "716-886-7500",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "II",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -8779996.25594537,
+        "y": 5297631.2201620145
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 187,
+        "ECODE": "33068",
+        "Chapter": "The American Red Cross serving the Southern Piedmont of North Carolina",
+        "Region_Type": "C",
+        "RCODE": "33R08",
+        "Region": "North Carolina Region",
+        "DCODE": "D25",
+        "Division": "Southeast and Caribbean Division",
+        "Chapter_Address": "608 E. Franklin St.",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Monroe",
+        "Chapter_State": "NC",
+        "Chapter_Zip": "28112",
+        "Chapter_Phone": "704-283-7402",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "IV",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -8965454.509664655,
+        "y": 4161021.7388882865
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 188,
+        "ECODE": "33188",
+        "Chapter": "The American Red Cross serving the Piedmont Triad of North Carolina",
+        "Region_Type": "C",
+        "RCODE": "33R08",
+        "Region": "North Carolina Region",
+        "DCODE": "D25",
+        "Division": "Southeast and Caribbean Division",
+        "Chapter_Address": "1501 Yanceyville St.",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Greensboro",
+        "Chapter_State": "NC",
+        "Chapter_Zip": "27415",
+        "Chapter_Phone": "336-333-2111",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "IV",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -8881081.674503414,
+        "y": 4313408.411963805
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 189,
+        "ECODE": "33380",
+        "Chapter": "American Red Cross of Northeastern North Carolina",
+        "Region_Type": "C",
+        "RCODE": "33R08",
+        "Region": "North Carolina Region",
+        "DCODE": "D25",
+        "Division": "Southeast and Caribbean Division",
+        "Chapter_Address": "700 A Cromwell Avenue",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Greenville",
+        "Chapter_State": "NC",
+        "Chapter_Zip": "27858",
+        "Chapter_Phone": "252-355-3800",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "IV",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -8612814.094320327,
+        "y": 4243019.405725314
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 190,
+        "ECODE": "35106",
+        "Chapter": "American Red Cross of Miami Valley Ohio",
+        "Region_Type": "C",
+        "RCODE": "35R12",
+        "Region": "Central and Southern Ohio Region",
+        "DCODE": "D24",
+        "Division": "Central Atlantic Division",
+        "Chapter_Address": "370 West 1st St.",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Dayton",
+        "Chapter_State": "OH",
+        "Chapter_Zip": "45401",
+        "Chapter_Phone": "937-222-6711",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "V",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9373033.363514764,
+        "y": 4831302.566668247
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 191,
+        "ECODE": "36256",
+        "Chapter": "American Red Cross serving South Central and Southeast Oklahoma",
+        "Region_Type": "C",
+        "RCODE": "36R04",
+        "Region": "Kansas and Oklahoma Region",
+        "DCODE": "D22",
+        "Division": "Southwest and Rocky Mountain Division",
+        "Chapter_Address": "232 North Broadway",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Shawnee",
+        "Chapter_State": "OK",
+        "Chapter_Zip": "74801",
+        "Chapter_Phone": "405-273-8800",
+        "Time_Zone": "Central",
+        "FEMA_Region": "VI",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -10789479.92034228,
+        "y": 4208701.908571827
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 192,
+        "ECODE": "38212",
+        "Chapter": "American Red Cross of Delaware Valley PA",
+        "Region_Type": "C",
+        "RCODE": "38R24",
+        "Region": "Southeastern Pennsylvania Region",
+        "DCODE": "D27",
+        "Division": "Northeast Division",
+        "Chapter_Address": "601 Westtown Rd, Suite 385",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "West Chester",
+        "Chapter_State": "PA",
+        "Chapter_Zip": "19382",
+        "Chapter_Phone": "610-750-8206",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "III",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -8414208.339698834,
+        "y": 4860043.966065709
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 193,
+        "ECODE": "38360",
+        "Chapter": "American Red Cross of Philadelphia",
+        "Region_Type": "R",
+        "RCODE": "38R24",
+        "Region": "Southeastern Pennsylvania Region",
+        "DCODE": "D27",
+        "Division": "Northeast Division",
+        "Chapter_Address": "2221 Chestnut Street",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Phildalephia",
+        "Chapter_State": "PA",
+        "Chapter_Zip": "19103",
+        "Chapter_Phone": "215-299-4000",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "III",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -8368771.136418715,
+        "y": 4859062.997121271
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 194,
+        "ECODE": "38428",
+        "Chapter": "ARC of Chestnut Ridge and Allegheny Mountains",
+        "Region_Type": "C",
+        "RCODE": "38R28",
+        "Region": "Greater Pennsylvania Region",
+        "DCODE": "D27",
+        "Division": "Northeast Division",
+        "Chapter_Address": "351 Harvey Avenue B",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Greensburg",
+        "Chapter_State": "PA",
+        "Chapter_Zip": "15601",
+        "Chapter_Phone": "724-834-6510",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "III",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -8854232.644382207,
+        "y": 4910926.611570009
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 195,
+        "ECODE": "40050",
+        "Chapter": "American Red Cross of Central South Carolina",
+        "Region_Type": "C",
+        "RCODE": "40R08",
+        "Region": "South Carolina Region",
+        "DCODE": "D25",
+        "Division": "Southeast and Caribbean Division",
+        "Chapter_Address": "2751 Bull Street",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Columbia",
+        "Chapter_State": "SC",
+        "Chapter_Zip": "29201",
+        "Chapter_Phone": "803-540-1200",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "IV",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9021104.631276665,
+        "y": 4031966.34752801
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 196,
+        "ECODE": "36104",
+        "Chapter": "American Red Cross serving Northern Oklahoma",
+        "Region_Type": "C",
+        "RCODE": "36R04",
+        "Region": "Kansas and Oklahoma Region",
+        "DCODE": "D22",
+        "Division": "Southwest and Rocky Mountain Division",
+        "Chapter_Address": "114 W. 8th Street",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Stillwater",
+        "Chapter_State": "OK",
+        "Chapter_Zip": "74074",
+        "Chapter_Phone": "405-372-1833",
+        "Time_Zone": "Central",
+        "FEMA_Region": "VI",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -10804545.410171082,
+        "y": 4316247.5516948495
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 197,
+        "ECODE": "42196",
+        "Chapter": "American Red Cross of East Tennessee",
+        "Region_Type": "C",
+        "RCODE": "42R20",
+        "Region": "Tennessee Region",
+        "DCODE": "D25",
+        "Division": "Southeast and Caribbean Division",
+        "Chapter_Address": "6921 Middlebrook Pike",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Knoxville",
+        "Chapter_State": "TN",
+        "Chapter_Zip": "37909",
+        "Chapter_Phone": "865-584-2999",
+        "Time_Zone": "Central",
+        "FEMA_Region": "IV",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9353890.67028857,
+        "y": 4293062.457128179
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 198,
+        "ECODE": "42192",
+        "Chapter": "American Red Cross of Northeast Tennessee",
+        "Region_Type": "C",
+        "RCODE": "42R20",
+        "Region": "Tennessee Region",
+        "DCODE": "D25",
+        "Division": "Southeast and Caribbean Division",
+        "Chapter_Address": "660 Eastern Star Rd.",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Kingsport",
+        "Chapter_State": "TN",
+        "Chapter_Zip": "37663",
+        "Chapter_Phone": "423-765-4222",
+        "Time_Zone": "Central",
+        "FEMA_Region": "IV",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9186176.7809115,
+        "y": 4362063.812195315
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 199,
+        "ECODE": "41016",
+        "Chapter": "American Red Cross serving Central and Western South Dakota",
+        "Region_Type": "C",
+        "RCODE": "23R12",
+        "Region": "Minnesota and Dakotas Region",
+        "DCODE": "D23",
+        "Division": "North Central Division",
+        "Chapter_Address": "1221 N. Maple",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Rapid City",
+        "Chapter_State": "SD",
+        "Chapter_Zip": "57701",
+        "Chapter_Phone": "605-342-4010",
+        "Time_Zone": "Central",
+        "FEMA_Region": "VIII",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -11489477.725254372,
+        "y": 5480501.138495508
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 200,
+        "ECODE": "42264",
+        "Chapter": "American Red Cross of Mid-South Tennessee",
+        "Region_Type": "C",
+        "RCODE": "42R20",
+        "Region": "Tennessee Region",
+        "DCODE": "D25",
+        "Division": "Southeast and Caribbean Division",
+        "Chapter_Address": "1399 Madison Avenue",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Memphis",
+        "Chapter_State": "TN",
+        "Chapter_Zip": "38104",
+        "Chapter_Phone": "901-726-1690",
+        "Time_Zone": "Central",
+        "FEMA_Region": "IV",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -10020362.939347137,
+        "y": 4182749.4732893314
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 201,
+        "ECODE": "43142",
+        "Chapter": "American Red Cross of Coastal Bend-Texas",
+        "Region_Type": "C",
+        "RCODE": "43R28",
+        "Region": "Texas Gulf Coast Region",
+        "DCODE": "D22",
+        "Division": "Southwest and Rocky Mountain Division",
+        "Chapter_Address": "1721 S. Brownlee Blvd",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Corpus Christi",
+        "Chapter_State": "TX",
+        "Chapter_Zip": "78463",
+        "Chapter_Phone": "361-887-9991",
+        "Time_Zone": "Central",
+        "FEMA_Region": "VI",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -10842771.533179965,
+        "y": 3220191.9803096345
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 202,
+        "ECODE": "43200",
+        "Chapter": "American Red Cross serving DFW East",
+        "Region_Type": "R",
+        "RCODE": "43R16",
+        "Region": "North Texas Region",
+        "DCODE": "D22",
+        "Division": "Southwest and Rocky Mountain Division",
+        "Chapter_Address": "2055 Kendall Drive ",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Dallas",
+        "Chapter_State": "TX",
+        "Chapter_Zip": "75235",
+        "Chapter_Phone": "214-678-4800",
+        "Time_Zone": "Central",
+        "FEMA_Region": "VI",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -10779242.658859015,
+        "y": 3869919.086813293
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 203,
+        "ECODE": "43484",
+        "Chapter": "American Red Cross serving the Hill Country of Texas",
+        "Region_Type": "C",
+        "RCODE": "43R08",
+        "Region": "Central and South Texas Region",
+        "DCODE": "D22",
+        "Division": "Southwest and Rocky Mountain Division",
+        "Chapter_Address": "333 Earl Garrett",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Kerrville",
+        "Chapter_State": "TX",
+        "Chapter_Zip": "78028",
+        "Chapter_Phone": "830-257-4677",
+        "Time_Zone": "Central",
+        "FEMA_Region": "VI",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -11036107.911705274,
+        "y": 3509573.1291449396
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 204,
+        "ECODE": "43596",
+        "Chapter": "American Red Cross serving the Permian Basin of Texas",
+        "Region_Type": "C",
+        "RCODE": "43R08",
+        "Region": "Central and South Texas Region",
+        "DCODE": "D22",
+        "Division": "Southwest and Rocky Mountain Division",
+        "Chapter_Address": "9601 Wright Dr.",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Midland",
+        "Chapter_State": "TX",
+        "Chapter_Zip": "79711",
+        "Chapter_Phone": "432-563-2267",
+        "Time_Zone": "Central",
+        "FEMA_Region": "VI",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -11378168.228671517,
+        "y": 3755763.1958430116
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 205,
+        "ECODE": "43390",
+        "Chapter": "American Red Cross serving the Heart of Texas",
+        "Region_Type": "C",
+        "RCODE": "43R08",
+        "Region": "Central and South Texas Region",
+        "DCODE": "D22",
+        "Division": "Southwest and Rocky Mountain Division",
+        "Chapter_Address": "4244 Boonville Rd.",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Bryan",
+        "Chapter_State": "TX",
+        "Chapter_Zip": "77802",
+        "Chapter_Phone": "254-523-4985",
+        "Time_Zone": "Central",
+        "FEMA_Region": "VI",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -10720592.314494625,
+        "y": 3589059.7281743954
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 206,
+        "ECODE": "43784",
+        "Chapter": "American Red Cross serving East Texas",
+        "Region_Type": "C",
+        "RCODE": "43R16",
+        "Region": "North Texas Region",
+        "DCODE": "D22",
+        "Division": "Southwest and Rocky Mountain Division",
+        "Chapter_Address": "320 E. Rieck Rd.",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Tyler",
+        "Chapter_State": "TX",
+        "Chapter_Zip": "75711",
+        "Chapter_Phone": "903-581-7981",
+        "Time_Zone": "Central",
+        "FEMA_Region": "VI",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -10608824.834213827,
+        "y": 3801353.3790885247
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 207,
+        "ECODE": "44006",
+        "Chapter": "American Red Cross of Northern Utah and Southwest Wyoming",
+        "Region_Type": "C",
+        "RCODE": "44R04",
+        "Region": "Utah and Nevada Region",
+        "DCODE": "D22",
+        "Division": "Southwest and Rocky Mountain Division",
+        "Chapter_Address": "2955 Harrison Blvd. 204",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Ogden",
+        "Chapter_State": "UT",
+        "Chapter_Zip": "84405",
+        "Chapter_Phone": "801-627-0000",
+        "Time_Zone": "Mountain",
+        "FEMA_Region": "VIII",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -12462048.889930591,
+        "y": 5043475.508691679
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 208,
+        "ECODE": "43916",
+        "Chapter": "American Red Cross serving Texas Big Country",
+        "Region_Type": "C",
+        "RCODE": "43R16",
+        "Region": "North Texas Region",
+        "DCODE": "D22",
+        "Division": "Southwest and Rocky Mountain Division",
+        "Chapter_Address": "1809 5th St.",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Wichita Falls",
+        "Chapter_State": "TX",
+        "Chapter_Zip": "76301",
+        "Chapter_Phone": "325-677-2622",
+        "Time_Zone": "Central",
+        "FEMA_Region": "VI",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -10965692.937518144,
+        "y": 4016651.0166264772
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 209,
+        "ECODE": "48240",
+        "Chapter": "American Red Cross of the Allegheny Highlands",
+        "Region_Type": "C",
+        "RCODE": "48R04",
+        "Region": "Central Appalachia Region",
+        "DCODE": "D24",
+        "Division": "Central Atlantic Division",
+        "Chapter_Address": "1299 Pineview Dr. Ste 300",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Morgantown",
+        "Chapter_State": "WV",
+        "Chapter_Zip": "26505",
+        "Chapter_Phone": "800-733-2767",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "III",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -8900349.821170684,
+        "y": 4816908.583271793
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 210,
+        "ECODE": "49084",
+        "Chapter": "American Red Cross of Northwest Wisconsin",
+        "Region_Type": "C",
+        "RCODE": "49R12",
+        "Region": "Wisconsin Region",
+        "DCODE": "D23",
+        "Division": "North Central Division",
+        "Chapter_Address": "3728 Spooner Ave.",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Altoona",
+        "Chapter_State": "WI",
+        "Chapter_Zip": "54720",
+        "Chapter_Phone": "877-618-6628",
+        "Time_Zone": "Central",
+        "FEMA_Region": "V",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -10182170.049976362,
+        "y": 5591249.314019221
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 211,
+        "ECODE": "43552",
+        "Chapter": "American Red Cross serving Panhandle Plains",
+        "Region_Type": "C",
+        "RCODE": "43R16",
+        "Region": "North Texas Region",
+        "DCODE": "D22",
+        "Division": "Southwest and Rocky Mountain Division",
+        "Chapter_Address": "2201 19th St.",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Lubbock",
+        "Chapter_State": "TX",
+        "Chapter_Zip": "79411",
+        "Chapter_Phone": "806-765-8534",
+        "Time_Zone": "Central",
+        "FEMA_Region": "VI",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -11339347.038003627,
+        "y": 3972251.403600564
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 212,
+        "ECODE": "49162",
+        "Chapter": "American Red Cross of Northeast Wisconsin",
+        "Region_Type": "C",
+        "RCODE": "49R12",
+        "Region": "Wisconsin Region",
+        "DCODE": "D23",
+        "Division": "North Central Division",
+        "Chapter_Address": "121 Bader Street",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Green Bay",
+        "Chapter_State": "WI",
+        "Chapter_Zip": "54302",
+        "Chapter_Phone": "877-618-6628",
+        "Time_Zone": "Central",
+        "FEMA_Region": "V",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9792762.558579052,
+        "y": 5543453.526953305
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 213,
+        "ECODE": "22172",
+        "Chapter": "American Red Cross of Southwest Michigan",
+        "Region_Type": "C",
+        "RCODE": "22R08",
+        "Region": "Michigan Region",
+        "DCODE": "D23",
+        "Division": "North Central Division",
+        "Chapter_Address": "5460 Venture Ct",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Kalamazoo",
+        "Chapter_State": "MI",
+        "Chapter_Zip": "49009",
+        "Chapter_Phone": "269-353-6180",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "V",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9535834.567699587,
+        "y": 5201457.18225818
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 214,
+        "ECODE": "15422",
+        "Chapter": "American Red Cross of Northwest Iowa and Northeast Nebraska",
+        "Region_Type": "C",
+        "RCODE": "15R08",
+        "Region": "Nebraska Iowa Region",
+        "DCODE": "D23",
+        "Division": "North Central Division",
+        "Chapter_Address": "401 Douglas St",
+        "Chapter_Address_2": "#101",
+        "Chapter_City": "Sioux City",
+        "Chapter_State": "IA",
+        "Chapter_Zip": "51101",
+        "Chapter_Phone": "712-252-4081",
+        "Time_Zone": "Central",
+        "FEMA_Region": "VII",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -10731353.230191855,
+        "y": 5235297.421853949
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 215,
+        "ECODE": "05052",
+        "Chapter": "American Red Cross of Northern California",
+        "Region_Type": "C",
+        "RCODE": "05R20",
+        "Region": "California Gold Country Region",
+        "DCODE": "D21",
+        "Division": "Pacific Division",
+        "Chapter_Address": "14085-1601 Esplanade Way",
+        "Chapter_Address_2": "Ste 6",
+        "Chapter_City": "Chico",
+        "Chapter_State": "CA",
+        "Chapter_Zip": "95927",
+        "Chapter_Phone": "530-673-1460",
+        "Time_Zone": "Pacific",
+        "FEMA_Region": "IX",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -13562403.062653178,
+        "y": 4827502.560356108
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 216,
+        "ECODE": "17048",
+        "Chapter": "American Red Cross Bluegrass Area",
+        "Region_Type": "C",
+        "RCODE": "17R08",
+        "Region": "Kentucky Region",
+        "DCODE": "D24",
+        "Division": "Central Atlantic Division",
+        "Chapter_Address": "1450 Newton Pike",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Lexington",
+        "Chapter_State": "KY",
+        "Chapter_Zip": "40511",
+        "Chapter_Phone": "859-253-1331",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "IV",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9411690.073652012,
+        "y": 4592057.808845191
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 217,
+        "ECODE": "33088",
+        "Chapter": "American Red Cross serving the Blue Ridge Piedmont of North Carolina",
+        "Region_Type": "C",
+        "RCODE": "33R08",
+        "Region": "North Carolina Region",
+        "DCODE": "D25",
+        "Division": "Southeast and Caribbean Division",
+        "Chapter_Address": "1375 Lenoir Rhyne West",
+        "Chapter_Address_2": "Suite 119",
+        "Chapter_City": "Hickory",
+        "Chapter_State": "NC",
+        "Chapter_Zip": "28602",
+        "Chapter_Phone": "828-322-4151",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "IV",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9054635.596408093,
+        "y": 4262900.438973273
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 218,
+        "ECODE": "40048",
+        "Chapter": "American Red Cross of Lowcountry South Carolina",
+        "Region_Type": "R",
+        "RCODE": "40R08",
+        "Region": "South Carolina Region",
+        "DCODE": "D25",
+        "Division": "Southeast and Caribbean Division",
+        "Chapter_Address": "2424- A City Hall Lane",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "North Charleston",
+        "Chapter_State": "SC",
+        "Chapter_Zip": "29406",
+        "Chapter_Phone": "843-764-2323",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "IV",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -8907138.476851244,
+        "y": 3881580.1327264626
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 219,
+        "ECODE": "16274",
+        "Chapter": "American Red Cross of South Central and Southeast Kansas",
+        "Region_Type": "C",
+        "RCODE": "36R04",
+        "Region": "Kansas and Oklahoma Region",
+        "DCODE": "D22",
+        "Division": "Southwest and Rocky Mountain Division",
+        "Chapter_Address": "707 N Main St",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Wichita",
+        "Chapter_State": "KS",
+        "Chapter_Zip": "67203",
+        "Chapter_Phone": "316-219-4000",
+        "Time_Zone": "Central",
+        "FEMA_Region": "VII",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -10835992.99192217,
+        "y": 4535688.112702077
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 220,
+        "ECODE": "44022",
+        "Chapter": "American Red Cross Central and Southern Utah",
+        "Region_Type": "C",
+        "RCODE": "44R04",
+        "Region": "Utah and Nevada Region",
+        "DCODE": "D22",
+        "Division": "Southwest and Rocky Mountain Division",
+        "Chapter_Address": "450 W 1086 N",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Springville",
+        "Chapter_State": "UT",
+        "Chapter_Zip": "84663",
+        "Chapter_Phone": "801-373-8580",
+        "Time_Zone": "Mountain",
+        "FEMA_Region": "VIII",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -12424035.040254846,
+        "y": 4890192.0273001995
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 221,
+        "ECODE": "03068",
+        "Chapter": "ARC of Northern Arizona",
+        "Region_Type": "C",
+        "RCODE": "03R04",
+        "Region": "Arizona and New Mexico Region",
+        "DCODE": "D22",
+        "Division": "Southwest and Rocky Mountain Division",
+        "Chapter_Address": "1750 Railroad Spring Blvd",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Flagstaff",
+        "Chapter_State": "AZ",
+        "Chapter_Zip": "86001",
+        "Chapter_Phone": "928-779-5494",
+        "Time_Zone": "Mountain",
+        "FEMA_Region": "IX",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -12428946.470342044,
+        "y": 4190840.4336703178
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 222,
+        "ECODE": "10122",
+        "Chapter": "ARC of North Central Florida",
+        "Region_Type": "C",
+        "RCODE": "10R08",
+        "Region": "North and Central Florida Region",
+        "DCODE": "D25",
+        "Division": "Southeast and Caribbean Division",
+        "Chapter_Address": "1425 NW 5th St",
+        "Chapter_Address_2": "0",
+        "Chapter_City": "Gainesville",
+        "Chapter_State": "FL",
+        "Chapter_Zip": "32601",
+        "Chapter_Phone": "904-358-8091",
+        "Time_Zone": "Eastern",
+        "FEMA_Region": "IV",
+        "Status": null,
+        "Score": null,
+        "Match_addr": null
+      },
+      "geometry": {
+        "x": -9164913.9477572,
+        "y": 3460572.0448523085
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 223,
+        "ECODE": "58010",
+        "Chapter": "American Red Cross of the Virgin Islands",
+        "Region_Type": "C",
+        "RCODE": "10R08",
+        "Region": "North and Central Florida Region",
+        "DCODE": "D25",
+        "Division": "Southeast and Caribbean Division",
+        "Chapter_Address": "6035 Castle Coakley",
+        "Chapter_Address_2": null,
+        "Chapter_City": "Christeansted",
+        "Chapter_State": "VI",
+        "Chapter_Zip": "00820",
+        "Chapter_Phone": "340-778-5104",
+        "Time_Zone": "Atlantic",
+        "FEMA_Region": "II",
+        "Status": "M",
+        "Score": 84,
+        "Match_addr": "00820, Christiansted, Virgin Islands"
+      },
+      "geometry": {
+        "x": -7204589.896658075,
+        "y": 2008489.1976019184
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 224,
+        "ECODE": "53004",
+        "Chapter": "American Red Cross of Guam",
+        "Region_Type": "C",
+        "RCODE": "54R04",
+        "Region": "Pacific Islands Region",
+        "DCODE": "D21",
+        "Division": "Pacific Division",
+        "Chapter_Address": "285 Rte 4",
+        "Chapter_Address_2": null,
+        "Chapter_City": "Hagatna",
+        "Chapter_State": "GU",
+        "Chapter_Zip": "96910",
+        "Chapter_Phone": "671-472-6217",
+        "Time_Zone": "Chamorro",
+        "FEMA_Region": "X",
+        "Status": "T",
+        "Score": 97.42,
+        "Match_addr": "285 Rte 4, Hagåtña, 96910"
+      },
+      "geometry": {
+        "x": 16113950.789766131,
+        "y": 1513728.2376055617
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 225,
+        "ECODE": "55004",
+        "Chapter": "American Red Cross of Northern Mariana Islands",
+        "Region_Type": "C",
+        "RCODE": "54R04",
+        "Region": "Pacific Islands Region",
+        "DCODE": "D21",
+        "Division": "Pacific Division",
+        "Chapter_Address": "Airport Rd St Vincente",
+        "Chapter_Address_2": null,
+        "Chapter_City": "Saipan",
+        "Chapter_State": "MP",
+        "Chapter_Zip": "96950",
+        "Chapter_Phone": "670-234-3459",
+        "Time_Zone": "Chamorro",
+        "FEMA_Region": "X",
+        "Status": "M",
+        "Score": 84,
+        "Match_addr": "96950, Saipan"
+      },
+      "geometry": {
+        "x": 16220415.9804051,
+        "y": 1708818.9975955714
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 226,
+        "ECODE": "56004",
+        "Chapter": "American Red Cross of Puerto Rico",
+        "Region_Type": "R",
+        "RCODE": "56R04",
+        "Region": "Puerto Rico Region",
+        "DCODE": "D25",
+        "Division": "Southeast and Caribbean Division",
+        "Chapter_Address": "Paseo Dr. José Celso Barbosa",
+        "Chapter_Address_2": "American Red Cross Bldg  2nd Floor",
+        "Chapter_City": "Rio Pedras",
+        "Chapter_State": "PR",
+        "Chapter_Zip": "00935",
+        "Chapter_Phone": "787-758-8150",
+        "Time_Zone": "Atlantic",
+        "FEMA_Region": "II",
+        "Status": "M",
+        "Score": 86.7,
+        "Match_addr": "Paseo Dr. José Celso Barbosa, Gobernador Piñero, San Juan, 00921"
+      },
+      "geometry": {
+        "x": -7355157.188173177,
+        "y": 2084176.3370435485
+      }
+    }
+  ]
+}
