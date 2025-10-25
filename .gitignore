@@ -39,5 +39,15 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Large data files
+red-cross-3162-counties.json
+red-cross-counties-with-demographics.csv
 *.json
 *.csv
+
+# Keep essential config files
+!package.json
+!package-lock.json
+!tsconfig.json
+!next.config.js
