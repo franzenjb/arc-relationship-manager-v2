@@ -2,6 +2,7 @@ import { supabase } from './supabase'
 import { Organization, SearchFilters } from './types'
 import { AuditService } from './audit'
 import { getUserRegion, REGIONS } from '@/config/regions'
+import { GeocodingService } from './geocoding'
 
 export class OrganizationService {
   static async getAll(filters?: SearchFilters): Promise<Organization[]> {
@@ -91,13 +92,15 @@ export class OrganizationService {
       ...auditFields
     }
 
-    // Auto-assign county if we have city and state but no county_id
-    if (!organizationData.county_id && organizationData.city && organizationData.state) {
+    // Auto-assign county using geocoding if we have address information
+    if (!organizationData.county_id && (organizationData.address || organizationData.city) && organizationData.state) {
       try {
-        const county = await this.inferCountyFromCityState(organizationData.city, organizationData.state)
+        // First try simple city match
+        const county = await this.inferCountyFromCityState(organizationData.city || '', organizationData.state)
         if (county) {
           organizationData.county_id = county.id
         }
+        // If no direct match, we'll geocode after organization is created
       } catch (error) {
         console.warn('Failed to auto-assign county:', error)
         // Continue without county assignment
@@ -111,6 +114,21 @@ export class OrganizationService {
       .single()
 
     if (error) throw error
+
+    // If no county was assigned and we have address info, try geocoding
+    if (!org.county_id && (org.address || org.city) && org.state) {
+      console.log(`Attempting to geocode organization: ${org.name}`)
+      GeocodingService.geocodeAndAssignCounty(
+        org.id,
+        org.address,
+        org.city,
+        org.state,
+        org.zip
+      ).catch(error => {
+        console.warn(`Geocoding failed for ${org.name}:`, error)
+      })
+    }
+
     return org
   }
 
@@ -150,6 +168,21 @@ export class OrganizationService {
       .single()
 
     if (error) throw error
+
+    // If address changed and no county assigned, try geocoding
+    if (!org.county_id && (org.address || org.city) && org.state) {
+      console.log(`Attempting to geocode updated organization: ${org.name}`)
+      GeocodingService.geocodeAndAssignCounty(
+        org.id,
+        org.address,
+        org.city,
+        org.state,
+        org.zip
+      ).catch(error => {
+        console.warn(`Geocoding failed for ${org.name}:`, error)
+      })
+    }
+
     return org
   }
 
@@ -315,8 +348,8 @@ export class OrganizationService {
    * This is a simple lookup - in production you might want more sophisticated geocoding
    */
   private static async inferCountyFromCityState(city: string, state: string) {
-    // First try exact city match
-    const { data, error } = await supabase
+    // First try exact city match from Red Cross geography table
+    const { data: exactMatch } = await supabase
       .from('red_cross_geography')
       .select('*')
       .eq('state', state)
@@ -324,11 +357,10 @@ export class OrganizationService {
       .limit(1)
       .single()
 
-    if (data) return data
+    if (exactMatch) return exactMatch
 
-    // If no exact match, try to find county that contains this city
-    // This would require more sophisticated logic or external geocoding service
-    console.warn(`Could not find county for ${city}, ${state}`)
+    // If no exact match, return null - geocoding will handle this
+    console.log(`No direct match for ${city}, ${state} - will use geocoding`)
     return null
   }
 
