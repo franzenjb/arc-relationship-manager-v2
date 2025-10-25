@@ -6,6 +6,7 @@ import Link from 'next/link'
 import { OrganizationService } from '@/lib/organizations'
 import { PersonService } from '@/lib/people'
 import { Organization, Person } from '@/lib/types'
+import { getUserRegion, REGIONS } from '@/config/regions'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
@@ -43,6 +44,11 @@ function MapPageContent() {
   const [filterCounty, setFilterCounty] = useState<string>('all')
   const [filterCity, setFilterCity] = useState<string>('all')
   
+  // Get user's region for dynamic title
+  const userRegion = getUserRegion()
+  const regionConfig = userRegion ? REGIONS[userRegion as keyof typeof REGIONS] : null
+  const regionName = regionConfig?.name || 'All'
+  
   // UI State
   const [isFilterPanelOpen, setIsFilterPanelOpen] = useState(false)
   const [isDetailsPanelOpen, setIsDetailsPanelOpen] = useState(false)
@@ -53,28 +59,19 @@ function MapPageContent() {
   useEffect(() => {
     const loadData = async () => {
       try {
-        // Load organizations
+        // Load organizations - will be filtered by region in OrganizationService
         const orgData = await OrganizationService.getAll()
-        const floridaOrgs = orgData.filter(org => 
-          org.state === 'FL' || 
-          org.state === 'Florida' ||
-          org.address?.toLowerCase().includes('florida') ||
-          org.address?.toLowerCase().includes(' fl ')
-        )
-        setOrganizations(floridaOrgs)
-        setFilteredOrgs(floridaOrgs)
+        setOrganizations(orgData)
+        setFilteredOrgs(orgData)
         
-        // Load people
+        // Load people - will be filtered by region in PersonService
         const peopleData = await PersonService.getAll()
-        // Filter people belonging to Florida organizations
-        const floridaOrgIds = new Set(floridaOrgs.map(org => org.id))
-        const floridaPeople = peopleData.filter(person => floridaOrgIds.has(person.org_id))
-        setPeople(floridaPeople)
-        setFilteredPeople(floridaPeople)
+        setPeople(peopleData)
+        setFilteredPeople(peopleData)
         
         // If orgId specified in URL, select that organization
         if (highlightOrgId) {
-          const highlightOrg = floridaOrgs.find(org => org.id === highlightOrgId)
+          const highlightOrg = orgData.find(org => org.id === highlightOrgId)
           if (highlightOrg) {
             setSelectedOrg(highlightOrg)
           }
@@ -345,7 +342,7 @@ function MapPageContent() {
             </Link>
           </Button>
           <div>
-            <h1 className="text-2xl font-bold text-gray-900">Florida Organizations Map</h1>
+            <h1 className="text-2xl font-bold text-gray-900">{regionName} Organizations Map</h1>
             <p className="text-gray-600">
               Showing {filteredOrgs.length} of {organizations.length} organizations
             </p>
