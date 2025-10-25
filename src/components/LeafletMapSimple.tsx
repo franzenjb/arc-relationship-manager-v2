@@ -3,8 +3,8 @@
 import { useEffect, useState } from 'react'
 import dynamic from 'next/dynamic'
 import { Organization, Person } from '@/lib/types'
-import { getCoordinatesForRegion } from '@/config/regionMapConfig'
-import { getUserRegion } from '@/lib/auth'
+import { CoordinatesService, MapCoordinate } from '@/lib/map/coordinates.service'
+import { getUserRegion } from '@/config/regions'
 import { REGIONS } from '@/config/regions'
 
 // Dynamically import Leaflet components to avoid SSR issues
@@ -21,8 +21,13 @@ interface LeafletMapProps {
   displayMode: 'organizations' | 'people' | 'both'
 }
 
-const getCoordinates = (city?: string): [number, number] | null => {
-  return getCoordinatesForRegion(city)
+interface MarkerData {
+  position: [number, number]
+  count: number
+  organizations: Organization[]
+  people: Person[]
+  type: 'organization' | 'person' | 'mixed'
+  isSelected: boolean
 }
 
 const createCustomIcon = (count: number, isSelected: boolean, markerType: 'organization' | 'person' | 'mixed') => {
@@ -74,83 +79,123 @@ export default function LeafletMapSimple({
   displayMode 
 }: LeafletMapProps) {
   const [isClient, setIsClient] = useState(false)
-  const [mapMarkers, setMapMarkers] = useState<any[]>([])
+  const [mapMarkers, setMapMarkers] = useState<MarkerData[]>([])
+  const [isLoadingCoordinates, setIsLoadingCoordinates] = useState(false)
+  const [coordinateError, setCoordinateError] = useState<string | null>(null)
 
-  // Fixed map settings - no auto-zoom
-  // Get map center based on user's region
+  // Get map configuration based on user's region
   const userRegion = getUserRegion()
-  const regionConfig = userRegion ? REGIONS[userRegion as keyof typeof REGIONS] : null
-  const mapCenter: [number, number] = regionConfig?.map?.center || [39.8283, -98.5795] // Default to US center
-  const mapZoom: number = regionConfig?.map?.zoom || 4
+  const mapConfig = CoordinatesService.getRegionMapConfig(userRegion || 'NATIONAL')
 
   useEffect(() => {
     setIsClient(true)
   }, [])
 
   useEffect(() => {
-    const markers: any[] = []
-    const cityGroups: Record<string, any> = {}
+    const resolveCoordinatesAndCreateMarkers = async () => {
+      if (organizations.length === 0 && people.length === 0) {
+        setMapMarkers([])
+        return
+      }
 
-    // Group organizations by city
-    if (displayMode === 'organizations' || displayMode === 'both') {
-      organizations.forEach(org => {
-        const coords = getCoordinates(org.city)
-        if (coords) {
-          const key = `${coords[0]}-${coords[1]}`
-          if (!cityGroups[key]) {
-            cityGroups[key] = {
-              position: coords,
-              organizations: [],
-              people: [],
-              type: 'organization' as const
+      setIsLoadingCoordinates(true)
+      setCoordinateError(null)
+
+      try {
+        console.log(`🗺️ Resolving coordinates for ${organizations.length} organizations and ${people.length} people...`)
+        
+        // Resolve coordinates for organizations and people
+        const [orgCoordinates, peopleCoordinates] = await Promise.all([
+          displayMode === 'organizations' || displayMode === 'both' 
+            ? CoordinatesService.resolveOrganizationCoordinates(organizations)
+            : Promise.resolve(new Map<string, MapCoordinate>()),
+          displayMode === 'people' || displayMode === 'both'
+            ? CoordinatesService.resolvePeopleCoordinates(people, organizations)
+            : Promise.resolve(new Map<string, MapCoordinate>())
+        ])
+
+        // Group entities by coordinates
+        const locationGroups = new Map<string, {
+          position: [number, number]
+          organizations: Organization[]
+          people: Person[]
+        }>()
+
+        // Add organizations to location groups
+        if (displayMode === 'organizations' || displayMode === 'both') {
+          for (const org of organizations) {
+            const coords = orgCoordinates.get(org.id)
+            if (coords) {
+              const key = `${coords.latitude.toFixed(6)},${coords.longitude.toFixed(6)}`
+              const position: [number, number] = [coords.latitude, coords.longitude]
+              
+              if (!locationGroups.has(key)) {
+                locationGroups.set(key, {
+                  position,
+                  organizations: [],
+                  people: []
+                })
+              }
+              locationGroups.get(key)!.organizations.push(org)
             }
           }
-          cityGroups[key].organizations.push(org)
         }
-      })
-    }
 
-    // Group people by their organization's city
-    if (displayMode === 'people' || displayMode === 'both') {
-      people.forEach(person => {
-        const org = organizations.find(o => o.id === person.org_id)
-        const coords = getCoordinates(org?.city)
-        if (coords) {
-          const key = `${coords[0]}-${coords[1]}`
-          if (!cityGroups[key]) {
-            cityGroups[key] = {
-              position: coords,
-              organizations: [],
-              people: [],
-              type: 'person' as const
+        // Add people to location groups
+        if (displayMode === 'people' || displayMode === 'both') {
+          for (const person of people) {
+            const coords = peopleCoordinates.get(person.id)
+            if (coords) {
+              const key = `${coords.latitude.toFixed(6)},${coords.longitude.toFixed(6)}`
+              const position: [number, number] = [coords.latitude, coords.longitude]
+              
+              if (!locationGroups.has(key)) {
+                locationGroups.set(key, {
+                  position,
+                  organizations: [],
+                  people: []
+                })
+              }
+              locationGroups.get(key)!.people.push(person)
             }
           }
-          cityGroups[key].people.push(person)
-          if (cityGroups[key].organizations.length === 0) {
-            cityGroups[key].type = 'person'
-          } else {
-            cityGroups[key].type = 'mixed'
-          }
         }
-      })
+
+        // Convert location groups to markers
+        const markers: MarkerData[] = Array.from(locationGroups.values()).map(group => {
+          const count = group.organizations.length + group.people.length
+          const isSelected = selectedOrg && group.organizations.some(org => org.id === selectedOrg.id)
+          
+          let type: 'organization' | 'person' | 'mixed' = 'organization'
+          if (group.organizations.length === 0) {
+            type = 'person'
+          } else if (group.people.length > 0) {
+            type = 'mixed'
+          }
+
+          return {
+            position: group.position,
+            count,
+            organizations: group.organizations,
+            people: group.people,
+            type,
+            isSelected: !!isSelected
+          }
+        })
+
+        console.log(`📍 Created ${markers.length} map markers from ${orgCoordinates.size + peopleCoordinates.size} resolved coordinates`)
+        setMapMarkers(markers)
+
+      } catch (error) {
+        console.error('Coordinate resolution failed:', error)
+        setCoordinateError(error instanceof Error ? error.message : 'Failed to resolve coordinates')
+        setMapMarkers([])
+      } finally {
+        setIsLoadingCoordinates(false)
+      }
     }
 
-    // Create markers from city groups
-    Object.values(cityGroups).forEach(group => {
-      const count = group.organizations.length + group.people.length
-      const isSelected = selectedOrg && group.organizations.some((org: Organization) => org.id === selectedOrg.id)
-      
-      markers.push({
-        position: group.position,
-        count,
-        organizations: group.organizations,
-        people: group.people,
-        type: group.type,
-        isSelected: !!isSelected
-      })
-    })
-
-    setMapMarkers(markers)
+    resolveCoordinatesAndCreateMarkers()
   }, [organizations, people, selectedOrg, displayMode])
 
   if (!isClient) {
@@ -159,9 +204,27 @@ export default function LeafletMapSimple({
 
   return (
     <div className="h-full relative">
+      {/* Loading overlay */}
+      {isLoadingCoordinates && (
+        <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center z-10">
+          <div className="bg-white p-4 rounded-lg shadow-lg flex items-center space-x-3">
+            <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-red-600"></div>
+            <span className="text-gray-700">Resolving locations...</span>
+          </div>
+        </div>
+      )}
+      
+      {/* Error overlay */}
+      {coordinateError && (
+        <div className="absolute top-4 left-4 right-4 bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded z-10">
+          <strong className="font-bold">Coordinate Error:</strong>
+          <span className="block sm:inline"> {coordinateError}</span>
+        </div>
+      )}
+
       <MapContainer
-        center={mapCenter}
-        zoom={mapZoom}
+        center={mapConfig.center}
+        zoom={mapConfig.zoom}
         style={{ height: '100%', width: '100%' }}
         className="z-0"
       >

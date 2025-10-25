@@ -1,5 +1,5 @@
 // Region-specific map configurations
-import { getUserRegion } from '@/lib/auth'
+import { getUserRegion } from '@/config/regions'
 
 // City coordinates by region
 export const REGION_COORDINATES: Record<string, Record<string, [number, number]>> = {
@@ -21,6 +21,64 @@ export const REGION_COORDINATES: Record<string, Record<string, [number, number]>
     'clearwater': [27.9659, -82.8001],
     'lakeland': [28.0395, -81.9498],
     'melbourne': [28.0836, -80.6081]
+  },
+  NATIONAL: {
+    // Additional cities for national coverage
+    'philadelphia': [39.9526, -75.1652],
+    'baltimore': [39.2904, -76.6122],
+    'arlington': [38.8816, -77.0910],
+    // Include all regional cities for national view
+    'miami': [25.7617, -80.1918],
+    'tampa': [27.9506, -82.4572],
+    'orlando': [28.5383, -81.3792],
+    'jacksonville': [30.3322, -81.6557],
+    'tallahassee': [30.4518, -84.27277],
+    'fort lauderdale': [26.1224, -80.1373],
+    'st. petersburg': [27.7676, -82.6403],
+    'gainesville': [29.6516, -82.3248],
+    'west palm beach': [26.7153, -80.0534],
+    'naples': [26.1420, -81.7948],
+    'fort myers': [26.5628, -81.8495],
+    'cape coral': [26.5629, -81.9495],
+    'pensacola': [30.4213, -87.2169],
+    'sarasota': [27.3364, -82.5307],
+    'clearwater': [27.9659, -82.8001],
+    'lakeland': [28.0395, -81.9498],
+    'melbourne': [28.0836, -80.6081],
+    'coral gables': [25.7214, -80.2687],
+    'hollywood': [26.0112, -80.1495],
+    'juno beach': [26.8942, -80.0581],
+    'big pine key': [24.6985, -81.3668],
+    'bay lake': [28.3852, -81.5742],
+    'st. augustine': [29.9012, -81.3124],
+    // Nebraska cities
+    'omaha': [41.2565, -95.9345],
+    'lincoln': [40.8136, -96.7026],
+    'bellevue': [41.1370, -95.8916],
+    'grand island': [40.9264, -98.3420],
+    'kearney': [40.6994, -99.0817],
+    'fremont': [41.4332, -96.4981],
+    'norfolk': [42.0341, -97.4170],
+    'north platte': [41.1238, -100.7654],
+    'columbus': [41.4302, -97.3559],
+    'papillion': [41.1544, -96.0436],
+    'la vista': [41.1836, -96.0311],
+    'scottsbluff': [41.8666, -103.6672],
+    // Iowa cities  
+    'des moines': [41.5868, -93.6250],
+    'cedar rapids': [42.0080, -91.6441],
+    'davenport': [41.5236, -90.5776],
+    'sioux city': [42.4999, -96.4003],
+    'waterloo': [42.4928, -92.3426],
+    'iowa city': [41.6611, -91.5302],
+    'council bluffs': [41.2619, -95.8608],
+    'dubuque': [42.5001, -90.6665],
+    'ames': [42.0341, -93.6202],
+    'west des moines': [41.5772, -93.7108],
+    'cedar falls': [42.5341, -92.4454],
+    'urbandale': [41.6266, -93.7824],
+    'marion': [42.0341, -91.5968],
+    'bettendorf': [41.5245, -90.5151]
   },
   NEBRASKA_IOWA: {
     // Nebraska cities
@@ -192,17 +250,32 @@ export const REGION_FILTERS = {
 }
 
 // Get coordinates for a city based on current region
-export function getCoordinatesForRegion(city?: string): [number, number] | null {
+export function getCoordinatesForRegion(city?: string, userRegion?: string): [number, number] | null {
   if (!city) return null
   
-  const userRegion = getUserRegion()
-  if (!userRegion) return null
-  
-  const regionCoords = REGION_COORDINATES[userRegion as keyof typeof REGION_COORDINATES]
-  if (!regionCoords) return null
+  // Use provided region or fall back to getUserRegion
+  const currentRegion = userRegion || (typeof window !== 'undefined' ? getUserRegion() : null)
+  if (!currentRegion) return null
   
   const normalized = city.toLowerCase().trim()
-  return regionCoords[normalized] || null
+  
+  // First try the user's specific region
+  const regionCoords = REGION_COORDINATES[currentRegion as keyof typeof REGION_COORDINATES]
+  if (regionCoords && regionCoords[normalized]) {
+    return regionCoords[normalized]
+  }
+  
+  // If not found and user is NATIONAL, search all regions
+  if (currentRegion === 'NATIONAL') {
+    for (const regionKey of Object.keys(REGION_COORDINATES)) {
+      const coords = REGION_COORDINATES[regionKey as keyof typeof REGION_COORDINATES]
+      if (coords && coords[normalized]) {
+        return coords[normalized]
+      }
+    }
+  }
+  
+  return null
 }
 
 // Get filters for current region (DEPRECATED - use GeographyService instead)
