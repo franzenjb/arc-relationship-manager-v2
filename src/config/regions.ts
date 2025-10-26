@@ -98,6 +98,10 @@ export function setUserRegion(regionCode: string, userName?: string) {
     sessionStorage.setItem('userRegion', regionCode);
     sessionStorage.setItem('userName', userName || 'User');
     sessionStorage.setItem('loginTime', new Date().toISOString());
+    
+    // Also set cookies for middleware to access
+    document.cookie = `userRegion=${regionCode}; path=/; max-age=86400`; // 24 hours
+    document.cookie = `userName=${userName || 'User'}; path=/; max-age=86400`;
   }
 }
 

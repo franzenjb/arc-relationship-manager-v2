@@ -2,8 +2,7 @@
 
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { REGIONS, RegionCode, validateRegionAccess } from '@/config/regions'
-import { setUserRegion } from '@/lib/auth'
+import { REGIONS, RegionCode, validateRegionAccess, setUserRegion } from '@/config/regions'
 import { MapPin, Lock, AlertCircle } from 'lucide-react'
 
 export default function LoginPage() {
