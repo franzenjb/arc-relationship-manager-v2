@@ -902,11 +902,11 @@ export default function TechStackPage() {
             <div className="border-l-4 border-green-600 pl-4">
               <h4 className="font-semibold text-green-800 mb-2">📈 Capacity Planning</h4>
               <p className="text-sm mb-2">
-                <strong>Current Performance:</strong> Map loading <100ms (50-100x improvement), organization search <200ms, 
+                <strong>Current Performance:</strong> Map loading &lt;100ms (50-100x improvement), organization search &lt;200ms, 
                 optimized for current scale with excellent user experience.
               </p>
               <p className="text-sm">
-                <strong>Enterprise Targets:</strong> Map loading <200ms for 600 users, search operations <500ms for 30K database, 
+                <strong>Enterprise Targets:</strong> Map loading &lt;200ms for 600 users, search operations &lt;500ms for 30K database, 
                 99.5% uptime requirement. Infrastructure scaling plan defined with clear cost projections.
               </p>
             </div>
@@ -922,7 +922,7 @@ export default function TechStackPage() {
               <p className="text-sm text-yellow-800">
                 <strong>Recommended Path:</strong> Complete the controlled handoff strategy BEFORE expanding to 30+ regions. 
                 The system is ready for enterprise use, but sustainable support requires proper knowledge transfer 
-                and Red Cross IT team ownership. Don't expand to hundreds of users until bus factor > 3.
+                and Red Cross IT team ownership. Don't expand to hundreds of users until bus factor &gt; 3.
               </p>
             </div>
 
