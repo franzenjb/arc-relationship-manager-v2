@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import dynamic from 'next/dynamic'
 import { Organization, Person } from '@/lib/types'
 import { CoordinatesService, MapCoordinate } from '@/lib/map/coordinates.service'
+import { getCachedCoordinates } from '@/lib/geocoding/geocoding.cache'
 import { getUserRegion } from '@/config/regions'
 import { REGIONS } from '@/config/regions'
 
@@ -102,17 +103,36 @@ export default function LeafletMapSimple({
       setCoordinateError(null)
 
       try {
-        console.log(`🗺️ Resolving coordinates for ${organizations.length} organizations and ${people.length} people...`)
+        console.log(`🗺️ Loading coordinates for ${organizations.length} organizations and ${people.length} people...`)
         
-        // Resolve coordinates for organizations and people
-        const [orgCoordinates, peopleCoordinates] = await Promise.all([
-          displayMode === 'organizations' || displayMode === 'both' 
-            ? CoordinatesService.resolveOrganizationCoordinates(organizations)
-            : Promise.resolve(new Map<string, MapCoordinate>()),
-          displayMode === 'people' || displayMode === 'both'
-            ? CoordinatesService.resolvePeopleCoordinates(people, organizations)
-            : Promise.resolve(new Map<string, MapCoordinate>())
-        ])
+        // Fast coordinate resolution using precomputed cache (instant)
+        const orgCoordinates = new Map<string, MapCoordinate>()
+        const peopleCoordinates = new Map<string, MapCoordinate>()
+        
+        // Get organization coordinates from cache (instant lookup)
+        if (displayMode === 'organizations' || displayMode === 'both') {
+          for (const org of organizations) {
+            if (org.city && org.state) {
+              const coords = getCachedCoordinates(org.city, org.state)
+              if (coords) {
+                orgCoordinates.set(org.id, coords)
+              }
+            }
+          }
+        }
+        
+        // Get people coordinates from their organization locations
+        if (displayMode === 'people' || displayMode === 'both') {
+          for (const person of people) {
+            const org = organizations.find(o => o.id === person.org_id)
+            if (org && org.city && org.state) {
+              const coords = getCachedCoordinates(org.city, org.state)
+              if (coords) {
+                peopleCoordinates.set(person.id, coords)
+              }
+            }
+          }
+        }
 
         // Group entities by coordinates
         const locationGroups = new Map<string, {

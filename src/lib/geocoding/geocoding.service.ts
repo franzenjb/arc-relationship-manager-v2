@@ -14,6 +14,7 @@
  */
 
 import { supabase } from '../supabase'
+import { getCachedCoordinates, setCachedCoordinates } from './geocoding.cache'
 
 export interface GeocodeProvider {
   name: string
@@ -111,7 +112,7 @@ export class GeocodingService {
     new NominatimProvider()
   ]
   
-  private static readonly RATE_LIMIT_MS = 1000 // 1 second between requests
+  private static readonly RATE_LIMIT_MS = 200 // 200ms between requests (faster for UX)
   private static lastRequestTime = 0
   
   /**
@@ -128,7 +129,13 @@ export class GeocodingService {
     const fullAddress = `${address}, ${city}, ${state}, ${country}`
     const cacheKey = this.generateCacheKey(fullAddress)
     
-    // Check database cache first
+    // Check fast in-memory cache first (instant)
+    const memoryCache = getCachedCoordinates(city, state)
+    if (memoryCache) {
+      return { ...memoryCache, cached: true }
+    }
+    
+    // Check database cache second
     const cached = await this.getCachedResult(cacheKey)
     if (cached) {
       return { ...cached, cached: true }
@@ -143,7 +150,13 @@ export class GeocodingService {
         const result = await provider.geocode(fullAddress)
         
         if (result && this.isValidResult(result)) {
-          // Cache successful result
+          // Cache successful result in memory and database
+          setCachedCoordinates(city, state, {
+            latitude: result.latitude,
+            longitude: result.longitude,
+            accuracy: result.accuracy,
+            source: result.provider
+          })
           await this.cacheResult(cacheKey, result, fullAddress)
           return result
         }
