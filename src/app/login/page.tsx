@@ -21,7 +21,8 @@ export default function LoginPage() {
     try {
       if (validateRegionAccess(selectedRegion, password)) {
         setUserRegion(selectedRegion, userName || 'User')
-        router.push('/organizations')
+        // Use window.location.href to ensure cookie is set before navigation
+        window.location.href = '/organizations'
       } else {
         setError('Access denied for selected region')
       }
