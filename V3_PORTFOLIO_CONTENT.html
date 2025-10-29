@@ -1,0 +1,229 @@
+<!-- ========================================
+     V3 PRODUCTION - ADD THIS TO YOUR PORTFOLIO
+     ======================================== -->
+
+<!--
+  INSTRUCTIONS:
+  1. Open your portfolio-showcase repository
+  2. Find where V1 Florida and V2 National are displayed
+  3. Add this V3 section next to them (probably in index.html or projects.html)
+  4. Adjust styling classes to match your existing cards
+-->
+
+<div class="project-card v3-card">
+  <div class="project-header">
+    <span class="version-badge v3">V3 PRODUCTION</span>
+    <span class="year-badge">2025</span>
+  </div>
+
+  <h3>🔒 ARC Relationship Manager V3</h3>
+  <h4>Enterprise with Authentication</h4>
+
+  <p class="project-description">
+    Production-ready version with full Supabase authentication, Row Level Security (RLS),
+    and region-based access control. Supports 40-50 independent regional deployments with
+    complete data isolation.
+  </p>
+
+  <div class="features-list">
+    <h5>Key Features:</h5>
+    <ul>
+      <li>✅ <strong>Individual User Accounts</strong> - Email/password authentication via Supabase Auth</li>
+      <li>✅ <strong>Region-Based Access Control</strong> - Users only see their assigned region's data</li>
+      <li>✅ <strong>Full Audit Trails</strong> - Track who created/modified every record</li>
+      <li>✅ <strong>Row Level Security</strong> - Database-enforced multi-tenancy</li>
+      <li>✅ <strong>Scalable Architecture</strong> - Support for 600+ concurrent users</li>
+      <li>✅ <strong>Same V2 Performance</strong> - Geocoding <100ms, all features preserved</li>
+    </ul>
+  </div>
+
+  <div class="tech-stack-mini">
+    <strong>Tech Stack:</strong>
+    <span class="tech-badge">Supabase Auth</span>
+    <span class="tech-badge">PostgreSQL RLS</span>
+    <span class="tech-badge">Next.js 15</span>
+    <span class="tech-badge">Vercel</span>
+  </div>
+
+  <div class="project-stats">
+    <div class="stat">
+      <span class="stat-number">3</span>
+      <span class="stat-label">Separate Versions</span>
+    </div>
+    <div class="stat">
+      <span class="stat-number">40+</span>
+      <span class="stat-label">Regions Supported</span>
+    </div>
+    <div class="stat">
+      <span class="stat-number">$25</span>
+      <span class="stat-label">Monthly Cost</span>
+    </div>
+  </div>
+
+  <div class="project-links">
+    <a href="https://arc-relationship-manager-v3.vercel.app"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="demo-link primary">
+      <span class="icon">🔒</span> View V3 Production
+    </a>
+    <a href="https://github.com/franzenjb/arc-relationship-manager-v2"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="github-link">
+      <span class="icon">💻</span> View Source
+    </a>
+  </div>
+
+  <div class="project-note">
+    <strong>Note:</strong> V3 requires login. V2 remains as public demo. Both deploy from same codebase.
+  </div>
+</div>
+
+<!-- ========================================
+     VERSION COMPARISON TABLE (OPTIONAL)
+     Add this after all three version cards
+     ======================================== -->
+
+<div class="version-comparison">
+  <h3>Version Evolution Comparison</h3>
+
+  <table class="comparison-table">
+    <thead>
+      <tr>
+        <th>Feature</th>
+        <th>V1 Florida</th>
+        <th>V2 National</th>
+        <th>V3 Production</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Authentication</td>
+        <td>❌ None</td>
+        <td>❌ None</td>
+        <td>✅ Supabase Auth</td>
+      </tr>
+      <tr>
+        <td>Geographic Scope</td>
+        <td>Florida Only</td>
+        <td>National</td>
+        <td>40+ Regions</td>
+      </tr>
+      <tr>
+        <td>Access Control</td>
+        <td>Public</td>
+        <td>Public</td>
+        <td>Region-Based RLS</td>
+      </tr>
+      <tr>
+        <td>Audit Trail</td>
+        <td>❌ None</td>
+        <td>⚠️ Hardcoded</td>
+        <td>✅ Full Tracking</td>
+      </tr>
+      <tr>
+        <td>Geocoding Performance</td>
+        <td>⚠️ Slow</td>
+        <td>✅ Fast (<100ms)</td>
+        <td>✅ Fast (<100ms)</td>
+      </tr>
+      <tr>
+        <td>Database</td>
+        <td>Separate</td>
+        <td>Separate</td>
+        <td>Separate (V3)</td>
+      </tr>
+      <tr>
+        <td>Purpose</td>
+        <td>Regional Demo</td>
+        <td>Public Demo</td>
+        <td>Production Use</td>
+      </tr>
+      <tr>
+        <td>Cost</td>
+        <td>Free</td>
+        <td>Free</td>
+        <td>$25/month</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ========================================
+     SUGGESTED CSS (if not already styled)
+     ======================================== -->
+
+<style>
+.v3-card {
+  border-left: 4px solid #3b82f6;
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+}
+
+.version-badge.v3 {
+  background: #3b82f6;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.tech-badge {
+  display: inline-block;
+  background: #1e40af;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  margin: 2px;
+}
+
+.project-stats {
+  display: flex;
+  gap: 1.5rem;
+  margin: 1rem 0;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 8px;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1e40af;
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.7rem;
+  color: #64748b;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.comparison-table th {
+  background: #f1f5f9;
+  font-weight: bold;
+}
+
+.comparison-table tr:hover {
+  background: #f8fafc;
+}
+</style>
